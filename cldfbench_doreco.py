@@ -1,27 +1,13 @@
 import pathlib
 
-import attr
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
 import pybtex
-
-# @attr.s
-# class CustomLanguage(Language):
-#     Area = attr.ib(default=None)
-#     Creator = attr.ib(default=None)
-#     Source = attr.ib(default=None)
-#     Archive = attr.ib(default=None)
-#     Archive_link = attr.ib(default=None)
-#     Translation = attr.ib(default=None)
-#     AnnotationLicense = attr.ib(default=None)
-#     AudioLicense = attr.ib(default=None)
-#     DOI = attr.ib(default=None)
 
 
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
     id = "doreco"
-    #language_class = CustomLanguage
 
     def cldf_specs(self):  # A dataset must declare all CLDF sets it creates.
         return CLDFSpec(
@@ -31,23 +17,13 @@ class Dataset(BaseDataset):
 
 
     def cmd_makecldf(self, args):
+        self.create_schema(args.writer.cldf)
+
         sources = pybtex.database.parse_string(
             'doreco_CITATIONS.bib', bib_format='bibtex'
             )
-
+        args.writer.cldf.add_sources(sources)
         args.log.info("added sources")
-		
-        # args.writer.cldf.add_columns(
-        #         "ParameterTable",
-        #         "Category",
-        #         "Shortname",
-        #         "Variable_type",
-        #         "Category_esp",  
-        #         "Description_esp",
-        #         "Comments")
-
-        args.writer.cldf.add_component("ContributionTable")
-        args.writer.cldf.add_component("LanguageTable")
 
         for row in self.etc_dir.read_csv(
             'doreco_languages_metadata.csv',
@@ -57,6 +33,8 @@ class Dataset(BaseDataset):
                 "ID": row["Language"],
                 "Name": row["Language"],
                 "Glottocode": row["Glottocode"],
+                "Latitude": row["Latitude"],
+                "Longitude": row["Longitude"],
                 "Macroarea": row["Area"],
                 "Translation": row["Translation"],
                 "Gloss": row["Gloss"],
@@ -71,7 +49,9 @@ class Dataset(BaseDataset):
             })
 
             args.writer.objects["ContributionTable"].append({
-                "Creator": row["Creator"],
+                "ID": row["Language"],
+                "Name": row["Language"],
+                "Contributor": row["Creator"],
                 "Archive": row["Archive"],
                 "Archive_link": row["Archive_link"],
                 "AnnotationLicense": row["Annotation license"],
@@ -89,3 +69,69 @@ class Dataset(BaseDataset):
         #     row["Source"] = [row["Source"]]
         #     args.writer.objects['ValueTable'].append(row)
         # args.log.info("added values")
+
+    def create_schema(self, cldf):
+        cldf.add_component(
+            'LanguageTable',
+            {
+                'name': 'Translation',
+                'datatype': 'str',
+            },
+            {
+                'name': 'Gloss',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ExtendedSpeakers',
+                'datatype': 'int',
+            },
+            {
+                'name': 'ExtendedWordTokens',
+                'datatype': 'int',
+            },
+            {
+                'name': 'ExtendedTexts',
+                'datatype': 'int',
+            },
+            {
+                'name': 'CoreSpeakers',
+                'datatype': 'int',
+            },
+
+            {
+                'name': 'CoreWordTokens',
+                'datatype': 'int',
+            },
+            {
+                'name': 'CoreTexts',
+                'datatype': 'int',
+            },
+            {
+                'name': 'YearsOfRecordingInCoreSet',
+                'datatype': 'int',
+            })
+
+        cldf.add_component(
+            'ContributionTable',
+            {
+                'name': 'Archive',
+                'datatype': 'str',
+            },
+            {
+                'name': 'Archive_link',
+                'datatype': 'str',
+            },
+            {
+                'name': 'AnnotationLicense',
+                'datatype': 'str',
+            },
+            {
+                'name': 'AudioLicense',
+                'datatype': 'str',
+            },
+            {
+                'name': 'DOI',
+                'datatype': 'str',
+            },
+
+        )
