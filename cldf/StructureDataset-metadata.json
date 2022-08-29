@@ -14,7 +14,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco",
             "rdf:type": "prov:Entity",
-            "dc:created": "b7cf16a",
+            "dc:created": "6f35bc5",
             "dc:title": "Repository"
         },
         {
@@ -181,6 +181,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+            "dc:extent": 51,
             "tableSchema": {
                 "columns": [
                     {
@@ -252,31 +253,31 @@
                         "name": "Gloss"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "ExtendedSpeakers"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "ExtendedWordTokens"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "ExtendedTexts"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "CoreSpeakers"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "CoreWordTokens"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "CoreTexts"
                     },
                     {
-                        "datatype": "int",
+                        "datatype": "string",
                         "name": "YearsOfRecordingInCoreSet"
                     }
                 ],
@@ -288,6 +289,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
+            "dc:extent": 51,
             "tableSchema": {
                 "columns": [
                     {
@@ -349,6 +351,106 @@
                 ]
             },
             "url": "contributions.csv"
+        },
+        {
+            "dc:conformsTo": null,
+            "dc:extent": 1006,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "spk_code"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "spk_age"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "spk_age_c"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "spk_sex"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "rec_date"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "rec_date_c"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "genre"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "genre_stim"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "gloss"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "transl"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "sound_quality"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "background_noise"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "word_tokens"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "extended"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "ID"
+                        ],
+                        "reference": {
+                            "resource": "values.csv",
+                            "columnReference": [
+                                "File"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "spk_code"
+                        ],
+                        "reference": {
+                            "resource": "values.csv",
+                            "columnReference": [
+                                "Speaker_ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "metadata.csv"
         }
     ]
 }

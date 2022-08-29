@@ -1,0 +1,1007 @@
+ID,Name,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,RL,69,certain,f,2013-10-27,certain,personal narrative,na,break/gloss,Swahili/English,medium,none,1225,no
+,,RL,69,certain,f,2013-11-08,certain,traditional narrative,na,break/gloss,Swahili/English,medium,none,1075,no
+,,TD,17,certain,m,2015-08-08,certain,personal narrative,na,break/gloss,Swahili/English,medium,punctual,649,no
+,,SJ/HJ,19/22,certain/certain,m/m,2015-08-17,certain,conversation,stimulus tools,break/gloss,Swahili/English,good,punctual,2517,no
+,,JS/RL,76/71,certain/certain,m/f,2015-08-18,certain,conversation,stimulus tools,break/gloss,Swahili/English,medium,punctual,664,no
+,,BQ,95,certain,m,2015-11-25,certain,conversation,na,all,English,medium,punctual,878,no
+,,BS,61,certain,m,2015-12-02,certain,traditional narrative,na,all,English,medium,punctual,1521,no
+,,BS,61,certain,m,2015-12-02,certain,traditional narrative,na,all,English,good,none,1033,no
+,,BS/PB,61/23,certain/certain,m/m,2015-12-23,certain,conversation,na,all,English,medium,constant,1112,no
+,,BT/AG,97/95,certain/certain,m/m,2016-02-19,certain,conversation,na,all,English,medium,none,357,yes
+,,SY/RL,12/71,certain/certain,m/f,2015-07-26,certain,conversation,na,all,English,medium,punctual,783,yes
+,,BS/PB,61/23,certain/certain,m/m,2015-10-21,certain,conversation,stimulus tools,all,English,bad,punctual,2242,yes
+,,BQ/BS,95/61,certain/certain,m/m,2015-11-25,certain,conversation,na,all,English,medium,none,2754,yes
+,,BQ/BS,95/61,certain/certain,m/m,2015-11-25,certain,conversation,na,all,English,medium,none,2878,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,AA1/RZ1,22/20,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,punctual,548,no
+,,AA1/RZ1,22/20,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,punctual,193,no
+,,AA1/RZ1,22/20,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,punctual,835,no
+,,AA1,22,certain,f,2010,approximate,stimulus retelling,pear story,all,English,medium,punctual,395,no
+,,AC1/IC1,22/25,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,constant,189,no
+,,AC1/IC1,22/25,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,punctual,912,no
+,,AC1,22,certain,f,2010,approximate,stimulus retelling,pear story,all,English,bad,constant,332,no
+,,AJ1/IA2,23/24,certain/certain,m/f,2010,approximate,conversation,na,all,English,bad,punctual,507,no
+,,IA2,24,certain,f,2010,approximate,traditional narrative,na,all,English,bad,punctual,315,no
+,,KA1,19,certain,f,2010,approximate,stimulus retelling,pear story,all,English,good,none,293,no
+,,AZ2,21,certain,f,2010,approximate,stimulus retelling,pear story,all,English,medium,punctual,233,no
+,,IA1,32,certain,f,2010,approximate,stimulus retelling,pear story,all,English,good,none,149,no
+,,KA2/LJ1,22/22,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,constant,560,no
+,,KA2/LJ1,22/22,certain/certain,f/f,2010,approximate,conversation,na,all,English,bad,constant,512,no
+,,LJ1,22,certain,f,2010,approximate,stimulus retelling,pear story,all,English,bad,constant,277,no
+,,KA2,22,certain,f,2010,approximate,stimulus retelling,pear story,all,English,bad,constant,66,no
+,,KH2/KH1,34/38,certain/certain,f/m,2010,approximate,conversation,na,all,English,medium,punctual,328,no
+,,KZ1/TZ1,20/21,certain/certain,f/m,2010,approximate,conversation,na,all,English,bad,constant,529,no
+,,KZ1/TZ1,20/21,certain/certain,f/m,2010,approximate,conversation,na,all,English,bad,constant,310,no
+,,KZ1,20,certain,f,2010,approximate,stimulus retelling,pear story,all,English,bad,constant,292,no
+,,MA1,18,certain,f,2010,approximate,stimulus retelling,pear story,all,English,bad,punctual,332,no
+,,TA1,56,certain,f,2010,approximate,stimulus retelling,pear story,all,English,good,none,185,no
+,,TA2,61,certain,m,2010,approximate,stimulus retelling,pear story,all,English,good,none,133,no
+,,TA3,19,certain,f,2010,approximate,stimulus retelling,pear story,all,English,good,none,420,no
+,,TA4,35,certain,m,2010,approximate,stimulus retelling,pear story,all,English,good,punctual,352,no
+,,TZ2,23,certain,m,2010,approximate,stimulus retelling,pear story,all,English,medium,punctual,230,no
+,,VS1/KY1,19/22,certain/certain,f/m,2010,approximate,conversation,na,all,English,bad,constant,308,no
+,,KY1,22,certain,m,2010,approximate,stimulus retelling,pear story,all,English,bad,constant,246,no
+,,HC1/AZ2,21/21,certain,f/f,2010,approximate,conversation,na,all,English,bad,constant,905,yes
+,,AJ1,23,certain,m,2010,approximate,stimulus retelling,pear story,all,English,bad,punctual,622,yes
+,,KZ1,20,certain,f,2010,approximate,conversation,na,all,English,bad,constant,116,yes
+,,KZ1/TZ1,20/21,certain/certain,f/m,2010,approximate,conversation,na,all,English,bad,constant,396,yes
+,,MZ1/JZ1,23/22,certain/certain,m/f,2010,approximate,conversation,na,all,English,bad,constant,80,yes
+,,JZ1,22,certain,f,2010,approximate,stimulus retelling,pear story,all,English,bad,constant,361,yes
+,,VS1/KY1,19/22,certain/certain,f/m,2010,approximate,conversation,na,all,English,bad,constant,377,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,Lidexiang,47,certain,m,2011-01-10,certain,personal narrative,na,break/gloss,Chinese/English,medium,none,1009,no
+,,Lidexiang,47,certain,m,2011-01-10,certain,personal narrative,na,break/gloss,Chinese/English,medium,none,1691,no
+,,Lirong,60,certain,m,2011-02-07,certain,personal narrative,na,break/gloss,English/Chinese,medium,none,185,no
+,,Lirong,60,certain,m,2011-02-08,certain,traditional narrative,na,break/gloss,English/Chinese,medium,none,234,no
+,,Lifenqin,38,certain,f,2010-12-06,certain,personal narrative,na,break/gloss,English/Chinese,good,none,455,no
+,,Lihou,81,certain,m,2011-08-02,certain,traditional narrative,na,break/gloss,Chinese/English,medium,constant,808,no
+,,Lihou,81,certain,m,2011-05-08,certain,personal narrative,na,break/gloss,Chinese/English,medium,none,2235,no
+,,Lilanzhen,35,approximate,f,2012-12-05,certain,personal narrative,na,break/gloss,Chinese/English,good,none,395,no
+,,Lilanzhen,35,approximate,f,2012-12-05,certain,traditional narrative,na,break/gloss,English/Chinese,good,none,139,no
+,,Lilanzhen,35,approximate,f,2012-12-28,certain,traditional narrative,na,break/gloss,English/Chinese,good,none,978,no
+,,Lizhongfu,38,approximate,m,2010-12-06,certain,personal narrative,na,break/gloss,Chinese/English,good,none,725,no
+,,Lizhongfu,38,approximate,m,2010-12-06,certain,traditional narrative,na,break/gloss,English/Chinese,good,none,311,no
+,,Lilanzhen,35,approximate,f,2013-01-30,certain,procedural,commenting a marriage ceremony,break/gloss,Chinese/English,medium,constant,2854,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,AP,56,certain,m,2003-07-09,certain,traditional narrative,na,all,English,good,punctual,2640,no
+,,ES,40,approximate,m,2004-08-21,certain,traditional narrative,na,all,na,medium,constant,1690,no
+,,IK,25,certain,f,2008-07-16,certain,traditional narrative,na,all,English,medium,constant,964,no
+,,JN,54,certain,m,2005-06-19,certain,traditional narrative,na,all,English,medium,punctual,1855,no
+,,PB,63,certain,f,2008-07-16,certain,traditional narrative,na,all,English,good,punctual,3351,no
+,,SE,70,approximate,m,2003-02-03,certain,procedural,na,all,English,good,constant,392,no
+,,SS,69,certain,f,2005-06-24,certain,traditional narrative,na,all,na,medium,punctual,1183,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,B,70,approximate,f,2004-10-16,certain,traditional narrative,na,all,English/Afrikaans,good,punctual,1017,no
+,,B,70,approximate,f,2004-10-16,certain,traditional narrative,na,all,English/Afrikaans,good,punctual,667,no
+,,C,72,approximate,f,2007-11-07,certain,personal narrative,na,all,English/Afrikaans,medium,punctual,376,no
+,,C,72,approximate,f,2009-09-30,certain,stimulus retelling,pear story,all,English/Afrikaans,good,none,351,no
+,,D,70,approximate,f,2006-07-19,certain,personal narrative,na,all,English/Afrikaans,medium,constant,285,no
+,,E,65,approximate,f,2006-07-15,certain,personal narrative,na,all,English/Afrikaans,good,punctual,531,no
+,,E,65,approximate,f,2008-08-25,certain,personal narrative,na,all,English/Afrikaans,good,constant,268,no
+,,E,65,approximate,f,2009-10-06,certain,stimulus retelling,pear story,all,English/Afrikaans,good,punctual,408,no
+,,F,75,approximate,f,2007-10-17,certain,traditional narrative,na,all,English/Afrikaans,good,constant,831,no
+,,F,75,approximate,f,2008-09-03,certain,traditional narrative,na,all,English/Afrikaans,medium,punctual,392,no
+,,F,75,approximate,f,2009-10-01,certain,stimulus retelling,pear story,all,English/Afrikaans,good,none,138,no
+,,G,73,approximate,f,2006-07-18,certain,traditional narrative,na,all,English/Afrikaans,medium,none,1027,no
+,,G,73,approximate,f,2006-07-18,certain,traditional narrative,na,all,English/Afrikaans,medium,constant,509,no
+,,G,73,approximate,f,2007-11-14,certain,traditional narrative,na,all,English/Afrikaans,medium,punctual,970,no
+,,G,73,approximate,f,2007-11-19,certain,personal narrative,na,all,English/Afrikaans,medium,punctual,460,no
+,,G,73,approximate,f,2009-11-03,certain,traditional narrative,na,all,English/Afrikaans,medium,none,474,no
+,,C/F,72/75,approximate,f/f,2008-09-03,certain,conversation,na,all,English/Afrikaans,medium,punctual,1579,no
+,,B,70,approximate,f,2004-10-16,certain,traditional narrative,na,all,English/Afrikaans,medium,punctual,1156,yes
+,,B,70,approximate,f,2004-10-16,certain,traditional narrative,na,all,English/Afrikaans,good,punctual,703,yes
+,,B,70,approximate,f,2008-10-07,certain,personal narrative,na,all,English/Afrikaans,medium,punctual,1133,yes
+,,B,70,approximate,f,2008-10-07,certain,personal narrative,na,all,English/Afrikaans,medium,punctual,993,yes
+,,C,72,approximate,f,2006-07-10,certain,personal narrative,na,all,English/Afrikaans,bad,punctual,583,yes
+,,C,72,approximate,f,2006-07-10,certain,traditional narrative,na,all,English/Afrikaans,bad,punctual,310,yes
+,,C,72,approximate,f,2006-07-10,certain,personal narrative,na,all,English/Afrikaans,bad,punctual,76,yes
+,,C,72,approximate,f,2006-07-10,certain,personal narrative,na,all,English/Afrikaans,bad,punctual,315,yes
+,,C,72,approximate,f,2006-07-15,certain,traditional narrative,na,all,English/Afrikaans,medium,punctual,457,yes
+,,C,74,approximate,f,2008-09-03,certain,personal narrative,na,all,English/Afrikaans,bad,punctual,1243,yes
+,,E/C,75/72,approximate/approximate,f/f,2007-10-22,certain,conversation,na,all,English/Afrikaans,bad,punctual,2163,yes
+,,D/G,70/73,approximate/approximate,f/f,2007-11-09,certain,conversation,na,all,English/Afrikaans,bad,punctual,916,yes
+,,B/I,70/71,approximate/approximate,f/f,2007-12-13,certain,conversation,na,all,English/Afrikaans,bad,punctual,3643,yes
+,,B/I,70/71,approximate/approximate,f/f,2007-12-14,certain,conversation,na,all,English/Afrikaans,bad,punctual,1478,yes
+,,B,70,approximate,f,2007-12-14,certain,personal narrative,na,all,English/Afrikaans,bad,punctual,1588,yes
+,,B,71,approximate,f,2008-10-07,certain,traditional narrative,na,all,English/Afrikaans,medium,punctual,965,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,BK,25,approximate,f,2013-12-08,certain,personal narrative,na,all,English,medium,none,958,no
+,,ST,30,approximate,m,2013-12-08,certain,personal narrative,na,all,English,medium,none,331,no
+,,AK,30,approximate,m,2013-12-27,certain,traditional narrative,na,all,English,good,none,496,no
+,,UK,30,approximate,m,2013-12-27,certain,traditional narrative,na,all,English,good,none,1360,no
+,,AK,30,approximate,m,2013-12-27,certain,traditional narrative,na,all,English,good,none,2376,no
+,,AK,30,approximate,m,2015-01-24,certain,traditional narrative,na,all,English,good,none,1338,no
+,,AK,30,approximate,m,2015-02-03,certain,personal narrative,na,all,English,good,none,747,no
+,,AK,30,approximate,m,2015-02-03,certain,personal narrative,na,all,English,good,none,1333,no
+,,AK,30,approximate,m,2015-02-03,certain,traditional narrative,na,all,English,good,none,586,no
+,,MK/BK,35/25,approximate,m/m,2013-12-07,certain,conversation,na,all,English,medium,punctual,4851,yes
+,,MK/NumK,35/30,approximate,m/f,2013-12-07,certain,conversation,na,all,English,medium,punctual,3135,yes
+,,MK/NumK,35/30,approximate,m/f,2013-12-07,certain,conversation,na,all,English,medium,punctual,3392,yes
+,,MK/BilK,35/25,approximate,m/m,2013-12-07,certain,conversation,na,all,English,medium,punctual,2345,yes
+,,MK/AlfM,35/18,approximate,m/m,2013-12-07,certain,conversation,na,all,English,medium,punctual,3626,yes
+,,AlfM/MK,18/35,approximate,m/m,2013-12-07,certain,conversation,na,all,English,medium,punctual,378,yes
+,,MK/KerS,35/25,approximate,m/m,2013-12-07,certain,conversation,na,all,English,medium,punctual,1603,yes
+,,AmaM/NbeK,40/30,approximate,m/m,2013-12-20,certain,conversation,na,all,English,bad,constant,1435,yes
+,,MamJ/AmaM,50/40,approximate,m/m,2013-12-20,certain,conversation,na,all,English,medium,punctual,2589,yes
+,,AmaM/AlaK,40/50,approximate,m/m,2013-12-20,certain,conversation,na,all,English,medium,punctual,1822,yes
+,,AmaM/NumK,40/60,approximate,m/f,2013-12-20,certain,conversation,na,all,English,medium,punctual,2200,yes
+,,SuIK/BeIS,45/60,approximate,m/m,2013-12-21,certain,conversation,na,all,English,medium,punctual,3225,yes
+,,SarK/BeIS,60/60,approximate,m/m,2013-12-21,certain,conversation,na,all,English,medium,punctual,1670,yes
+,,SanK/PenK,55/50,approximate,m/f,2013-12-22,certain,conversation,na,all,English,medium,none,4860,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,MT,70,approximate,f,2010-07-23,certain,personal narrative,na,break/gloss,English,good,constant,333,no
+,,QB,66,certain,f,2011-05-18,certain,traditional narrative,na,none,English,medium,constant,1160,no
+,,LB,60,certain,f,2011-05-18,certain,personal narrative,na,none,na,good,constant,196,no
+,,MT,70,approximate,f,2011-05-21,certain,stimulus retelling,Jackal and crow story: a picture task designed by reseachers of the Language and Social Cognition group (Melbourne/Canberra),none,na,good,constant,335,no
+,,MT,70,approximate,f,2011-05-26,certain,personal narrative,na,all,English,good,constant,277,no
+,,LB/ND,60/60,certain/certain,f/f,2011-06-05,certain,stimulus retelling,jackal and crow story: a picture task designed by reseachers of the Language and Social Cognition group (Melbourne/Canberra),break/gloss,na,medium,constant,554,no
+,,MT,70,approximate,f,2011-06-07,certain,personal narrative,na,all,English,good,constant,92,no
+,,LB,60,certain,f,2011-06-14,certain,stimulus retelling,husband and wife picture task,none,na,good,constant,281,no
+,,MT,70,approximate,f,2012-07-12,certain,stimulus retelling,story based on pictures series G6,none,na,good,constant,106,no
+,,MT,70,approximate,f,2012-07-17,certain,personal narrative,na,all,English,good,constant,78,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,Hermina,33,approximate,f,2017-10-08,certain,personal narrative,na,break/gloss,English/Indonesian,good,none,158,no
+,,Slipa,30,approximate,f,2014-08-12,certain,stimulus retelling,frog story,break/gloss,English/Indonesian,medium,constant,918,no
+,,Ware,35,approximate,m,2013-03-05,certain,personal narrative,na,break/gloss,English/Indonesian,bad,constant,4511,no
+,,Lince,35,approximate,f,2017-10-09,certain,stimulus retelling,pear story,break/gloss,English/Indonesian,good,none,248,no
+,,Marthen,35,approximate,m,2017-10-17,certain,stimulus retelling,pear story,break/gloss,English/Indonesian,middle,constant,218,no
+,,Stefen,30,approximate,m,2017-10-17,certain,stimulus retelling,pear story,break/gloss,English/Indonesian,bad,constant,252,no
+,,Yoas/Firaon,30/35,approximate,m/m,2014-08-11,certain,conversation,na,break/gloss,English/Indonesian,medium,constant,777,no
+,,Sadrak/Fedrik,30/30,approximate,m/m,2014-08-09,certain,conversation,na,break/gloss,English/Indonesian,middle,constant,713,yes
+,,Kris/Daud,30/30,approximate,m/f,2014-08-08,certain,conversation,na,break/gloss,English/Indonesian,middle,constant,736,yes
+,,Kris/Daud,30/30,approximate,m/f,2014-08-08,certain,conversation,na,break/gloss,English/Indonesian,good,constant,1268,yes
+,,Nelson/Edi,35/35,approximate,m/m,2014-08-08,certain,conversation,na,break/gloss,English/Indonesian,bad,constant,392,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,ABB,60,certain,m,2010-09-05,certain,traditional narrative,na,all,English,good,na,454,no
+,,ABB,60,certain,m,2011-08-02,certain,traditional narrative,na,all,English,good,na,530,no
+,,MAB,68,certain,m,2011-08-10,certain,personal narrative,na,all,English,good,na,210,no
+,,MAB,68,certain,m,2011-08-10,certain,personal narrative,na,all,English,good,na,266,no
+,,ABB,60,certain,m,2011-08-17,certain,personal narrative,na,all,English,good,na,416,no
+,,ABB,60,certain,m,2012-08-15,certain,personal narrative,na,all,English,good,na,343,no
+,,ABB,60,certain,m,2012-08-17,certain,personal narrative,na,all,English,good,na,143,no
+,,LNA,56,certain,f,2012-08-21,certain,personal narrative,na,all,English,good,na,300,no
+,,MAK,63,certain,m,2012-09-01,certain,traditional narrative,na,all,English,good,na,858,no
+,,MAB,68,certain,m,2012-09-04,certain,personal narrative,na,all,English,good,na,580,no
+,,MAB,68,certain,m,2012-09-04,certain,personal narrative,na,all,English,good,na,983,no
+,,MAB/SKK,68/38,certain/certain,m/m,2012-09-06,certain,conversation,na,all,English,good,na,681,no
+,,DAK,38,certain,m,2012-09-22,certain,traditional narrative,na,all,English,good,na,573,no
+,,WAM,32,certain,f,2013-08-23,certain,personal narrative,na,all,English,good,na,258,no
+,,MKW,35,certain,m,2013-09-03,certain,personal narrative,na,all,English,good,na,643,no
+,,RNA,28,certain,f,2013-09-03,certain,traditional narrative,na,all,English,good,na,607,no
+,,MBR,40,certain,f,2013-09-11,certain,personal narrative,na,all,English,good,na,376,no
+,,ALB,34,certain,f,2013-09-23,certain,traditional narrative,na,all,English,good,na,255,no
+,,LNA/SKK,56/38,certain/certain,f/m,2015-09-19,certain,conversation,na,all,English,good,na,1416,no
+,,DAK,38,certain,m,2011-08-13,certain,personal narrative,na,all,English,medium,na,355,yes
+,,RMA/TSA/MAE,31/24/25,certain/certain/certain,m/m/m,2011-10-04,certain,stimulus retelling,Family Problems Picture Series,all,English,medium,na,2950,yes
+,,MAK,63,certain,m,2011-11-07,certain,traditional narrative,na,all,English,medium,na,936,yes
+,,RNA,28,certain,f,2011-11-07,certain,stimulus retelling,na,all,English,medium,na,251,yes
+,,MAB/ROM,68/40,certain/certain,m/m,2011-11-19,certain,traditional narrative,na,all,English,medium,na,611,yes
+,,ABB,60,certain,m,2011-11-19,certain,traditional narrative,na,all,English,medium,na,790,yes
+,,ABB,60,certain,m,2012-08-05,certain,personal narrative,na,none,English,medium,na,2913,yes
+,,ABB,60,certain,m,2012-08-14,certain,personal narrative,na,none,English,medium,na,2276,yes
+,,ABB,60,certain,m,2012-08-18,certain,personal narrative,na,none,English,good,na,341,yes
+,,LNA,56,certain,f,2012-08-21,certain,personal narrative,na,none,English,medium,na,362,yes
+,,KAA,42,certain,m,2012-08-24,certain,procedural,na,none,English,medium,na,536,yes
+,,KUT,42,certain,m,2012-08-27,certain,traditional narrative,na,none,English,medium,na,865,yes
+,,KAB,65,certain,m,2012-09-09,certain,traditional narrative,na,none,English,good,na,641,yes
+,,RNA,28,certain,f,2012-09-14,certain,procedural,na,none,English,good,na,231,yes
+,,DAK,38,certain,m,2012-09-22,certain,traditional narrative,na,none,English,good,na,235,yes
+,,DAK,38,certain,m,2012-09-22,certain,traditional narrative,na,none,English,good,na,220,yes
+,,DAK,38,certain,m,2012-09-22,certain,personal narrative,na,none,English,medium,na,243,yes
+,,MAA,35,certain,m,2012-09-22,certain,procedural,na,none,English,medium,na,511,yes
+,,MAA/STK,35/28,certain/certain,m/m,2012-09-22,certain,personal narrative,na,none,English,medium,na,565,yes
+,,ALK,38,certain,f,2012-09-22,certain,personal narrative,na,none,English,medium,na,306,yes
+,,TRK,29,certain,f,2012-09-24,certain,personal narrative,na,none,English,medium,na,286,yes
+,,ABM,45,certain,m,2012-09-24,certain,personal narrative,na,none,English,medium,na,192,yes
+,,MKA/KAB/MEA,46/65/55,certain/certain/certain,m/m/m,2012-09-25,certain,stimulus retelling,na,all,English,good,na,2860,yes
+,,SIK,42,certain,m,2012-09-29,certain,personal narrative,na,all,English,medium,na,469,yes
+,,MKW,35,certain,m,2013-09-03,certain,procedural,na,none,English,medium,na,169,yes
+,,MKW,35,certain,m,2013-09-03,certain,procedural,na,none,English,good,na,91,yes
+,,MKW,35,certain,m,2013-09-05,certain,personal narrative,na,none,English,good,na,424,yes
+,,KAB,65,certain,m,2013-09-14,certain,procedural,na,none,English,medium,na,308,yes
+,,ABB,60,certain,m,2013-10-13,certain,traditional narrative,na,none,English,good,na,1879,yes
+,,ABB,60,certain,m,2013-10-13,certain,personal narrative,na,none,English,good,na,1201,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,80,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,18,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,129,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,162,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,202,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,77,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,32,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,21,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,147,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,158,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,40,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,92,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,46,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,42,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,10,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,30,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,60,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,28,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,72,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,45,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,69,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,73,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,279,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,68,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,47,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,341,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,34,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,130,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,193,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,none,326,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,none,451,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,punctual,806,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,punctual,45,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,punctual,160,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,102,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,punctual,70,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,84,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,92,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,33,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,83,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,325,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,125,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,358,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,46,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,12,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,251,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,61,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,256,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,181,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,67,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,248,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,140,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,89,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,48,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,95,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,83,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,219,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,70,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,37,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,142,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,punctual,94,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,45,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,80,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,84,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,52,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,40,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,267,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,133,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,167,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,245,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,129,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,171,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,150,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,80,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,368,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,202,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,73,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,87,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,237,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,75,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,139,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,48,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,65,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,89,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,none,86,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,290,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,1083,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,196,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,39,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,1037,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,261,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,44,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,241,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,124,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,47,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,71,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,94,no
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,137,no
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,172,no
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,26,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,105,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,306,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,889,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,965,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,good,none,685,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,806,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,864,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,924,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,1007,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,862,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,981,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,836,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,773,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,884,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,878,no
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,939,no
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,1162,yes
+,,PKZ,70,approximate,f,1964,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,954,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,constant,808,no
+,,PKZ,70,approximate,f,1964,approximate,procedural,na,all,Russian/English/German,medium,none,649,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,none,749,no
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,medium,none,682,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,831,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,812,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,848,yes
+,,PKZ,70,approximate,f,1964,approximate,personal narrative,na,all,Russian/English/German,good,none,780,no
+,,PKZ,75,approximate,f,1970,approximate,personal narrative,na,all,Russian/English/German,good,none,1221,yes
+,,PKZ,75,approximate,f,1970,approximate,traditional narrative,na,all,Russian/English/German,good,none,1602,yes
+,,PKZ,75,approximate,f,1970,approximate,personal narrative,na,all,Russian/English/German,bad,none,286,yes
+,,SAE,70,approximate,f,1970,approximate,traditional narrative,na,all,Russian/English/German,medium,constant,552,yes
+,,SAE,70,approximate,f,1970,approximate,personal narrative,na,all,Russian/English/German,medium,constant,760,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,35,70,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,constant,1687,no
+,,55,68,approximate,m,2005,approximate,personal narrative,na,all,English,bad,constant,90,no
+,,45,80,approximate,m,2005,approximate,personal narrative,na,all,English,good,constant,266,no
+,,45,80,approximate,m,2005,approximate,personal narrative,na,all,English,good,constant,122,no
+,,40,72,approximate,m,2005,approximate,traditional narrative,na,all,English,medium,punctual,681,no
+,,40,72,approximate,m,2005,approximate,personal narrative,na,all,English,good,none,369,no
+,,40,72,approximate,m,2005,approximate,personal narrative,na,all,English,good,none,345,no
+,,40,72,approximate,m,2005,approximate,personal narrative,na,all,English,good,none,323,no
+,,40,72,approximate,m,2005,approximate,personal narrative,na,all,English,good,none,359,no
+,,40,72,approximate,m,2005,approximate,personal narrative,na,all,English,good,none,343,no
+,,40,72,approximate,m,2005,approximate,conversation,na,all,English,good,punctual,161,no
+,,36,75,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,none,112,yes
+,,33,75,approximate,m,2005,approximate,personal narrative,na,all,English,bad,none,417,yes
+,,33,75,approximate,m,2005,approximate,personal narrative,na,all,English,bad,punctual,543,yes
+,,33,75,approximate,m,2005,approximate,traditional narrative,na,all,English,medium,constant,556,yes
+,,56,75,approximate,m,2005,approximate,personal narrative,na,all,English,bad,constant,233,yes
+,,6,75,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,constant,446,yes
+,,6,75,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,constant,545,yes
+,,35,70,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,constant,2072,yes
+,,35,70,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,constant,322,yes
+,,35,70,approximate,m,2005,approximate,traditional narrative,na,all,English,bad,constant,415,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,EAO,56,certain,f,2002-07-30,certain,personal narrative,na,all,English/Spanish,good,constant,428,no
+,,EAO,56,certain,f,2002-07-30,certain,personal narrative,na,all,English/Spanish,good,constant,369,no
+,,EAO,61,certain,f,2007-08-24,certain,personal narrative,na,all,English,middle,constant,1091,no
+,,EAO,56,certain,f,2002-08-02,certain,personal narrative,na,all,English/Spanish,middle,constant,640,no
+,,HRR,54,certain,m,2008-08-12,certain,traditional narrative,na,all,Spanish,bad,constant,3636,no
+,,JGD,63,certain,m,2007-09-13,certain,traditional narrative,na,all,English/Spanish,good,constant,1108,no
+,,JGD,63,certain,m,2007-09-13,certain,traditional narrative,na,all,Spanish,good,constant,252,no
+,,JGD,63,certain,m,2007-07-09,certain,traditional narrative,na,all,Spanish,good,constant,950,no
+,,JMH,68,certain,f,2001-09-12,certain,personal narrative,na,all,English,good,constant,521,no
+,,JGD,63,certain,m,2007-09-13,certain,personal narrative,na,all,English,medium,constant,486,no
+,,JZH,80,approximate,m,2014-06-18,certain,personal narrative,na,all,English,good,constant,499,no
+,,EAO,57,certain,f,2002-07-20,certain,personal narrative,na,all,English/Spanish,good,constant,203,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,LJI,68,certain,m,2005,certain,traditional narrative,na,all,English/Spanish,medium,punctual,908,no
+,,EIN,50,certain,m,2006,certain,stimulus retelling,na,all,English/Spanish,bad,constant,308,no
+,,ANM,60,approximate,m,2006,certain,traditional narrative,na,all,English/Spanish,good,punctual,275,no
+,,FCT,46,certain,f,2006,certain,traditional narrative,na,all,English/Spanish,medium,constant,1578,no
+,,LJI/FCT,69/46,certain/certain,m/f,2006,certain,conversation,na,all,English/Spanish,good,punctual,372,no
+,,ANM,70,approximate,m,2008,certain,traditional narrative,na,all,English/Spanish,medium,constant,652,no
+,,ANM,70,approximate,m,2008,certain,traditional narrative,na,all,English/Spanish,medium,punctual,1572,no
+,,LJI,71,certain,m,2008,certain,traditional narrative,na,all,English/Spanish,medium,punctual,1202,no
+,,CMC,30,approximate,f,2010,certain,personal narrative,na,all,English/Spanish,medium,constant,468,no
+,,SGG,60,certain,f,2018,certain,traditional narrative,na,none,Spanish,good,constant,457,no
+,,LJI,68,certain,m,2005,certain,traditional narrative,na,all,English/Spanish,medium,punctual,149,yes
+,,LJI,68,certain,m,2005,certain,traditional narrative,na,all,English/Spanish,good,constant,611,yes
+,,G/PMY,60/60,approximate/approximate,f/f,2005,certain,conversation,na,all,English/Spanish,medium,constant,79,yes
+,,EIN,50,certain,m,2006,certain,traditional narrative,na,all,English/Spanish,medium,constant,271,yes
+,,FGN,60,approximate,m,2006,certain,traditional narrative,na,all,English/Spanish,medium,constant,800,yes
+,,PFN,54,certain,m,2009,certain,traditional narrative,na,all,English/Spanish,good,constant,367,yes
+,,PFN,54,certain,m,2006,certain,traditional narrative,na,all,English/Spanish,good,punctual,484,yes
+,,PFN,54,certain,m,2006,certain,traditional narrative,na,all,English/Spanish,good,constant,370,yes
+,,FMJ,60,approximate,m,2006,certain,traditional narrative,na,all,English/Spanish,good,constant,363,yes
+,,FMJ,60,approximate,m,2006,certain,traditional narrative,na,all,English/Spanish,good,constant,204,yes
+,,NYM,73,certain,m,2006,certain,stimulus retelling,na,all,English/Spanish,good,constant,562,yes
+,,LJI,71,certain,m,2008,certain,traditional narrative,na,all,English/Spanish,medium,punctual,1377,yes
+,,MYY/CMC,60/30,approximate/approximate,f/f,2008,certain,conversation,na,all,English/Spanish,bad,punctual,127,yes
+,,FMJ,70,approximate,m,2008,certain,personal narrative,na,all,English/Spanish,medium,punctual,2140,yes
+,,NTN/MYY,41/30,certain/approximate,f/m,2008,certain,conversation,na,all,English/Spanish,good,constant,303,yes
+,,ESV/VMN,60/50,approximate/approximate,m/f,2008,certain,conversation,na,all,English/Spanish,good,constant,21,yes
+,,CYM/SYM,30/38,approximate/certain,f/f,2008,certain,conversation,na,all,English/Spanish,medium,punctual,325,yes
+,,ONT,42,certain,m,2008,certain,traditional narrative,na,all,English/Spanish,medium,constant,191,yes
+,,ONT,42,certain,m,2008,certain,personal narrative,na,all,English/Spanish,medium,constant,199,yes
+,,MPMT,36,certain,f,2008,certain,personal narrative,na,all,English/Spanish,medium,constant,413,yes
+,,LNN,70,approximate,f,2010,certain,traditional narrative,na,all,English/Spanish,medium,constant,630,yes
+,,FCT,50,certain,f,2010,certain,personal narrative,na,all,English/Spanish,good,constant,558,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,GW106,60,approximate,f,2012-04-21,certain,traditional narrative,na,all,English,medium,punctual,398,no
+,,SO107,60,approximate,f,2012-04-21,certain,traditional narrative,na,all,English,medium,punctual,277,no
+,,SK095,35,certain,m,2017-02-24,certain,personal narrative,na,all,English,medium,constant,1540,no
+,,KA096/BC097,37/49,certain,f/m,2017-02-25,certain,conversation,na,all,English,medium,constant,1328,no
+,,ND001/NH001,40/35,certain,f/f,2019-08-01,certain,conversation,na,all,English,medium,none,5175,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,MA/AH,49/35,certain/certain,m/m,2011-02-03,certain,conversation,na,all,English,medium,punctual,932,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,249,no
+,,AA,40,certain,m,2007-02-04,certain,traditional narrative,na,all,English,good,constant,538,no
+,,AA,40,certain,m,2007-12-30,certain,personal narrative,na,all,English,good,none,394,no
+,,AA,40,certain,m,2006-02-08,certain,personal narrative,na,all,English,medium,constant,249,no
+,,AA,40,certain,m,2003-02-10,certain,traditional narrative,na,all,English,good,constant,710,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,punctual,108,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,135,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,342,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,113,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,112,no
+,,AA,40,certain,m,2005-02-08,certain,traditional narrative,na,all,English,good,constant,55,no
+,,A,55,certain,m,2005-02-08,certain,traditional narrative,na,all,English,good,constant,286,no
+,,AA,40,certain,m,2007-12-28,certain,traditional narrative,na,all,English,good,none,189,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,541,no
+,,AA,40,certain,m,2007-12-25,certain,traditional narrative,na,all,English,good,none,190,no
+,,AA,40,certain,m,2005-02-18,certain,traditional narrative,na,all,English,good,none,498,no
+,,AA,40,certain,m,2006-02-05,certain,traditional narrative,na,all,English,good,none,479,no
+,,AA,40,certain,m,2006-02-05,certain,traditional narrative,na,all,English,good,constant,562,no
+,,MA,49,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,83,no
+,,MA,49,certain,m,2011-01-24,certain,traditional narrative,na,all,English,medium,none,78,no
+,,MA,49,certain,m,2011-01-29,certain,personal narrative,na,all,English,good,none,109,no
+,,MA,49,certain,m,2011-01-29,certain,personal narrative,na,all,English,good,none,86,no
+,,MA,49,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,206,no
+,,AH,35,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,punctual,187,no
+,,AH,35,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,688,no
+,,AH,35,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,350,no
+,,AH,35,certain,m,2011-01-27,certain,personal narrative,na,all,English,good,punctual,283,no
+,,AH,35,certain,m,2011-01-29,certain,stimulus retelling,pear story,all,English,good,punctual,125,no
+,,AH,35,certain,m,2011-01-30,certain,stimulus retelling,pear story,all,English,good,none,297,no
+,,AH,35,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,176,no
+,,AH,35,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,131,no
+,,AH,35,certain,m,2011-01-25,certain,traditional narrative,na,all,English,good,none,40,no
+,,MA,49,certain,m,2006-12-21,certain,traditional narrative,na,all,English,good,constant,128,no
+,,MA,49,certain,m,2006-02-07,certain,traditional narrative,na,all,English,good,constant,115,no
+,,MA,49,certain,m,2006-02-07,certain,traditional narrative,na,all,English,good,constant,154,no
+,,ZH,40,certain,f,2006-02-07,certain,traditional narrative,na,all,English,good,constant,978,no
+,,MA,49,certain,m,2006-02-08,certain,traditional narrative,na,all,English,good,none,165,no
+,,MA,49,certain,m,2006-02-08,certain,traditional narrative,na,all,English,good,constant,206,no
+,,MA,49,certain,m,2006-02-08,certain,traditional narrative,na,all,English,good,constant,76,no
+,,MA,49,certain,m,2006-02-10,certain,traditional narrative,na,all,English,good,constant,171,no
+,,MA,49,certain,m,2006-02-10,certain,traditional narrative,na,all,English,good,constant,158,no
+,,MA,49,certain,m,2006-02-10,certain,traditional narrative,na,all,English,good,constant,238,no
+,,AH,35,certain,m,2006-02-11,certain,traditional narrative,na,all,English,good,constant,165,no
+,,MA,49,certain,m,2006-02-11,certain,traditional narrative,na,all,English,good,constant,155,no
+,,MA,49,certain,m,2006-02-12,certain,traditional narrative,na,all,English,medium,constant,137,no
+,,MA,49,certain,m,2006-02-13,certain,traditional narrative,na,all,English,medium,constant,208,no
+,,A,55,certain,f,2006-02-08,certain,traditional narrative,na,all,English,good,none,272,no
+,,MA,49,certain,m,2006-02-13,certain,personal narrative,na,all,English,good,constant,160,no
+,,MA,49,certain,m,2006-02-13,certain,traditional narrative,na,all,English,good,constant,176,no
+,,MA,49,certain,m,2006-02-14,certain,personal narrative,na,all,English,medium,none,392,no
+,,MA,49,certain,m,2005-01-28,certain,traditional narrative,na,all,English,good,none,693,no
+,,MA,49,certain,m,2005-01-28,certain,traditional narrative,na,all,English,good,none,105,no
+,,MA,49,certain,m,2005-01-28,certain,traditional narrative,na,all,English,good,constant,82,no
+,,MA,49,certain,m,2005-01-30,certain,traditional narrative,na,all,English,good,constant,37,no
+,,MA,49,certain,m,2005-02-02,certain,personal narrative,na,all,English,good,none,165,no
+,,MA,49,certain,m,2005-01-31,certain,traditional narrative,na,all,English,good,constant,300,no
+,,MA,49,certain,m,2005-01-31,certain,traditional narrative,na,all,English,good,constant,482,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,GOH1,70,approximate,f,2015-08-13,certain,conversation,na,all,Korean/English,medium,punctual,1657,no
+,,HJG1,60,approximate,m,2015-08-15,certain,stimulus retelling,frog story,all,English,good,punctual,726,no
+,,HSH1,80,approximate,f,2015-08-20,certain,stimulus retelling,pear story,all,Korean/English,medium,punctual,477,no
+,,YSH1,90,approximate,f,2015-08-21,certain,stimulus retelling,pear story,all,Korean/English,bad,constant,633,no
+,,HSH1,80,approximate,f,2015-07-14,certain,conversation,na,all,Korean/English,medium,punctual,1624,no
+,,HSH1,80,approximate,f,2015-07-14,certain,conversation,na,all,Korean/English,medium,punctual,1000,no
+,,HYJ1,80,approximate,f,2015-12-21,certain,conversation,na,all,Korean/English,medium,punctual,472,no
+,,HYJ1,80,approximate,f,2015-12-25,certain,conversation,na,all,Korean/English,medium,punctual,683,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,BB,47,certain,f,2011-05-26,certain,stimulus retelling,pear story,all,English,good,constant,669,no
+,,DD,70,certain,f,2011-05-26,certain,personal narrative,na,all,English,good,punctual,1696,no
+,,FF,26,certain,m,2011-06-07,certain,stimulus retelling,pear story,all,English,good,none,859,no
+,,BD,44,certain,m,2011-05-27,certain,personal narrative,na,all,English,good,constant,1822,no
+,,CP,49,certain,m,2012-05-19,certain,traditional narrative,na,all,English,good,none,1027,no
+,,CP,49,certain,m,2012-05-19,certain,traditional narrative,na,all,English,good,punctual,915,no
+,,CP,49,certain,m,2012-05-19,certain,traditional narrative,na,all,English,good,punctual,826,no
+,,II,54,certain,m,2012-04-23,certain,traditional narrative,na,all,English,medium,constant,706,no
+,,AA/ZZ,48/36,certain,m/m,2011-06-04,certain,conversation,na,all,English,good,punctual,1458,yes
+,,CC,36,certain,m,2011-05-26,certain,stimulus retelling,pear story,all,English,medium,constant,812,yes
+,,CL,44,certain,m,2011-05-27,certain,personal narrative,na,all,English,good,punctual,189,yes
+,,EE,43,certain,m,2011-06-04,certain,traditional narrative,na,all,English,good,punctual,1011,yes
+,,BD,44,certain,m,2011-05-27,certain,traditional narrative,na,all,na,good,none,66,yes
+,,GG,43,certain,f,2012-05-20,certain,personal narrative,na,all,English,medium,punctual,1193,yes
+,,MM,60,approximate,m,2012-03-24,certain,personal narrative,na,all,English,medium,constant,464,yes
+,,NN,60,approximate,m,2012-03-24,certain,personal narrative,na,all,English,medium,constant,942,yes
+,,OO,70,certain,m,2012-03-24,certain,personal narrative,na,all,English,medium,constant,143,yes
+,,HH,63,certain,m,2012-05-27,certain,personal narrative,na,all,English,medium,punctual,1205,yes
+,,KK,63,na,m,2012-05-27,certain,personal narrative,na,all,English,medium,punctual,1812,yes
+,,LL,63,na,m,2012-05-27,certain,personal narrative,na,all,English,good,punctual,1946,yes
+,,JJ,16,certain,f,2013-07-15,certain,traditional narrative,na,all,English,good,punctual,693,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,Ngahring,80,certain,m,2015-12-02,certain,traditional narrative,na,none,English,good,punctual,1340,no
+,,Ngahring,80,certain,m,2015-12-02,certain,traditional narrative,na,none,English,good,none,335,no
+,,Ngahring,80,certain,m,2015-12-02,certain,traditional narrative,na,none,English,medium,punctual,785,no
+,,Ngahring,80,certain,m,2015-12-02,certain,traditional narrative,na,none,English,medium,punctual,810,no
+,,Ngahring,80,certain,m,2015-12-03,certain,traditional narrative,na,none,English,good,none,365,no
+,,Ngahring,80,certain,m,2015-12-03,certain,traditional narrative,na,none,English,good,none,403,no
+,,Ngahring,80,certain,m,2015-12-03,certain,traditional narrative,na,none,English,good,none,161,no
+,,Ngahring,80,certain,m,2015-12-03,certain,traditional narrative,na,none,English,good,none,614,no
+,,Mohtung,100,certain,m,2016-02-20,certain,personal narrative,na,none,English,medium,none,261,no
+,,Mohtung,100,certain,m,2016-02-20,certain,personal narrative,na,none,English,medium,none,121,no
+,,Mohtung,100,certain,m,2016-02-20,certain,traditional narrative,na,none,English,medium,none,96,no
+,,Ngahring,80,certain,m,2015-12-02,certain,traditional narrative,na,none,English,medium,punctual,1117,no
+,,Ngahring,80,certain,m,2015-12-02,certain,traditional narrative,na,none,English,bad,punctual,812,no
+,,Thumri,76,certain,f,2016-02-20,certain,traditional narrative,na,none,English,medium,constant,1525,no
+,,Pethun,60,certain,f,2016-02-21,certain,traditional narrative,na,none,English,medium,none,161,no
+,,Sharingla,44,certain,f,2016-02-21,certain,traditional narrative,na,none,English,medium,constant,683,no
+,,Tohnuwng,84,certain,f,2016-02-21,certain,traditional narrative,na,none,English,medium,punctual,82,no
+,,Thumhring,79,certain,f,2016-02-27,certain,traditional narrative,na,none,English,good,punctual,601,no
+,,Thungno,74,certain,m,2016-02-27,certain,traditional narrative,na,none,English,good,none,338,no
+,,Thumhring,79,certain,f,2016-03-18,certain,traditional narrative,na,none,English,good,none,314,no
+,,Thumhring,79,certain,f,2016-03-18,certain,traditional narrative,na,none,English,medium,punctual,1201,no
+,,Hringvel/Shanghnim,76/67,certain,f/f,2016-09-24,certain,conversation,na,none,English,bad,punctual,294,no
+,,Angkam/Damhring,51/58,certain,f/m,2016-10-14,certain,conversation,na,none,English,bad,constant,596,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,RL,60,approximate,f,2010-06-15,certain,traditional narrative,na,all,Bislama/English,good,constant,709,no
+,,FB,50,approximate,m,2013-07-30,certain,traditional narrative,na,all,Bislama/English,medium,punctual,783,no
+,,IM,30,approximate,m,2011-08-22,certain,traditional narrative,na,none,Bislama/English,medium,punctual,681,no
+,,IM,30,approximate,m,2011-08-22,certain,traditional narrative,na,all,Bislama/English,medium,none,1113,no
+,,AT,30,approximate,m,2011-08-24,certain,traditional narrative,na,all,Bislama/English/German,medium,punctual,479,no
+,,SJ,40,approximate,m,2011-08-24,certain,traditional narrative,na,all,Bislama/English/German,medium,punctual,763,no
+,,IM,75,approximate,m,2012-08-27,certain,traditional narrative,na,all,Bislama/English,good,punctual,595,no
+,,RJ,16,approximate,m,2011-08-29,certain,traditional narrative,na,all,Bislama/English/German,good,punctual,347,no
+,,AT,30,approximate,m,2011-09-03,certain,traditional narrative,na,none,Bislama/English,good,punctual,780,no
+,,CA,30,approximate,m,2012-09-11,certain,traditional narrative,na,break/gloss,Bislama/English,medium,constant,859,no
+,,IM,75,approximate,m,2012-09-11,certain,traditional narrative,na,all,Bislama/English,medium,punctual,2228,no
+,,EAG,40,approximate,m,2017-06-30,certain,traditional narrative,na,all,Bislama/English,medium,none,705,no
+,,FB,50,approximate,m,2017-06-30,certain,traditional narrative,na,all,Bislama/English,medium,punctual,662,no
+,,IM,30,approximate,m,2017-06-30,certain,traditional narrative,na,all,Bislama/English,medium,punctual,704,no
+,,TA,30,approximate,f,2017-06-30,certain,traditional narrative,na,all,Bislama/English,medium,punctual,291,no
+,,ABT,35,approximate,m,2018-07-06,certain,traditional narrative,na,all,Bislama/English,medium,punctual,339,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,VNS,47,certain,m,2006,certain,personal narrative,na,all,Russian,medium,punctual,145,no
+,,VNS,47,certain,m,2006,certain,personal narrative,na,all,Russian,medium,punctual,120,no
+,,VNS,47,certain,m,2006,certain,personal narrative,na,all,Russian,bad,constant,185,no
+,,RIB,49,certain,f,2006,certain,personal narrative,na,all,Russian,medium,punctual,90,no
+,,VKY,53,certain,f,2007,certain,traditional narrative,na,all,Russian,good,punctual,335,no
+,,VKY,53,certain,f,2007,certain,traditional narrative,na,all,Russian,medium,none,603,no
+,,VKY,53,certain,f,2007,certain,traditional narrative,,all,Russian,good,none,457,no
+,,DMK,54,certain,m,2007,certain,personal narrative,na,all,Russian,good,none,149,no
+,,GNK,75,certain,m,2007,certain,personal narrative,na,all,Russian,bad,punctual,486,no
+,,AIP,50,certain,m,2007,certain,personal narrative,na,all,Russian,medium,punctual,449,no
+,,VNU,62,certain,m,2007,certain,traditional narrative,na,all,Russian,good,punctual,518,no
+,,AVN,42,certain,m,2007,certain,personal narrative,na,all,Russian,medium,punctual,131,no
+,,SMA,66,certain,f,2007,certain,personal narrative,na,all,Russian,medium,punctual,289,no
+,,SMA,66,certain,f,2007,certain,personal narrative,na,all,Russian,medium,punctual,369,no
+,,VIU,61,certain,f,2008,certain,personal narrative,na,all,Russian,good,punctual,112,no
+,,VIU,61,certain,f,2008,certain,personal narrative,na,all,Russian,good,punctual,254,no
+,,VIU,61,certain,f,2008,certain,personal narrative,na,all,Russian,medium,punctual,134,no
+,,GKL,70,certain,m,2008,certain,personal narrative,na,all,Russian,good,punctual,78,no
+,,GKL,70,certain,m,2008,certain,personal narrative,na,all,Russian,medium,punctual,111,no
+,,SDB,49,certain,f,2008,certain,personal narrative,na,all,Russian,good,punctual,188,no
+,,DAK,53,certain,m,2008,certain,personal narrative,na,all,Russian,bad,punctual,154,no
+,,MDK,19,certain,m,2008,certain,conversation,na,all,Russian,good,none,72,no
+,,MDL,72,certain,f,2008,certain,personal narrative,na,all,Russian,good,none,64,no
+,,GPB,55,certain,m,2009,certain,personal narrative,na,all,Russian,bad,punctual,99,no
+,,ADC,69,certain,f,2011,certain,personal narrative,na,all,Russian,medium,punctual,271,no
+,,MDT,60,certain,f,2011,certain,personal narrative,na,all,Russian,good,none,161,no
+,,MDT,60,certain,f,2011,certain,personal narrative,na,all,Russian,medium,none,168,no
+,,MDT,60,certain,f,2011,certain,personal narrative,na,all,Russian,good,none,71,no
+,,LAY,71,certain,f,2011,certain,personal narrative,na,all,Russian,medium,punctual,597,no
+,,TAB,56,certain,f,2011,certain,personal narrative,na,all,Russian,medium,punctual,398,no
+,,VPU,63,certain,m,2014,certain,personal narrative,na,all,Russian,medium,punctual,201,no
+,,VPU,63,certain,m,2014,certain,personal narrative,na,all,Russian,medium,punctual,128,no
+,,PIM,72,certain,m,2016,certain,personal narrative,na,all,Russian,medium,punctual,150,no
+,,IIT,65,certain,f,2016,certain,personal narrative,na,all,Russian,good,none,249,no
+,,IIT,65,certain,f,2016,certain,personal narrative,na,all,Russian,medium,punctual,183,no
+,,IIT,65,certain,f,2016,certain,personal narrative,na,all,Russian,medium,punctual,146,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,AnIM,49,certain,f,2009,certain,personal narrative,,all,English/German/Russian,good,none,251,no
+,,AnIM,49,certain,f,2009,certain,stimulus retelling,pear story,all,English/German/Russian,good,none,217,no
+,,AnMS,60,approximate,m,1972,certain,personal narrative,,all,English/German/Russian,medium,none,592,no
+,,BeAM,80,approximate,f,1990,approximate,traditional narrative,,all,English/German/Russian,good,none,1903,no
+,,BeES,62,certain,f,1997,certain,personal narrative,,all,English/German/Russian,bad,none,1538,no
+,,BeES,75,certain,f,2010,certain,personal narrative,,all,English/German/Russian,good,none,773,no
+,,KiMN,60,certain,m,1975,certain,personal narrative,,all,English/German/Russian,bad,none,911,no
+,,KiMN,75,certain,m,1990,certain,traditional narrative,,all,English/German/Russian,medium,none,1809,no
+,,SuAA,65,approximate,f,2000,approximate,personal narrative,,all,English/German/Russian,good,none,784,no
+,,KuDP,9,certain,f,2009,certain,personal narrative,,all,English/German/Russian,good,none,146,yes
+,,ChVD,58,certain,m,1982,certain,personal narrative,,all,English/German/Russian,medium,none,969,yes
+,,ErTS,63,certain,f,1994,certain,personal narrative,,all,English/German/Russian,medium,none,1245,yes
+,,Anka,10,approximate,f,2009,certain,personal narrative,,all,English/German/Russian,good,some,106,yes
+,,KiPP,77,certain,f,2009,certain,personal narrative,,all,English/German/Russian,good,none,696,yes
+,,KiPP/KuNS,72/35,certain/approximate,f/f,2002,certain,conversation,,all,English/German/Russian,good,none,652,yes
+,,KuDP,9,certain,f,2009,certain,personal narrative,,all,English/German/Russian,good,some,281,yes
+,,MiPP,60,approximate,m,1996,certain,traditional narrative,,all,English/German/Russian,medium,none,769,yes
+,,NaLE,63,certain,f,2002,certain,traditional narrative,,all,English/German/Russian,good,none,456,yes
+,,PoNA/AkPG,na/na,na/na,na/na,1994,certain,conversation,,all,English/German/Russian,good,some,1272,yes
+,,PoTY,42,certain,f,2009,certain,personal narrative,,all,English/German/Russian,medium,some,1001,yes
+,,PoXN,55,approximate,f,1970,certain,traditional narrative,,all,English/German/Russian,good,none,725,yes
+,,SuAA,65,approximate,f,2000,approximate,personal narrative,,all,English/German/Russian,medium,none,232,yes
+,,UkET,56,certain,f,1994,certain,traditional narrative,,all,English/German/Russian,good,none,401,yes
+,,UkET,64,certain,f,2002,certain,traditional narrative,,all,English/German/Russian,bad,none,672,yes
+,,UkOA,51,certain,m,2010,certain,personal narrative,,all,English/German/Russian,good,none,565,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,NG-LBK,60,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,507,no
+,,NG-LBK,60,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,bad,constant,203,no
+,,UJ-UBK,60,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,433,no
+,,UJ-UBK,60,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,217,no
+,,MSH-UBL,40,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,none,296,no
+,,LO-LS,50,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,punctual,127,no
+,,LO-LS,50,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,none,401,no
+,,LO-LS,50,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,punctual,577,no
+,,LO-LS,50,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,143,no
+,,LO-LS,50,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,769,no
+,,NX-CH,40,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,396,no
+,,VG-LS,50,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,426,no
+,,VG-LS,50,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,233,no
+,,VG-LS,50,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,261,no
+,,VG-LS,50,approximate,m,2012,approximate,traditional narrative,na,none,Georgian/English,medium,constant,567,no
+,,NT-LT,40,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,good,constant,367,no
+,,NT-LT,40,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,good,constant,356,no
+,,SHO-LS,70,approximate,m,2012,approximate,traditional narrative,na,none,Georgian/English,medium,constant,495,no
+,,SHO-LS,70,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,234,no
+,,SHO-LS,70,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,219,no
+,,SHO-LS,70,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,93,no
+,,SHO-LS,70,approximate,m,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,446,no
+,,SHO-LS,70,approximate,m,2012,approximate,traditional narrative,na,none,Georgian/English,medium,constant,226,no
+,,BM-CH,60,approximate,f,2012,approximate,traditional narrative,na,none,Georgian/English,medium,constant,394,no
+,,BM-CH,60,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,428,no
+,,BM-CH,60,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,170,no
+,,BM-CH,60,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,233,no
+,,BM-CH,60,approximate,f,2012,approximate,personal narrative,na,none,Georgian/English,medium,constant,678,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,TS01,52,certain,m,2010,certain,traditional narrative,na,break/gloss,English,good,punctual,588,no
+,,TS02,64,certain,m,2010,certain,traditional narrative,na,break/gloss,English,good,punctual,1671,no
+,,TS01,52,certain,m,2010,certain,traditional narrative,na,break/gloss,English,good,punctual,423,no
+,,TS01,52,certain,m,2010,certain,traditional narrative,na,break/gloss,English,good,punctual,587,no
+,,TS01,52,certain,m,2010,certain,traditional narrative,na,break/gloss,English,good,punctual,1790,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,NK01,50,approximate,m,2000,certain,traditional narrative,na,all,English,medium,none,2666,no
+,,NK02,60,approximate,f,2004,certain,traditional narrative,na,all,English,good,punctual,1794,no
+,,NK01,50,approximate,m,2000,certain,traditional narrative,na,all,English,medium,none,2863,no
+,,NK02,65,approximate,f,2004,certain,traditional narrative,na,all,English,good,constant,1042,no
+,,NK01,50,approximate,m,2000,certain,traditional narrative,na,all,English,medium,none,1293,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,GN,48,certain,m,2006-06-11,certain,traditional narrative,na,break/gloss,English/Portuguese,good,constant,3959,no
+,,JC,58,certain,m,2006-06-09,certain,traditional narrative,na,break/gloss,English/Portuguese,good,constant,639,no
+,,MB,65,certain,m,2006-06-17,certain,personal narrative,na,break/gloss,English/Portuguese,good,constant,5445,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,VR01,20,approximate,f,2007,certain,traditional narrative,na,all,English,good,punctual,855,no
+,,VR02,40,approximate,m,2007,certain,traditional narrative,na,all,English,medium,punctual,1003,no
+,,VR05,20,approximate,m,2007,certain,traditional narrative,na,all,English,good,punctual,1873,no
+,,VR06,60,approximate,m,2007,certain,traditional narrative,na,all,English,good,punctual,1189,no
+,,VR08,60,approximate,m,2007,certain,traditional narrative,na,all,English,good,punctual,4239,no
+,,VR09,30,approximate,m,2007,certain,traditional narrative,na,all,English,good,punctual,1465,no
+,,VR10,40,approximate,f,2007,certain,traditional narrative,na,all,English,good,constant,615,no
+,,VR10,40,approximate,f,2007,certain,traditional narrative,na,all,English,good,constant,1141,no
+,,VR03,40,approximate,m,2007,certain,traditional narrative,na,all,English,good,punctual,899,yes
+,,VR04,40,approximate,m,2007,certain,traditional narrative,na,all,English,good,punctual,1172,yes
+,,VR07,60,approximate,m,2007,certain,traditional narrative,na,all,English,medium,constant,3343,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,ET1,37,certain,f,2015-06-26,certain,personal narrative,na,break/gloss,English,medium,constant,268,no
+,,IR1,53,certain,f,2015-06-26,certain,personal narrative,na,break/gloss,English,medium,constant,417,no
+,,LM1,72,approximate,f,2015-08-06,certain,traditional narrative,na,break/gloss,English,medium,constant,515,no
+,,LM1,72,approximate,f,2015-11-17,certain,traditional narrative,na,break/gloss,English,medium,constant,342,no
+,,RL1,61,certain,f,2015-06-26,certain,personal narrative,na,break/gloss,English,medium,constant,104,no
+,,RT1,62,certain,m,2016-06-16,certain,stimulus retelling,pear story,break/gloss,English,medium,constant,591,no
+,,AT1,67,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Chore Girl storyboard,none,English,good,constant,194,no
+,,AT1,67,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Fortune Teller storyboard,none,English,good,constant,221,no
+,,AT1,67,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Bill vs the Weather storyboard,none,English,good,constant,311,no
+,,AT1,67,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Woodchopper storyboard,none,English,good,constant,239,no
+,,AT1,67,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Red Yam storyboard,none,English,good,constant,208,no
+,,ET1,37,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Fortune Teller storyboard,none,English,good,constant,427,no
+,,ET1,37,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Bill vs the Weather storyboard,none,English,good,constant,518,no
+,,ET1,37,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Woodchopper storyboard,none,English,good,constant,389,no
+,,ET1,37,certain,f,2017-07-30,certain,stimulus retelling,MelaTAMP Red Yam storyboard,none,English,good,constant,328,no
+,,SJ1,61,certain,m,2015-06-10,certain,traditional narrative,na,break/gloss,English,good,constant,861,no
+,,SJ1,61,certain,m,2015-06-10,certain,personal narrative,na,break/gloss,English,good,constant,721,no
+,,SJ1,61,certain,m,2015-11-20,certain,personal narrative,na,break/gloss,English,medium,constant,950,no
+,,TH1,49,certain,m,2015-06-26,certain,personal narrative,na,break/gloss,English,medium,constant,151,no
+,,WS1,54,certain,m,2014-05-10,certain,traditional narrative,na,break/gloss,English,medium,constant,1223,no
+,,WS1,54,certain,m,2014-05-10,certain,traditional narrative,na,break/gloss,English,medium,constant,439,no
+,,WS1,54,certain,m,2014-05-10,certain,personal narrative,na,break/gloss,English,good,constant,23,no
+,,WS1,54,certain,m,2014-05-10,certain,personal narrative,na,break/gloss,English,good,constant,36,no
+,,WS1,54,certain,m,2014-05-10,certain,personal narrative,na,break/gloss,English,good,constant,117,no
+,,WS1,55,certain,m,2015-06-14,certain,personal narrative,na,break/gloss,English,good,constant,287,no
+,,WS3,34,certain,f,2016-06-17,certain,procedural,pear story,break/gloss,English,medium,constant,290,no
+,,JT1/WS1,64/55,certain/certain,m/m,2015-11-19,certain,conversation,na,break/gloss,English,bad,constant,793,yes
+,,BK1,60,approximate,m,2015-06-06,certain,traditional narrative,na,break/gloss,English,medium,punctual,510,yes
+,,KS1/BK1,40/60,approximate/approximate,m/m,2015-12-01,certain,conversation,na,break/gloss,English,medium,constant,451,yes
+,,KS1,40,approximate,m,2015-06-06,certain,personal narrative,na,break/gloss,English,medium,constant,1545,yes
+,,KS1/SJ1,50/61,approximate/certain,m/m,2015-12-01,certain,conversation,na,none,English,bad,constant,1405,yes
+,,KS2,14,certain,f,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,117,yes
+,,KS2,14,certain,f,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,28,yes
+,,KS2,14,certain,f,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,141,yes
+,,LM1/WS1,72/54,approximate/certain,f/m,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,121,yes
+,,LM1,72,approximate,f,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,83,yes
+,,LM1,72,approximate,f,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,27,yes
+,,LM1/WS1,72/54,approximate/certain,f/m,2015-11-17,certain,conversation,na,break/gloss,English,bad,constant,23,yes
+,,IR1/LM1,54/72,certain/approximate,f/f,2016-06-16,certain,conversation,na,break/gloss,English,bad,constant,3717,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,Iar,71,certain,f,2003,approximate,traditional narrative,na,break/gloss,English,medium,punctual,1869,no
+,,Mat,30,approximate,f,2004,approximate,traditional narrative,na,break/gloss,English,good,punctual,873,no
+,,Sii,66,certain,f,2004,approximate,traditional narrative,na,break/gloss,English,good,punctual,2793,no
+,,Viv,40,approximate,f,2004,approximate,traditional narrative,na,break/gloss,English,medium,punctual,873,no
+,,Asu,40,approximate,f,2004,approximate,traditional narrative,na,break/gloss,English,medium,punctual,736,no
+,,Gol,30,approximate,m,2004,approximate,traditional narrative,na,break/gloss,English,medium,punctual,232,no
+,,Nah,81,certain,m,2003,approximate,traditional narrative,na,break/gloss,English,good,punctual,951,no
+,,Nan,73,certain,f,2003,approximate,traditional narrative,na,break/gloss,English,medium,punctual,1209,no
+,,Pur,75,approximate,m,2003,approximate,traditional narrative,na,break/gloss,English,good,punctual,780,no
+,,San,72,certain,m,2003,approximate,traditional narrative,na,break/gloss,English,medium,punctual,881,no
+,,Sha,18,certain,f,2003,approximate,traditional narrative,na,break/gloss,English,good,punctual,951,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,EN01,85,approximate,m,1975,certain,personal narrative,na,all,English,medium,punctual,4782,no
+,,EN03,87,approximate,m,1976,certain,personal narrative,na,all,English,medium,punctual,4216,no
+,,EN02,80,certain,m,1980,certain,personal narrative,na,all,english,medium,none,3868,yes
+,,EN01,85,approximate,m,1975,certain,personal narrative,na,all,english,medium,none,4139,yes
+,,EN01,85,approximate,m,1975,certain,personal narrative,na,all,english,medium,punctual,4958,yes
+,,EN03,87,approximate,m,1976,certain,personal narrative,na,all,english,medium,none,4250,yes
+,,EN04,61,approximate,m,1985,certain,personal narrative,na,all,english,bad,none,4935,yes
+,,EN04,61,approximate,m,1985,certain,personal narrative,na,all,english,bad,none,5097,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,unine15-001,21,certain,m,2014-12-21,certain,personal narrative,na,pos,French,good,none,1517,no
+,,unine15-007,69,certain,f,2015-01-22,certain,personal narrative,na,pos,French,good,constant,1466,no
+,,unine15-017,74,certain,m,2015-02-04,certain,personal narrative,na,pos,French,bad,punctual,1232,no
+,,unine15-021,79,certain,m,2015-02-14,certain,personal narrative,na,pos,French,bad,punctual,1566,no
+,,unine15-039,38,certain,m,2015-03-30,certain,personal narrative,na,pos,French,good,punctual,1814,no
+,,unine15-043,20,certain,f,2015-03-26,certain,personal narrative,na,pos,French,medium,punctual,2326,no
+,,unine15-054,49,certain,f,2015-05-08,certain,personal narrative,na,pos,French,medium,medium,1814,no
+,,unine15-062,22,certain,f,2015-06-10,certain,personal narrative,na,pos,French,good,none,1604,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,SD01,60,approximate,m,2012,certain,personal narrative,na,all,English,medium,constant,413,no
+,,SD02,60,approximate,m,2013,certain,traditional narrative,na,all,English,good,constant,317,no
+,,SD02,60,approximate,m,2013,certain,personal narrative,na,all,English,medium,constant,415,no
+,,SD03,60,approximate,m,2011,certain,personal narrative,na,all,English,medium,constant,495,no
+,,SD01,60,approximate,m,2013,certain,traditional narrative,na,all,English,medium,constant,409,no
+,,SD02,60,approximate,m,2013,certain,traditional narrative,na,all,English,medium,punctual,445,no
+,,SD04,60,approximate,m,2012,certain,personal narrative,na,all,English,bad,punctual,669,no
+,,SD03,60,approximate,m,2011,certain,personal narrative,na,all,English,good,constant,184,no
+,,KZ,80,approximate,f,2012-08-09,certain,personal narrative,na,none,Russian,good,punctual,1799,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,GG,60,approximate,m,2015-12-21,certain,personal narrative,na,none,Swahili,good,none,652,no
+,,GG,60,approximate,m,2015-12-21,certain,traditional narrative,na,none,Swahili/English,good,none,499,no
+,,GG,60,approximate,m,2015-12-21,certain,personal narrative,na,none,Swahili/English,good,none,163,no
+,,MM,55,approximate,f,2017-01-25,certain,traditional narrative,na,none,Swahili/English,good,none,120,no
+,,MM,55,approximate,f,2017-01-25,certain,traditional narrative,na,none,Swahili/English,good,none,151,no
+,,MM,55,approximate,f,2017-01-25,certain,personal narrative,na,none,Swahili/English,good,none,55,no
+,,MM,55,approximate,f,2017-01-25,certain,traditional narrative,na,none,Swahili/English,good,none,344,no
+,,MM,55,approximate,f,2017-01-25,certain,personal narrative,na,none,Swahili/English,good,none,172,no
+,,MM,55,approximate,f,2017-01-25,certain,traditional narrative,na,none,Swahili/English,good,none,168,no
+,,MM,55,approximate,f,2017-01-25,certain,personal narrative,na,none,Swahili/English,good,none,224,no
+,,MM,55,approximate,f,2017-01-25,certain,traditional narrative,na,none,Swahili/English,good,none,182,no
+,,MM,55,approximate,f,2017-01-25,certain,personal narrative,na,none,Swahili/English,good,none,232,no
+,,MM,55,approximate,f,2017-01-25,certain,traditional narrative,na,none,Swahili/English,good,none,162,no
+,,WQ,70,approximate,m,2017-03-10,certain,personal narrative,na,none,Swahili/English,good,punctual,158,no
+,,GB,50,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,293,no
+,,UG,40,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,183,no
+,,UG,40,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,217,no
+,,UB,35,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,445,no
+,,UB,35,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,193,no
+,,WQ,70,approximate,m,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,252,no
+,,WQ,70,approximate,m,2017-03-10,certain,personal narrative,na,none,Swahili/English,good,punctual,229,no
+,,MQ,40,approximate,f,2017-03-10,certain,personal narrative,na,none,Swahili/English,good,punctual,277,no
+,,MQ,40,approximate,f,2017-03-10,certain,personal narrative,na,none,Swahili/English,good,punctual,380,no
+,,GG,60,approximate,m,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,390,no
+,,GB,50,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,87,no
+,,GB,50,approximate,f,2017-03-10,certain,traditional narrative,na,none,Swahili/English,good,punctual,98,no
+,,GG,60,approximate,m,2017-03-14,certain,traditional narrative,na,none,Swahili/English,medium,punctual,335,no
+,,GG,60,approximate,m,2017-03-14,certain,traditional narrative,na,none,Swahili/English,medium,punctual,95,no
+,,BG,70,approximate,f,2017-03-03,certain,personal narrative,na,none,Swahili/English,good,punctual,224,no
+,,BG,70,approximate,f,2017-03-03,certain,traditional narrative,na,none,Swahili/English,good,punctual,189,no
+,,BG,70,approximate,f,2017-03-08,certain,personal narrative,na,none,Swahili/English,good,punctual,73,no
+,,JMM,50,approximate,m,2017-03-08,certain,traditional narrative,na,none,Swahili/English,good,none,95,no
+,,GW,30,approximate,f,2017-03-08,certain,personal narrative,na,none,Swahili/English,good,punctual,199,no
+,,WQ,70,approximate,m,2017-03-08,certain,traditional narrative,na,none,Swahili/English,good,punctual,284,no
+,,DQ,60,approximate,f,2017-03-08,certain,personal narrative,na,none,Swahili/English,good,none,139,no
+,,DQ,60,approximate,f,2017-03-08,certain,traditional narrative,na,none,Swahili/English,good,none,94,no
+,,DQ,60,approximate,f,2017-03-08,certain,personal narrative,na,none,Swahili/English,good,none,62,no
+,,GB,50,approximate,m,2017-03-08,certain,traditional narrative,na,none,Swahili/English,good,punctual,333,no
+,,GB,50,approximate,m,2017-03-08,certain,traditional narrative,na,none,Swahili/English,good,none,129,no
+,,JW,30,approximate,m,2017-03-08,certain,traditional narrative,na,none,Swahili/English,good,punctual,207,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,KBK/OAS,32/31,certain/certain,m/m,2012-05-02,certain,personal narrative,na,none,English,medium,none,280,no
+,,KBK/OAS,32/31,certain/certain,m/m,2012-05-02,certain,personal narrative,na,none,English,medium,none,146,no
+,,KBK/GAK,33/66,certain/certain,m/m,2013-05-20,certain,personal narrative,na,none,English,medium,punctual,1386,no
+,,KBK/GAK,33/66,certain/certain,m/m,2013-05-10,certain,personal narrative,na,none,English,medium,punctual,866,no
+,,KBK/GAK,33/66,certain/certain,m/m,2013-05-24,certain,personal narrative,na,none,English,good,punctual,1013,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,321,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,punctual,413,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,828,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,734,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,268,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,212,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,286,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,463,no
+,,KBK/NHK,33/65,certain/certain,m/m,2013-02-01,certain,personal narrative,na,none,English,good,none,438,no
+,,KBK/GAK,33/66,certain/certain,m/m,2013-05-24,certain,personal narrative,na,none,English,medium,punctual,1012,no
+,,HSD,60,certain,f,2013-08-30,certain,personal narrative,na,none,English,medium,punctual,599,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,BPN,73,certain,m,2011-11-19,certain,personal narrative,na,none,German,medium,none,738,no
+,,EMZ,86,certain,m,2012-10-23,certain,personal narrative,na,none,German,medium,punctual,1001,no
+,,EMZ,86,certain,m,2012-10-23,certain,personal narrative,na,none,German,medium,none,767,no
+,,EMZ,86,certain,m,2012-10-23,certain,personal narrative,na,none,German,medium,none,1484,no
+,,EMZ,86,certain,m,2012-10-23,certain,personal narrative,na,none,German,medium,none,109,no
+,,BPN,73,certain,m,2012-11-02,certain,personal narrative,na,none,German,medium,none,902,no
+,,BPN,73,certain,m,2012-11-02,certain,personal narrative,na,none,German,medium,none,661,no
+,,BPN,73,certain,m,2012-11-02,certain,personal narrative,na,none,German,medium,none,1115,no
+,,EMZ,86,certain,m,2012-12-14,certain,personal narrative,na,none,German,medium,none,244,no
+,,EMZ,86,certain,m,2012-12-14,certain,personal narrative,na,none,German,medium,none,88,no
+,,EMZ,86,certain,m,2012-12-14,certain,personal narrative,na,none,German,medium,none,298,no
+,,EMZ,86,certain,m,2012-12-14,certain,personal narrative,na,none,German,medium,none,186,no
+,,EMZ,86,certain,m,2012-12-14,certain,personal narrative,na,none,German,medium,none,188,no
+,,LRE,77,certain,f,2013-08-12,certain,personal narrative,na,none,German,medium,none,535,no
+,,FKM,73,certain,m,2013-08-30,certain,personal narrative,na,none,German,medium,none,1930,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,HS,45,certain,f,2009,certain,procedural,na,break/gloss,English/French,medium,punctual,948,yes
+,,CS,66,certain,m,2011,certain,traditional narrative,na,break/gloss,English/French,good,punctual,397,no
+,,CS,66,certain,m,2011,certain,procedural,na,break/gloss,English/French,good,punctual,342,no
+,,CS,66,certain,m,2011,certain,procedural,na,break/gloss,English/French,good,punctual,212,no
+,,BS,20,certain,f,2010,certain,traditional narrative,na,break/gloss,English/French,good,constant,295,no
+,,BS,20,certain,f,2010,certain,traditional narrative,na,break/gloss,English/French,good,constant,1224,no
+,,JS,70,approximate,m,2010,certain,procedural,na,none,French,good,constant,608,no
+,,JS,70,approximate,m,2010,certain,procedural,na,break/gloss,English/French,good,constant,194,no
+,,AB/AS,61/65,certain/certain,m/m,2009,certain,conversation,na,break/gloss,English/French,good,constant,493,no
+,,AB,61,certain,m,2009,certain,traditional narrative,na,break/gloss,English/French,good,constant,245,no
+,,AB,61,certain,m,2009,certain,procedural,na,break/gloss,English/French,good,constant,195,no
+,,JS,70,approximate,m,2010,certain,procedural,na,none,English/French,medium,constant,1736,no
+,,AKS/EC,67/76,certain/certain,m/m,2011,certain,conversation,na,break/gloss,English/French,good,punctual,452,no
+,,AJB/LM,78/37,certain/certain,f/m,2011,certain,conversation,na,none,French,good,constant,1409,no
+,,AJB/LM,78/37,certain/certain,f/m,2011,certain,conversation,na,break/gloss,English/French,bad,constant,620,no
+,,LM,37,certain,m,2011,certain,traditional narrative,na,break/gloss,English/French,good,constant,546,no
+,,CS,69,certain,m,2014,certain,traditional narrative,na,break/gloss,English/French,good,constant,1344,no
+,,LM,37,approximate,m,2011,approximate,procedural,na,break/gloss,English/French,medium,constant,1165,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,MM,55,certain,m,2008-03-18,certain,personal narrative,na,all,Spanish,medium,constant,396,no
+,,JUM,61,certain,f,2005-08-09,certain,traditional narrative,na,all,Spanish,medium,constant,978,no
+,,V,50,certain,f,2004-12-27,certain,traditional narrative,na,all,Spanish,medium,constant,946,no
+,,ROR,50,certain,f,2005-01-31,certain,traditional narrative,na,all,Spanish,medium,constant,537,no
+,,JUM,61,certain,f,2005-07-27,certain,traditional narrative,na,all,Spanish,medium,constant,546,no
+,,MM,52,certain,m,2005-08-02,certain,traditional narrative,na,all,Spanish/English,good,punctual,2612,no
+,,JUM,61,certain,f,2005-02-09,certain,traditional narrative,na,all,Spanish,medium,punctual,1034,no
+,,CAP,60,certain,m,2005-08-12,certain,traditional narrative,na,all,Spanish,bad,constant,1177,no
+,,JP,63,certain,m,2008-03-19,certain,personal narrative,na,all,Spanish,medium,constant,205,no
+,,AP,45,approximate,m,2005-07-30,certain,traditional narrative,na,all,Spanish,medium,constant,205,yes
+,,MM,52,certain,m,2005-01-31,certain,traditional narrative,na,all,Spanish,medium,constant,1016,yes
+,,JUM/JP/AM,61/61/30,certain/certain/approximate,f/m/m,2005-07-25,certain,conversation,na,all,Spanish,bad,constant,194,yes
+,,JUM/LIR/JP,61/30/61,certain/approximate/certain,f/m/m,2005-02-09,certain,conversation,na,all,Spanish,bad,constant,31,yes
+,,FEB/ARR/OLO/JUM,30/50/40/61,approximate/approximate/approximate/certain,na/na/na/f,2005-02-09,certain,conversation,na,all,Spanish,bad,constant,96,yes
+,,RA,52,certain,f,2005-07-19,certain,traditional narrative,na,all,Spanish,medium,constant,347,yes
+,,VIR,55,approximate,m,2006-08-05,certain,procedural,na,all,Spanish,bad,constant,129,yes
+,,MM/RR,52/55,certain/approximate,m/m,2005-02-06,certain,conversation,na,all,Spanish/English,medium,constant,246,yes
+,,MAM/JP/MM/ALF/ELP/LIR/LBP/HIC,40/61/52/30/25/30/50/50,approximate/certain/certain/approximate/approximate/approximate/approximate/approximate,f/m/m/m/m/m/f/f,2005-08-05,certain,conversation,na,all,Spanish,bad,constant,542,yes
+,,JP/RO,60/75,certain/na,m/m,2004-12-30,certain,conversation,na,all,Spanish,bad,constant,192,yes
+,,MM,52,certain,m,2005-08-08,certain,traditional narrative,na,all,Spanish,medium,constant,2562,yes
+,,JUM,61,certain,f,2005-08-09,certain,traditional narrative,na,all,Spanish,medium,constant,4327,yes
+,,AC,55,approximate,m,2006-09-11,certain,traditional narrative,na,all,Spanish,medium,constant,1248,yes
+,,MM,52,certain,m,2005-07-25,certain,personal narrative,na,all,Spanish,medium,constant,712,yes
+,,MM,52,certain,m,2005-01-26,certain,traditional narrative,na,all,Spanish,medium,constant,737,yes
+,,MM,52,certain,m,2005-01-31,certain,traditional narrative,na,all,Spanish,medium,constant,310,yes
+,,AC,55,approximate,m,2006-09-11,certain,traditional narrative,na,all,Spanish,medium,constant,743,yes
+,,MM,53,certain,m,2006-08-19,certain,traditional narrative,na,all,Spanish,medium,constant,685,yes
+,,ESI/JP/JUN/OL/MM/JR/SV/ES/AL/CAV/GPE/MVP/LUR/INE/YOS,45/60/40/50/52/61/40/50/30/30/50/40/40/30/40,approximate/certain/approximate/approximate/certain/certain/approximate/approximate/approximate/approximate/approximate/approximate/approximate/approximate/approximate,m/m/m/m/m/m/f/m/m/m/f/m/m/m/f,2004-12-18,certain,conversation,na,all,Spanish,bad,constant,192,yes
+,,JUM/JUN/GPE/OL/AF/CP/JP/ES,61/40/50/50/30/30/61/40,certain/ approximate/ approximate/ approximate/ approximate/ approximate/certain/ approximate,f/m/f/m/f/m/m/m,2004-12-18,certain,conversation,na,all,Spanish,bad,constant,108,yes
+,,MM/JN/JP/ES/ALF/DRS/OL,52/40/60/45/30/20/50,certain/approximate/certain/ approximate/ approximate/ approximate/ approximate,m/m/m/m/m/m/m,2004-12-18,certain,conversation,na,all,Spanish,bad,constant,162,yes
+,,MM,52,certain,m,2005-01-23,certain,traditional narrative,na,all,Spanish,medium,constant,695,yes
+,,AP,45,approximate,m,2005-07-30,certain,traditional narrative,na,all,Spanish,medium,constant,2093,yes
+,,AC,55,certain,m,2005-07-27,certain,traditional narrative,na,all,Spanish,medium,constant,574,yes
+,,AC,55,certain,m,2006-09-11,certain,traditional narrative,na,all,Spanish,medium,constant,333,yes
+,,MM/LIR,52/na,certain/na,m/m,2005-01-26,certain,traditional narrative,na,all,Spanish/English,medium,constant,102,yes
+,,MM,52,certain,m,2005-01-23,certain,procedural,na,all,Spanish,medium,constant,991,yes
+,,AC,55,approximate,m,2008-03-19,certain,personal narrative,na,all,Spanish,medium,constant,153,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,DP,62,approximate,m,2012-02-25,certain,personal narrative,na,break/gloss,English,medium,punctual,712,no
+,,CP,58,approximate,m,2002-11-16,certain,personal narrative,na,none,English,medium,punctual,670,no
+,,CP,58,approximate,m,2002-11-16,certain,personal narrative,na,none,English,medium,punctual,2398,no
+,,DP,55,approximate,m,2005-07-09,certain,personal narrative,na,break/gloss,English,medium,constant,377,no
+,,CP,55,approximate,m,2000,approximate,personal narrative,na,break/gloss,English,medium,constant,287,no
+,,CP,55,approximate,m,2000,approximate,personal narrative,na,break/gloss,English,medium,constant,383,no
+,,CP,55,approximate,m,2000,approximate,personal narrative,na,break/gloss,English,medium,constant,1370,no
+,,CW,62,approximate,f,2007-03-29,certain,traditional narrative,na,break/gloss,English,medium,constant,659,no
+,,CP,62,approximate,m,2006-03-17,certain,traditional narrative,na,break/gloss,English,bad,constant,474,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,TLF,59,certain,m,1993,certain,traditional narrative,,all,Spanish,medium,constant,5293,no
+,,TLF,59,certain,m,1993,certain,traditional narrative,,all,Spanish,medium,constant,1633,no
+,,TLF,59,certain,m,1993,certain,traditional narrative,,all,Spanish,medium,constant,1372,no
+,,TLF,59,certain,m,1993,certain,traditional narrative,,all,Spanish,medium,constant,175,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,HT,50,approximate,m,1998-09-29,certain,traditional narrative,na,all,English,medium,punctual,364,no
+,,K,70,approximate,m,1998-09-29,certain,traditional narrative,na,all,English,medium,punctual,149,no
+,,KN,80,approximate,m,1998-09-29,certain,traditional narrative,na,all,English,medium,punctual,244,no
+,,KK,70,approximate,m,1998-09-27,certain,traditional narrative,na,all,English,medium,punctual,168,no
+,,KN,80,approximate,m,1998-09-30,certain,traditional narrative,na,all,English,medium,punctual,149,no
+,,KN,80,approximate,m,1998-09-20,certain,traditional narrative,na,all,English,medium,punctual,500,no
+,,WT,80,approximate,m,1998-09-27,certain,traditional narrative,na,all,English,medium,punctual,184,no
+,,TT,80,approximate,f,1998-09-29,certain,traditional narrative,na,all,English,medium,punctual,666,no
+,,TT,80,approximate,f,1998-09-29,certain,traditional narrative,na,all,English,medium,punctual,244,no
+,,KN,80,approximate,m,1998-10-23,certain,traditional narrative,na,all,English,medium,punctual,314,no
+,,KM,70,approximate,m,1998-10-12,certain,traditional narrative,na,all,English,medium,punctual,272,no
+,,AK,30,approximate,m,1998-10-20,certain,personal narrative,na,all,English,medium,punctual,323,no
+,,HL,20,approximate,m,1998-10-21,certain,personal narrative,na,all,English,medium,punctual,249,no
+,,JK,70,approximate,m,1998-10-30,certain,traditional narrative,na,all,English,medium,punctual,914,no
+,,TT,80,approximate,f,1998-10-12,certain,traditional narrative,na,all,English,medium,punctual,229,no
+,,KN,80,approximate,m,2000-03-28,certain,traditional narrative,na,all,English,good,punctual,236,no
+,,KN,80,approximate,m,2000-03-28,certain,traditional narrative,na,all,English,medium,punctual,204,no
+,,JK,70,approximate,m,1998-09-29,certain,personal narrative,na,all,English,medium,punctual,110,no
+,,KN,80,approximate,m,1998-09-21,certain,traditional narrative,na,all,English,medium,punctual,340,no
+,,HT,50,approximate,m,1998-09-28,certain,personal narrative,na,all,English,medium,punctual,194,no
+,,GC,20,approximate,m,1998-10-20,certain,personal narrative,na,all,English,medium,punctual,780,no
+,,JK,70,approximate,m,1998-10-31,certain,traditional narrative,na,all,English,medium,punctual,895,no
+,,JK,70,approximate,m,1998-10-30,certain,traditional narrative,na,all,English,medium,punctual,424,no
+,,TT,80,approximate,f,1998-10-24,certain,traditional narrative,na,all,English,medium,punctual,210,no
+,,TT,80,approximate,f,1998-10-12,certain,traditional narrative,na,all,English,medium,punctual,282,no
+,,KN,80,approximate,m,1997-09-09,certain,traditional narrative,na,all,English,medium,punctual,197,no
+,,KN,80,approximate,m,1996-03-07,certain,traditional narrative,na,all,English,medium,punctual,306,no
+,,SA,40,approximate,m,1997-03-02,certain,traditional narrative,na,all,English,medium,punctual,637,no
+,,TT,80,approximate,f,1998-10-24,certain,traditional narrative,na,all,English,medium,punctual,219,no
+,,KN,80,approximate,m,1997-07-09,certain,traditional narrative,na,all,English,medium,punctual,240,no
+,,KN,80,approximate,m,1997-04-02,certain,traditional narrative,na,all,English,medium,punctual,208,yes
+,,KN,80,approximate,m,1996-03-07,certain,personal narrative,na,all,English,medium,punctual,729,yes
+,,KN,80,approximate,m,1996-03-07,certain,personal narrative,na,all,English,medium,punctual,471,yes
+,,KN,80,approximate,m,1996-03-07,certain,traditional narrative,na,all,English,medium,punctual,112,yes
+,,HT,50,approximate,m,1998-10-12,certain,traditional narrative,na,all,English,medium,punctual,600,yes
+,,K,70,approximate,m,1998-09-29,certain,personal narrative,na,all,English,medium,punctual,1025,yes
+,,K,70,approximate,m,1998-09-29,certain,personal narrative,na,all,English,medium,punctual,535,yes
+,,JM,70,approximate,m,1998-10-03,certain,traditional narrative,na,all,English,medium,punctual,314,yes
+,,JM,70,approximate,m,1998-10-03,certain,traditional narrative,na,all,English,medium,punctual,158,yes
+,,JM,70,approximate,m,1998-10-03,certain,traditional narrative,na,all,English,medium,punctual,206,yes
+,,JM,70,approximate,m,1998-10-03,certain,traditional narrative,na,all,English,medium,punctual,180,yes
+,,JM,70,approximate,m,1998-10-03,certain,traditional narrative,na,all,English,medium,punctual,261,yes
+,,KN,80,approximate,m,1998-09-28,certain,traditional narrative,na,all,English,medium,punctual,372,yes
+,,KN,80,approximate,m,1998-09-28,certain,traditional narrative,na,all,English,medium,punctual,780,yes
+,,TT,80,approximate,f,1998-09-29,certain,traditional narrative,na,all,English,medium,punctual,840,yes
+,,WW,40,approximate,m,1998-09-30,certain,personal narrative,na,all,English,medium,punctual,427,yes
+,,WW,40,approximate,m,1998-09-30,certain,traditional narrative,na,all,English,medium,punctual,304,yes
+,,WW,40,approximate,m,1998-10-17,certain,traditional narrative,na,all,English,medium,punctual,245,yes
+,,TT,80,approximate,f,1998-10-12,certain,traditional narrative,na,all,English,medium,punctual,452,yes
+,,JK,70,approximate,f,1998-10-20,certain,personal narrative,na,all,English,medium,constant,459,yes
+,,DW,70,approximate,f,1998-10-20,certain,personal narrative,na,all,English,medium,constant,894,yes
+,,K,70,approximate,m,1998-10-30,certain,personal narrative,na,all,English,medium,punctual,1095,yes
+,,JK,70,approximate,m,1998-10-30,certain,traditional narrative,na,all,English,medium,punctual,640,yes
+,,TT,80,approximate,f,2005-11-07,certain,traditional narrative,na,all,English,bad,punctual,886,yes
+,,PK,70,approximate,m,1998-09-28,certain,traditional narrative,na,all,English,medium,punctual,492,yes
+,,JK,70,approximate,f,1998-10-20,certain,personal narrative,na,all,English,medium,punctual,379,yes
+,,JK,70,approximate,f,1998-10-20,certain,procedural,na,all,English,medium,punctual,305,yes
+,,KN,80,approximate,m,2000-03-28,certain,traditional narrative,na,all,na,medium,punctual,165,yes
+,,JK,70,approximate,m,1998-09-29,certain,personal narrative,na,all,English,medium,punctual,480,yes
+,,HL,20,approximate,m,1998-10-20,certain,personal narrative,na,all,English,medium,punctual,575,yes
+,,EK,20,approximate,m,1998-10-12,certain,personal narrative,na,all,English,medium,punctual,2888,yes
+,,NK,70,approximate,m,1998-10-13,certain,traditional narrative,na,all,English,medium,punctual,795,yes
+,,P,60,approximate,f,1998-10-29,certain,personal narrative,na,all,na,medium,punctual,899,yes
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,DL,57,certain,f,2007-11-09,certain,personal narrative,na,none,French/Chinese,good,none,1074,no
+,,DL,61,certain,f,2011-09-06,certain,traditional narrative,na,none,French/Chinese/English,good,none,751,no
+,,DL,61,certain,f,2011-09-06,certain,traditional narrative,na,none,French/Chinese,good,none,839,no
+,,DL,62,certain,f,2012-02-25,certain,traditional narrative,na,none,French,good,none,1740,no
+,,DL,62,certain,f,2012-05-11,certain,traditional narrative,na,none,French/Chinese,good,none,1605,no
+,,DL,56,certain,f,2006,certain,procedural,na,none,French/Chinese,good,none,2868,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,PA,50,approximate,m,2009-08-09,certain,personal narrative,na,none,Spanish,good,none,228,no
+,,PA,50,approximate,m,2004-12-13,certain,traditional narrative,na,none,Spanish,medium,constant,1191,no
+,,RA,50,approximate,f,2005-07-19,certain,traditional narrative,na,none,Spanish,good,constant,210,no
+,,RA,50,approximate,f,2005-07-19,certain,traditional narrative,na,none,Spanish,good,constant,531,no
+,,RA,50,approximate,f,2005-07-19,certain,traditional narrative,na,none,Spanish,good,constant,114,no
+,,PA,50,approximate,m,2005-07-22,certain,traditional narrative,na,none,Spanish,good,constant,98,no
+,,PA,50,approximate,m,2006-09-05,certain,traditional narrative,na,none,Spanish,medium,constant,587,no
+,,RA,50,approximate,f,2005-01-13,certain,traditional narrative,na,none,Spanish,medium,constant,1586,no
+,,PA,50,approximate,m,2006-09-05,certain,personal narrative,na,none,Spanish,good,constant,269,no
+,,PA,50,approximate,m,2005-07-21,certain,personal narrative,na,none,Spanish,good,constant,451,no
+,,PA,50,approximate,m,2005-07-21,certain,personal narrative,na,none,Spanish,good,constant,392,no
+,,RA,50,approximate,f,2006-08-08,certain,personal narrative,na,none,Spanish,good,constant,223,no
+,,RA,50,approximate,f,2006-08-08,certain,personal narrative,na,none,Spanish,good,constant,155,no
+,,RA,50,approximate,f,2006-09-05,certain,personal narrative,na,none,Spanish,good,constant,293,no
+,,OG/RA,75/50,approximate,f/f,2004-12-09,certain,personal narrative,na,none,Spanish,medium,constant,307,no
+,,OG/RA,75/50,approximate,f/f,2005-07-15,certain,procedural/conversation,na,none,Spanish,medium,constant,86,no
+,,RA,50,approximate,f,2005-07-15,certain,procedural/conversation,na,none,Spanish,medium,constant,32,no
+,,PA,50,approximate,m,2009-08-09,certain,traditional narrative,na,none,Spanish,medium,constant,701,no
+,,OG,75,approximate,f,2009-09-01,certain,traditional narrative,na,none,Spanish,medium,constant,121,no
+,,PA,50,approximate,m,2006-08-01,certain,personal narrative,na,none,Spanish,good,constant,410,no
+,,spk_code,spk_age,spk_age_c,spk_sex,rec_date,rec_date_c,genre,genre_stim,gloss,transl,sound_quality,background_noise,word_tokens,extended
+,,A/N,65/60,approximate/approximate,m/m,2000-09-26,certain,conversation,na,all,English,medium,punctual,1256,no
+,,J/M,23/17,certain/certain,m/m,2000-11-01,certain,conversation,na,all,English,medium,punctual,619,no
+,,J,23,certain,m,2000-11-23,certain,traditional narrative,na,all,English,good,punctual,730,no
+,,J,23,certain,m,2000-11-29,certain,traditional narrative,na,all,English,good,punctual,949,no
+,,J,23,certain,m,2000-11-29,certain,traditional narrative,na,all,English,good,punctual,619,no
+,,J,23,certain,m,2000-11-29,certain,traditional narrative,na,all,English,medium,punctual,249,no
+,,J,23,certain,m,2000-12-01,certain,traditional narrative,na,all,English,good,punctual,929,no
+,,A,65,approximate,m,1999,approximate,traditional narrative,na,all,English,good,punctual,1114,no
+,,D,51,certain,m,1999,approximate,traditional narrative,na,all,English,medium,punctual,929,no
+,,D,51,certain,m,1999-02-12,certain,traditional narrative,na,all,English,medium,punctual,976,no
+,,D,51,certain,m,1999-02-04,certain,traditional narrative,na,all,English,medium,constant,970,no
+,,N/A,60/65,approximate/approximate,m/m,2000-09-26,certain,conversation,na,all,English,medium,punctual,843,yes
+,,N/A,60/65,approximate/approximate,m/m,2000-09-26,certain,conversation,na,all,English,medium,punctual,1751,yes
+,,N/A,60/65,approximate/approximate,m/m,2000-09-26,certain,conversation,na,all,English,medium,punctual,2128,yes
+,,J/M,23/17,certain/certain,m/m,2000-11-01,certain,conversation,na,all,English,good,punctual,577,yes
+,,J/M,23/17,certain/certain,m/m,2000-11-01,certain,conversation,na,all,English,good,punctual,817,yes
+,,J/M,23/17,certain/certain,m/m,2000-11-01,certain,conversation,na,all,English,good,punctual,1103,yes
+,,J/M,23/17,certain/certain,m/m,2000-11-01,certain,conversation,na,all,English,good,punctual,904,yes
+,,J/M,23/17,certain/certain,m/m,2000-11-01,certain,conversation,na,all,English,good,punctual,691,yes
+,,J,23,certain,m,2000-11-29,certain,traditional narrative,na,all,English,good,none,361,yes
+,,A,65,approximate,m,1999,approximate,traditional narrative,na,all,English,medium,punctual,683,yes
+,,A,65,approximate,m,1999,approximate,traditional narrative,na,all,English,medium,constant,556,yes
+,,D,51,certain,m,1999-02-10,certain,traditional narrative,na,all,English,good,punctual,1413,yes
+,,D,51,certain,m,1999-02-09,certain,traditional narrative,na,all,English,good,punctual,553,yes
+,,D,51,certain,m,1999-02-08,certain,traditional narrative,na,all,English,medium,punctual,1226,yes
+,,D,51,certain,m,1999-01-13,certain,traditional narrative,na,all,English,good,punctual,518,yes
+,,O,60,approximate,f,1999,approximate,traditional narrative,na,all,English,good,none,1840,yes

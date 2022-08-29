@@ -63,9 +63,9 @@ class Dataset(BaseDataset):
             'file_metadata.csv',
             dicts=True,
             ):
-            args.writer.objects["MetadataTable"].append({
-                "FileID": row["ID"],
-                "Filename": row["Filename"],
+            args.writer.objects["metadata.csv"].append({
+                "FileID": row["id"],
+                "Filename": row["name"],
                 "spk_code": row["spk_code"],
                 "spk_age": row["spk_age"],
                 "spk_age_c": row["spk_age_c"],
@@ -78,7 +78,7 @@ class Dataset(BaseDataset):
                 "transl": row["transl"],
                 "sound_quality": row["sound_quality"],
                 "background_noise": row["background_noise"],
-                "words": row["words"],
+                "word_tokens": row["word_tokens"],
                 "extended": row["extended"],
             })
 
@@ -119,7 +119,7 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'YearsOfRecordingInCoreSet',
-                'datatype': 'int',
+                'datatype': 'str',
             })
 
         cldf.add_component(
@@ -214,7 +214,6 @@ class Dataset(BaseDataset):
             },
         )
 
-        cldf.add_component('MetadataTable')
         T = cldf.add_table(
             'metadata.csv',
             {
@@ -243,7 +242,7 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'rec_date',
-                'datatype': 'int',
+                'datatype': 'str',
             },
             {
                 'name': 'rec_date_c',
@@ -274,15 +273,15 @@ class Dataset(BaseDataset):
                 'datatype': 'str',
             },
             {
-                'name': 'words',
+                'name': 'word_tokens',
                 'datatype': 'int',
             },
             {
                 'name': 'extended',
-                'datatype': 'boolean',
+                'datatype': 'str',
             }
             )
         T.common_props['dc:conformsTo'] = None
 
         cldf.add_foreign_key('metadata.csv', 'ID', 'ValueTable', 'File')
-        cldf.add_foreign_key('metadata.csv', 'spk_code', 'ValueTable', 'Speaker')
+        cldf.add_foreign_key('metadata.csv', 'spk_code', 'ValueTable', 'Speaker_ID')
