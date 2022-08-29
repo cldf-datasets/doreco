@@ -105,4 +105,7 @@ ENV/
 
 # Raw data
 /raw/data/
-/raw/full_corpus.csv
+/raw/wd_data.csv
+/raw/ph_data.csv
+/raw/glosses.csv
+/raw/file_metadata.csv
