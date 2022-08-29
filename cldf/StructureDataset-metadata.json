@@ -14,7 +14,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco",
             "rdf:type": "prov:Entity",
-            "dc:created": "a40e74d",
+            "dc:created": "b7cf16a",
             "dc:title": "Repository"
         },
         {
@@ -94,6 +94,70 @@
                         "required": false,
                         "separator": ";",
                         "name": "Source"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Language"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "File"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Speaker_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ph"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "start"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "end"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ref"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "tx"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ft"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "wd_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "wd"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "mb_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "mb"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "doreco-mb-algn"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ps"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "gl"
                     }
                 ],
                 "foreignKeys": [
@@ -117,7 +181,6 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 51,
             "tableSchema": {
                 "columns": [
                     {
@@ -225,7 +288,6 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
-            "dc:extent": 51,
             "tableSchema": {
                 "columns": [
                     {

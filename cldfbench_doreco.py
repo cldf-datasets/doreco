@@ -1,5 +1,4 @@
 import pathlib
-
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
 import pybtex
@@ -45,7 +44,7 @@ class Dataset(BaseDataset):
                 # inconsistent caps in core/Core in original file
                 "CoreWordTokens": row["core word tokens"],
                 "CoreTexts": row["Core texts"],
-                "YearsOfRecordingInCoreSet": row["Years of recordings in core set"]
+                "YearsOfRecordingsInCoreSet": row["Years of recordings in core set"]
             })
 
             args.writer.objects["ContributionTable"].append({
@@ -58,17 +57,30 @@ class Dataset(BaseDataset):
                 "AudioLicense": row["Audio license"],
                 "DOI": row["DOI"]
             })
+        args.log.info("added languages and contributions")
 
-            #  print(row["Creator"])
-        args.log.info("added languages")
-        
-        # for row in self.raw_dir.read_csv(
-        #     'gata_raw.csv',
-        #     dicts=True,
-        #     ):
-        #     row["Source"] = [row["Source"]]
-        #     args.writer.objects['ValueTable'].append(row)
-        # args.log.info("added values")
+        for row in self.raw_dir.read_csv(
+            'file_metadata.csv',
+            dicts=True,
+            ):
+            args.writer.objects["MetadataTable"].append({
+                "FileID": row["ID"],
+                "Filename": row["Filename"],
+                "spk_code": row["spk_code"],
+                "spk_age": row["spk_age"],
+                "spk_age_c": row["spk_age_c"],
+                "spk_sex": row["spk_sex"],
+                "rec_date": row["rec_date"],
+                "rec_date_c": row["rec_date_c"],
+                "genre": row["genre"],
+                "genre_stim": row["genre_stim"],
+                "gloss": row["gloss"],
+                "transl": row["transl"],
+                "sound_quality": row["sound_quality"],
+                "background_noise": row["background_noise"],
+                "words": row["words"],
+                "extended": row["extended"],
+            })
 
     def create_schema(self, cldf):
         cldf.add_component(
@@ -97,7 +109,6 @@ class Dataset(BaseDataset):
                 'name': 'CoreSpeakers',
                 'datatype': 'int',
             },
-
             {
                 'name': 'CoreWordTokens',
                 'datatype': 'int',
@@ -133,5 +144,145 @@ class Dataset(BaseDataset):
                 'name': 'DOI',
                 'datatype': 'str',
             },
-
         )
+
+        cldf.add_columns(
+            'ValueTable',
+            {
+                'name': 'Language',
+                'datatype': 'str',
+            },
+            {
+                'name': 'File',
+                'datatype': 'str',
+            },
+            {
+                'name': 'Speaker_ID',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ph',
+                'datatype': 'str',
+            },
+            {
+                'name': 'start',
+                'datatype': 'str',
+            },
+            {
+                'name': 'end',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ref',
+                'datatype': 'str',
+            },
+            {
+                'name': 'tx',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ft',
+                'datatype': 'str',
+            },
+            {
+                'name': 'wd_ID',
+                'datatype': 'str',
+            },
+            {
+                'name': 'wd',
+                'datatype': 'str',
+            },
+            {
+                'name': 'mb_ID',
+                'datatype': 'str',
+            },
+            {
+                'name': 'mb',
+                'datatype': 'str',
+            },
+            {
+                'name': 'doreco-mb-algn',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ps',
+                'datatype': 'str',
+            },
+            {
+                'name': 'gl',
+                'datatype': 'str',
+            },
+        )
+
+        cldf.add_component('MetadataTable')
+        T = cldf.add_table(
+            'metadata.csv',
+            {
+                'name': 'ID',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
+            },
+            {
+                'name': 'Name',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name',
+            },
+            {
+                'name': 'spk_code',
+                'datatype': 'str',
+            },
+            {
+                'name': 'spk_age',
+                'datatype': 'int',
+            },
+            {
+                'name': 'spk_age_c',
+                'datatype': 'str',
+            },
+            {
+                'name': 'spk_sex',
+                'datatype': 'str',
+            },
+            {
+                'name': 'rec_date',
+                'datatype': 'int',
+            },
+            {
+                'name': 'rec_date_c',
+                'datatype': 'str',
+            },
+            {
+                'name': 'genre',
+                'datatype': 'str',
+            },
+            {
+                'name': 'genre_stim',
+                'datatype': 'str',
+            },
+            {
+                'name': 'gloss',
+                'datatype': 'str',
+            },
+            {
+                'name': 'transl',
+                'datatype': 'str',
+            },
+            {
+                'name': 'sound_quality',
+                'datatype': 'str',
+            },
+            {
+                'name': 'background_noise',
+                'datatype': 'str',
+            },
+            {
+                'name': 'words',
+                'datatype': 'int',
+            },
+            {
+                'name': 'extended',
+                'datatype': 'boolean',
+            }
+            )
+        T.common_props['dc:conformsTo'] = None
+
+        cldf.add_foreign_key('metadata.csv', 'ID', 'ValueTable', 'File')
+        cldf.add_foreign_key('metadata.csv', 'spk_code', 'ValueTable', 'Speaker')
