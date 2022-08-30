@@ -14,13 +14,15 @@ HEADER = 0
 full_ph_corpus = []
 full_wd_corpus = []
 file_metadata = []
-glosses = []
+glosses = [
+    ["Gloss", "LGR", "Meaning", "Glottocode"]
+]
 
 
 def unpack(path, file, out, add_glotto=False):
     """Function unzips and merges the indicated csv-files."""
     glottocode = re.sub(r"./data/doreco_(.*)_dataset", "\\1", path)
-    for files in glob.glob(os.path.join(path, file)):
+    for files in sorted(glob.glob(os.path.join(path, file))):
         with open(files, mode='r', encoding="utf8") as doc:
             data = csv.reader(doc)
 
@@ -28,9 +30,11 @@ def unpack(path, file, out, add_glotto=False):
                 # skip headers for all but first file
                 next(data, None)
 
+            glotto_count = 0
             for entry in data:
                 if add_glotto is True:
-                    if HEADER == 0:
+                    glotto_count += 1
+                    if glotto_count == 1 and HEADER == 1 and out != glosses:
                         # add Glottocode column to the header
                         entry.append("Glottocode")
                     else:

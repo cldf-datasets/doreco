@@ -14,7 +14,6 @@ class Dataset(BaseDataset):
                 module='StructureDataset'
                 )
 
-
     def cmd_makecldf(self, args):
         self.create_schema(args.writer.cldf)
 
@@ -64,7 +63,7 @@ class Dataset(BaseDataset):
             dicts=True,
             ):
             args.writer.objects["metadata.csv"].append({
-                "FileID": row["id"],
+                "ID": row["Glottocode"] + "_" + row["id"],
                 "Filename": row["name"],
                 "spk_code": row["spk_code"],
                 "spk_age": row["spk_age"],
@@ -80,9 +79,72 @@ class Dataset(BaseDataset):
                 "background_noise": row["background_noise"],
                 "word_tokens": row["word_tokens"],
                 "extended": row["extended"],
+                "Glottocode": row["Glottocode"]
+            })
+
+        for row in self.raw_dir.read_csv(
+            'glosses.csv',
+            dicts=True,
+            ):
+            args.writer.objects["glosses.csv"].append({
+                "Gloss": row["Gloss"],
+                "LGR": row["LGR"],
+                "Meaning": row["Meaning"],
+                "Glottocode": row["Glottocode"]
+            })
+
+        for row in self.raw_dir.read_csv(
+            'wd_data.csv',
+            dicts=True,
+            ):
+            args.writer.objects["words.csv"].append({
+                "Language_ID": row["lang"],
+                "Filename": row["file"],
+                # "core_extended": row["core_extended"],
+                "speaker": row["speaker"],
+                "wd_ID": row["wd_ID"],
+                "wd": row["wd"],
+                "start": row["start"],
+                "end": row["end"],
+                "ref": row["ref"],
+                "tx": row["tx"],
+                "ft": row["ft"],
+                "mb_ID": row["mb_ID"],
+                "mb": row["mb"],
+                "doreco-mb-algn": row["doreco-mb-algn"],
+                "ps": row["ps"],
+                "gl": row["gl"],
+                "ph_ID": row["ph_ID"],
+                "ph": row["ph"]
+            })
+
+        for row in self.raw_dir.read_csv(
+            'ph_data.csv',
+            dicts=True,
+            ):
+            args.writer.objects["ValueTable"].append({
+                "Language_ID": row["lang"],
+                "Filename": row["file"],
+                # "core_extended": row["core_extended"],
+                "speaker": row["speaker"],
+                "ph_ID": row["ph_ID"],
+                "ph": row["ph"],
+                "start": row["start"],
+                "end": row["end"],
+                # "ref": row["ref"],
+                # "tx": row["tx"],
+                # "ft": row["ft"],
+                "wd_ID": row["wd_ID"],
+                # "wd": row["wd"],
+                # "mb_ID": row["mb_ID"],
+                # "mb": row["mb"],
+                # "doreco-mb-algn": row["doreco-mb-algn"],
+                # "ps": row["ps"],
+                # "gl": row["gl"]
             })
 
     def create_schema(self, cldf):
+
         cldf.add_component(
             'LanguageTable',
             {
@@ -146,22 +208,90 @@ class Dataset(BaseDataset):
             },
         )
 
-        cldf.add_columns(
-            'ValueTable',
+        cldf.add_table(
+            'phones.csv',
             {
-                'name': 'Language',
+                'name': 'Language_ID',
                 'datatype': 'str',
             },
             {
-                'name': 'File',
+                'name': 'Filename',
+                'datatype': 'str',
+            },
+            {
+                'name': 'speaker',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ph_ID',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
+            },
+            {
+                'name': 'ph',
+                'datatype': 'str',
+            },
+            {
+                'name': 'start',
+                'datatype': 'str',
+            },
+            {
+                'name': 'end',
+                'datatype': 'str',
+            },
+            # {
+            #     'name': 'ref',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'tx',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'ft',
+            #     'datatype': 'str',
+            # },
+            {
+                'name': 'wd_ID',
+                'datatype': 'str',
+            },
+            # {
+            #     'name': 'wd',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'mb_ID',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'mb',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'doreco-mb-algn',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'ps',
+            #     'datatype': 'str',
+            # },
+            # {
+            #     'name': 'gl',
+            #     'datatype': 'str',
+            # },
+        )
+
+        cldf.add_table(
+            'words.csv',
+            {
+                'name': 'Language_ID',
+                'datatype': 'str',
+            },
+            {
+                'name': 'Filename',
                 'datatype': 'str',
             },
             {
                 'name': 'Speaker_ID',
-                'datatype': 'str',
-            },
-            {
-                'name': 'ph',
                 'datatype': 'str',
             },
             {
@@ -186,7 +316,7 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'wd_ID',
-                'datatype': 'str',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
             },
             {
                 'name': 'wd',
@@ -212,6 +342,14 @@ class Dataset(BaseDataset):
                 'name': 'gl',
                 'datatype': 'str',
             },
+            {
+                'name': 'ph_id',
+                'datatype': 'str',
+            },
+            {
+                'name': 'ph',
+                'datatype': 'str',
+            },
         )
 
         T = cldf.add_table(
@@ -221,12 +359,12 @@ class Dataset(BaseDataset):
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
             },
             {
-                'name': 'Name',
+                'name': 'Filename',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name',
             },
             {
                 'name': 'spk_code',
-                'datatype': 'str',
+                'datatype': 'int',
             },
             {
                 'name': 'spk_age',
@@ -279,9 +417,39 @@ class Dataset(BaseDataset):
             {
                 'name': 'extended',
                 'datatype': 'str',
+            },
+            {
+                'name': 'Glottocode',
+                'datatype': 'str',
             }
             )
         T.common_props['dc:conformsTo'] = None
 
-        cldf.add_foreign_key('metadata.csv', 'ID', 'ValueTable', 'File')
-        cldf.add_foreign_key('metadata.csv', 'spk_code', 'ValueTable', 'Speaker_ID')
+        cldf.add_table(
+            'glosses.csv',
+            {
+                'name': 'Gloss',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
+            },
+            {
+                'name': 'LGR',
+                'datatype': 'str',
+            },
+            {
+                'name': 'Meaning',
+                'datatype': 'str',
+            },
+            {
+                'name': 'Glottocode',
+                'datatype': 'str',
+            }
+            )
+
+        cldf.add_foreign_key('metadata.csv', 'Glottocode', 'LanguageTable', 'Glottocode')
+        cldf.add_foreign_key('glosses.csv', 'Glottocode', 'LanguageTable', 'Glottocode')
+        cldf.add_foreign_key('ContributionTable', 'ID', 'LanguageTable', 'ID')
+        cldf.add_foreign_key('ValueTable', 'wd_ID', 'words.csv', 'wd_ID')
+        cldf.add_foreign_key('ValueTable', 'Language_ID', 'LanguageTable', 'ID')
+        cldf.add_foreign_key('ValueTable', 'Filename', 'metadata.csv', 'Filename')
+        cldf.add_foreign_key('words.csv', 'Language_ID', 'LanguageTable', 'Name')
+        cldf.add_foreign_key('words.csv', 'Filename', 'metadata.csv', 'Filename')
