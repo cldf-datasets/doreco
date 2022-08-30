@@ -4,15 +4,46 @@ and merges them into individual csv-files.
 Languages with a ND-license are not included.
 """
 import glob
+import re
 import os
 import csv
 import zipfile
 
 PATH = './data/'
+HEADER = 0
 full_ph_corpus = []
 full_wd_corpus = []
 file_metadata = []
 glosses = []
+
+
+def unpack(path, file, out, add_glotto=False):
+    """Function unzips and merges the indicated csv-files."""
+    glottocode = re.sub(r"./data/doreco_(.*)_dataset", "\\1", path)
+    for files in glob.glob(os.path.join(path, file)):
+        with open(files, mode='r', encoding="utf8") as doc:
+            data = csv.reader(doc)
+
+            if HEADER > 1:
+                # skip headers for all but first file
+                next(data, None)
+
+            for entry in data:
+                if add_glotto is True:
+                    if HEADER == 0:
+                        # add Glottocode column to the header
+                        entry.append("Glottocode")
+                    else:
+                        entry.append(glottocode)
+
+                out.append(entry)
+
+
+def write_corpus(corpus, output):
+    """Function writes a list to an indicated csv-file."""
+    with open(output, 'w', encoding="utf8") as file:
+        writer = csv.writer(file)
+        writer.writerows(corpus)
 
 
 for filename in os.listdir(PATH):
@@ -31,38 +62,14 @@ for filename in os.listdir(PATH):
 for root, dirs, _ in os.walk(PATH):
     for d in dirs:
         path_sub = os.path.join(root, d)  # this is the current subfolder
-        for filename in glob.glob(os.path.join(path_sub, '*_ph.csv')):
-            with open(filename, mode='r', encoding="utf8") as file:
-                data = csv.reader(file)
-                for entry in data:
-                    full_ph_corpus.append(entry)
-        for filename in glob.glob(os.path.join(path_sub, '*_wd.csv')):
-            with open(filename, mode='r', encoding="utf8") as file:
-                data = csv.reader(file)
-                for entry in data:
-                    full_wd_corpus.append(entry)
-        for filename in glob.glob(os.path.join(path_sub, '*_metadata.csv')):
-            with open(filename, mode='r', encoding="utf8") as file:
-                data = csv.reader(file)
-                for entry in data:
-                    file_metadata.append(entry)
-        for filename in glob.glob(os.path.join(path_sub, '*_gloss-abbreviations.csv')):
-            with open(filename, mode='r', encoding="utf8") as file:
-                data = csv.reader(file)
-                for entry in data:
-                    glosses.append(entry)
+        HEADER += 1
 
-# print(len(full_corpus))
+        unpack(path_sub, '*_ph.csv', full_ph_corpus)
+        unpack(path_sub, '*_wd.csv', full_wd_corpus)
+        unpack(path_sub, '*_metadata.csv', file_metadata, add_glotto=True)
+        unpack(path_sub, '*_gloss-abbreviations.csv', glosses, add_glotto=True)
 
-with open('ph_data.csv', 'w', encoding="utf8") as file:
-    writer = csv.writer(file)
-    writer.writerows(full_ph_corpus)
-with open('wd_data.csv', 'w', encoding="utf8") as file:
-    writer = csv.writer(file)
-    writer.writerows(full_wd_corpus)
-with open('file_metadata.csv', 'w', encoding="utf8") as file:
-    writer = csv.writer(file)
-    writer.writerows(file_metadata)
-with open('glosses.csv', 'w', encoding="utf8") as file:
-    writer = csv.writer(file)
-    writer.writerows(glosses)
+write_corpus(full_ph_corpus, 'ph_data.csv')
+write_corpus(full_wd_corpus, 'wd_data.csv')
+write_corpus(file_metadata, 'file_metadata.csv')
+write_corpus(glosses, 'glosses.csv')
