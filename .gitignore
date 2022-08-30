@@ -109,3 +109,4 @@ ENV/
 /raw/ph_data.csv
 /raw/glosses.csv
 /raw/file_metadata.csv
+/cldf/
