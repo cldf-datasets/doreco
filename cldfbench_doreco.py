@@ -102,19 +102,19 @@ class Dataset(BaseDataset):
                 "Filename": row["file"],
                 # "core_extended": row["core_extended"],
                 "speaker": row["speaker"],
-                "wd_ID": row["wd_ID"],
+                "wd_ID": row["lang"] + "_" + row["wd_ID"],
                 "wd": row["wd"],
                 "start": row["start"],
                 "end": row["end"],
                 "ref": row["ref"],
                 "tx": row["tx"],
                 "ft": row["ft"],
-                "mb_ID": row["mb_ID"],
+                "mb_ID": row["lang"] + "_" + row["mb_ID"],
                 "mb": row["mb"],
                 "doreco-mb-algn": row["doreco-mb-algn"],
                 "ps": row["ps"],
                 "gl": row["gl"],
-                "ph_ID": row["ph_ID"],
+                "ph_ID": row["lang"] + "_" + row["ph_ID"],
                 "ph": row["ph"]
             })
 
@@ -122,19 +122,20 @@ class Dataset(BaseDataset):
             'ph_data.csv',
             dicts=True,
             ):
-            args.writer.objects["ValueTable"].append({
+            args.writer.objects["phones.csv"].append({
                 "Language_ID": row["lang"],
                 "Filename": row["file"],
                 # "core_extended": row["core_extended"],
                 "speaker": row["speaker"],
-                "ph_ID": row["ph_ID"],
+                "ph_ID": row["lang"] + "_" + row["ph_ID"],
                 "ph": row["ph"],
                 "start": row["start"],
                 "end": row["end"],
+                "duration": row["end"] - row["start"],
                 # "ref": row["ref"],
                 # "tx": row["tx"],
                 # "ft": row["ft"],
-                "wd_ID": row["wd_ID"],
+                "wd_ID": row["lang"] + "_" + row["wd_ID"],
                 # "wd": row["wd"],
                 # "mb_ID": row["mb_ID"],
                 # "mb": row["mb"],
@@ -236,6 +237,10 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'end',
+                'datatype': 'str',
+            },
+            {
+                'name': 'duration',
                 'datatype': 'str',
             },
             # {
@@ -448,8 +453,8 @@ class Dataset(BaseDataset):
         cldf.add_foreign_key('metadata.csv', 'Glottocode', 'LanguageTable', 'Glottocode')
         cldf.add_foreign_key('glosses.csv', 'Glottocode', 'LanguageTable', 'Glottocode')
         cldf.add_foreign_key('ContributionTable', 'ID', 'LanguageTable', 'ID')
-        cldf.add_foreign_key('ValueTable', 'wd_ID', 'words.csv', 'wd_ID')
-        cldf.add_foreign_key('ValueTable', 'Language_ID', 'LanguageTable', 'ID')
-        cldf.add_foreign_key('ValueTable', 'Filename', 'metadata.csv', 'Filename')
-        cldf.add_foreign_key('words.csv', 'Language_ID', 'LanguageTable', 'Name')
+        cldf.add_foreign_key('phones.csv', 'wd_ID', 'words.csv', 'wd_ID')
+        cldf.add_foreign_key('phones.csv', 'Language_ID', 'LanguageTable', 'Glottocode')
+        cldf.add_foreign_key('phones.csv', 'Filename', 'metadata.csv', 'Filename')
+        cldf.add_foreign_key('words.csv', 'Language_ID', 'LanguageTable', 'Glottocode')
         cldf.add_foreign_key('words.csv', 'Filename', 'metadata.csv', 'Filename')
