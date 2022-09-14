@@ -2,6 +2,7 @@ import pathlib
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
 import pybtex
+import re
 
 
 class Dataset(BaseDataset):
@@ -34,6 +35,7 @@ class Dataset(BaseDataset):
                 "Latitude": row["Latitude"],
                 "Longitude": row["Longitude"],
                 "Macroarea": row["Area"],
+                "Source": "doreco-" + row["Glottocode"],
                 "Translation": row["Translation"],
                 "Gloss": row["Gloss"],
                 "ExtendedSpeakers": row["Extended speakers"],
@@ -64,7 +66,7 @@ class Dataset(BaseDataset):
             ):
             args.writer.objects["metadata.csv"].append({
                 "ID": row["Glottocode"] + "_" + row["id"],
-                "Filename": row["name"],
+                "Filename": "doreco_" + row["Glottocode"] + "_" + row["name"],
                 "spk_code": row["spk_code"],
                 "spk_age": row["spk_age"],
                 "spk_age_c": row["spk_age_c"],
@@ -126,12 +128,12 @@ class Dataset(BaseDataset):
                 "Language_ID": row["lang"],
                 "Filename": row["file"],
                 # "core_extended": row["core_extended"],
-                "speaker": row["speaker"],
+                "speaker": row["lang"] + "_" + row["speaker"],
                 "ph_ID": row["lang"] + "_" + row["ph_ID"],
                 "ph": row["ph"],
                 "start": row["start"],
                 "end": row["end"],
-                "duration": row["end"] - row["start"],
+                "duration": int(re.sub(r"\.", "", row["end"])) - int(re.sub(r"\.", "", row["start"])),
                 # "ref": row["ref"],
                 # "tx": row["tx"],
                 # "ft": row["ft"],
@@ -148,6 +150,10 @@ class Dataset(BaseDataset):
 
         cldf.add_component(
             'LanguageTable',
+            {
+                'name': 'Source',
+                'datatype': 'str',
+            },
             {
                 'name': 'Translation',
                 'datatype': 'str',

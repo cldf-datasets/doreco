@@ -14,7 +14,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco",
             "rdf:type": "prov:Entity",
-            "dc:created": "6f35bc5",
+            "dc:created": "8255de7",
             "dc:title": "Repository"
         },
         {
@@ -94,70 +94,6 @@
                         "required": false,
                         "separator": ";",
                         "name": "Source"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Language"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "File"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Speaker_ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ph"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "start"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "end"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ref"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "tx"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ft"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "wd_ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "wd"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "mb_ID"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "mb"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "doreco-mb-algn"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "ps"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "gl"
                     }
                 ],
                 "foreignKeys": [
@@ -253,27 +189,27 @@
                         "name": "Gloss"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "ExtendedSpeakers"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "ExtendedWordTokens"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "ExtendedTexts"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "CoreSpeakers"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "CoreWordTokens"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "CoreTexts"
                     },
                     {
@@ -346,6 +282,19 @@
                         "name": "DOI"
                     }
                 ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
                 "primaryKey": [
                     "ID"
                 ]
@@ -353,8 +302,193 @@
             "url": "contributions.csv"
         },
         {
+            "dc:extent": 1866499,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "name": "Language_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Filename"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "speaker"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ph_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ph"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "start"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "end"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "duration"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "wd_ID"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "wd_ID"
+                        ],
+                        "reference": {
+                            "resource": "words.csv",
+                            "columnReference": [
+                                "wd_ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "Glottocode"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Filename"
+                        ],
+                        "reference": {
+                            "resource": "metadata.csv",
+                            "columnReference": [
+                                "Filename"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ph_ID"
+                ]
+            },
+            "url": "phones.csv"
+        },
+        {
+            "dc:extent": 842043,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "name": "Language_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Filename"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Speaker_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "start"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "end"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ref"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "tx"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ft"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "wd_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "wd"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "mb_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "mb"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "doreco-mb-algn"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ps"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "gl"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ph_id"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ph"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "Glottocode"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Filename"
+                        ],
+                        "reference": {
+                            "resource": "metadata.csv",
+                            "columnReference": [
+                                "Filename"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "wd_ID"
+                ]
+            },
+            "url": "words.csv"
+        },
+        {
             "dc:conformsTo": null,
-            "dc:extent": 1006,
+            "dc:extent": 965,
             "tableSchema": {
                 "columns": [
                     {
@@ -363,14 +497,14 @@
                     },
                     {
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
-                        "name": "Name"
+                        "name": "Filename"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "spk_code"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "spk_age"
                     },
                     {
@@ -414,34 +548,27 @@
                         "name": "background_noise"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": "int",
                         "name": "word_tokens"
                     },
                     {
                         "datatype": "string",
                         "name": "extended"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Glottocode"
                     }
                 ],
                 "foreignKeys": [
                     {
                         "columnReference": [
-                            "ID"
+                            "Glottocode"
                         ],
                         "reference": {
-                            "resource": "values.csv",
+                            "resource": "languages.csv",
                             "columnReference": [
-                                "File"
-                            ]
-                        }
-                    },
-                    {
-                        "columnReference": [
-                            "spk_code"
-                        ],
-                        "reference": {
-                            "resource": "values.csv",
-                            "columnReference": [
-                                "Speaker_ID"
+                                "Glottocode"
                             ]
                         }
                     }
@@ -451,6 +578,46 @@
                 ]
             },
             "url": "metadata.csv"
+        },
+        {
+            "dc:extent": 1330,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "Gloss"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "LGR"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Meaning"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Glottocode"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Glottocode"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "Glottocode"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "Gloss"
+                ]
+            },
+            "url": "glosses.csv"
         }
     ]
 }
