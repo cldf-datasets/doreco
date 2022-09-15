@@ -105,8 +105,12 @@ ENV/
 
 # Raw data
 /raw/data/
+/raw/*_wd.csv
+/raw/*_ph.csv
+/raw/*_gloss-abbreviations.csv
+/raw/*_metadata.csv
 /raw/wd_data.csv
 /raw/ph_data.csv
 /raw/glosses.csv
 /raw/file_metadata.csv
-/cldf/
+.idea/
