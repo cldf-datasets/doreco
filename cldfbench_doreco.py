@@ -44,8 +44,9 @@ class Dataset(BaseDataset):
             for row in self.raw_dir.read_csv(p.name, dicts=True):
                 row.setdefault('Glottocode', p.name.partition('_')[0])
                 if '_wd' in pattern or ('_ph' in pattern):
-                    # doreco-mb-algn col missing in some files of _ph
+                    # doreco-mb-algn and mc-zero col missing in some files of _ph
                     row.setdefault('doreco-mb-algn', '')
+                    row.setdefault('mc-zero', '')
                 yield row
 
     def cmd_makecldf(self, args):
