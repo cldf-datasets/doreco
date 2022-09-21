@@ -40,7 +40,7 @@ class Dataset(BaseDataset):
                             break
 
     def iter_rows(self, pattern):
-        for p in sorted(self.raw_dir.glob(pattern), key=lambda pp: p.name):
+        for p in sorted(self.raw_dir.glob(pattern), key=lambda pp: pp.name):
             for row in self.raw_dir.read_csv(p.name, dicts=True):
                 row.setdefault('Glottocode', p.name.partition('_')[0])
                 if '_wd' in pattern or ('_ph' in pattern):
@@ -91,7 +91,7 @@ class Dataset(BaseDataset):
             })
         args.log.info("added languages and contributions")
 
-        for row in self.iter_rows('*_metadata.csv'):
+        for i, row in enumerate(self.iter_rows('*_metadata.csv'), start=1):
             args.writer.objects["metadata.csv"].append({
                 "ID": row["Glottocode"] + "_" + row["id"],
                 "Filename": "doreco_" + row["Glottocode"] + "_" + row["name"],
@@ -112,8 +112,9 @@ class Dataset(BaseDataset):
                 "Glottocode": row["Glottocode"]
             })
 
-        for row in self.iter_rows('*_gloss-abbreviations.csv'):
+        for i, row in enumerate(self.iter_rows('*_gloss-abbreviations.csv'), start=1):
             args.writer.objects["glosses.csv"].append({
+                "ID": row['Glottocode'] + str(i),
                 "Gloss": row["Gloss"],
                 "LGR": row["LGR"],
                 "Meaning": row["Meaning"],
@@ -171,15 +172,15 @@ class Dataset(BaseDataset):
             'LanguageTable',
             {
                 'name': 'Source',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Translation',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Gloss',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ExtendedSpeakers',
@@ -207,30 +208,30 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'YearsOfRecordingInCoreSet',
-                'datatype': 'str',
+                'datatype': 'string',
             })
 
         cldf.add_component(
             'ContributionTable',
             {
                 'name': 'Archive',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Archive_link',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'AnnotationLicense',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'AudioLicense',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'DOI',
-                'datatype': 'str',
+                'datatype': 'string',
             },
         )
 
@@ -238,15 +239,15 @@ class Dataset(BaseDataset):
             'phones.csv',
             {
                 'name': 'Language_ID',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Filename',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'speaker',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ph_ID',
@@ -254,19 +255,19 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'ph',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'start',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'end',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'duration',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             # {
             #     'name': 'ref',
@@ -282,7 +283,7 @@ class Dataset(BaseDataset):
             # },
             {
                 'name': 'wd_ID',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             # {
             #     'name': 'wd',
@@ -314,35 +315,35 @@ class Dataset(BaseDataset):
             'words.csv',
             {
                 'name': 'Language_ID',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Filename',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Speaker_ID',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'start',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'end',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ref',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'tx',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ft',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'wd_ID',
@@ -350,35 +351,35 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'wd',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'mb_ID',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'mb',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'doreco-mb-algn',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ps',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'gl',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ph_id',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'ph',
-                'datatype': 'str',
+                'datatype': 'string',
             },
         )
 
@@ -386,59 +387,58 @@ class Dataset(BaseDataset):
             'metadata.csv',
             {
                 'name': 'ID',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
             },
             {
                 'name': 'Filename',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
             },
             {
                 'name': 'spk_code',
-                'datatype': 'int',
+                'datatype': 'string',
             },
             {
                 'name': 'spk_age',
-                'datatype': 'int',
+                'datatype': 'string',
             },
             {
                 'name': 'spk_age_c',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'spk_sex',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'rec_date',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'rec_date_c',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'genre',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'genre_stim',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'gloss',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'transl',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'sound_quality',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'background_noise',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'word_tokens',
@@ -446,40 +446,43 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'extended',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Glottocode',
-                'datatype': 'str',
+                'datatype': 'string',
             }
             )
-        T.common_props['dc:conformsTo'] = None
 
         cldf.add_table(
             'glosses.csv',
             {
-                'name': 'Gloss',
+                'name': 'ID',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
             },
             {
+                'name': 'Gloss',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#name',
+            },
+            {
                 'name': 'LGR',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Meaning',
-                'datatype': 'str',
+                'datatype': 'string',
             },
             {
                 'name': 'Glottocode',
-                'datatype': 'str',
+                'datatype': 'string',
             }
             )
 
-        cldf.add_foreign_key('metadata.csv', 'Glottocode', 'LanguageTable', 'Glottocode')
-        cldf.add_foreign_key('glosses.csv', 'Glottocode', 'LanguageTable', 'Glottocode')
+        cldf.add_foreign_key('metadata.csv', 'Glottocode', 'LanguageTable', 'ID')
+        cldf.add_foreign_key('glosses.csv', 'Glottocode', 'LanguageTable', 'ID')
         cldf.add_foreign_key('ContributionTable', 'ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('phones.csv', 'wd_ID', 'words.csv', 'wd_ID')
-        cldf.add_foreign_key('phones.csv', 'Language_ID', 'LanguageTable', 'Glottocode')
+        cldf.add_foreign_key('phones.csv', 'Language_ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('phones.csv', 'Filename', 'metadata.csv', 'Filename')
-        cldf.add_foreign_key('words.csv', 'Language_ID', 'LanguageTable', 'Glottocode')
+        cldf.add_foreign_key('words.csv', 'Language_ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('words.csv', 'Filename', 'metadata.csv', 'Filename')
