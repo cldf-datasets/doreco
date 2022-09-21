@@ -1,3 +1,4 @@
+import re
 import pathlib
 import urllib.parse
 
@@ -5,7 +6,6 @@ import requests
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
 import pybtex.database
-import re
 
 NAKALA_API = 'https://api.nakala.fr/'
 
@@ -17,7 +17,7 @@ class Dataset(BaseDataset):
     def cldf_specs(self):  # A dataset must declare all CLDF sets it creates.
         return CLDFSpec(
                 dir=self.cldf_dir, 
-                module='StructureDataset'
+                module='Generic'
                 )
 
     def cmd_download(self, args):
