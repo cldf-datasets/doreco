@@ -1,8 +1,13 @@
 import pathlib
+import urllib.parse
+
+import requests
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
-import pybtex
+import pybtex.database
 import re
+
+NAKALA_API = 'https://api.nakala.fr/'
 
 
 class Dataset(BaseDataset):
@@ -15,21 +20,47 @@ class Dataset(BaseDataset):
                 module='StructureDataset'
                 )
 
+    def cmd_download(self, args):
+        self.raw_dir.download(
+            'https://sharedocs.huma-num.fr/wl/?id=s947TcfRfDZR643QURdyncdku4EmeKyb&fmode=download',
+            'languages.csv')
+        self.raw_dir.download(
+            'https://sharedocs.huma-num.fr/wl/?id=xqkUR3WoFOKB8cRb0MdHYJxIDEXEXlVG&fmode=download',
+            'sources.bib')
+
+        for row in self.raw_dir.read_csv('languages.csv', dicts=True):
+            if 'ND' not in row['Annotation license']:
+                print(row['Glottocode'], row['DOI'])
+                cid = urllib.parse.quote(row['DOI'], safe='')
+                for f in requests.get("{}datas/{}?metadata-format=dc".format(NAKALA_API, cid)).json()['files']:
+                    for s in ['_wd.csv', '_ph.csv', '_metadata.csv', '_gloss-abbreviations.csv']:
+                        if f['name'].endswith(s):
+                            print(f['name'], f['sha1'])
+                            self.raw_dir.download('{}data/{}/{}'.format(NAKALA_API, cid, f['sha1']), '{}{}'.format(row['Glottocode'], s))
+                            break
+
+    def iter_rows(self, pattern):
+        for p in sorted(self.raw_dir.glob(pattern), key=lambda pp: p.name):
+            for row in self.raw_dir.read_csv(p.name, dicts=True):
+                row.setdefault('Glottocode', p.name.partition('_')[0])
+                if '_wd' in pattern or ('_ph' in pattern):
+                    # doreco-mb-algn and mc-zero col missing in some files of _ph
+                    row.setdefault('doreco-mb-algn', '')
+                    row.setdefault('mc-zero', '')
+                yield row
+
     def cmd_makecldf(self, args):
         self.create_schema(args.writer.cldf)
 
-        sources = pybtex.database.parse_string(
-            'doreco_CITATIONS.bib', bib_format='bibtex'
-            )
-        args.writer.cldf.add_sources(sources)
+        args.writer.cldf.add_sources(pybtex.database.parse_string(
+            self.raw_dir.joinpath('sources.bib').read_text(encoding='utf8'),
+            bib_format='bibtex',
+        ))
         args.log.info("added sources")
 
-        for row in self.etc_dir.read_csv(
-            'doreco_languages_metadata.csv',
-            dicts=True,
-            ):
+        for row in self.raw_dir.read_csv('languages.csv', dicts=True):
             args.writer.objects["LanguageTable"].append({
-                "ID": row["Language"],
+                "ID": row["Glottocode"],
                 "Name": row["Language"],
                 "Glottocode": row["Glottocode"],
                 "Latitude": row["Latitude"],
@@ -49,7 +80,7 @@ class Dataset(BaseDataset):
             })
 
             args.writer.objects["ContributionTable"].append({
-                "ID": row["Language"],
+                "ID": row["Glottocode"],
                 "Name": row["Language"],
                 "Contributor": row["Creator"],
                 "Archive": row["Archive"],
@@ -60,10 +91,7 @@ class Dataset(BaseDataset):
             })
         args.log.info("added languages and contributions")
 
-        for row in self.raw_dir.read_csv(
-            'file_metadata.csv',
-            dicts=True,
-            ):
+        for row in self.iter_rows('*_metadata.csv'):
             args.writer.objects["metadata.csv"].append({
                 "ID": row["Glottocode"] + "_" + row["id"],
                 "Filename": "doreco_" + row["Glottocode"] + "_" + row["name"],
@@ -84,10 +112,7 @@ class Dataset(BaseDataset):
                 "Glottocode": row["Glottocode"]
             })
 
-        for row in self.raw_dir.read_csv(
-            'glosses.csv',
-            dicts=True,
-            ):
+        for row in self.iter_rows('*_gloss-abbreviations.csv'):
             args.writer.objects["glosses.csv"].append({
                 "Gloss": row["Gloss"],
                 "LGR": row["LGR"],
@@ -95,10 +120,7 @@ class Dataset(BaseDataset):
                 "Glottocode": row["Glottocode"]
             })
 
-        for row in self.raw_dir.read_csv(
-            'wd_data.csv',
-            dicts=True,
-            ):
+        for row in self.iter_rows('*_wd.csv'):
             args.writer.objects["words.csv"].append({
                 "Language_ID": row["lang"],
                 "Filename": row["file"],
@@ -120,10 +142,7 @@ class Dataset(BaseDataset):
                 "ph": row["ph"]
             })
 
-        for row in self.raw_dir.read_csv(
-            'ph_data.csv',
-            dicts=True,
-            ):
+        for row in self.iter_rows('*_ph.csv'):
             args.writer.objects["phones.csv"].append({
                 "Language_ID": row["lang"],
                 "Filename": row["file"],
