@@ -18,21 +18,25 @@ pauses is manually checked by the DoReCo team, while the symbol itself is insert
 service. Unlike the other labels, the <p:> symbol has only one of each bracket, and no other
 content may be included in it.
 """
-import collections
 import re
 import decimal
 import pathlib
 import itertools
+import collections
+import urllib.error
 import urllib.parse
+import urllib.request
 
-import requests
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
+from clldutils.clilib import confirm
 import pybtex.database
-from pyigt.lgrmorphemes import MORPHEME_SEPARATORS, split_morphemes
-from pyigt import IGT
 
-NAKALA_API = 'https://api.nakala.fr/'
+from util import nakala
+from util import igt
+
+SILENT_PAUSE = '<p:>'
+
 
 # bora: translations in spanish -> raw/languages.csv:Translation
 # even1259 : russian! not english, as claimed in languages.csv!
@@ -44,7 +48,7 @@ def fix_text(s, type_, gc):
     for m, repl in {
         'â\x80\x9d': '”',
         'â\x80\x9c': '“',
-        #<200e><200e>
+        # <200e><200e>
         '\u200e\u200e': '',
     }.items():
         s = s.replace(m, repl)
@@ -76,100 +80,71 @@ def fix_text(s, type_, gc):
     return s
 
 
-def harmonize_separators(morphemes, glosses):
-    #
-    # Combine morphemes and morpheme glosses at the same time, giving explicit morpheme
-    # saparators precedence. E.g.
-
-    # anē=n
-    # DEM1.A-ART
-
-    # should be
-
-    # anē=n
-    # DEM1.A=ART
-    #
-    nms, ngs = [], []
-    for morpheme, gloss in zip(morphemes, glosses):
-        mparts = split_morphemes(morpheme)
-        gparts = split_morphemes(gloss)
-        if len(mparts) == len(gparts):
-            for i, sep in enumerate(mparts):
-                if i % 2 == 1:  # a separator! copy it over to the gloss parts
-                    gparts[i] = sep
-            morpheme = ''.join(mparts)
-            gloss = ''.join(gparts)
-        nms.append(morpheme)
-        ngs.append(gloss)
-    return nms, ngs
-
-
-def combine_morphemes(morphemes, type_):
-    """
-    FIXME:
-    goro1270
-tsoobu>-kwí>----dir=í
-liquid.honey>---DemM>---place\LF
-
-    \LF or \F to =LF, =F? or just remove the "="?
-    What to do with
-    "~$A~","","v Attaches to any category"
-    """
-    innerhyphen = re.compile(r'([^-]+)-([^-]+)')
-
-    def replace_innerhyphen(s, repl):
-        while innerhyphen.search(s):
-            s = ''.join(innerhyphen.sub(
-                lambda m: '{}{}{}'.format(m.groups()[0], repl, m.groups()[1]), s))
-        return s
-
-    word = ''
-    for morpheme in morphemes:
-        if morpheme:
-            # replace inner hyphens!
-            morpheme = replace_innerhyphen(morpheme, '.' if type_ == 'g' else '–')
-            if word and (not word[-1] in MORPHEME_SEPARATORS) and (not morpheme[0] in MORPHEME_SEPARATORS):
-                word += '-'
-            word += morpheme
-    while word and (word[-1] in MORPHEME_SEPARATORS):
-        word = word[:-1]
-    while word and word[0] in MORPHEME_SEPARATORS:
-        word = word[1:]
-    return word.replace('--', '-').replace('=-', '=').replace('==', '=')
-
-
 class Dataset(BaseDataset):
     dir = pathlib.Path(__file__).parent
     id = "doreco"
 
     def cldf_specs(self):  # A dataset must declare all CLDF sets it creates.
         return CLDFSpec(
-                dir=self.cldf_dir, 
-                module='Generic'
-                )
+            dir=self.cldf_dir,
+            module='Generic',
+            zipped={'phones.csv', 'words.csv'},
+        )
 
     def cmd_download(self, args):
         self.raw_dir.download(
-            'https://sharedocs.huma-num.fr/wl/?id=s947TcfRfDZR643QURdyncdku4EmeKyb&fmode=download',
+            #'https://sharedocs.huma-num.fr/wl/?id=s947TcfRfDZR643QURdyncdku4EmeKyb&fmode=download',  # v1.1
+            "https://sharedocs.huma-num.fr/wl/?id=3LuEgKRrEUrdkAeDVskK46eNFqes5s6F&fmode=download",  # v1.2
             'languages.csv')
         self.raw_dir.download(
-            'https://sharedocs.huma-num.fr/wl/?id=xqkUR3WoFOKB8cRb0MdHYJxIDEXEXlVG&fmode=download',
+            #'https://sharedocs.huma-num.fr/wl/?id=xqkUR3WoFOKB8cRb0MdHYJxIDEXEXlVG&fmode=download',  # v1.1
+            "https://sharedocs.huma-num.fr/wl/?id=6OkBYGXrPkLEuHchF4kOXpsJf7MOKcLv&fmode=download",  # v1.2
             'sources.bib')
 
+        with_nd_data = confirm('Include ND data?', default=False)
+        with_audio_data = confirm('Include audio files?', default=False)
         for row in self.raw_dir.read_csv('languages.csv', dicts=True):
-            if 'ND' not in row['Annotation license']:
+            if with_nd_data or ('ND' not in row['Annotation license']):
                 print(row['Glottocode'], row['DOI'])
-                cid = urllib.parse.quote(row['DOI'], safe='')
-                for f in requests.get("{}datas/{}?metadata-format=dc".format(NAKALA_API, cid)).json()['files']:
+
+                dep = nakala.Deposit(row['DOI'])
+                for f in dep.files:
                     for s in ['_wd.csv', '_ph.csv', '_metadata.csv', '_gloss-abbreviations.csv']:
-                        if f['name'].endswith(s):
-                            print(f['name'], f['sha1'])
-                            self.raw_dir.download('{}data/{}/{}'.format(NAKALA_API, cid, f['sha1']), '{}{}'.format(row['Glottocode'], s))
+                        if f.name.endswith(s):
+                            print(f.name, f.sha1)
+                            self.raw_dir.download(f.url, '{}{}'.format(row['Glottocode'], s))
                             break
+                if with_audio_data:
+                    for supp in dep.supplements:
+                        for f in supp.files:
+                            if f.mime_type == 'audio/x-wav':
+                                target = self.dir / 'audio' / row['Glottocode'] / f.name
+                                target.parent.mkdir(parents=True, exist_ok=True)
+                                if not target.exists():
+                                    try:
+                                        urllib.request.urlretrieve(f.url, target)
+                                    except urllib.error.HTTPError as e:
+                                        if int(e.code) == 401:
+                                            pass
+
 
     def iter_rows(self, pattern):
+        mismatch = set()
         for p in sorted(self.raw_dir.glob(pattern), key=lambda pp: pp.name):
-            for row in self.raw_dir.read_csv(p.name, dicts=True):
+            # What to do if there are tab-delimited files? Sniff!
+            delimiter = ','
+            with p.open(encoding='utf8') as f:
+                if '\t' in f.readline():  # Even gloss abbreviations come in a tab-delimited file.
+                    assert 'even' in p.stem
+                    delimiter = '\t'
+            for row in self.raw_dir.read_csv(p.name, dicts=True, delimiter=delimiter):
+                # Catch the Beja issue in v1.2, where the file for a different language was
+                # packaged in the deposit for Beja:
+                if row.get('lang') and row.get('lang') != p.name.partition('_')[0]:
+                    if p.name.partition('_')[0] not in mismatch:
+                        print('Glottocode mismatch: {}'.format(p))
+                        mismatch.add(p.name.partition('_')[0])
+                    #raise ValueError(p)
                 row.setdefault('Glottocode', p.name.partition('_')[0])
                 if '_wd' in pattern or ('_ph' in pattern):
                     # doreco-mb-algn and mc-zero col missing in some files of _ph
@@ -181,12 +156,29 @@ class Dataset(BaseDataset):
                 yield row
 
     def cmd_makecldf(self, args):
+        from pyclts import CLTS
+        clts = CLTS('../../cldf-clts/clts-data')
+        xsampa_to_bipa = collections.OrderedDict()
+        for row in self.etc_dir.read_csv('orthography.tsv', dicts=True, delimiter='\t'):
+            bipa = clts.bipa[row['IPA']] if row['IPA'] else None
+            if bipa and bipa.type != 'unknownsound':
+                xsampa_to_bipa[row['Grapheme']] = bipa
+
         self.create_schema(args.writer.cldf)
 
         args.writer.cldf.add_sources(pybtex.database.parse_string(
             self.raw_dir.joinpath('sources.bib').read_text(encoding='utf8'),
             bib_format='bibtex',
         ))
+
+        for i, (xsampa, bipa) in enumerate(list(xsampa_to_bipa.items()), start=1):
+            args.writer.objects['ParameterTable'].append(dict(
+                ID=str(i),
+                Name=bipa.s,
+                CLTS_ID=bipa.name,
+            ))
+            xsampa_to_bipa[xsampa] = str(i)
+
         args.log.info("added sources")
         inv, valid = 0, 0
 
@@ -257,152 +249,101 @@ class Dataset(BaseDataset):
         eids = collections.defaultdict(int)
         for (f, tx, ft), rows in itertools.groupby(self.iter_rows('*_wd.csv'), lambda r: (r['file'], r['tx'], r['ft'])):
             rows = list(rows)
-            gc = rows[0]['Glottocode']
             eid = None
             # Create an entry in ExampleTable if tx not in ['', None, '****', '<p:>']
-            if tx and (ft not in ['', None, '****', '<p:>']):
-                eids[gc] += 1
-                eid = '{}-{}'.format(gc, eids[gc])
-                # collect morphemes:
-                mbs, gls, mbids = [], [], set()
-                #
-                # No morphemes, glosses:
-                # yong1270
-                # tsim1256
-                # svan1243
-                # sout3282 (no morphemes, but word glosses)
-                # sadu1234
-                # resi1247
-                # lowe1385
-                # kark1256
-                # anal1239
-                #
-                for row in rows:
-                    agg, gl = [], []
-                    for mb, g, mbid in zip(row['mb'].split(), row['gl'].split(), row['mb_ID'].split()):
-                        if mbid not in mbids:
-                            mbids.add(mbid)
-                            agg.append(mb)
-                            gl.append(g)
-                    if agg:
-                        mbs.append(combine_morphemes(agg, 'm'))
-                    if gl:
-                        gls.append(combine_morphemes(gl, 'g'))
-                if any(mbs):
-                    if len(mbs) == len(gls):
-                        mbs, gls = harmonize_separators(mbs, gls)
-                    igt = IGT(phrase=mbs, gloss=gls)
-                    if not igt.is_valid(strict=True):
-                        inv += 1
-                        print(gc)
-                        print(tx)
-                        print('\t'.join(mbs))
-                        print('\t'.join(gls))
-                        print(ft)
-                    else:
-                        valid += 1
-                if eids[gc] <= 10:
-                    args.writer.objects['ExampleTable'].append(dict(
-                        ID=eid,
-                    Language_ID=gc,
-                    Primary_Text=tx,
-                    Analyzed_Word=mbs,
-                    Gloss=gls,
-                    Translated_Text=ft,
-                    ))
-                else:
-                    eid = None
-            #'â\x80\x9c': '“'
-            # aggregate mb vi mb_ID from word in rows!
-            #
+            if tx and (ft not in ['', None, '****', SILENT_PAUSE]):
+                ex = igt.igt(rows, tx, ft, eids)
+                if ex:
+                    args.writer.objects['ExampleTable'].append(ex)
+                    eid = ex['ID']
 
             for row in rows:
                 args.writer.objects["words.csv"].append({
-                "Language_ID": row["lang"],
-                "Filename": row["file"],
-                # "core_extended": row["core_extended"],
-                "speaker": row["speaker"],
-                "Example_ID": eid,
-                "wd_ID": row["lang"] + "_" + row["wd_ID"],
-                "wd": row["wd"],
-                "start": decimal.Decimal(row["start"]),
-                "end": decimal.Decimal(row["end"]),
-                "ref": row["ref"],
-                "tx": row["tx"],
-                "ft": row["ft"],
-                # FIXME: mb_ID is a whitespace-separated list of IDs
-                #"mb_ID": row["lang"] + "_" + row["mb_ID"],
-                #"mb": row["mb"],
-                #"doreco-mb-algn": row["doreco-mb-algn"],
-                # FIXME: add ps and gl to ExampleTable!
-                #"ps": row["ps"],
-                #"gl": row["gl"],
-                "ph_ID": row["lang"] + "_" + row["ph_ID"],
-                "ph": row["ph"]
+                    "Language_ID": row["Glottocode"],
+                    "Filename": row["file"],
+                    # "core_extended": row["core_extended"],
+                    "speaker": row["speaker"],
+                    "Example_ID": eid,
+                    "wd_ID": row["Glottocode"] + "_" + row["wd_ID"],
+                    "wd": row["wd"],
+                    "start": decimal.Decimal(row["start"]),
+                    "end": decimal.Decimal(row["end"]),
+                    "duration": decimal.Decimal(row["end"]) - decimal.Decimal(row["start"]),
+                    "ref": row["ref"],
+                    "tx": row["tx"],
+                    "ft": row["ft"],
+                    # FIXME: mb_ID is a whitespace-separated list of IDs
+                    # "mb_ID": row["lang"] + "_" + row["mb_ID"],
+                    # "mb": row["mb"],
+                    # "doreco-mb-algn": row["doreco-mb-algn"],
+                    # FIXME: add ps and gl to ExampleTable!
+                    "ps": row["ps"],
+                    "gl": row["gl"],
+                    "ph_ID": row["Glottocode"] + "_" + row["ph_ID"],
+                    "ph": row["ph"]
                 })
-                wd_intervals[row["lang"] + "_" + row["wd_ID"]] = (decimal.Decimal(row["start"]), decimal.Decimal(row["end"]))
+                wd_intervals[row["Glottocode"] + "_" + row["wd_ID"]] = (
+                    decimal.Decimal(row["start"]), decimal.Decimal(row["end"]))
 
         misaligned_start, max_misalignment = [], decimal.Decimal('0')
+        uid = 0
         for wid, rows in itertools.groupby(self.iter_rows('*_ph.csv'), lambda r: r['wd_ID']):
+            wido = wid
+            wid = wid.split()[0]
             rows = list(rows)
             for i, row in enumerate(rows):
+                if row['Glottocode'] + '_' + wido not in wd_intervals:
+                    assert row['Glottocode'] == 'even1259' and ' ' in wido, '{} - {}'.format(row['Glottocode'], wido)
+                    print('dropping phone with wid {}'.format(wid))
+                    continue
+                if row['ph'] == SILENT_PAUSE:  # Silent pauses delimit utterances.
+                    uid += 1
                 if i == 0:
-                    try:
-                        ps = decimal.Decimal(row["start"])
-                        ws = wd_intervals[row['Glottocode'] + '_' + wid][0]
-                        assert ps >= ws
-                        if ps > ws:
-                            misaligned_start.append((row['Glottocode'], ps - ws, row['wd'], [r['ph'] for r in rows]))
-                            if ps - ws > max_misalignment:
-                                max_misalignment = ps - ws
-                    except:
-                        print(decimal.Decimal(row["start"]), wd_intervals[row['Glottocode'] + '_' + wid][0])
-                        raise
+                    ps = decimal.Decimal(row["start"])
+                    ws = wd_intervals[row['Glottocode'] + '_' + wid][0]
+                    assert ps >= ws
+                    if ps > ws:
+                        misaligned_start.append((row['Glottocode'], ps - ws, row['wd'], [r['ph'] for r in rows]))
+                        if ps - ws > max_misalignment:
+                            max_misalignment = ps - ws
                 if i == len(rows) - 1:
                     pe = decimal.Decimal(row["end"])
                     we = wd_intervals[row['Glottocode'] + '_' + wid][1]
                     assert pe <= we
-                    #if pe < we:
-                    #    misaligned_start.append((row['Glottocode'], row['wd']))
+                    if pe < we:
+                        misaligned_start.append((row['Glottocode'], row['wd']))
                 if 0 < i < len(rows):
-                    try:
-                        assert decimal.Decimal(row["start"]) >= args.writer.objects["phones.csv"][-1]['end']
-                    except:
-                        if row['ph'] != '****':
-                            print(row['Glottocode'], wid, args.writer.objects["phones.csv"][-1]['ph_ID'], row['ph_ID'])
-                            print(args.writer.objects["phones.csv"][-1]['end'], decimal.Decimal(row["start"]))
-                        continue
+                    assert decimal.Decimal(row["start"]) >= args.writer.objects["phones.csv"][-1]['end']
 
                 args.writer.objects["phones.csv"].append({
-                "Language_ID": row["lang"],
-                "Filename": row["file"],
-                # "core_extended": row["core_extended"],
-                "speaker": row["lang"] + "_" + row["speaker"],
-                "ph_ID": row["lang"] + "_" + row["ph_ID"],
-                "ph": row["ph"],
-                "start": decimal.Decimal(row["start"]),
-                "end": decimal.Decimal(row["end"]),
-                #"duration": int(re.sub(r"\.", "", row["end"])) - int(re.sub(r"\.", "", row["start"])),
-                # "ref": row["ref"],
-                # "tx": row["tx"],
-                # "ft": row["ft"],
-                "wd_ID": row["lang"] + "_" + row["wd_ID"],
-                # "wd": row["wd"],
-                # "mb_ID": row["mb_ID"],
-                # "mb": row["mb"],
-                # "doreco-mb-algn": row["doreco-mb-algn"],
-                # "ps": row["ps"],
-                # "gl": row["gl"]
+                    "Language_ID": row["Glottocode"],
+                    "Filename": row["file"],
+                    # "core_extended": row["core_extended"],
+                    "speaker": row["Glottocode"] + "_" + row["speaker"],
+                    "ph_ID": row["Glottocode"] + "_" + row["ph_ID"],
+                    "ph": row["ph"],
+                    "IPA": xsampa_to_bipa[row['ph']] if row['ph'] in xsampa_to_bipa else None,
+                    "start": decimal.Decimal(row["start"]),
+                    "end": decimal.Decimal(row["end"]),
+                    "duration": decimal.Decimal(row["end"]) - decimal.Decimal(row["start"]),
+                    # "ref": row["ref"],
+                    # "tx": row["tx"],
+                    # "ft": row["ft"],
+                    "wd_ID": row["Glottocode"] + "_" + row["wd_ID"],
+                    'u_ID': None if row['ph'] == SILENT_PAUSE else str(uid),
+                    'Token_Type': 'pause' if row['ph'] == SILENT_PAUSE else (
+                        'label' if row['ph'].startswith('<<') else 'xsampa'),
+                    # "wd": row["wd"],
+                    # "mb_ID": row["mb_ID"],
+                    # "mb": row["mb"],
+                    # "doreco-mb-algn": row["doreco-mb-algn"],
+                    # "ps": row["ps"],
+                    # "gl": row["gl"]
                 })
-        #for cid, forms in itertools.groupby(misaligned_start, lambda i: i[0]):
-        #    forms = list(forms)
-        #    print(cid, len(forms))
-        #    for f in forms[:10]:
-        #        print(f[1:])
-        #print(len(misaligned_start))
-        #print(max_misalignment)
+                if row['ph'] != SILENT_PAUSE:
+                    pause = False
 
-        print(inv, valid)
+        print(inv, valid, len(misaligned_start))
 
     def create_schema(self, cldf):
         cldf.add_component('ExampleTable')
@@ -413,148 +354,82 @@ class Dataset(BaseDataset):
             {
                 'name': 'Source',
                 'datatype': 'string',
-            },
-            {
-                'name': 'Translation',
-                'datatype': 'string',
-            },
-            {
-                'name': 'Gloss',
-                'datatype': 'string',
-            },
-            {
-                'name': 'ExtendedSpeakers',
-                'datatype': 'int',
-            },
-            {
-                'name': 'ExtendedWordTokens',
-                'datatype': 'int',
-            },
-            {
-                'name': 'ExtendedTexts',
-                'datatype': 'int',
-            },
-            {
-                'name': 'CoreSpeakers',
-                'datatype': 'int',
-            },
-            {
-                'name': 'CoreWordTokens',
-                'datatype': 'int',
-            },
-            {
-                'name': 'CoreTexts',
-                'datatype': 'int',
-            },
-            {
-                'name': 'YearsOfRecordingInCoreSet',
-                'datatype': 'string',
-            })
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#source'},
+            {'name': 'Translation', 'datatype': 'string'},
+            {'name': 'Gloss', 'datatype': 'string'},
+            {'name': 'ExtendedSpeakers', 'datatype': 'int'},
+            {'name': 'ExtendedWordTokens', 'datatype': 'int'},
+            {'name': 'ExtendedTexts', 'datatype': 'int'},
+            {'name': 'CoreSpeakers', 'datatype': 'int'},
+            {'name': 'CoreWordTokens', 'datatype': 'int'},
+            {'name': 'CoreTexts', 'datatype': 'int'},
+            {'name': 'YearsOfRecordingInCoreSet', 'datatype': 'string'})
 
         cldf.add_component(
             'ContributionTable',
-            {
-                'name': 'Archive',
-                'datatype': 'string',
-            },
-            {
-                'name': 'Archive_link',
-                'datatype': 'string',
-            },
-            {
-                'name': 'AnnotationLicense',
-                'datatype': 'string',
-            },
-            {
-                'name': 'AudioLicense',
-                'datatype': 'string',
-            },
-            {
-                'name': 'DOI',
-                'datatype': 'string',
-            },
+            {'name': 'Archive', 'datatype': 'string'},
+            {'name': 'Archive_link', 'datatype': 'string'},
+            {'name': 'AnnotationLicense', 'datatype': 'string'},
+            {'name': 'AudioLicense', 'datatype': 'string'},
+            {'name': 'DOI', 'datatype': 'string'},
         )
+        t = cldf.add_component(
+            'ParameterTable',
+            {'name': 'CLTS_ID', 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#cltsReference'},
+        )
+        t.common_props['dc:description'] = \
+            "The ParameterTable lists IPA phones which appear in the DoReCo corpus (if a " \
+            "correspondence to the X-Sampa representation could be determined). If possible, IPA " \
+            "phones are linked to CLTS' BIPA representation, giving access to the CLTS feature " \
+            "system."
 
         cldf.add_table(
             'phones.csv',
             {
                 'name': 'Language_ID',
                 'datatype': 'string',
-            },
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference'},
+            {'name': 'Filename', 'datatype': 'string'},
+            {'name': 'speaker', 'datatype': 'string'},
+            {'name': 'ph_ID', 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id'},
+            {'name': 'ph', 'datatype': 'string'},
             {
-                'name': 'Filename',
-                'datatype': 'string',
-            },
+                'name': 'IPA',
+                'dc:description': "Link to corresponding IPA phoneme, with details given in ParameterTable",
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#parameterReference'},
             {
-                'name': 'speaker',
-                'datatype': 'string',
-            },
+                'name': 'u_ID',
+                'dc:description': 'Utterance ID. Utterances are words/phones delimited by silent pauses.',
+                'datatype': 'string'},
             {
-                'name': 'ph_ID',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
-            },
-            {
-                'name': 'ph',
-                'datatype': 'string',
-            },
+                'name': 'Token_Type',
+                'dc:description': 'Not all rows in this table correspond to actual phones. If a row does, '
+                                  "it's Token_Type is 'xsampa', otherwise it's 'label' or 'pause'.",
+                'datatype': {'base': 'string', 'format': 'label|pause|xsampa'}},
             {
                 'name': 'start',
-                'datatype': 'decimal',
-            },
+                'dc:description': 'Start of the phone in the linked sound file in (floating point) seconds.',
+                'datatype': 'decimal'},
             {
                 'name': 'end',
-                'datatype': 'decimal',
-            },
-            #{
-            #    'name': 'duration',
-            #    'datatype': 'string',
-            #},
-            # {
-            #     'name': 'ref',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'tx',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'ft',
-            #     'datatype': 'str',
-            # },
+                'dc:description': 'End of the phone in the linked sound file in (floating point) seconds.',
+                'datatype': 'decimal'},
+            {
+                'name': 'duration',
+                'dc:description': 'Duration of the phone in the linked sound file in (floating point) seconds.',
+                'datatype': 'decimal'},
             {
                 'name': 'wd_ID',
+                'dc:description': 'Link to corresponding word.',
                 'datatype': 'string',
             },
-            # {
-            #     'name': 'wd',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'mb_ID',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'mb',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'doreco-mb-algn',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'ps',
-            #     'datatype': 'str',
-            # },
-            # {
-            #     'name': 'gl',
-            #     'datatype': 'str',
-            # },
         )
 
         cldf.add_table(
             'words.csv',
             {
                 'name': 'Language_ID',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference',
                 'datatype': 'string',
             },
             {
@@ -571,6 +446,10 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'end',
+                'datatype': 'decimal',
+            },
+            {
+                'name': 'duration',
                 'datatype': 'decimal',
             },
             {
@@ -686,9 +565,10 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'Glottocode',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference',
                 'datatype': 'string',
             }
-            )
+        )
 
         cldf.add_table(
             'glosses.csv',
@@ -710,15 +590,11 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'Glottocode',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference',
                 'datatype': 'string',
             }
-            )
-
-        cldf.add_foreign_key('metadata.csv', 'Glottocode', 'LanguageTable', 'ID')
-        cldf.add_foreign_key('glosses.csv', 'Glottocode', 'LanguageTable', 'ID')
+        )
         cldf.add_foreign_key('ContributionTable', 'ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('phones.csv', 'wd_ID', 'words.csv', 'wd_ID')
-        cldf.add_foreign_key('phones.csv', 'Language_ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('phones.csv', 'Filename', 'metadata.csv', 'Filename')
-        cldf.add_foreign_key('words.csv', 'Language_ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('words.csv', 'Filename', 'metadata.csv', 'Filename')
