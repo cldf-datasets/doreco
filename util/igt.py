@@ -1,5 +1,6 @@
 import re
 
+from pyigt.igt import NON_OVERT_ELEMENT
 from pyigt.lgrmorphemes import MORPHEME_SEPARATORS, split_morphemes
 from pyigt import IGT
 
@@ -107,8 +108,8 @@ def igt(rows, tx, ft, eids):
             ID=eid,
             Language_ID=gc,
             Primary_Text=tx,
-            Analyzed_Word=mbs,
-            Gloss=gls,
+            Analyzed_Word=[k if k else NON_OVERT_ELEMENT for k in mbs],
+            Gloss=[k if k else NON_OVERT_ELEMENT for k in gls],
             Translated_Text=ft,
         )
 # 'â\x80\x9c': '“'

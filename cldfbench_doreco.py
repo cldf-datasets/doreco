@@ -1,22 +1,5 @@
 """
-Filled pause: <<fp>>
-False start: <<fs>>
-Prolongation: <<pr>>
-Foreign material: <<fm>>
-Singing: <<sg>>
-Backchannel: <<bc>>
-Ideophone: <<id>>
-Onomatopoeic: <<on>>
-Word-internal pause: <<wip>>
-Unidentifiable: <<ui>>
-Silent pause: <p:>
 
-Labels consist of two opening brackets, the label proper, a closing bracket, the content (optional),
-and another closing bracket, e.g. <<ui>word>. Labels may also appear on their own if the content is
-not known, e.g. <<ui>>. Silent pauses are marked by a special symbol, <p:>. The location of silent
-pauses is manually checked by the DoReCo team, while the symbol itself is inserted by the WebMAUS
-service. Unlike the other labels, the <p:> symbol has only one of each bracket, and no other
-content may be included in it.
 """
 import re
 import decimal
@@ -30,12 +13,27 @@ import urllib.request
 from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
 from clldutils.clilib import confirm
+from clldutils.jsonlib import dump, load
 import pybtex.database
+from tqdm import tqdm
 
 from util import nakala
 from util import igt
 
 SILENT_PAUSE = '<p:>'
+FILLER = '****'
+LABEL_PATTERN = re.compile(r'<<(?P<label>fp|fs|pr|fm|sg|bc|id|on|wip|ui)>(?P<content>[^>]+)?>')
+
+
+def global_id(glottocode, local_id):
+    return '{}_{}'.format(glottocode, local_id)
+
+
+#
+# FIXME: determine valid words (for core):
+# - core speaker (check spk_code split by "/") in metadata!
+# - no pause, no filler, no label
+#
 
 
 # bora: translations in spanish -> raw/languages.csv:Translation
@@ -93,11 +91,11 @@ class Dataset(BaseDataset):
 
     def cmd_download(self, args):
         self.raw_dir.download(
-            #'https://sharedocs.huma-num.fr/wl/?id=s947TcfRfDZR643QURdyncdku4EmeKyb&fmode=download',  # v1.1
+            # 'https://sharedocs.huma-num.fr/wl/?id=s947TcfRfDZR643QURdyncdku4EmeKyb&fmode=download',  # v1.1
             "https://sharedocs.huma-num.fr/wl/?id=3LuEgKRrEUrdkAeDVskK46eNFqes5s6F&fmode=download",  # v1.2
             'languages.csv')
         self.raw_dir.download(
-            #'https://sharedocs.huma-num.fr/wl/?id=xqkUR3WoFOKB8cRb0MdHYJxIDEXEXlVG&fmode=download',  # v1.1
+            # 'https://sharedocs.huma-num.fr/wl/?id=xqkUR3WoFOKB8cRb0MdHYJxIDEXEXlVG&fmode=download',  # v1.1
             "https://sharedocs.huma-num.fr/wl/?id=6OkBYGXrPkLEuHchF4kOXpsJf7MOKcLv&fmode=download",  # v1.2
             'sources.bib')
 
@@ -106,18 +104,25 @@ class Dataset(BaseDataset):
         for row in self.raw_dir.read_csv('languages.csv', dicts=True):
             if with_nd_data or ('ND' not in row['Annotation license']):
                 print(row['Glottocode'], row['DOI'])
+                doi = row['DOI']
+                if row['Glottocode'] == 'beja1238':
+                    # Known issue with https://nakala.fr/10.34847/nkl.edd011t1 v7 including wrong
+                    # language files.
+                    doi += '.v6'
 
-                dep = nakala.Deposit(row['DOI'])
+                dep = nakala.Deposit(doi)
                 for f in dep.files:
                     for s in ['_wd.csv', '_ph.csv', '_metadata.csv', '_gloss-abbreviations.csv']:
                         if f.name.endswith(s):
                             print(f.name, f.sha1)
                             self.raw_dir.download(f.url, '{}{}'.format(row['Glottocode'], s))
                             break
-                if with_audio_data:
-                    for supp in dep.supplements:
-                        for f in supp.files:
-                            if f.mime_type == 'audio/x-wav':
+                audio = collections.OrderedDict()
+                for supp in dep.supplements:
+                    for f in supp.files:
+                        if f.mime_type == 'audio/x-wav':
+                            audio[f.name.replace('.wav', '')] = (f.url, f.size)
+                            if with_audio_data:
                                 target = self.dir / 'audio' / row['Glottocode'] / f.name
                                 target.parent.mkdir(parents=True, exist_ok=True)
                                 if not target.exists():
@@ -126,7 +131,7 @@ class Dataset(BaseDataset):
                                     except urllib.error.HTTPError as e:
                                         if int(e.code) == 401:
                                             pass
-
+                dump(audio, self.raw_dir / '{}_files.json'.format(row['Glottocode']), indent=4)
 
     def iter_rows(self, pattern):
         mismatch = set()
@@ -144,7 +149,7 @@ class Dataset(BaseDataset):
                     if p.name.partition('_')[0] not in mismatch:
                         print('Glottocode mismatch: {}'.format(p))
                         mismatch.add(p.name.partition('_')[0])
-                    #raise ValueError(p)
+                    # raise ValueError(p)
                 row.setdefault('Glottocode', p.name.partition('_')[0])
                 if '_wd' in pattern or ('_ph' in pattern):
                     # doreco-mb-algn and mc-zero col missing in some files of _ph
@@ -156,6 +161,9 @@ class Dataset(BaseDataset):
                 yield row
 
     def cmd_makecldf(self, args):
+        #
+        # FIXME: add MediaTable !
+        #
         from pyclts import CLTS
         clts = CLTS('../../cldf-clts/clts-data')
         xsampa_to_bipa = collections.OrderedDict()
@@ -215,60 +223,141 @@ class Dataset(BaseDataset):
             })
         args.log.info("added languages and contributions")
 
+        speakers = set()
+        filemd = collections.defaultdict(dict)
+        for p in self.raw_dir.glob('*_files.json'):
+            filemd[p.stem.split('_')[0]] = load(p)
         for i, row in enumerate(self.iter_rows('*_metadata.csv'), start=1):
-            args.writer.objects["metadata.csv"].append({
-                "ID": row["Glottocode"] + "_" + row["id"],
-                "Filename": "doreco_" + row["Glottocode"] + "_" + row["name"],
-                "spk_code": row["spk_code"],
-                "spk_age": row["spk_age"],
-                "spk_age_c": row["spk_age_c"],
-                "spk_sex": row["spk_sex"],
-                "rec_date": row["rec_date"],
-                "rec_date_c": row["rec_date_c"],
-                "genre": row["genre"],
-                "genre_stim": row["genre_stim"],
-                "gloss": row["gloss"],
-                "transl": row["transl"],
-                "sound_quality": row["sound_quality"],
-                "background_noise": row["background_noise"],
-                "word_tokens": row["word_tokens"],
-                "extended": row["extended"],
-                "Glottocode": row["Glottocode"]
-            })
+            if row['extended'] == 'yes':
+                continue
+            fid = 'doreco_{}'.format(global_id(row['Glottocode'], row["name"]))
+            if fid in filemd[row['Glottocode']]:
+                args.writer.objects["MediaTable"].append({
+                    "ID": fid,
+                    'Name': '{}.wav'.format(row['name']),
+                    "rec_date": row["rec_date"],
+                    "rec_date_c": row["rec_date_c"],
+                    "genre": row["genre"],
+                    "genre_stim": row["genre_stim"],
+                    "gloss": row["gloss"],
+                    "transl": row["transl"],
+                    "sound_quality": row["sound_quality"],
+                    "background_noise": row["background_noise"],
+                    "Glottocode": row["Glottocode"],
+                    "Download_URL": filemd[row['Glottocode']][fid][0],
+                    'Media_Type': 'audio/x-wav',
+                })
+            age_c = row['spk_age_c'].split('/') if '/' in row['spk_age_c'] else row['spk_age_c']
+            for i, (code, age, sex) in enumerate(
+                    itertools.zip_longest(row['spk_code'].split('/'), row['spk_age'].split('/'), row['spk_sex'].split('/'))):
+                assert code and age and sex, '{} {} {} {}'.format(row['Glottocode'], code, age, sex)
+                code = global_id(row['Glottocode'], code)
+                if code not in speakers:
+                    args.writer.objects['speakers.csv'].append(dict(
+                        ID=code,
+                        age=None if age == 'na' else int(age),
+                        sex=sex,
+                        age_assignment_certain=age_c[i] if isinstance(age_c, list) else age_c,
+                        Language_ID=row['Glottocode'],
+                    ))
+                    speakers.add(code)
 
         for i, row in enumerate(self.iter_rows('*_gloss-abbreviations.csv'), start=1):
             args.writer.objects["glosses.csv"].append({
-                "ID": row['Glottocode'] + str(i),
+                "ID": global_id(row['Glottocode'], str(i)),
                 "Gloss": row["Gloss"],
                 "LGR": row["LGR"],
                 "Meaning": row["Meaning"],
                 "Glottocode": row["Glottocode"]
             })
 
-        wd_intervals = {}
+        wd_intervals = {}  # We store start and end of words - as specified by contained phones.
+        uid = 0  # We are adding utterance IDs.
+        gc = None
+        for wid, rows in tqdm(itertools.groupby(self.iter_rows('*_ph.csv'), lambda r: r['wd_ID']), desc='phones'):
+            i, core, row, global_wid = 0, True, None, None
+            while core:
+                try:
+                    row = next(rows)
+                except StopIteration:  # row is now the last phone in the word.
+                    wd_intervals['{}_{}'.format(gc, wid)][1] = decimal.Decimal(row["end"])
+                    break
+                core = row['core_extended'] != 'extended'
+                if not core:
+                    break
+                start, end = decimal.Decimal(row["start"]), decimal.Decimal(row["end"])
+                if i == 0:  # The first phone in the word.
+                    if row['Glottocode'] != gc:
+                        # A new corpus, make sure we are not conflating utterance.
+                        # FIXME: Should be done per file!
+                        uid += 1
+                    gc = row['Glottocode']
+                    if wid.split()[0] != wid:
+                        # Known problem of the Evenki corpus, see
+                        # https://github.com/DoReCo/doreco/issues/13
+                        assert gc == 'even1259'
+                        wid = wid.split()[-1]
+                    global_wid = global_id(gc, wid)
+                    wd_intervals[global_wid] = [start, None]
+                    speaker = global_id(gc, row['speaker'])
+                    if speaker.startswith('yuca1254_0'):
+                        # Known problem of the Yucatec corpus, see
+                        # https://github.com/DoReCo/doreco/issues/5#issuecomment-1490180631
+                        speaker = speaker.replace('0', '')
+                    assert speaker in speakers, 'Unknown speaker: {}'.format(speaker)
+                else:
+                    assert start >= args.writer.objects["phones.csv"][-1]['end']
+                if row['ph'] == SILENT_PAUSE:  # Silent pauses delimit utterances.
+                    uid += 1
+                args.writer.objects["phones.csv"].append({
+                    "ph_ID": gc + "_" + row["ph_ID"],
+                    "ph": row["ph"],
+                    "IPA": xsampa_to_bipa[row['ph']] if row['ph'] in xsampa_to_bipa else None,
+                    "start": start,
+                    "end": end,
+                    "duration": end - start,
+                    "wd_ID": global_wid,
+                    'u_ID': None if row['ph'] == SILENT_PAUSE else str(uid),
+                    'Token_Type': 'pause' if row['ph'] == SILENT_PAUSE else (
+                        'label' if row['ph'].startswith('<<') else 'xsampa'),
+                })
+                i += 1
+
+        misaligned_start, max_misalignment = [], decimal.Decimal('0')
         eids = collections.defaultdict(int)
-        for (f, tx, ft), rows in itertools.groupby(self.iter_rows('*_wd.csv'), lambda r: (r['file'], r['tx'], r['ft'])):
+        for (f, tx, ft), rows in tqdm(itertools.groupby(self.iter_rows('*_wd.csv'), lambda r: (r['file'], r['tx'], r['ft'])), desc='words'):
             rows = list(rows)
             eid = None
             # Create an entry in ExampleTable if tx not in ['', None, '****', '<p:>']
-            if tx and (ft not in ['', None, '****', SILENT_PAUSE]):
+            if tx and ft and ft not in {FILLER, SILENT_PAUSE}:
                 ex = igt.igt(rows, tx, ft, eids)
                 if ex:
                     args.writer.objects['ExampleTable'].append(ex)
                     eid = ex['ID']
 
             for row in rows:
+                gc = row['Glottocode']
+                wid = global_id(gc, row['wd_ID'])
+                sid = None
+                start, end = decimal.Decimal(row["start"]), decimal.Decimal(row["end"])
+                if wid in wd_intervals:
+                    ps, pe = wd_intervals[wid]
+                    assert start <= ps and pe <= end, 'Conflicting time alignment of wd and ph.'
+                    sid = global_id(gc, row["speaker"])
+                    del wd_intervals[wid]
+                core = row['core_extended'] != 'extended'
                 args.writer.objects["words.csv"].append({
-                    "Language_ID": row["Glottocode"],
-                    "Filename": row["file"],
-                    # "core_extended": row["core_extended"],
-                    "speaker": row["speaker"],
+                    "Language_ID": gc,
+                    "File_ID": row["file"] if core and row['file'] in filemd[gc] else None,
+                    "core": core,
+                    # Only speakers for core words are normalized.
+                    "Speaker_ID": sid,
                     "Example_ID": eid,
-                    "wd_ID": row["Glottocode"] + "_" + row["wd_ID"],
+                    "wd_ID": wid,
                     "wd": row["wd"],
-                    "start": decimal.Decimal(row["start"]),
-                    "end": decimal.Decimal(row["end"]),
-                    "duration": decimal.Decimal(row["end"]) - decimal.Decimal(row["start"]),
+                    "start": start,
+                    "end": end,
+                    "duration": end - start,
                     "ref": row["ref"],
                     "tx": row["tx"],
                     "ft": row["ft"],
@@ -279,74 +368,58 @@ class Dataset(BaseDataset):
                     # FIXME: add ps and gl to ExampleTable!
                     "ps": row["ps"],
                     "gl": row["gl"],
-                    "ph_ID": row["Glottocode"] + "_" + row["ph_ID"],
-                    "ph": row["ph"]
                 })
-                wd_intervals[row["Glottocode"] + "_" + row["wd_ID"]] = (
-                    decimal.Decimal(row["start"]), decimal.Decimal(row["end"]))
+        assert not wd_intervals, '{} missing wd_IDs linked from phones!'.format(len(wd_intervals))
 
-        misaligned_start, max_misalignment = [], decimal.Decimal('0')
-        uid = 0
-        for wid, rows in itertools.groupby(self.iter_rows('*_ph.csv'), lambda r: r['wd_ID']):
-            wido = wid
-            wid = wid.split()[0]
-            rows = list(rows)
-            for i, row in enumerate(rows):
-                if row['Glottocode'] + '_' + wido not in wd_intervals:
-                    assert row['Glottocode'] == 'even1259' and ' ' in wido, '{} - {}'.format(row['Glottocode'], wido)
-                    print('dropping phone with wid {}'.format(wid))
-                    continue
-                if row['ph'] == SILENT_PAUSE:  # Silent pauses delimit utterances.
-                    uid += 1
-                if i == 0:
-                    ps = decimal.Decimal(row["start"])
-                    ws = wd_intervals[row['Glottocode'] + '_' + wid][0]
-                    assert ps >= ws
-                    if ps > ws:
-                        misaligned_start.append((row['Glottocode'], ps - ws, row['wd'], [r['ph'] for r in rows]))
-                        if ps - ws > max_misalignment:
-                            max_misalignment = ps - ws
-                if i == len(rows) - 1:
-                    pe = decimal.Decimal(row["end"])
-                    we = wd_intervals[row['Glottocode'] + '_' + wid][1]
-                    assert pe <= we
-                    if pe < we:
-                        misaligned_start.append((row['Glottocode'], row['wd']))
-                if 0 < i < len(rows):
-                    assert decimal.Decimal(row["start"]) >= args.writer.objects["phones.csv"][-1]['end']
-
-                args.writer.objects["phones.csv"].append({
-                    "Language_ID": row["Glottocode"],
-                    "Filename": row["file"],
-                    # "core_extended": row["core_extended"],
-                    "speaker": row["Glottocode"] + "_" + row["speaker"],
-                    "ph_ID": row["Glottocode"] + "_" + row["ph_ID"],
-                    "ph": row["ph"],
-                    "IPA": xsampa_to_bipa[row['ph']] if row['ph'] in xsampa_to_bipa else None,
-                    "start": decimal.Decimal(row["start"]),
-                    "end": decimal.Decimal(row["end"]),
-                    "duration": decimal.Decimal(row["end"]) - decimal.Decimal(row["start"]),
-                    # "ref": row["ref"],
-                    # "tx": row["tx"],
-                    # "ft": row["ft"],
-                    "wd_ID": row["Glottocode"] + "_" + row["wd_ID"],
-                    'u_ID': None if row['ph'] == SILENT_PAUSE else str(uid),
-                    'Token_Type': 'pause' if row['ph'] == SILENT_PAUSE else (
-                        'label' if row['ph'].startswith('<<') else 'xsampa'),
-                    # "wd": row["wd"],
-                    # "mb_ID": row["mb_ID"],
-                    # "mb": row["mb"],
-                    # "doreco-mb-algn": row["doreco-mb-algn"],
-                    # "ps": row["ps"],
-                    # "gl": row["gl"]
-                })
-                if row['ph'] != SILENT_PAUSE:
-                    pause = False
-
-        print(inv, valid, len(misaligned_start))
 
     def create_schema(self, cldf):
+        #
+        # FIXME: mediatable should have contributionReference!
+        #
+        cldf.add_component(
+            'MediaTable',
+            {
+                'name': 'rec_date',
+                'datatype': 'string',
+            },
+            {
+                'name': 'rec_date_c',
+                'datatype': 'string',
+            },
+            {
+                'name': 'genre',
+                'datatype': 'string',
+            },
+            {
+                'name': 'genre_stim',
+                'datatype': 'string',
+            },
+            {
+                'name': 'gloss',
+                'datatype': 'string',
+            },
+            {
+                'name': 'transl',
+                'datatype': 'string',
+            },
+            {
+                'name': 'sound_quality',
+                'datatype': 'string',
+            },
+            {
+                'name': 'background_noise',
+                'datatype': 'string',
+            },
+            {
+                'name': 'Glottocode',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference',
+                'datatype': 'string',
+            }
+        )
+        cldf.remove_columns('MediaTable', 'Description', 'Path_In_Zip')
         cldf.add_component('ExampleTable')
+        cldf['ExampleTable', 'Analyzed_Word'].null = []
+        cldf['ExampleTable', 'Gloss'].null = []
         cldf['ExampleTable', 'Analyzed_Word'].separator = '\t'
         cldf['ExampleTable', 'Gloss'].separator = '\t'
         cldf.add_component(
@@ -382,17 +455,28 @@ class Dataset(BaseDataset):
             "correspondence to the X-Sampa representation could be determined). If possible, IPA " \
             "phones are linked to CLTS' BIPA representation, giving access to the CLTS feature " \
             "system."
-
         cldf.add_table(
-            'phones.csv',
+            'speakers.csv',
+            {'name': 'ID', 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id'},
             {
                 'name': 'Language_ID',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference'},
-            {'name': 'Filename', 'datatype': 'string'},
-            {'name': 'speaker', 'datatype': 'string'},
+            {'name': 'age', 'datatype': 'integer'},
+            {'name': 'age_assignment_certain',
+             'datatype': {'base': 'str', 'format': 'certain|approximate'},
+             },
+            {'name': 'sex',
+             'datatype': {'base': 'str', 'format': 'm|f'},
+             },
+        )
+        cldf.add_table(
+            'phones.csv',
             {'name': 'ph_ID', 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id'},
-            {'name': 'ph', 'datatype': 'string'},
+            {
+                'name': 'ph',
+                'dc:description': 'See the description of the Token_Type column.',
+                'datatype': 'string'},
             {
                 'name': 'IPA',
                 'dc:description': "Link to corresponding IPA phoneme, with details given in ParameterTable",
@@ -403,8 +487,30 @@ class Dataset(BaseDataset):
                 'datatype': 'string'},
             {
                 'name': 'Token_Type',
-                'dc:description': 'Not all rows in this table correspond to actual phones. If a row does, '
-                                  "it's Token_Type is 'xsampa', otherwise it's 'label' or 'pause'.",
+                'dc:description': """\
+Not all rows in this table correspond to actual phones. If a row does the Token_Type is 'xsampa'
+and the `ph` column holds the X-SAMPA representation of the phone, otherwise it is a 'pause' or a
+'label'.
+
+Labels consist of two opening brackets, the label proper, a closing bracket, the content (optional),
+and another closing bracket, e.g. `<<ui>word>`. Labels may also appear on their own if the content
+is not known, e.g. `<<ui>>`. Valid proper labels are
+
+- fp: Filled pause
+- fs: False start
+- pr: Prolongation
+- fm: Foreign material
+- sg: Singing
+- bc: Backchannel
+- id: Ideophone
+- on: Onomatopoeic
+- wip: Word-internal pause
+- ui: Unidentifiable
+
+Silent pauses are marked by a special symbol, `<p:>`. The location of silent pauses is manually
+checked by the DoReCo team, while the symbol itself is inserted by the WebMAUS service. Unlike
+labels, the <p:> symbol has only one of each bracket, and no other content may be included in it.\
+""",
                 'datatype': {'base': 'string', 'format': 'label|pause|xsampa'}},
             {
                 'name': 'start',
@@ -433,7 +539,8 @@ class Dataset(BaseDataset):
                 'datatype': 'string',
             },
             {
-                'name': 'Filename',
+                'name': 'File_ID',
+                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#mediaReference',
                 'datatype': 'string',
             },
             {
@@ -466,6 +573,7 @@ class Dataset(BaseDataset):
             },
             {
                 'name': 'wd',
+                'dc:description': 'The word form transcribed into orthography.',
                 'datatype': 'string',
             },
             {
@@ -488,88 +596,7 @@ class Dataset(BaseDataset):
                 'name': 'gl',
                 'datatype': 'string',
             },
-            {
-                'name': 'ph_id',
-                'datatype': 'string',
-            },
-            {
-                'name': 'ph',
-                'datatype': 'string',
-            },
         )
-
-        T = cldf.add_table(
-            'metadata.csv',
-            {
-                'name': 'ID',
-            },
-            {
-                'name': 'Filename',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#id',
-            },
-            {
-                'name': 'spk_code',
-                'datatype': 'string',
-            },
-            {
-                'name': 'spk_age',
-                'datatype': 'string',
-            },
-            {
-                'name': 'spk_age_c',
-                'datatype': 'string',
-            },
-            {
-                'name': 'spk_sex',
-                'datatype': 'string',
-            },
-            {
-                'name': 'rec_date',
-                'datatype': 'string',
-            },
-            {
-                'name': 'rec_date_c',
-                'datatype': 'string',
-            },
-            {
-                'name': 'genre',
-                'datatype': 'string',
-            },
-            {
-                'name': 'genre_stim',
-                'datatype': 'string',
-            },
-            {
-                'name': 'gloss',
-                'datatype': 'string',
-            },
-            {
-                'name': 'transl',
-                'datatype': 'string',
-            },
-            {
-                'name': 'sound_quality',
-                'datatype': 'string',
-            },
-            {
-                'name': 'background_noise',
-                'datatype': 'string',
-            },
-            {
-                'name': 'word_tokens',
-                'datatype': 'int',
-            },
-            {
-                'name': 'extended',
-                'datatype': 'string',
-            },
-            {
-                'name': 'Glottocode',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference',
-                'datatype': 'string',
-            }
-        )
-
         cldf.add_table(
             'glosses.csv',
             {
@@ -596,5 +623,4 @@ class Dataset(BaseDataset):
         )
         cldf.add_foreign_key('ContributionTable', 'ID', 'LanguageTable', 'ID')
         cldf.add_foreign_key('phones.csv', 'wd_ID', 'words.csv', 'wd_ID')
-        cldf.add_foreign_key('phones.csv', 'Filename', 'metadata.csv', 'Filename')
-        cldf.add_foreign_key('words.csv', 'Filename', 'metadata.csv', 'Filename')
+        cldf.add_foreign_key('words.csv', 'Speaker_ID', 'speakers.csv', 'ID')

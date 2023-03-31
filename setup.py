@@ -9,6 +9,9 @@ setup(
     entry_points={
         'cldfbench.dataset': [
             'doreco=cldfbench_doreco:Dataset',
+        ],
+        'cldfbench.commands': [
+            'doreco=dorecocommands',
         ]
     },
     install_requires=[
