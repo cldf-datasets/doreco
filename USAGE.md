@@ -36,8 +36,11 @@ Notes:
 
 ## Data access via SQL queries
 
-Data for some interesting objects in the database is most easily accessed using somewhat advanced
-SQL constructs like window functions. Consider for example all word-initial phones.
+Time-aligned phones and words make up the core contribution of the DoReCo dataset. This data is stored
+in the `phones.csv` and `words.csv` tables, respectively, and can be queried in a straightforward way.
+
+Retrieving particular phones, e.g. word initials is best done using somewhat advanced
+SQL constructs like window functions, though.
 
 An SQL query to retrieve these could look as follows:
 
@@ -116,12 +119,11 @@ consonant|389871
 vowel|99312
 
 
-
 ## Utterances
 
-Some kinds of analysis make most sense on utterance level, e.g. computing speech rate. To make this
-possible, `phones.csv` contains a column `u_id` which allows for aggregating or partitioning phone
-data by utterance.
+Some kinds of analysis make most sense on utterance level, e.g. computing speech rate. (Utterances are
+defined as any chunk of speech delimited by silent pauses.) To make this possible, `phones.csv` contains
+a column `u_id` which allows for aggregating or partitioning phone data by utterance.
 
 Computing speech rate per utterance as *ln(phones per second)* can be done with the following query:
 
@@ -259,6 +261,67 @@ m|nʱ|7
 ```
 
 
+## IGT examples
+
+Although the main focus of the DoReCo dataset are the time-aligned phones, the data also contains
+many glossed example sentences. These are available in the CLDF ExampleTable.
+
+So, for example, if we are interested in particular phenomena, we can first inspect the gloss labels
+used for a language, and the number of examples containing the label:
+
+```sql
+SELECT 
+    g.cldf_name AS label,         
+    count(DISTINCT e.cldf_id) AS freq 
+FROM
+    `glosses.csv` AS g, 
+    exampletable AS e 
+WHERE 
+    e.cldf_gloss LIKE '%' || g.cldf_name || '%' AND 
+    g.cldf_languagereference = 'sout3282' AND 
+    e.cldf_languagereference = 'sout3282' 
+GROUP BY g.cldf_name 
+ORDER BY freq 
+LIMIT 3;
+```
+
+Note: We use SQLite's string concatenation operator `||` to string together a suitable argument for
+the `LIKE` operator, making sure we match gloss containing `HORT`.
+
+label | freq
+--- | ---
+SUBJ|1
+SUPR|7
+HORT|11
+
+And now we can list the (shortest 3) aligned analyzed words and gloss lines of the matching IGT examples:
+
+```sql
+SELECT 
+    cldf_analyzedword || char(10) || cldf_gloss || char(10) 
+FROM 
+    exampletable 
+WHERE 
+    cldf_gloss LIKE '%HORT%' AND cldf_languagereference = 'sout3282' 
+ORDER BY length(cldf_primaryText) 
+LIMIT 3;
+```
+
+Note: We use SQLite's `char` function to insert newline characters in the output to "align" the IGTs.
+
+```text
+****	well	****	put	him	in	****	let's	try	him
+****	well	****	put.IMP	3SG.M.OBL	in	****	HORT	try.INF	3SG.M.OBL
+
+[INT]	****	let's	leave	that	for	another	occasion	shall-we
+[INT]	****	HORT	leave.INF	DIST.SG	for	another	occasion	shall-2PL
+
+****	because	everybody	was	having	rabbit-s	then	****	'cause	the	grub	was	so	short
+****	because	everybody	be.PST.3SG	have.PTCP.PRS	rabbit-PL	then	****	because	the	grub	be.PST.3SG	so	short
+```
+
+
+
 ## Audio files
 
 The DoReCo CLDF dataset also includes information about the publicly available audio files underlying the
@@ -271,7 +334,13 @@ audio file:
 ```sql
 sqlite> 
     SELECT 
-        w.cldf_id, w.cldf_name, count(p.cldf_id) AS wl, f.cldf_downloadUrl, w.start, w.end 
+        w.cldf_id, 
+        w.cldf_exampleReference,
+        w.cldf_name,
+        count(p.cldf_id) AS wl,
+        f.cldf_downloadUrl, 
+        w.start, 
+        w.end 
     FROM 
         `phones.csv` AS p, 
         `words.csv` AS w, 
@@ -283,7 +352,7 @@ sqlite>
     GROUP BY w.cldf_id 
     ORDER BY wl DESC 
     LIMIT 1;
-sout3282_w020797|agricultural|12|https://api.nakala.fr/data/10.34847%2Fnkl.dcfbh2yw/830afcf32230aa859b39a92137edbdb18c5b174f|1950.493|1951.383
+sout3282_w020797|sout3282-1322|agricultural|12|https://api.nakala.fr/data/10.34847%2Fnkl.dcfbh2yw/830afcf32230aa859b39a92137edbdb18c5b174f|1950.493|1951.383
 ```
 
 Plugging this data into HTML as follows
@@ -302,3 +371,63 @@ and saving the file as `agricultural.html` you can get a light-weight corpus vie
 in your browser and clicking the play button to listen to the word.
 
 > ![audio player](audio.png)
+
+
+IGT examples are linked to audio files as well. So we can do the same for the glossed example linked to
+the word *agricultural*:
+
+```sql
+SELECT
+    e.cldf_primaryText, 
+    '<table><tr>' || char(10) || '<td>' || replace(e.cldf_analyzedword, char(9), '</td><td>') || '</td></tr>' || char(10) || '<tr><td>' || replace(e.cldf_gloss, char(9), '</td><td>') || '</td></tr></table>', 
+    e.cldf_translatedText, 
+    f.cldf_downloadUrl, 
+    e.start, 
+    e.end 
+FROM 
+    exampletable AS e, 
+    mediatable AS f 
+WHERE 
+    e.cldf_mediareference = f.cldf_id AND e.cldf_id = 'sout3282-1322';
+```
+
+Note: While somewhat cumbersome, basic HTML can be strung together in SQL. In the above code we use the SQLite operator
+`||` to concatenate strings, and the [char](https://www.sqlite.org/lang_corefunc.html#char) function to express the
+"special" characters `\n` - newline - and `\t` - tab, and the [replace](https://www.sqlite.org/lang_corefunc.html#replace) function
+to turn the tab-separated aligned words into HTML table cells.
+
+Again, we can plug the result 
+
+```text
+He knew all the -- Well, they kne-- the farms -- the bank managers them days, in the agricultural, knew as much about a farm as the farmer did, pretty well.|
+<table><tr>
+<td>he</td><td>knew</td><td>all</td><td>****</td><td><p:></td><td>well</td><td>they</td><td>kne</td><td>****</td><td>farm-s</td><td>the</td><td>****</td><td>bank-manager</td><td>them</td><td>day-s</td><td><p:></td><td>in</td><td>the</td><td>agricultural</td><td><p:></td><td>knew</td><td>as</td><td>much</td><td>about</td><td>a</td><td>farm</td><td>as</td><td>the</td><td>farmer</td><td>did</td><td>pretty</td><td>well</td></tr>
+<tr><td>3SG.M</td><td>know.PST</td><td>all</td><td>****</td><td><p:></td><td>well</td><td>3PL</td><td>NC</td><td>****</td><td>farm-PL</td><td>the</td><td>****</td><td>bank_manager-PL</td><td>DIST.PL</td><td>day-PL</td><td><p:></td><td>in</td><td>the</td><td>agricultural</td><td><p:></td><td>know.PST</td><td>as</td><td>much</td><td>about</td><td>a</td><td>farm</td><td>as</td><td>the</td><td>farmer</td><td>do.PST</td><td>pretty</td><td>well</td></tr></table>
+The bank managers in those days, in the agricultural, knew as much about a farm as the farmer did, pretty well.
+https://api.nakala.fr/data/10.34847%2Fnkl.dcfbh2yw/830afcf32230aa859b39a92137edbdb18c5b174f
+1944.132
+1955.501
+```
+
+into an HTML file to get a (very) basic corpus viewer:
+
+```html
+<html>
+<body>
+<p><i>
+He knew all the -- Well, they kne-- the farms -- the bank managers them days, in the agricultural, knew as much about a farm as the farmer did, pretty well.
+</i></p>
+<table><tr>
+<td>he</td><td>knew</td><td>all</td><td>****</td><td><p:></td><td>well</td><td>they</td><td>kne</td><td>****</td><td>farm-s</td><td>the</td><td>****</td><td>bank-manager</td><td>them</td><td>day-s</td><td><p:></td><td>in</td><td>the</td><td>agricultural</td><td><p:></td><td>knew</td><td>as</td><td>much</td><td>about</td><td>a</td><td>farm</td><td>as</td><td>the</td><td>farmer</td><td>did</td><td>pretty</td><td>well</td></tr>
+<tr><td>3SG.M</td><td>know.PST</td><td>all</td><td>****</td><td><p:></td><td>well</td><td>3PL</td><td>NC</td><td>****</td><td>farm-PL</td><td>the</td><td>****</td><td>bank_manager-PL</td><td>DIST.PL</td><td>day-PL</td><td><p:></td><td>in</td><td>the</td><td>agricultural</td><td><p:></td><td>know.PST</td><td>as</td><td>much</td><td>about</td><td>a</td><td>farm</td><td>as</td><td>the</td><td>farmer</td><td>do.PST</td><td>pretty</td><td>well</td></tr></table>
+<p>
+The bank managers in those days, in the agricultural, knew as much about a farm as the farmer did, pretty well.
+</p>
+<audio id="audio2" 
+       preload="auto"
+       controls="controls" 
+       src="https://api.nakala.fr/data/10.34847%2Fnkl.dcfbh2yw/830afcf32230aa859b39a92137edbdb18c5b174f#t=1944.132,1955.501">
+</audio>
+</body>
+</html>
+```
