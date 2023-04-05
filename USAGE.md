@@ -285,16 +285,22 @@ ORDER BY freq
 LIMIT 3;
 ```
 
-Note: We use SQLite's string concatenation operator `||` to string together a suitable argument for
-the `LIKE` operator, making sure we match gloss containing `HORT`.
+Notes: 
+- We use SQLite's string concatenation operator `||` to string together a suitable argument for
+  the `LIKE` operator, making sure we match gloss containing `HORT`.
+- To make sure the `LIKE` operator matches in a case sensitive way, you may have to issue a
+  [`PRAGMA` statement](https://www.sqlite.org/pragma.html#pragma_case_sensitive_like) to force the correct behaviour:
+  ```sql
+  sqlite> PRAGMA case_sensitive_like=ON; 
+  ```
 
 label | freq
 --- | ---
 SUBJ|1
+HORT|3
 SUPR|7
-HORT|11
 
-And now we can list the (shortest 3) aligned analyzed words and gloss lines of the matching IGT examples:
+And now we can list the aligned analyzed words and gloss lines of the matching IGT examples:
 
 ```sql
 SELECT 
@@ -302,24 +308,21 @@ SELECT
 FROM 
     exampletable 
 WHERE 
-    cldf_gloss LIKE '%HORT%' AND cldf_languagereference = 'sout3282' 
-ORDER BY length(cldf_primaryText) 
-LIMIT 3;
+    cldf_gloss LIKE '%HORT%' AND cldf_languagereference = 'sout3282' ;
 ```
 
 Note: We use SQLite's `char` function to insert newline characters in the output to "align" the IGTs.
 
 ```text
+****	and	he	says	****	put	tha'	pony	in	****	he	says	and	****	in	the	cart	****	and	****	let's	try	him	****	he	says	****	I	want	that	for	Tom-Smith	atFaversham	****	if	it	suit-s	him
+****	and	3SG.M	say.PRS.3SG	****	put.IMP	DIST.SG	pony	in	****	3SG.M	say.PRS.3SG	and	****	in	the	cart	****	and	****	HORT	try.INF	3SG.M.OBL	****	3SG.M	say.PRS.3SG	****	1SG	want.PRS	DIST.SG	for	Tom-Smith	at	Faversham	****	if	3SG.N	suit-PRS.3SG	3SG.M.OBL
+
 ****	well	****	put	him	in	****	let's	try	him
 ****	well	****	put.IMP	3SG.M.OBL	in	****	HORT	try.INF	3SG.M.OBL
 
 [INT]	****	let's	leave	that	for	another	occasion	shall-we
 [INT]	****	HORT	leave.INF	DIST.SG	for	another	occasion	shall-2PL
-
-****	because	everybody	was	having	rabbit-s	then	****	'cause	the	grub	was	so	short
-****	because	everybody	be.PST.3SG	have.PTCP.PRS	rabbit-PL	then	****	because	the	grub	be.PST.3SG	so	short
 ```
-
 
 
 ## Audio files
