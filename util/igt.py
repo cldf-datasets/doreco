@@ -1,8 +1,46 @@
 import re
+import decimal
 
 from pyigt.igt import NON_OVERT_ELEMENT
 from pyigt.lgrmorphemes import MORPHEME_SEPARATORS, split_morphemes
 from pyigt import IGT
+
+
+# bora: translations in spanish -> raw/languages.csv:Translation
+# even1259 : russian! not english, as claimed in languages.csv!
+# sout2856: "§ 014-002" prefixes (and infixes) for tx
+# apah: tx: "(\<+)(x+)(\>+)", e.g. "<<xxx>>" meaning what?
+
+def fix_text(s, type_, gc):
+    s = s.strip()
+    for m, repl in {'â\x80\x9d': '”', 'â\x80\x9c': '“', '\u200e\u200e': ''}.items():
+        s = s.replace(m, repl)
+
+    if gc == 'bain1259' and type_ == 'ft' and '|' in s:
+        # bain1259: "french | english" translations, separated by pipe.
+        french, _, s = s.partition('|')
+        s = s.strip()
+
+    if (gc == 'bain1259' or gc == 'anal1239' or gc == 'beja1238') and type_ == 'tx':
+        # beja1238: tx ends with / or //
+        while s.endswith('/'):
+            s = s[:-1].strip()
+
+    if type_ == 'ft':
+        # movi: leading and trailing "'" for translation
+        # pnar: translations in `...'  , ft may be EMPTY
+        if s.startswith("'") and s.endswith("'"):
+            s = s[1:-1].strip()
+        elif s.startswith("`") and s.endswith("'"):
+            s = s[1:-1].strip()
+        # FIXME:
+        # arap1274: leading "“", trailing "”"
+        if s == 'EMPTY':
+            s = ''
+
+    # Normalize whitespace!
+    s = re.sub(r'\s+', ' ', s)
+    return s
 
 
 def harmonize_separators(morphemes, glosses):
@@ -67,7 +105,7 @@ liquid.honey>---DemM>---place\LF
     return word.replace('--', '-').replace('=-', '=').replace('==', '=')
 
 
-def igt(rows, tx, ft, eids):
+def igt(rows, tx, ft, eids, fid):
     gc = rows[0]['Glottocode']
     eids[gc] += 1
     eid = '{}-{}'.format(gc, eids[gc])
@@ -104,14 +142,19 @@ def igt(rows, tx, ft, eids):
         #    inv += 1
         #else:
         #    valid += 1
-        return dict(
+        res = dict(
             ID=eid,
             Language_ID=gc,
             Primary_Text=tx,
             Analyzed_Word=[k if k else NON_OVERT_ELEMENT for k in mbs],
             Gloss=[k if k else NON_OVERT_ELEMENT for k in gls],
             Translated_Text=ft,
+            start=decimal.Decimal(rows[0]["start"]),
+            end=decimal.Decimal(rows[-1]["end"]),
+            File_ID=fid,
         )
+        res['duration'] = res['end'] - res['start']
+        return res
 # 'â\x80\x9c': '“'
 # aggregate mb vi mb_ID from word in rows!
 #
