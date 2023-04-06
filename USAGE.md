@@ -3,12 +3,50 @@
 Before you use the DoReCo CLDF data you should read through the data model description at
 [cldf/README.md](cldf/README.md).
 
-Due to the size of the DoReCo corpus - more than 2,000,000 annotated phones - analysing the data is
-made a lot easier (and quicker) when data is accessed via SQL from the 
-[CLDF SQLite](https://github.com/cldf/cldf/blob/master/extensions/sql.md) database.
+
+## Coverage
+
+This dataset is derived from the DoReCo data as follows:
+- DoReCo data is **limited to the core data with annotations released under a license without ND (no derivatives) clause**
+  (because we add annotations which goes against this clause).
+- Morpheme-aligned data is converted into IGT instances in an ExampleTable.
+- The Beja annotation files are taken from DOI 10.34847/nkl.edd011t1 v6, not the latest, but
+  incorrect v7.
+- Two minor issues with the DoReCo data are fixed, namely a handful of phones in the Evenki corpus
+  being linked to two words, and phones/words in the Yucatec corpus having a typo in the speaker
+  reference.
+- Links from phones to IPA symbols, and eventually to CLTS sounds are added, based on the
+  orthography profile in etc/orthography.tsv
+
+Note that the `cldfbench.Dataset` implementation in the Python module [cldfbench_doreco.py](cldfbench_doreco.py)
+provides functionality to also
+- download the ND-licensed data (which is appropriate for analysis, but not for re-destribution)
+- download the audio files on which the DoReCo data is based.
+
+To do so, 
+
+1. Install the required Python packages (preferably in a fresh virtual environment) via
+   ```shell
+   pip install -e .
+   ```
+2. Download (and unpack) the CLTS v2.2.0 data from [DOI: 10.5281/zenodo.5583682](https://doi.org/10.5281/zenodo.5583682).
+3. Download (and unpack) the Glottolog v4.7 data from [DOI: 10.5281/zenodo.7398962](https://doi.org/10.5281/zenodo.7398962).
+4. Then run
+   ```shell
+   cldfbench download cldfbench_doreco.py
+   ```
+   and answer appropriately when prompted.
+5. The CLDF data can then be created running
+   ```shell
+   cldfbench makecldf cldfbench_doreco.py --glottolog PATH/TO/glottolog-4.7/
+   ```
 
 
 ## Overview
+
+Due to the size of the DoReCo corpus - ~ 2,000,000 annotated phones - analysing the data is
+made a lot easier (and quicker) when data is accessed via SQL[^1] from the
+[CLDF SQLite](https://github.com/cldf/cldf/blob/master/extensions/sql.md) database.
 
 Create the SQLite database by running
 ```shell
@@ -16,7 +54,7 @@ cldf createdb cldf/Generic-metadata.json doreco.sqlite
 ```
 
 An [entity relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model),
-visualizing the schena of the resulting database looks as follows:
+visualizing the schema of the resulting database looks as follows:
 
 ![ERD](erd.svg)
 
@@ -30,8 +68,8 @@ Notes:
   - `phones.csv`, listing the time-aligned phones in the corpus.
 
   These non-CLDF-standard tables are named after the corresponding filename. Thus, to prevent the
-  `.` in the name from confusing SQLite, the names must always be escaped in SQL, i.e. wrapped in
-  backticks.
+  `.` in the name from confusing SQLite, the [names must always be quoted](https://www.sqlite.org/lang_keywords.html), i.e. wrapped in
+  quotes.
 
 
 ## Data access via SQL queries
@@ -50,7 +88,7 @@ SELECT s.* FROM (
         p.*,
         row_number() OVER (PARTITION BY wd_ID ORDER BY cldf_id) rownum
     FROM
-        `phones.csv` AS p
+        'phones.csv' AS p
     ) AS s
 WHERE
     s.rownum = 1 AND s.token_type = 'xsampa';
@@ -66,7 +104,7 @@ SELECT s.* FROM (
         p.*,
         row_number() OVER (PARTITION BY wd_ID ORDER BY cldf_id) rownum
     FROM
-        `phones.csv` AS p
+        'phones.csv' AS p
     ) AS s
 WHERE
     s.rownum = 1 AND s.token_type = 'xsampa';
@@ -115,8 +153,8 @@ Which will output a result similar to
 
 sound class | word_initial_instances
 --- | ---
-consonant|389871
-vowel|99312
+consonant|313053
+vowel|80703
 
 
 ## Utterances
@@ -132,7 +170,7 @@ SELECT
     p.u_id AS u_id, 
     count(p.cldf_id)/sum(p.duration) AS speech_rate 
 FROM
-    `phones.csv` AS p
+    'phones.csv' AS p
 GROUP BY p.u_id;
 ```
 
@@ -148,7 +186,7 @@ SELECT
     AVG(u.speech_rate) AS sr
 FROM
     utterance_initials AS ui,
-    `words.csv` AS w,
+    'words.csv' AS w,
     utterances AS u
 WHERE 
     u.u_id = ui.u_id AND ui.wd_id = w.cldf_id 
@@ -165,54 +203,45 @@ $ sqlite3 -csv doreco.sqlite < sr_by_lang.sql | termgraph
 kama1351: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 8.50 
 nngg1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 9.43 
 lowe1385: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 9.49 
-trin1278: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.15
+trin1278: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.15
 yong1270: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.21
-resi1247: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.45
+resi1247: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.45
 sadu1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.54
-hoch1243: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.77
 arap1274: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 10.92
-nort2875: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.13
 tsim1256: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.40
 even1259: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.56
 sanz1248: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.57
-ligh1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.57
-orko1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.59
-beja1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.59
-jeha1242: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.62
-yura1255: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.69
+orko1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.59
+beja1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.59
+jeha1242: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.62
 bora1263: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.72
 sout3282: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.76
-yuca1254: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.81
 svan1243: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.86
-dolg1241: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.89
+dolg1241: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.89
 goem1240: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.97
 movi1243: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.03
-urum1249: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.05
 cash1254: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.05
-anal1239: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.18
-kaka1265: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.20
-cabe1245: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.23
-warl1254: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.25
+anal1239: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.18
+kaka1265: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.20
 stan1290: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.30
 teop1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.35
 taba1259: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.41
-kark1256: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.49
-pnar1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.54
-ngal1292: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.78
-sout2856: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.84
+kark1256: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.49
+pnar1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.54
+ngal1292: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.78
+sout2856: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.84
 ruul1235: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 12.99
 komn1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.03
-jeju1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.08
-savo1255: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.12
+jeju1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.08
+savo1255: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.12
 port1286: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.30
-sumi1235: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.43
+sumi1235: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.43
 apah1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 13.81
 goro1270: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.08
 nort2641: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.11
-bain1259: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.27
+bain1259: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.27
 texi1237: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.41
-vera1241: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.85
-nisv1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.94
+vera1241: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.85
 ```
 
 
@@ -222,43 +251,53 @@ Speaker information is available from the `speakers.csv` table, which can be joi
 `words.csv`. E.g. the following query counts phones per speaker sex.
 
 ```sql
-sqlite> 
-    SELECT
-        s.sex, count(p.cldf_id) 
-    FROM
-        `phones.csv` as p, 
-        `words.csv` as w, 
-        `speakers.csv` as s
-    WHERE
-        p.wd_id = w.cldf_id AND w.speaker_id = s.cldf_id
-    GROUP BY s.sex;
-f|948453
-m|1238361
+SELECT
+    s.sex AS sex,
+    count(p.cldf_id) AS num_phones
+FROM
+    'phones.csv' as p, 
+    'words.csv' as w, 
+    'speakers.csv' as s
+WHERE
+    p.wd_id = w.cldf_id AND w.speaker_id = s.cldf_id
+GROUP BY s.sex;
 ```
 
+sex | num_phones
+--- | ---
+f|721373
+m|1142461
+
 Correlations between speaker metadata and IPA phone metadata can be assessed by joining
-the ParameterTable as well:
+the ParameterTable as well
 
 ```sql
-sqlite> 
-    SELECT
-        s.sex, ipa.cldf_name, count(p.cldf_id)
-    from 
-        `phones.csv` as p, 
-        `words.csv` as w, 
-        `speakers.csv` as s, 
-        parametertable as ipa 
-    where 
-        p.wd_id = w.cldf_id and 
-        w.speaker_id = s.cldf_id and 
-        p.cldf_parameterReference = ipa.cldf_id and 
-        ipa.cldf_cltsreference like '%breathy%' 
-    group by p.cldf_name, s.sex;
+SELECT
+    s.sex AS sex, 
+    ipa.cldf_name AS IPA, 
+    count(p.cldf_id) AS num
+FROM
+    'phones.csv' AS p,
+    'words.csv' AS w, 
+    'speakers.csv' AS s, 
+    parametertable AS ipa 
+WHERE 
+    p.wd_id = w.cldf_id AND
+    w.speaker_id = s.cldf_id AND
+    p.cldf_parameterReference = ipa.cldf_id AND
+    ipa.cldf_cltsreference LIKE '%breathy%' 
+GROUP BY p.cldf_name, s.sex;
+```
+
+lending superficial support to the hypothesis of "breathiness as a feminine voice characteristic"
+(DOI: [10.1016/j.jvoice.2007.08.002](https://doi.org/10.1016/j.jvoice.2007.08.002)):
+
+sex | IPA | num
+--- | --- | ---
 f|lʱ|31
 m|lʱ|4
 f|nʱ|16
 m|nʱ|7
-```
 
 
 ## IGT examples
@@ -274,7 +313,7 @@ SELECT
     g.cldf_name AS label,         
     count(DISTINCT e.cldf_id) AS freq 
 FROM
-    `glosses.csv` AS g, 
+    'glosses.csv' AS g, 
     exampletable AS e 
 WHERE 
     e.cldf_gloss LIKE '%' || g.cldf_name || '%' AND 
@@ -345,8 +384,8 @@ sqlite>
         w.start, 
         w.end 
     FROM 
-        `phones.csv` AS p, 
-        `words.csv` AS w, 
+        'phones.csv' AS p, 
+        'words.csv' AS w, 
         mediatable AS f 
     WHERE
         p.wd_id = w.cldf_id AND
@@ -434,3 +473,6 @@ The bank managers in those days, in the agricultural, knew as much about a farm 
 </body>
 </html>
 ```
+
+[^1]: For a short overview of SQL and how to access SQL databases (and links to further reading), see https://github.com/dlce-eva/dlce-eva/blob/main/doc/sql.md
+
