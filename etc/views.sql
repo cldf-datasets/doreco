@@ -5,7 +5,7 @@ SELECT s.* FROM (
         p.*,
         row_number() OVER (PARTITION BY wd_ID ORDER BY cldf_id) rownum
     FROM
-        `phones.csv` AS p
+        'phones.csv' AS p
     ) AS s
 WHERE
     s.rownum = 1 AND s.token_type = 'xsampa';
@@ -17,7 +17,7 @@ SELECT s.* FROM (
         p.*,
         row_number() OVER (PARTITION BY u_ID ORDER BY cldf_id) rownum
     FROM
-        `phones.csv` AS p
+        'phones.csv' AS p
     ) AS s
 WHERE
     s.rownum = 1 AND s.token_type = 'xsampa';
@@ -30,5 +30,5 @@ SELECT
     count(p.cldf_id)/sum(p.duration) as speech_rate,
     log(exp(1), count(p.cldf_id)/sum(p.duration)) AS log_speech_rate
 FROM
-    `phones.csv` AS p
+    'phones.csv' AS p
 GROUP BY p.u_id;

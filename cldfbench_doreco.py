@@ -24,6 +24,7 @@ import re
 import decimal
 import pathlib
 import itertools
+import subprocess
 import collections
 import urllib.error
 import urllib.parse
@@ -110,6 +111,27 @@ class Dataset(BaseDataset):
                                             pass
                 dump(audio, self.raw_dir / '{}_files.json'.format(row['Glottocode']), indent=4)
 
+    def cmd_readme(self, args):
+        subprocess.check_call([
+            'cldfbench',
+            'cldfviz.map',
+            str(self.cldf_specs().metadata_path),
+            '--output', str(self.dir / 'map.png'),
+            '--width', '20',
+            '--height', '10',
+            '--format', 'png',
+            '--with-ocean',
+            '--language-properties', 'Macroarea',
+            '--markersize', '15',
+            '--no-legend',
+            '--language-labels',
+            '--padding-top', '3',
+            '--padding-bottom', '3',
+            '--pacific-centered'])
+        desc = ['\n![](map.png)\n']
+        pre, head, post = super().cmd_readme(args).partition('## CLDF ')
+        return pre + '\n'.join(desc) + head + post
+
     def iter_rows(self, pattern):
         mismatch = set()
         for p in sorted(self.raw_dir.glob(pattern), key=lambda pp: pp.name):
@@ -139,10 +161,10 @@ class Dataset(BaseDataset):
                 yield row
 
     def cmd_makecldf(self, args):
-        #
-        # FIXME: prompt for location of clts-data!
-        #
-        clts = CLTS('../../cldf-clts/clts-data')
+        clts_data = pathlib.Path('cldf-clts-clts-6dc73af')
+        if not clts_data.exists():
+            clts_data = pathlib.Path(input('Path to clts data: '))
+        clts = CLTS(clts_data)
         xsampa_to_bipa = collections.OrderedDict()
         for row in self.etc_dir.read_csv('orthography.tsv', dicts=True, delimiter='\t'):
             bipa = clts.bipa[row['IPA']] if row['IPA'] else None
@@ -167,6 +189,8 @@ class Dataset(BaseDataset):
         args.log.info("added sources")
 
         for row in self.raw_dir.read_csv('languages.csv', dicts=True):
+            if not self.raw_dir.joinpath('{}_metadata.csv'.format(row['Glottocode'])).exists():
+                continue
             args.writer.objects["LanguageTable"].append({
                 "ID": row["Glottocode"],
                 "Name": row["Language"],

@@ -15,6 +15,9 @@ setup(
         ]
     },
     install_requires=[
+        'pyclts',
+        'pybtex',
+        'tqdm',
         'cldfbench',
     ],
     extras_require={

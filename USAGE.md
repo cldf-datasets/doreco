@@ -78,7 +78,7 @@ Time-aligned phones and words make up the core contribution of the DoReCo datase
 in the `phones.csv` and `words.csv` tables, respectively, and can be queried in a straightforward way.
 
 Retrieving particular phones, e.g. word initials is best done using somewhat advanced
-SQL constructs like window functions, though.
+SQL constructs like [window functions](https://www.sqlitetutorial.net/sqlite-window-functions/), though.
 
 An SQL query to retrieve these could look as follows:
 

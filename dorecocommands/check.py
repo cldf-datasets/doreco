@@ -10,8 +10,18 @@ def valid_word(row):
 
 
 def run(args):
-    ds = Dataset()
+    from pyclts import CLTS
 
+    ds = Dataset()
+    clts = CLTS('../../cldf-clts/clts-data')
+    bipa = clts.bipa
+
+    for row in ds.etc_dir.read_csv('orthography.tsv', delimiter='\t', dicts=True):
+        s = bipa[row['IPA']]
+        if s.name is None:
+            print(row)
+
+    return
     for row in ds.raw_dir.read_csv('languages.csv', dicts=True):
         words = ds.raw_dir.read_csv('{}_wd.csv'.format(row['Glottocode']), dicts=True)
         valid = sum(1 for w in words if valid_word(w))

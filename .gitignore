@@ -107,6 +107,7 @@ ENV/
 /raw/data/
 /raw/*_wd.csv
 /raw/*_ph.csv
+/raw/*_files.json
 /raw/*_gloss-abbreviations.csv
 /raw/*_metadata.csv
 /raw/wd_data.csv
