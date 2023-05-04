@@ -17,7 +17,7 @@ for sound in sounds:
     sound_class = clts.bipa[sound[1]].name
 
     if sound_class == None:
-        pass
+        print(clts.bipa[sound[1]], clts.bipa[sound[1]].name)
     else:
         if "voiced" in sound_class:
             vc = "voiced"
@@ -50,4 +50,4 @@ for sound in sounds:
         else:
             sc = "Problem"
 
-        print(vc, sc)
+        # print(vc, sc)
