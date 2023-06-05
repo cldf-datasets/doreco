@@ -9,6 +9,8 @@ SELECT s.* FROM (
     ) AS s
 WHERE
     s.rownum = 1 AND s.token_type = 'xsampa';
+-- FIXME: add WordCount!? distinct words per ... file?
+
 
 -- Utterance initial phones
 CREATE VIEW IF NOT EXISTS utterance_initials AS
@@ -32,3 +34,5 @@ SELECT
 FROM
     'phones.csv' AS p
 GROUP BY p.u_id;
+
+-- filter non-pulmonic consonants, i.e. click, ejective, implosive (other manners?)

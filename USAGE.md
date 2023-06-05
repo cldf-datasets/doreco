@@ -16,7 +16,7 @@ This dataset is derived from the DoReCo data as follows:
   being linked to two words, and phones/words in the Yucatec corpus having a typo in the speaker
   reference.
 - Links from phones to IPA symbols, and eventually to CLTS sounds are added, based on the
-  orthography profile in etc/orthography.tsv
+  orthography profile in [etc/orthography.tsv](etc/orthography.tsv)
 
 Note that the `cldfbench.Dataset` implementation in the Python module [cldfbench_doreco.py](cldfbench_doreco.py)
 provides functionality to also
@@ -44,8 +44,8 @@ To do so,
 
 ## Overview
 
-Due to the size of the DoReCo corpus - ~ 2,000,000 annotated phones - analysing the data is
-made a lot easier (and quicker) when data is accessed via SQL[^1] from the
+Due to the size of the DoReCo corpus - ~ 2,000,000 annotated phones (if ND-licensed data is incuded) - analysing
+the data is made a lot easier (and quicker) when data is accessed via SQL[^1] from the
 [CLDF SQLite](https://github.com/cldf/cldf/blob/master/extensions/sql.md) database.
 
 Create the SQLite database by running
@@ -476,3 +476,98 @@ The bank managers in those days, in the agricultural, knew as much about a farm 
 
 [^1]: For a short overview of SQL and how to access SQL databases (and links to further reading), see https://github.com/dlce-eva/dlce-eva/blob/main/doc/sql.md
 
+
+## Going further
+
+### Parametrized queries
+
+To make it easier to run parametrized queries (aka 
+[queries with placeholders](https://docs.python.org/3/library/sqlite3.html#sqlite3-placeholders)),
+this dataset - when installed via `pip install -e .` -
+registers a [cldfbench command](https://github.com/cldf/cldfbench/blob/master/src/cldfbench/commands/README.md)
+`query`. So, with a query
+```sql
+SELECT count(*) from `phones.csv` where duration > ?;                                                     
+```
+in a file called `phones_by_duration.sql` you can run the parametrized query from the commandline:
+```shell
+$ cldfbench doreco.query phones_by_duration.sql 0.7
+  count(*)
+----------
+     79281
+```
+
+
+### Filtering phones based on features
+
+Since phones are mapped to [BIPA sounds](https://clts.clld.org/parameters) listed in
+`ParameterTable`, they can be filtered based on [feature values](https://github.com/cldf-clts/clts/blob/master/data/features.tsv),
+because the column `ParameterTable.cldf_cltsReference` contains the sound name, which is a `_` delimited
+concatenation of feature values for the sound.
+
+Thus, for example selecting [pulmonic consonants](https://enunciate.arts.ubc.ca/linguistics/world-sounds/consonants-non-pulmonic/) 
+can be done with SQL as follows
+
+```sql
+SELECT * FROM 
+    `phones.csv` AS phone, 
+    parametertable as sound
+WHERE
+    phone.cldf_parameterReference = sound.cldf_id AND 
+    sound.cldf_cltsReference LIKE '%_consonant' AND 
+    sound.cldf_cltsReference NOT LIKE '%click%' AND 
+    sound.cldf_cltsReference NOT LIKE '%implosive%' AND 
+    sound.cldf_cltsReference NOT LIKE '%ejective%'
+;
+```
+
+### Filtering outliers
+
+If you are accessing the DoReCo SQLite data from R, you can make use of 
+[math extensions available with RSQLite](https://rsqlite.r-dbi.org/reference/initextension#available-functions-in-the-math-extension-1)
+to push the "heavy lifting" when filtering outliers down to the database.
+
+Thus, filtering out phones that are unusually long for the respective speaker (indicating incorrect
+annotation) can be done running SQL as follows
+
+```sql
+> sql = "SELECT
+    count(*) 
+FROM 
+    `phones.csv` AS phone,
+    `words.csv` AS word
+LEFT JOIN
+    (
+        SELECT
+            w.speaker_id, avg(p.duration) + 3 * stdev(p.duration) AS threshold 
+        FROM 
+            `phones.csv` AS p, 
+            `words.csv` AS w 
+        WHERE 
+            p.cldf_parameterreference IS NOT NULL AND
+            p.wd_id = w.cldf_id 
+        GROUP BY w.speaker_id
+    ) AS t 
+ON
+    word.speaker_id = t.speaker_id
+WHERE
+    phone.cldf_parameterReference IS NOT NULL AND
+    phone.wd_id = word.cldf_id AND
+    phone.duration < t.threshold
+;"
+```
+
+via RSQLite:
+
+```r
+> library(DBI)
+> library(RSQLite)
+> db <- dbConnect(RSQLite::SQLite(), "doreco.sqlite")
+> RSQLite::initExtension(db)
+> dbGetQuery(db, sql)
+count(*)
+1  2142599
+```
+
+Note that the SQLite library used in `cldfbench doreco.query` does also support
+[math functions](https://www.sqlite.org/lang_mathfunc.html) as well as `stdev` as aggregate function.

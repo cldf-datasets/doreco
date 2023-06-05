@@ -1,22 +1,17 @@
 """
 
-
-
 """
 import math
 import pathlib
-import sqlite3
 import datetime
-import contextlib
-import collections
 import dataclasses
 from html import escape
 
 import pydub
-from clldutils import jsonlib
 from clldutils.clilib import PathType
 
 from cldfbench_doreco import Dataset
+from .query import Database
 
 
 # FIXME: get all phones for a filename, including IPA.
@@ -56,22 +51,6 @@ class Word:
 {2}
 </div>
 """.format(self, player, escape(self.ipa))
-
-
-class Database:
-    def __init__(self, fname):
-        self.fname = fname
-
-    def connection(self):
-        return contextlib.closing(sqlite3.connect(str(self.fname)))
-
-    def query(self, sql: str, params=None) -> list:
-        """
-        Run `sql` on the database, returning the list of results.
-        """
-        with self.connection() as conn:
-            cu = conn.execute(sql, params or ())
-            return list(cu.fetchall())
 
 
 def get_mono_channel(audio, channel=1):

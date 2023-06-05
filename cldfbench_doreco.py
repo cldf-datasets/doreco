@@ -162,7 +162,7 @@ class Dataset(BaseDataset):
 
     def cmd_makecldf(self, args):
         clts_data = pathlib.Path('cldf-clts-clts-6dc73af')
-        if not clts_data.exists():
+        if 1:#not clts_data.exists():
             clts_data = pathlib.Path(input('Path to clts data: '))
         clts = CLTS(clts_data)
         xsampa_to_bipa = collections.OrderedDict()

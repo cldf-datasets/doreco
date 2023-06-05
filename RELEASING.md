@@ -16,7 +16,12 @@
   ```
 - Make sure the data is valid running
   ```shell
-  cldf validate cldf
+  pytest
+  ```
+- Make sure data can be loaded into SQLite
+  ```shell
+  rm -f doreco.sqlite
+  cldf createdb cldf/Generic-metadata.json doreco.sqlite
   ```
 - Commit all changes, tag the release, push code and tags.
 - Create a release on GitHub and make sure it is picked up by Zenodo.
