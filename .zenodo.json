@@ -1,0 +1,24 @@
+{
+    "creators": [
+        {
+            "name": "Frank Seifart"
+        },
+        {
+            "name": "Ludger Paschen"
+        },
+        {
+            "name": "Matthew Stave"
+        },
+        {
+            "name": "Robert Forkel"
+        }
+    ],
+    "title": "CLDF dataset derived from the DoReCo core corpus",
+    "access_right": "open",
+    "keywords": [
+        "cldf:Generic",
+        "linguistics"
+    ],
+    "upload_type": "dataset",
+    "description": "<p>Cite the source of the dataset as:</p>\n\n<blockquote>\n<p>Seifart, Frank, Ludger Paschen &amp; Matthew Stave (eds.). 2022. Language Documentation Reference Corpus (DoReCo) 1.2. Berlin &amp; Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft &amp; laboratoire Dynamique Du Langage (UMR5596, CNRS &amp; Universit\u00e9 Lyon 2). DOI:10.34847/nkl.7cbfq779</p>\n</blockquote>"
+}
