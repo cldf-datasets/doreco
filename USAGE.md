@@ -3,10 +3,10 @@
 Before you use the DoReCo CLDF data you should read through the data model description at
 [cldf/README.md](cldf/README.md).
 
-
 ## Coverage
 
 This dataset is derived from the DoReCo data as follows:
+
 - DoReCo data is **limited to the core data with annotations released under a license without ND (no derivatives) clause**
   (because we add annotations which goes against this clause).
 - Morpheme-aligned data is converted into IGT instances in an ExampleTable.
@@ -20,27 +20,32 @@ This dataset is derived from the DoReCo data as follows:
 
 Note that the `cldfbench.Dataset` implementation in the Python module [cldfbench_doreco.py](cldfbench_doreco.py)
 provides functionality to also
+
 - download the ND-licensed data (which is appropriate for analysis, but not for re-destribution)
 - download the audio files on which the DoReCo data is based.
 
-To do so, 
+To do so,
 
 1. Install the required Python packages (preferably in a fresh virtual environment) via
+
    ```shell
    pip install -e .
    ```
+
 2. Download (and unpack) the CLTS v2.2.0 data from [DOI: 10.5281/zenodo.5583682](https://doi.org/10.5281/zenodo.5583682).
 3. Download (and unpack) the Glottolog v4.7 data from [DOI: 10.5281/zenodo.7398962](https://doi.org/10.5281/zenodo.7398962).
 4. Then run
+
    ```shell
    cldfbench download cldfbench_doreco.py
    ```
+
    and answer appropriately when prompted.
 5. The CLDF data can then be created running
+
    ```shell
    cldfbench makecldf cldfbench_doreco.py --glottolog PATH/TO/glottolog-4.7/
    ```
-
 
 ## Overview
 
@@ -49,6 +54,7 @@ the data is made a lot easier (and quicker) when data is accessed via SQL[^1] fr
 [CLDF SQLite](https://github.com/cldf/cldf/blob/master/extensions/sql.md) database.
 
 Create the SQLite database by running
+
 ```shell
 cldf createdb cldf/Generic-metadata.json doreco.sqlite
 ```
@@ -59,6 +65,7 @@ visualizing the schema of the resulting database looks as follows:
 ![ERD](erd.svg)
 
 Notes:
+
 - CLDF's `ParameterTable` stores metadata about sounds, linked from `phones.csv`, if `Token_Type` is
   `xsampa` and an IPA sound corresponding to the X-SAMPA symbol could be determined.
 - The database has 4 non-CLDF-standard tables:
@@ -70,7 +77,6 @@ Notes:
   These non-CLDF-standard tables are named after the corresponding filename. Thus, to prevent the
   `.` in the name from confusing SQLite, the [names must always be quoted](https://www.sqlite.org/lang_keywords.html), i.e. wrapped in
   quotes.
-
 
 ## Data access via SQL queries
 
@@ -111,6 +117,7 @@ WHERE
 ```
 
 and then use this view just like the `phones.csv` table:
+
 ```sql
 SELECT COUNT(*) FROM word_initials;
 ```
@@ -120,10 +127,10 @@ closing the database connection. Views can be deleted by running a `DROP VIEW <n
 
 Some useful views are defined in [etc/views.sql](etc/views.sql), and can be "installed" in the database
 by running
+
 ```shell
 sqlite3 -echo doreco.sqlite < etc/views.sql
 ```
-
 
 ## IPA metadata for phones
 
@@ -155,7 +162,6 @@ sound class | word_initial_instances
 --- | ---
 consonant|313053
 vowel|80703
-
 
 ## Utterances
 
@@ -244,7 +250,6 @@ texi1237: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 vera1241: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 14.85
 ```
 
-
 ## Speaker information
 
 Speaker information is available from the `speakers.csv` table, which can be joined to phones via
@@ -299,7 +304,6 @@ m|lʱ|4
 f|nʱ|16
 m|nʱ|7
 
-
 ## IGT examples
 
 Although the main focus of the DoReCo dataset are the time-aligned phones, the data also contains
@@ -324,11 +328,13 @@ ORDER BY freq
 LIMIT 3;
 ```
 
-Notes: 
+Notes:
+
 - We use SQLite's string concatenation operator `||` to string together a suitable argument for
   the `LIKE` operator, making sure we match gloss containing `HORT`.
 - To make sure the `LIKE` operator matches in a case sensitive way, you may have to issue a
   [`PRAGMA` statement](https://www.sqlite.org/pragma.html#pragma_case_sensitive_like) to force the correct behaviour:
+
   ```sql
   sqlite> PRAGMA case_sensitive_like=ON; 
   ```
@@ -362,7 +368,6 @@ Note: We use SQLite's `char` function to insert newline characters in the output
 [INT]	****	let's	leave	that	for	another	occasion	shall-we
 [INT]	****	HORT	leave.INF	DIST.SG	for	another	occasion	shall-2PL
 ```
-
 
 ## Audio files
 
@@ -398,6 +403,7 @@ sout3282_w020797|sout3282-1322|agricultural|12|https://api.nakala.fr/data/10.348
 ```
 
 Plugging this data into HTML as follows
+
 ```html
 <html>
 <body>
@@ -409,11 +415,11 @@ Plugging this data into HTML as follows
 </body>
 </html>
 ```
+
 and saving the file as `agricultural.html` you can get a light-weight corpus viewer by opening the file
 in your browser and clicking the play button to listen to the word.
 
 > ![audio player](audio.png)
-
 
 IGT examples are linked to audio files as well. So we can do the same for the glossed example linked to
 the word *agricultural*:
@@ -438,7 +444,7 @@ Note: While somewhat cumbersome, basic HTML can be strung together in SQL. In th
 "special" characters `\n` - newline - and `\t` - tab, and the [replace](https://www.sqlite.org/lang_corefunc.html#replace) function
 to turn the tab-separated aligned words into HTML table cells.
 
-Again, we can plug the result 
+Again, we can plug the result
 
 ```text
 He knew all the -- Well, they kne-- the farms -- the bank managers them days, in the agricultural, knew as much about a farm as the farmer did, pretty well.|
@@ -476,7 +482,6 @@ The bank managers in those days, in the agricultural, knew as much about a farm 
 
 [^1]: For a short overview of SQL and how to access SQL databases (and links to further reading), see https://github.com/dlce-eva/dlce-eva/blob/main/doc/sql.md
 
-
 ## Going further
 
 ### Parametrized queries
@@ -486,17 +491,19 @@ To make it easier to run parametrized queries (aka
 this dataset - when installed via `pip install -e .` -
 registers a [cldfbench command](https://github.com/cldf/cldfbench/blob/master/src/cldfbench/commands/README.md)
 `query`. So, with a query
+
 ```sql
 SELECT count(*) from `phones.csv` where duration > ?;                                                     
 ```
+
 in a file called `phones_by_duration.sql` you can run the parametrized query from the commandline:
+
 ```shell
 $ cldfbench doreco.query phones_by_duration.sql 0.7
   count(*)
 ----------
      79281
 ```
-
 
 ### Filtering phones based on features
 
