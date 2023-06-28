@@ -21,6 +21,7 @@ To do so, run
   prompted.
 """
 import re
+import html
 import decimal
 import pathlib
 import itertools
@@ -46,6 +47,12 @@ SILENT_PAUSE = '<p:>'
 FILLER = '****'
 LABEL_PATTERN = re.compile(r'<<(?P<label>fp|fs|pr|fm|sg|bc|id|on|wip|ui)>(?P<content>[^>]+)?>')
 LGR_PERSON_AND_ABBR = {p + a for p, a in itertools.product(PERSONS, ABBRS)}
+CORPUS_CITATION_FMT = \
+    "{Creator}. 2022. {Language} DoReCo dataset. In Seifart, Frank, Ludger Paschen and " \
+    "Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: " \
+    "Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage " \
+    "(UMR5596, CNRS & Université Lyon 2). " \
+    "https://doreco.huma-num.fr/languages/{Glottocode}. DOI:{DOI}"
 
 
 def is_lgr_abbr(s):
@@ -112,6 +119,23 @@ class Dataset(BaseDataset):
                 dump(audio, self.raw_dir / '{}_files.json'.format(row['Glottocode']), indent=4)
 
     def cmd_readme(self, args):
+        # At this point - according to RELEASING.md - .zenodo.json has been written so we can edit
+        # it, adding the individual corpus citations.
+        zenodo = load(self.dir / '.zenodo.json')
+        corpus_citations = [
+            "Please note that when citing this dataset, it is NOT sufficient to refer to DoReCo as "
+            "a whole, but the full citation for each individual corpus must be provided, including "
+            "the name(s) of the creator(s) of each corpus as given below."]
+        zenodo['description'] += '\n<p>{}</p>\n'.format(corpus_citations[0])
+        for src in self.cldf_reader().properties['prov:wasDerivedFrom']:
+            if src.get('dc:title', '').endswith('DoReCo dataset'):
+                corpus_citations.append('> {}\n'.format(src['dc:bibliographicCitation']))
+                zenodo['description'] += '\n<blockquote>{}</blockquote>\n'.format(
+                    html.escape(src['dc:bibliographicCitation']))
+        dump(zenodo, self.dir / '.zenodo.json', indent=4)
+        pre, head, post = super().cmd_readme(args).partition('## Description')
+        md = pre + '\n'.join(corpus_citations) + '\n\n' + head + post
+
         subprocess.check_call([
             'cldfbench',
             'cldfviz.map',
@@ -129,7 +153,7 @@ class Dataset(BaseDataset):
             '--padding-bottom', '3',
             '--pacific-centered'])
         desc = ['\n![](map.png)\n']
-        pre, head, post = super().cmd_readme(args).partition('## CLDF ')
+        pre, head, post = md.partition('## CLDF ')
         return pre + '\n'.join(desc) + head + post
 
     def iter_rows(self, pattern):
@@ -162,7 +186,7 @@ class Dataset(BaseDataset):
 
     def cmd_makecldf(self, args):
         clts_data = pathlib.Path('cldf-clts-clts-6dc73af')
-        if 1:#not clts_data.exists():
+        if not clts_data.exists():
             clts_data = pathlib.Path(input('Path to clts data: '))
         clts = CLTS(clts_data)
         xsampa_to_bipa = collections.OrderedDict()
@@ -191,6 +215,14 @@ class Dataset(BaseDataset):
         for row in self.raw_dir.read_csv('languages.csv', dicts=True):
             if not self.raw_dir.joinpath('{}_metadata.csv'.format(row['Glottocode'])).exists():
                 continue
+
+            args.writer.cldf.add_provenance(wasDerivedFrom={
+                "rdf:about": "https://github.com/cldf-datasets/doreco/",
+                "rdf:type": "prov:Entity",
+                "dc:title": "{} DoReCo dataset".format(row['Language']),
+                "dc:bibliographicCitation": CORPUS_CITATION_FMT.format(**row)
+            })
+
             args.writer.objects["LanguageTable"].append({
                 "ID": row["Glottocode"],
                 "Name": row["Language"],
