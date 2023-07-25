@@ -14,7 +14,7 @@ SELECT
         WHEN sound.cldf_cltsReference like '%stop%' then 'stop' else 'dunno'
         END sound_class,
 	-- standardize speech rate
-	-- (utt.log_speech_rate - avg(utt.log_speech_rate) over()) / stdev(utt.log_speech_rate) over() as z_speech_rate,
+	(utt.log_speech_rate - z.avg_speech_rate) / z.speech_rate AS z_speech_rate,
     ws.WordFreq AS freq,
 	ls.WordCount AS count
 	-- ws.WordFreq/ls.WordCount AS relation
@@ -43,8 +43,13 @@ LEFT JOIN
     utterances AS utt  -- utterance-level stats such as speech rate.
 ON
     phone.u_ID = utt.u_id
+LEFT JOIN
+	(
+	    SELECT stdev(u.log_speech_rate) AS speech_rate, AVG(u.log_speech_rate) AS avg_speech_rate FROM utterances as u
+    ) AS z
 WHERE
-    ws.cldf_languageReference = word.cldf_languageReference AND
+    (ws.cldf_languageReference = word.cldf_languageReference AND ws.cldf_name = word.cldf_name) AND
+    ls.cldf_languageReference = word.cldf_languageReference AND
     phone.wd_id = word.cldf_id AND
     phone.cldf_parameterReference = sound.cldf_id AND
     -- We only consider non-long, pulmonic consonants ...

@@ -49,10 +49,11 @@ GROUP BY w.cldf_languageReference;
 CREATE VIEW IF NOT EXISTS wordstats AS                                 
 SELECT                                                             
 	w.cldf_languageReference,
+	w.cldf_name,
 	-- word form frequency
-	count(w.cldf_name) as WordFreq
+	count(w.cldf_id) as WordFreq
 FROM
 	'words.csv' as w
-GROUP BY w.cldf_languageReference, cldf_name;
+GROUP BY w.cldf_languageReference, w.cldf_name;
 
 -- filter non-pulmonic consonants, i.e. click, ejective, implosive (other manners?)
