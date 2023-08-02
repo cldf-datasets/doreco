@@ -3,7 +3,8 @@ SELECT
     word.cldf_languageReference AS Language,
     word.speaker_id AS Speaker,
     utt.speech_rate AS SpeechRate,
-    utt.num_phones AS num_phones,
+    ps.num_phones AS num_phones,
+	(ps.num_phones - z_p.avg_num_phones) / ps.num_phones AS z_num_phones,
     CASE
         WHEN phone.cldf_id in (select cldf_id from utterance_initials) then 1 else 0
         END utt_initial,
@@ -39,6 +40,14 @@ LEFT JOIN
     ) AS t
 ON
     word.speaker_id = t.speaker_id
+LEFT JOIN
+	phonestats as ps -- number of phones per word
+ON
+	phone.wd_id = ps.wd_id
+LEFT JOIN
+	(
+	    SELECT stdev(ps.num_phones) AS num_phones, AVG(ps.num_phones) AS avg_num_phones FROM phonestats as ps
+    ) AS z_p
 LEFT JOIN
     utterances AS utt  -- utterance-level stats such as speech rate.
 ON

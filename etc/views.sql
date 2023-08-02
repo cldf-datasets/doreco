@@ -26,12 +26,25 @@ WHERE
 CREATE VIEW IF NOT EXISTS utterances AS
 SELECT
     p.u_id AS u_id,
-    count(p.cldf_id) AS num_phones,
-    count(p.cldf_id)/sum(p.duration) as speech_rate,
+	-- count of utterance to see how many phones in utterance
+    count(p.u_id)/sum(p.duration) as speech_rate,
     log(exp(1), count(p.cldf_id)/sum(p.duration)) AS log_speech_rate
 FROM
     'phones.csv' AS p
 GROUP BY p.u_id;
+
+
+-- Utterance information
+CREATE VIEW IF NOT EXISTS phonestats AS
+SELECT
+    p.wd_id AS wd_id,
+	-- count of words as count of phones
+	-- needs to be calculated before exclusion
+	count(p.wd_id) AS num_phones
+FROM
+    'phones.csv' AS p
+	-- I need to group on wd_id instead
+GROUP BY p.wd_id;
 
 
 -- Word count per lang
