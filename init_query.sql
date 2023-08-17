@@ -16,14 +16,14 @@ SELECT
         END sound_class,
 	-- standardize speech rate
 	(utt.log_speech_rate - z.avg_speech_rate) / z.speech_rate AS z_speech_rate,
-    ws.WordFreq AS freq,
-	ls.WordCount AS count
-	-- ws.WordFreq/ls.WordCount AS relation
+	ws.WordFreq AS freq,
+	ls.WordCount AS count,
+	(ws.WordFreq / ls.WordCount) AS word_frequency
 FROM
     "phones.csv" AS phone,
     "words.csv" AS word,
     ParameterTable AS sound,
-    wordstats AS ws,  -- language-level stats on words.
+    wordstats AS ws,
 	langstats AS ls
 LEFT JOIN
     (

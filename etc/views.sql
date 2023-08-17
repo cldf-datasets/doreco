@@ -35,20 +35,25 @@ GROUP BY p.u_id;
 
 
 -- Utterance information
-CREATE VIEW IF NOT EXISTS phonestats AS
+DROP VIEW IF EXISTS phonestats;
+CREATE VIEW phonestats AS
 SELECT
-    p.wd_id AS wd_id,
+    w.cldf_id as wd_id,
 	-- count of words as count of phones
 	-- needs to be calculated before exclusion
 	count(p.wd_id) AS num_phones
 FROM
-    'phones.csv' AS p
+    'phones.csv' AS p,
+	'words.csv' AS w
+WHERE
+	p.wd_id = w.cldf_id
 	-- I need to group on wd_id instead
 GROUP BY p.wd_id;
 
 
 -- Word count per lang
-CREATE VIEW IF NOT EXISTS langstats AS                                 
+DROP VIEW IF EXISTS langstats;
+CREATE VIEW langstats AS                                 
 SELECT                                                             
 	w.cldf_languageReference,
 	-- word form frequency
@@ -59,7 +64,8 @@ GROUP BY w.cldf_languageReference;
 
 
 -- Word form frequency
-CREATE VIEW IF NOT EXISTS wordstats AS                                 
+DROP VIEW IF EXISTS wordstats;
+CREATE VIEW wordstats AS                                 
 SELECT                                                             
 	w.cldf_languageReference,
 	w.cldf_name,
