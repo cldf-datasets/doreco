@@ -63,16 +63,24 @@ FROM
 GROUP BY w.cldf_languageReference;
 
 
--- Word form frequency
+-- Word form count
 DROP VIEW IF EXISTS wordstats;
 CREATE VIEW wordstats AS                                 
 SELECT                                                             
-	w.cldf_languageReference,
-	w.cldf_name,
+	w.cldf_id,
 	-- word form frequency
-	count(w.cldf_id) as WordFreq
+	count(w.cldf_id) AS WordFreq
 FROM
-	'words.csv' as w
+	'words.csv' AS w
 GROUP BY w.cldf_languageReference, w.cldf_name;
 
--- filter non-pulmonic consonants, i.e. click, ejective, implosive (other manners?)
+-- Word form frequency
+DROP VIEW IF EXISTS formstats;
+CREATE VIEW formstats AS                                 
+SELECT                                                             
+	(ws.WordFreq / cast(ls.WordCount AS float)) AS word_freq,
+	ws.cldf_id AS wd_id
+FROM
+	wordstats AS ws,
+	langstats AS ls
+GROUP BY ws.cldf_id;
