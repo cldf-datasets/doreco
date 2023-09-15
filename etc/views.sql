@@ -70,7 +70,8 @@ CREATE VIEW wordstats AS
 SELECT
 	w.cldf_id,
 	-- word form frequency
-	count(w.cldf_id) AS WordFreq
+	count(w.cldf_id) AS WordFreq,
+	w.cldf_languageReference
 FROM
 	'words.csv' AS w
 GROUP BY w.cldf_languageReference, w.cldf_name;
@@ -85,4 +86,6 @@ SELECT
 FROM
 	wordstats AS ws,
 	langstats AS ls
+where
+	ws.cldf_languageReference = ls.cldf_languageReference
 GROUP BY ws.cldf_id;
