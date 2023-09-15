@@ -43,6 +43,7 @@ ON
 LEFT JOIN
 	(
 	    SELECT stdev(ps.num_phones) AS num_phones, AVG(ps.num_phones) AS avg_num_phones FROM phonestats AS ps
+		GROUP BY ps.cldf_languageReference
     ) AS z_p
 LEFT JOIN
 	formstats as fs -- number of phones per word
@@ -51,7 +52,7 @@ ON
 LEFT JOIN
 	(
 	    SELECT stdev(fs.word_freq) AS word_freq, AVG(fs.word_freq) AS avg_word_freq FROM formstats AS fs
-		GROUP BY fs.cldf_languageReference
+		GROUP BY cldf_languageReference
     ) AS z_fs
 LEFT JOIN
     utterances AS utt  -- utterance-level stats such as speech rate.
