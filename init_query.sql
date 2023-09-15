@@ -51,6 +51,7 @@ ON
 LEFT JOIN
 	(
 	    SELECT stdev(fs.word_freq) AS word_freq, AVG(fs.word_freq) AS avg_word_freq FROM formstats AS fs
+		GROUP BY fs.cldf_languageReference
     ) AS z_fs
 LEFT JOIN
     utterances AS utt  -- utterance-level stats such as speech rate.

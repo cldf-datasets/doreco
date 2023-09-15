@@ -41,7 +41,8 @@ SELECT
     w.cldf_id as wd_id,
 	-- count of words as count of phones
 	-- needs to be calculated before exclusion
-	count(p.wd_id) AS num_phones
+	count(p.wd_id) AS num_phones,
+	w.cldf_languageReference
 FROM
     'phones.csv' AS p,
 	'words.csv' AS w
@@ -65,8 +66,8 @@ GROUP BY w.cldf_languageReference;
 
 -- Word form count
 DROP VIEW IF EXISTS wordstats;
-CREATE VIEW wordstats AS                                 
-SELECT                                                             
+CREATE VIEW wordstats AS
+SELECT
 	w.cldf_id,
 	-- word form frequency
 	count(w.cldf_id) AS WordFreq
@@ -76,10 +77,11 @@ GROUP BY w.cldf_languageReference, w.cldf_name;
 
 -- Word form frequency
 DROP VIEW IF EXISTS formstats;
-CREATE VIEW formstats AS                                 
+CREATE VIEW formstats AS
 SELECT                                                             
 	(ws.WordFreq / cast(ls.WordCount AS float)) AS word_freq,
-	ws.cldf_id AS wd_id
+	ws.cldf_id AS wd_id,
+	ls.cldf_languageReference as cldf_languageReference
 FROM
 	wordstats AS ws,
 	langstats AS ls
