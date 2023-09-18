@@ -23,14 +23,20 @@ WHERE
     s.rownum = 1 AND s.token_type = 'xsampa';
 
 -- Utterance information
+DROP VIEW IF EXISTS utterances;
 CREATE VIEW IF NOT EXISTS utterances AS
 SELECT
     p.u_id AS u_id,
 	-- count of utterance to see how many phones in utterance
-    count(p.u_id)/sum(p.duration) as speech_rate,
-    log(exp(1), count(p.cldf_id)/sum(p.duration)) AS log_speech_rate
+    count(p.u_id)/sum(p.duration) AS speech_rate,
+    log(exp(1), count(p.cldf_id)/sum(p.duration)) AS log_speech_rate,
+	w.cldf_languageReference AS cldf_languageReference
 FROM
     'phones.csv' AS p
+LEFT JOIN
+	'words.csv' AS w
+ON
+	p.wd_id = w.cldf_id
 GROUP BY p.u_id;
 
 
@@ -38,9 +44,7 @@ GROUP BY p.u_id;
 DROP VIEW IF EXISTS phonestats;
 CREATE VIEW phonestats AS
 SELECT
-    w.cldf_id as wd_id,
-	-- count of words as count of phones
-	-- needs to be calculated before exclusion
+    w.cldf_id AS wd_id,
 	count(p.wd_id) AS num_phones,
 	w.cldf_languageReference
 FROM
@@ -57,35 +61,43 @@ DROP VIEW IF EXISTS langstats;
 CREATE VIEW langstats AS                                 
 SELECT                                                             
 	w.cldf_languageReference,
-	-- word form frequency
-	count(w.cldf_id) as WordCount
-FROM
-	'words.csv' as w
-GROUP BY w.cldf_languageReference;
-
-
--- Word form count
-DROP VIEW IF EXISTS wordstats;
-CREATE VIEW wordstats AS
-SELECT
-	w.cldf_id,
-	-- word form frequency
-	count(w.cldf_id) AS WordFreq,
-	w.cldf_languageReference
+	count(w.cldf_id) AS WordCount -- overall words in lang
 FROM
 	'words.csv' AS w
-GROUP BY w.cldf_languageReference, w.cldf_name;
+GROUP BY w.cldf_languageReference;
+
 
 -- Word form frequency
 DROP VIEW IF EXISTS formstats;
 CREATE VIEW formstats AS
 SELECT                                                             
-	(ws.WordFreq / cast(ls.WordCount AS float)) AS word_freq,
-	ws.cldf_id AS wd_id,
-	ls.cldf_languageReference as cldf_languageReference
+	(count(ws.cldf_id) / cast(ls.WordCount AS float)) AS word_freq,
+	ws.cldf_name AS cldf_name,
+	ls.cldf_languageReference AS cldf_languageReference
 FROM
-	wordstats AS ws,
+	'words.csv' AS ws
+LEFT JOIN
 	langstats AS ls
-where
+ON
 	ws.cldf_languageReference = ls.cldf_languageReference
-GROUP BY ws.cldf_id;
+GROUP BY ws.cldf_name, ws.cldf_languageReference;
+
+
+-- Compute SD's of language level stats
+DROP VIEW IF EXISTS sdev;
+CREATE VIEW sdev AS
+SELECT 
+	stdev(fs.word_freq) AS word_freq,
+	AVG(fs.word_freq) AS avg_word_freq,
+	stdev(ps.num_phones) AS num_phones,
+	AVG(ps.num_phones) AS avg_num_phones,
+	stdev(u.log_speech_rate) AS speech_rate,
+	AVG(u.log_speech_rate) AS avg_speech_rate,
+	fs.cldf_languageReference AS cldf_languageReference
+FROM 
+	formstats AS fs,
+	phonestats AS ps,
+	utterances AS u
+WHERE
+	fs.cldf_languageReference = ps.cldf_languageReference AND
+	fs.cldf_languageReference = u.cldf_languageReference;
