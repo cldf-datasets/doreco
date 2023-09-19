@@ -6,24 +6,27 @@ SELECT
     word.speaker_id AS Speaker,
     CASE
         WHEN phone.cldf_id in (select cldf_id FROM utterance_initials) THEN 1 ELSE 0
-        END utt_initial,
+        END utt_initial, -- whether or not the phone is in utterance initial position
     CASE
         WHEN phone.cldf_id in (select cldf_id FROM word_initials) THEN 1 ELSE 0
-        END word_initial,
+        END word_initial, -- whether or not the phone is in word initial position
 	CASE
 		WHEN sound.cldf_cltsReference LIKE '%voiced%' THEN 'voiced' ELSE 'voiceless'
 		END voicing,
     CASE
         WHEN sound.cldf_cltsReference LIKE '%stop%' THEN 'stop' 
 		WHEN sound.cldf_cltsReference LIKE '%fricative%' THEN 'fricative' ELSE 'sonorant'
-        END sound_class
-	(ps.num_phones - sd.avg_num_phones) / sd.num_phones AS z_num_phones,
-	(utt.log_speech_rate - sd.avg_speech_rate) / sd.speech_rate AS z_speech_rate,
-	(fs.word_freq - sd.avg_word_freq) / sd.word_freq AS z_word_freq
+        END sound_class,
+    -- normalized word length:
+	(phones_per_word.num_phones - sd_num_phones.avg_num_phones) / sd_num_phones.num_phones AS z_num_phones,
+	-- normalized speech rate of the utterance:
+	(utt.log_speech_rate - sd_speech_rate.avg_speech_rate) / sd_speech_rate.speech_rate AS z_speech_rate,
+	-- normalized frequency of the word form:
+	(forms.freq - sd_word_freq.avg_word_freq) / sd_word_freq.word_freq AS z_word_freq
 FROM
     "phones.csv" AS phone,
-    "words.csv" AS word,
-    ParameterTable AS sound
+    "words.csv" AS word, -- word-level metadata joined ON phone.wd_id = word.cldf_id
+    ParameterTable AS sound -- sound-level metadata joined ON phone.cldf_parameterReference = sound.cldf_id
 LEFT JOIN
     (
         SELECT
@@ -40,22 +43,59 @@ LEFT JOIN
 ON
     word.speaker_id = t.speaker_id
 LEFT JOIN
-	phonestats as ps -- number of phones per word
+	phones_per_word
 ON
-	phone.wd_id = ps.wd_id
+	phone.wd_id = phones_per_word.wd_id
 LEFT JOIN
-	formstats as fs -- word frequency
+	forms
 ON
-	word.cldf_name = fs.cldf_name AND
-	word.cldf_languageReference = fs.cldf_languageReference
+	word.cldf_name = forms.form AND
+	word.cldf_languageReference = forms.cldf_languageReference
 LEFT JOIN
     utterances AS utt  -- utterance-level stats such as speech rate.
 ON
     phone.u_ID = utt.u_id
-LEFT JOIN
-	sdev AS sd
+LEFT JOIN -- summary stats on word length per language
+    (
+        SELECT
+            stdev(p.num_phones) AS num_phones,
+            AVG(p.num_phones) AS avg_num_phones,
+            w.cldf_languageReference
+        FROM
+            phones_per_word as p
+        LEFT JOIN
+            'words.csv' AS w
+        ON
+            p.wd_id = w.cldf_id
+        GROUP BY
+            w.cldf_languageReference
+    ) AS sd_num_phones
+ON word.cldf_languageReference = sd_num_phones.cldf_languageReference
+LEFT JOIN -- summary stats on speech rate per language
+    (
+        SELECT
+            stdev(log_speech_rate) AS speech_rate,
+	        AVG(log_speech_rate) AS avg_speech_rate,
+	        cldf_languageReference
+        FROM
+            utterances
+        GROUP BY
+            cldf_languageReference
+    ) AS sd_speech_rate
+ON word.cldf_languageReference = sd_speech_rate.cldf_languageReference
+LEFT JOIN -- summary stats on word form frequency per language
+    (
+        SELECT
+            stdev(freq) AS word_freq,
+            AVG(freq) AS avg_word_freq,
+            cldf_languageReference
+        FROM
+            forms
+        GROUP BY
+            cldf_languageReference
+    ) AS sd_word_freq
 ON 
-	word.cldf_languageReference = sd.cldf_languageReference
+	word.cldf_languageReference = sd_word_freq.cldf_languageReference
 WHERE
     phone.wd_id = word.cldf_id AND
     phone.cldf_parameterReference = sound.cldf_id AND

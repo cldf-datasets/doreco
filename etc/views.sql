@@ -3,6 +3,7 @@ CREATE VIEW IF NOT EXISTS word_initials AS
 SELECT s.* FROM (
     SELECT
         p.*,
+        -- We use a window function to be able to determine the first row in a batch.
         row_number() OVER (PARTITION BY wd_ID ORDER BY cldf_id) rownum
     FROM
         'phones.csv' AS p
@@ -15,6 +16,7 @@ CREATE VIEW IF NOT EXISTS utterance_initials AS
 SELECT s.* FROM (
     SELECT
         p.*,
+        -- We use a window function to be able to determine the first row in a batch.
         row_number() OVER (PARTITION BY u_ID ORDER BY cldf_id) rownum
     FROM
         'phones.csv' AS p
@@ -39,65 +41,37 @@ ON
 	p.wd_id = w.cldf_id
 GROUP BY p.u_id;
 
-
--- Utterance information
-DROP VIEW IF EXISTS phonestats;
-CREATE VIEW phonestats AS
+-- Number of phones per word
+DROP VIEW IF EXISTS phones_per_word;
+CREATE VIEW phones_per_word AS
 SELECT
-    w.cldf_id AS wd_id,
-	count(p.wd_id) AS num_phones,
-	w.cldf_languageReference
+    wd_id,
+	count(cldf_id) AS num_phones
 FROM
-    'phones.csv' AS p,
-	'words.csv' AS w
-WHERE
-	p.wd_id = w.cldf_id
-	-- I need to group on wd_id instead
-GROUP BY p.wd_id;
+    'phones.csv'
+GROUP BY wd_id;
 
-
--- Word count per lang
-DROP VIEW IF EXISTS langstats;
-CREATE VIEW langstats AS                                 
+-- Number of spoken words per language
+DROP VIEW IF EXISTS words_per_language;
+CREATE VIEW words_per_language AS
 SELECT                                                             
 	w.cldf_languageReference,
-	count(w.cldf_id) AS WordCount -- overall words in lang
+	count(w.cldf_id) AS num_words
 FROM
 	'words.csv' AS w
 GROUP BY w.cldf_languageReference;
 
-
--- Word form frequency
-DROP VIEW IF EXISTS formstats;
-CREATE VIEW formstats AS
+-- Table of forms, i.e. of distinct word forms per language.
+DROP VIEW IF EXISTS forms;
+CREATE VIEW forms AS
 SELECT                                                             
-	(count(ws.cldf_id) / cast(ls.WordCount AS float)) AS word_freq,
-	ws.cldf_name AS cldf_name,
+	(count(ws.cldf_id) / cast(ls.num_words AS float)) AS freq,
+	ws.cldf_name AS form,
 	ls.cldf_languageReference AS cldf_languageReference
 FROM
 	'words.csv' AS ws
 LEFT JOIN
-	langstats AS ls
+	words_per_language AS ls
 ON
 	ws.cldf_languageReference = ls.cldf_languageReference
 GROUP BY ws.cldf_name, ws.cldf_languageReference;
-
-
--- Compute SD's of language level stats
-DROP VIEW IF EXISTS sdev;
-CREATE VIEW sdev AS
-SELECT 
-	stdev(fs.word_freq) AS word_freq,
-	AVG(fs.word_freq) AS avg_word_freq,
-	stdev(ps.num_phones) AS num_phones,
-	AVG(ps.num_phones) AS avg_num_phones,
-	stdev(u.log_speech_rate) AS speech_rate,
-	AVG(u.log_speech_rate) AS avg_speech_rate,
-	fs.cldf_languageReference AS cldf_languageReference
-FROM 
-	formstats AS fs,
-	phonestats AS ps,
-	utterances AS u
-WHERE
-	fs.cldf_languageReference = ps.cldf_languageReference AND
-	fs.cldf_languageReference = u.cldf_languageReference;
