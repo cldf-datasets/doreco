@@ -46,7 +46,7 @@ DROP VIEW IF EXISTS phones_per_word;
 CREATE VIEW phones_per_word AS
 SELECT
     wd_id,
-	count(cldf_id) AS num_phones
+	log(exp(1), count(cldf_id)) AS num_phones
 FROM
     'phones.csv'
 GROUP BY wd_id;
@@ -54,7 +54,7 @@ GROUP BY wd_id;
 -- Number of spoken words per language
 DROP VIEW IF EXISTS words_per_language;
 CREATE VIEW words_per_language AS
-SELECT                                                             
+SELECT
 	w.cldf_languageReference,
 	count(w.cldf_id) AS num_words
 FROM
@@ -64,8 +64,8 @@ GROUP BY w.cldf_languageReference;
 -- Table of forms, i.e. of distinct word forms per language.
 DROP VIEW IF EXISTS forms;
 CREATE VIEW forms AS
-SELECT                                                             
-	(count(ws.cldf_id) / cast(ls.num_words AS float)) AS freq,
+SELECT
+	log(exp(1), (count(ws.cldf_id) / cast(ls.num_words AS float))) AS freq,
 	ws.cldf_name AS form,
 	ls.cldf_languageReference AS cldf_languageReference
 FROM
