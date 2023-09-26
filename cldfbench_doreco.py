@@ -3,8 +3,6 @@ This dataset is derived from the DoReCo data as follows:
 - DoReCo data is limited to the core data with annotations released under a license without ND (no
   derivatives) clause (because we add annotations which goes against this clause).
 - Morpheme-aligned data is converted into IGT instances in an ExampleTable.
-- The Beja annotation files are taken from DOI 10.34847/nkl.edd011t1 v6, not the latest, but
-  incorrect v7.
 - Two minor issues with the DoReCo data are fixed, namely a handful of phones in the Evenki corpus
   being linked to two words, and phones/words in the Yucatec corpus having a typo in the speaker
   reference.
@@ -76,26 +74,19 @@ class Dataset(BaseDataset):
 
     def cmd_download(self, args):
         self.raw_dir.download(
-            # 'https://sharedocs.huma-num.fr/wl/?id=s947TcfRfDZR643QURdyncdku4EmeKyb&fmode=download',  # v1.1
-            "https://sharedocs.huma-num.fr/wl/?id=3LuEgKRrEUrdkAeDVskK46eNFqes5s6F&fmode=download",  # v1.2
+            "https://sharedocs.huma-num.fr/wl/?id=sbLShl5tHQ7J2INRpMaJcotNYWPQioDV&fmode=download",  # v1.2
             'languages.csv')
         self.raw_dir.download(
-            # 'https://sharedocs.huma-num.fr/wl/?id=xqkUR3WoFOKB8cRb0MdHYJxIDEXEXlVG&fmode=download',  # v1.1
-            "https://sharedocs.huma-num.fr/wl/?id=6OkBYGXrPkLEuHchF4kOXpsJf7MOKcLv&fmode=download",  # v1.2
+            "https://sharedocs.huma-num.fr/wl/?id=qGGGvFRnpynYiqw8nVvvOQjkl97qhl49&fmode=download",  # v1.2
             'sources.bib')
 
         with_nd_data = confirm('Include ND data?', default=False)
         with_audio_data = confirm('Include audio files?', default=False)
+        dl = False
         for row in self.raw_dir.read_csv('languages.csv', dicts=True):
             if with_nd_data or ('ND' not in row['Annotation license']):
                 print(row['Glottocode'], row['DOI'])
-                doi = row['DOI']
-                if row['Glottocode'] == 'beja1238':
-                    # Known issue with https://nakala.fr/10.34847/nkl.edd011t1 v7 including wrong
-                    # language files.
-                    doi += '.v6'
-
-                dep = nakala.Deposit(doi)
+                dep = nakala.Deposit(row['DOI'])
                 for f in dep.files:
                     for s in ['_wd.csv', '_ph.csv', '_metadata.csv', '_gloss-abbreviations.csv']:
                         if f.name.endswith(s):
