@@ -36,6 +36,7 @@ from cldfbench import Dataset as BaseDataset
 from cldfbench import CLDFSpec
 from clldutils.clilib import confirm
 from clldutils.jsonlib import dump, load
+from clldutils.markup import add_markdown_text
 from clldutils.lgr import ABBRS, PERSONS
 
 from util import nakala
@@ -113,6 +114,9 @@ class Dataset(BaseDataset):
         # At this point - according to RELEASING.md - .zenodo.json has been written so we can edit
         # it, adding the individual corpus citations.
         zenodo = load(self.dir / '.zenodo.json')
+        corpus_citations_main = add_markdown_text(BaseDataset.cmd_readme(self, args),
+                                 "- the individual corpora, including the name(s) of the creator(s) of each corpus, as defined in the metadata.",
+                                 section='How to cite')
         corpus_citations = [
             "Please note that when citing this dataset, it is NOT sufficient to refer to DoReCo as "
             "a whole, but the full citation for each individual corpus must be provided, including "
@@ -145,7 +149,7 @@ class Dataset(BaseDataset):
             '--pacific-centered'])
         desc = ['\n![](map.png)\n']
         pre, head, post = md.partition('## CLDF ')
-        return pre + '\n'.join(desc) + head + post
+        return pre + '\n'.join(desc) + head + post + corpus_citations_main
 
     def iter_rows(self, pattern):
         mismatch = set()
