@@ -15,6 +15,7 @@ setup(
         ]
     },
     install_requires=[
+        'clldutils>=3.19',
         'pyclts',
         'pybtex',
         'tqdm',

@@ -114,9 +114,6 @@ class Dataset(BaseDataset):
         # At this point - according to RELEASING.md - .zenodo.json has been written so we can edit
         # it, adding the individual corpus citations.
         zenodo = load(self.dir / '.zenodo.json')
-        corpus_citations_main = add_markdown_text(BaseDataset.cmd_readme(self, args),
-                                 "- the individual corpora, including the name(s) of the creator(s) of each corpus, as defined in the metadata.",
-                                 section='How to cite')
         corpus_citations = [
             "Please note that when citing this dataset, it is NOT sufficient to refer to DoReCo as "
             "a whole, but the full citation for each individual corpus must be provided, including "
@@ -128,8 +125,8 @@ class Dataset(BaseDataset):
                 zenodo['description'] += '\n<blockquote>{}</blockquote>\n'.format(
                     html.escape(src['dc:bibliographicCitation']))
         dump(zenodo, self.dir / '.zenodo.json', indent=4)
-        pre, head, post = super().cmd_readme(args).partition('## Description')
-        md = pre + '\n'.join(corpus_citations) + '\n\n' + head + post
+        md = add_markdown_text(
+            super().cmd_readme(args), '\n'.join(corpus_citations), section='How to cite')
 
         subprocess.check_call([
             'cldfbench',
@@ -147,9 +144,12 @@ class Dataset(BaseDataset):
             '--padding-top', '3',
             '--padding-bottom', '3',
             '--pacific-centered'])
-        desc = ['\n![](map.png)\n']
-        pre, head, post = md.partition('## CLDF ')
-        return pre + '\n'.join(desc) + head + post + corpus_citations_main
+        return add_markdown_text(
+            md, """
+![](map.png)
+
+See [USAGE](USAGE.md) for information how the dataset can be analyszed.
+    """, section="Description")
 
     def iter_rows(self, pattern):
         mismatch = set()

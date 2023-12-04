@@ -1,0 +1,1073 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "dc:bibliographicCitation": "Seifart, Frank, Ludger Paschen & Matthew Stave (eds.). 2022. Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). DOI:10.34847/nkl.7cbfq779",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Generic",
+    "dc:license": "CC-BY",
+    "dc:source": "sources.bib",
+    "dc:title": "CLDF dataset derived from the DoReCo core corpus",
+    "dcat:accessURL": "https://github.com/cldf-datasets/doreco/",
+    "prov:wasDerivedFrom": [
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Anal DoReCo dataset",
+            "dc:bibliographicCitation": "Ozerov, Pavel. 2022. Anal DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/anal1239. DOI:10.34847/nkl.0dbazp8m"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Yali (Apahapsili) DoReCo dataset",
+            "dc:bibliographicCitation": "Riesberg, Sonja. 2022. Yali (Apahapsili) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/apah1238. DOI:10.34847/nkl.9d91nkq2"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Arapaho DoReCo dataset",
+            "dc:bibliographicCitation": "Cowell, Andrew. 2022. Arapaho DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/arap1274. DOI:10.34847/nkl.36f5r1b6"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Ba\u00efnounk Gub\u00ebeher DoReCo dataset",
+            "dc:bibliographicCitation": "Cobbinah, Alexander Yao. 2022. Ba\u00efnounk Gub\u00ebeher DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/bain1259. DOI:10.34847/nkl.a332abw8"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Beja DoReCo dataset",
+            "dc:bibliographicCitation": "Vanhove, Martine. 2022. Beja DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/beja1238. DOI:10.34847/nkl.edd011t1"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Bora DoReCo dataset",
+            "dc:bibliographicCitation": "Seifart, Frank. 2022. Bora DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/bora1263. DOI:10.34847/nkl.6eaf5laq"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Cashinahua DoReCo dataset",
+            "dc:bibliographicCitation": "Reiter, Sabine. 2022. Cashinahua DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/cash1254. DOI:10.34847/nkl.a8f9q2f1"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Dolgan DoReCo dataset",
+            "dc:bibliographicCitation": "D\u00e4britz, Chris Lasse and Kudryakova, Nina and Stapert, Eug\u00e9nie and Arkhipov, Alexandre. 2022. Dolgan DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/dolg1241. DOI:10.34847/nkl.f09eikq3"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Evenki DoReCo dataset",
+            "dc:bibliographicCitation": "Kazakevich, Olga and Klyachko, Elena. 2022. Evenki DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/even1259. DOI:10.34847/nkl.5e0d27cu"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Goemai DoReCo dataset",
+            "dc:bibliographicCitation": "Hellwig, Birgit. 2022. Goemai DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/goem1240. DOI:10.34847/nkl.b93664ml"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Gorwaa DoReCo dataset",
+            "dc:bibliographicCitation": "Harvey, Andrew. 2022. Gorwaa DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/goro1270. DOI:10.34847/nkl.a4b4ijj2"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Jahai DoReCo dataset",
+            "dc:bibliographicCitation": "Burenhult, Niclas. 2022. Jahai DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/jeha1242. DOI:10.34847/nkl.6a71xp0p"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Jejuan DoReCo dataset",
+            "dc:bibliographicCitation": "Kim, Soung-U. 2022. Jejuan DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/jeju1234. DOI:10.34847/nkl.06ebrk38"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Kakabe DoReCo dataset",
+            "dc:bibliographicCitation": "Vydrina, Alexandra. 2022. Kakabe DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/kaka1265. DOI:10.34847/nkl.d5aeu9t6"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Kamas DoReCo dataset",
+            "dc:bibliographicCitation": "Gusev, Valentin and Klooster, Tiina and Wagner-Nagy, Be\u00e1ta and Arkhipov, Alexandre. 2022. Kamas DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/kama1351. DOI:10.34847/nkl.cdd8177b"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Tabaq (Karko) DoReCo dataset",
+            "dc:bibliographicCitation": "Hellwig, Birgit and Schneider-Blum, Gertrud and Ismail, Khaleel Bakheet Khaleel. 2022. Tabaq (Karko) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/kark1256. DOI:10.34847/nkl.eea8144j"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Komnzo DoReCo dataset",
+            "dc:bibliographicCitation": "D\u00f6hler, Christian. 2022. Komnzo DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/komn1238. DOI:10.34847/nkl.c5e6dudv"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Lower Sorbian DoReCo dataset",
+            "dc:bibliographicCitation": "Bartels, Hauke and Szczepa\u0144ski, Marcin. 2022. Lower Sorbian DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/lowe1385. DOI:10.34847/nkl.6c6e4e9k"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Movima DoReCo dataset",
+            "dc:bibliographicCitation": "Haude, Katharina. 2022. Movima DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/movi1243. DOI:10.34847/nkl.da42xf67"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Dalabon DoReCo dataset",
+            "dc:bibliographicCitation": "Ponsonnet, Ma\u00efa. 2022. Dalabon DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/ngal1292. DOI:10.34847/nkl.fae299ug"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "N\u01c1ng DoReCo dataset",
+            "dc:bibliographicCitation": "G\u00fcldemann, Tom and Ernszt, Martina and Siegmund, Sven and Witzlack-Makarevich, Alena. 2022. N\u01c1ng DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/nngg1234. DOI:10.34847/nkl.f6c37fi0"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Northern Kurdish (Kurmanji) DoReCo dataset",
+            "dc:bibliographicCitation": "Haig, Geoff and Vollmer, Maria and Thiele, Hanna. 2022. Northern Kurdish (Kurmanji) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/nort2641. DOI:10.34847/nkl.ca10ez5t"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Fanbyak DoReCo dataset",
+            "dc:bibliographicCitation": "Franjieh, Michael. 2022. Fanbyak DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/orko1234. DOI:10.34847/nkl.02084446"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Pnar DoReCo dataset",
+            "dc:bibliographicCitation": "Ring, Hiram. 2022. Pnar DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/pnar1238. DOI:10.34847/nkl.5ba1062k"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Daakie DoReCo dataset",
+            "dc:bibliographicCitation": "Krifka, Manfred. 2022. Daakie DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/port1286. DOI:10.34847/nkl.efeav5l9"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Res\u00edgaro DoReCo dataset",
+            "dc:bibliographicCitation": "Seifart, Frank. 2022. Res\u00edgaro DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/resi1247. DOI:10.34847/nkl.ffb96lo8"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Ruuli DoReCo dataset",
+            "dc:bibliographicCitation": "Witzlack-Makarevich, Alena and Namyalo, Saudah and Kiriggwajjo, Anatol and Molochieva, Zarina. 2022. Ruuli DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/ruul1235. DOI:10.34847/nkl.fde4pp1u"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Sadu DoReCo dataset",
+            "dc:bibliographicCitation": "Xu, Xianming and Bai, Bibo. 2022. Sadu DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/sadu1234. DOI:10.34847/nkl.3db4u59d"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Sanzhi Dargwa DoReCo dataset",
+            "dc:bibliographicCitation": "Forker, Diana and Schiborr, Nils Norman. 2022. Sanzhi Dargwa DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/sanz1248. DOI:10.34847/nkl.81934177"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Savosavo DoReCo dataset",
+            "dc:bibliographicCitation": "Wegener, Claudia. 2022. Savosavo DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/savo1255. DOI:10.34847/nkl.b74d1b33"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Nafsan (South Efate) DoReCo dataset",
+            "dc:bibliographicCitation": "Thieberger, Nick. 2022. Nafsan (South Efate) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/sout2856. DOI:10.34847/nkl.ba4f760l"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "English (Southern England) DoReCo dataset",
+            "dc:bibliographicCitation": "Schiborr, Nils Norman. 2022. English (Southern England) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/sout3282. DOI:10.34847/nkl.9c271u5g"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "French (Swiss) DoReCo dataset",
+            "dc:bibliographicCitation": "Avanzi, Mathieu and B\u00e9guelin, Marie-Jos\u00e9 and Corminboeuf, Gilles and Di\u00e9moz, Federica and Johnsen, Laure Anne. 2022. French (Swiss) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/stan1290. DOI:10.34847/nkl.3520l685"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "S\u00fcmi DoReCo dataset",
+            "dc:bibliographicCitation": "Teo, Amos. 2022. S\u00fcmi DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/sumi1235. DOI:10.34847/nkl.5ad4t01p"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Svan DoReCo dataset",
+            "dc:bibliographicCitation": "Gippert, Jost. 2022. Svan DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/svan1243. DOI:10.34847/nkl.9ba054c3"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Tabasaran DoReCo dataset",
+            "dc:bibliographicCitation": "Bogomolova, Natalia and Ganenkov, Dmitry and Schiborr, Nils Norman. 2022. Tabasaran DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/taba1259. DOI:10.34847/nkl.ad7f97xr"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Teop DoReCo dataset",
+            "dc:bibliographicCitation": "Mosel, Ulrike. 2022. Teop DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/teop1238. DOI:10.34847/nkl.9322sdf2"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Texistepec Popoluca DoReCo dataset",
+            "dc:bibliographicCitation": "Wichmann, S\u00f8ren. 2022. Texistepec Popoluca DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/texi1237. DOI:10.34847/nkl.c50ck58f"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Moje\u00f1o Trinitario DoReCo dataset",
+            "dc:bibliographicCitation": "Rose, Fran\u00e7oise. 2022. Moje\u00f1o Trinitario DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/trin1278. DOI:10.34847/nkl.cbc3b4xr"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Asimjeeg Datooga DoReCo dataset",
+            "dc:bibliographicCitation": "Griscom, Richard. 2022. Asimjeeg Datooga DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/tsim1256. DOI:10.34847/nkl.f77c7m72"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Vera'a DoReCo dataset",
+            "dc:bibliographicCitation": "Schnell, Stefan. 2022. Vera'a DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/vera1241. DOI:10.34847/nkl.3e2cu8c4"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Yongning Na DoReCo dataset",
+            "dc:bibliographicCitation": "Michaud, Alexis. 2022. Yongning Na DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/yong1270. DOI:10.34847/nkl.abe65p95"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:created": "39342aa",
+            "dc:title": "Repository"
+        },
+        {
+            "rdf:about": "https://github.com/glottolog/glottolog",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v4.8",
+            "dc:title": "Glottolog"
+        }
+    ],
+    "prov:wasGeneratedBy": [
+        {
+            "dc:title": "python",
+            "dc:description": "3.10.12"
+        },
+        {
+            "dc:title": "python-packages",
+            "dc:relation": "requirements.txt"
+        }
+    ],
+    "rdf:ID": "doreco",
+    "rdf:type": "http://www.w3.org/ns/dcat#Distribution",
+    "tables": [
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#MediaTable",
+            "dc:description": "This table lists audio files which have been transcribed/annotated for DoReCo corpora. Note that only downloadable files are listed.",
+            "dc:extent": 583,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[^/]+/.+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaType",
+                        "required": true,
+                        "name": "Media_Type"
+                    },
+                    {
+                        "datatype": "anyURI",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#downloadUrl",
+                        "required": false,
+                        "name": "Download_URL"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?"
+                        },
+                        "name": "rec_date"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "certain|approximate"
+                        },
+                        "name": "rec_date_assignment_certain"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "traditional narrative|personal narrative|conversation|stimulus retelling|procedural|procedural/conversation"
+                        },
+                        "name": "genre"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "genre_stim"
+                    },
+                    {
+                        "dc:description": "Information on whether/how the audio has been annotated with glosses.",
+                        "datatype": "string",
+                        "name": "gloss"
+                    },
+                    {
+                        "dc:description": "Information on meta languages for which the annotations contain translations.",
+                        "datatype": "string",
+                        "null": [
+                            "na"
+                        ],
+                        "separator": "/",
+                        "name": "transl"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "good|medium|bad|middle"
+                        },
+                        "name": "sound_quality"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "punctual|none|constant|medium"
+                        },
+                        "null": [
+                            "na"
+                        ],
+                        "name": "background_noise"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributionReference",
+                        "name": "Corpus_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "name": "Glottocode"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Glottocode"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Corpus_ID"
+                        ],
+                        "reference": {
+                            "resource": "contributions.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "media.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
+            "dc:description": "Some corpora in DoReCo contain data annotated with glosses. Such glossed data is extracted into a CLDF ExampleTable.",
+            "dc:extent": 94672,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "required": true,
+                        "name": "Language_ID"
+                    },
+                    {
+                        "dc:description": "The example text in the source language.",
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText",
+                        "required": true,
+                        "name": "Primary_Text"
+                    },
+                    {
+                        "dc:description": "The sequence of words of the primary text to be aligned with glosses",
+                        "dc:extent": "multivalued",
+                        "datatype": "string",
+                        "null": [],
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
+                        "required": false,
+                        "separator": "\t",
+                        "name": "Analyzed_Word"
+                    },
+                    {
+                        "dc:description": "The sequence of glosses aligned with the words of the primary text",
+                        "dc:extent": "multivalued",
+                        "datatype": "string",
+                        "null": [],
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
+                        "required": false,
+                        "separator": "\t",
+                        "name": "Gloss"
+                    },
+                    {
+                        "dc:description": "The translation of the example text in a meta language",
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText",
+                        "required": false,
+                        "name": "Translated_Text"
+                    },
+                    {
+                        "dc:description": "References the language of the translated text",
+                        "dc:extent": "singlevalued",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference",
+                        "required": false,
+                        "name": "Meta_Language_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "required": false,
+                        "name": "Comment"
+                    },
+                    {
+                        "dc:description": "Link to the audio file to which start and end markers pertain.",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaReference",
+                        "name": "File_ID"
+                    },
+                    {
+                        "dc:description": "Start of the word in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "start"
+                    },
+                    {
+                        "dc:description": "End of the word in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "end"
+                    },
+                    {
+                        "dc:description": "Duration of the word in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "duration"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "File_ID"
+                        ],
+                        "reference": {
+                            "resource": "media.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Meta_Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "examples.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+            "dc:extent": 42,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea",
+                        "required": false,
+                        "name": "Macroarea"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": "-90",
+                            "maximum": "90"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
+                        "required": false,
+                        "name": "Latitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "decimal",
+                            "minimum": "-180",
+                            "maximum": "180"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
+                        "required": false,
+                        "name": "Longitude"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-z0-9]{4}[1-9][0-9]{3}"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
+                        "required": false,
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{Glottocode}",
+                        "name": "Glottocode"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-z]{3}"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
+                        "required": false,
+                        "name": "ISO639P3code"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "name": "Source"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "languages.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
+            "dc:description": "Each DoReCo language corpus is listed as separate contribution in this table.",
+            "dc:extent": 42,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "required": false,
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributor",
+                        "required": false,
+                        "name": "Contributor"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#citation",
+                        "required": false,
+                        "name": "Citation"
+                    },
+                    {
+                        "datatype": "string",
+                        "null": [
+                            "na"
+                        ],
+                        "name": "Archive"
+                    },
+                    {
+                        "datatype": "string",
+                        "null": [
+                            "na"
+                        ],
+                        "name": "Archive_link"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "AnnotationLicense"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "AudioLicense"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "DOI"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "contributions.csv"
+        },
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
+            "dc:description": "The ParameterTable lists IPA phones which appear in the DoReCo corpus (if a correspondence to the X-Sampa representation could be determined). If possible, IPA phones are linked to CLTS' BIPA representation, giving access to the CLTS feature system.",
+            "dc:extent": 339,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "required": true,
+                        "name": "ID"
+                    },
+                    {
+                        "dc:description": "The IPA representation of the sound.",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "required": false,
+                        "name": "Name"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "required": false,
+                        "name": "Description"
+                    },
+                    {
+                        "datatype": "json",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#columnSpec",
+                        "required": false,
+                        "name": "ColumnSpec"
+                    },
+                    {
+                        "dc:description": "CLTS ID of the sound, i.e. the underscore-separated ordered list of features of the sound.",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cltsReference",
+                        "name": "CLTS_ID"
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "parameters.csv"
+        },
+        {
+            "dc:extent": 289,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "name": "Language_ID"
+                    },
+                    {
+                        "datatype": "integer",
+                        "name": "age"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "certain|approximate"
+                        },
+                        "name": "age_assignment_certain"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "m|f"
+                        },
+                        "name": "sex"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "speakers.csv"
+        },
+        {
+            "dc:description": "This table lists individual, time-aligned phones.",
+            "dc:extent": 1863702,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ph_ID"
+                    },
+                    {
+                        "dc:description": "See the description of the Token_Type column.",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "ph"
+                    },
+                    {
+                        "dc:description": "Link to corresponding IPA phoneme, with details given in ParameterTable",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
+                        "name": "IPA"
+                    },
+                    {
+                        "dc:description": "Utterance ID. Utterances are words/phones delimited by silent pauses.",
+                        "datatype": "string",
+                        "name": "u_ID"
+                    },
+                    {
+                        "dc:description": "Not all rows in this table correspond to actual phones. If a row does the Token_Type is 'xsampa'\nand the `ph` column holds the X-SAMPA representation of the phone, otherwise it is a 'pause' or a\n'label'.\n\nLabels consist of two opening brackets, the label proper, a closing bracket, the content (optional),\nand another closing bracket, e.g. `<<ui>word>`. Labels may also appear on their own if the content\nis not known, e.g. `<<ui>>`. Valid proper labels are\n\n- fp: Filled pause\n- fs: False start\n- pr: Prolongation\n- fm: Foreign material\n- sg: Singing\n- bc: Backchannel\n- id: Ideophone\n- on: Onomatopoeic\n- wip: Word-internal pause\n- ui: Unidentifiable\n\nSilent pauses are marked by a special symbol, `<p:>`. The location of silent pauses is manually\nchecked by the DoReCo team, while the symbol itself is inserted by the WebMAUS service. Unlike\nlabels, the <p:> symbol has only one of each bracket, and no other content may be included in it.",
+                        "datatype": {
+                            "base": "string",
+                            "format": "label|pause|xsampa"
+                        },
+                        "name": "Token_Type"
+                    },
+                    {
+                        "dc:description": "Start of the phone in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "start"
+                    },
+                    {
+                        "dc:description": "End of the phone in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "end"
+                    },
+                    {
+                        "dc:description": "Duration of the phone in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "duration"
+                    },
+                    {
+                        "dc:description": "Link to corresponding word.",
+                        "datatype": "string",
+                        "name": "wd_ID"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "IPA"
+                        ],
+                        "reference": {
+                            "resource": "parameters.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "wd_ID"
+                        ],
+                        "reference": {
+                            "resource": "words.csv",
+                            "columnReference": [
+                                "wd_ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ph_ID"
+                ]
+            },
+            "url": "phones.csv"
+        },
+        {
+            "dc:extent": 896664,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "wd_ID"
+                    },
+                    {
+                        "dc:description": "The word form transcribed into orthography.",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "wd"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "name": "Language_ID"
+                    },
+                    {
+                        "dc:description": "Link to the audio file to which start and end markers pertain.",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaReference",
+                        "name": "File_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Speaker_ID"
+                    },
+                    {
+                        "dc:description": "Start of the word in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "start"
+                    },
+                    {
+                        "dc:description": "End of the word in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "end"
+                    },
+                    {
+                        "dc:description": "Duration of the word in the linked sound file in (floating point) seconds.",
+                        "datatype": "decimal",
+                        "name": "duration"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "ref"
+                    },
+                    {
+                        "dc:description": "Words that appear in glossed utterances are linked to an Example.",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#exampleReference",
+                        "name": "Example_ID"
+                    },
+                    {
+                        "datatype": "string",
+                        "separator": " ",
+                        "name": "mb"
+                    },
+                    {
+                        "datatype": "string",
+                        "separator": " ",
+                        "name": "ps"
+                    },
+                    {
+                        "datatype": "string",
+                        "separator": " ",
+                        "name": "gl"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "File_ID"
+                        ],
+                        "reference": {
+                            "resource": "media.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Example_ID"
+                        ],
+                        "reference": {
+                            "resource": "examples.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Language_ID"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "columnReference": [
+                            "Speaker_ID"
+                        ],
+                        "reference": {
+                            "resource": "speakers.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "wd_ID"
+                ]
+            },
+            "url": "words.csv"
+        },
+        {
+            "dc:description": "Gloss abbreviations used for glosses in a corpus.",
+            "dc:extent": 2053,
+            "tableSchema": {
+                "columns": [
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "name": "ID"
+                    },
+                    {
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "name": "Gloss"
+                    },
+                    {
+                        "dc:description": "Flag, signaling whether a gloss abbreviation is a standard, Leipzig-Glossing-Rules abbreviation.",
+                        "datatype": "boolean",
+                        "name": "LGR"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Meaning"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                        "name": "Glottocode"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": [
+                            "Glottocode"
+                        ],
+                        "reference": {
+                            "resource": "languages.csv",
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "ID"
+                ]
+            },
+            "url": "glosses.csv"
+        }
+    ]
+}

@@ -33,7 +33,7 @@ To do so,
    ```
 
 2. Download (and unpack) the CLTS v2.2.0 data from [DOI: 10.5281/zenodo.5583682](https://doi.org/10.5281/zenodo.5583682).
-3. Download (and unpack) the Glottolog v4.7 data from [DOI: 10.5281/zenodo.7398962](https://doi.org/10.5281/zenodo.7398962).
+3. Download (and unpack) the Glottolog v4.8 data from [DOI: 10.5281/zenodo.7398962](https://doi.org/10.5281/zenodo.8131084).
 4. Then run
 
    ```shell
@@ -44,7 +44,7 @@ To do so,
 5. The CLDF data can then be created running
 
    ```shell
-   cldfbench makecldf cldfbench_doreco.py --glottolog PATH/TO/glottolog-4.7/
+   cldfbench makecldf cldfbench_doreco.py --glottolog PATH/TO/glottolog-4.8/
    ```
 
 ## Overview
@@ -160,8 +160,9 @@ Which will output a result similar to
 
 sound class | word_initial_instances
 --- | ---
-consonant|313053
-vowel|80703
+consonant|313569
+vowel|80820
+
 
 ## Utterances
 
@@ -217,8 +218,8 @@ arap1274: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 tsim1256: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.40
 even1259: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.56
 sanz1248: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.57
+beja1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.58
 orko1234: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.59
-beja1238: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.59
 jeha1242: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.62
 bora1263: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.72
 sout3282: ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 11.76
@@ -270,8 +271,9 @@ GROUP BY s.sex;
 
 sex | num_phones
 --- | ---
-f|721373
-m|1142461
+f|721358
+m|1142344
+
 
 Correlations between speaker metadata and IPA phone metadata can be assessed by joining
 the ParameterTable as well
@@ -573,8 +575,15 @@ via RSQLite:
 > RSQLite::initExtension(db)
 > dbGetQuery(db, sql)
 count(*)
-1  2142599
+1  1681433
 ```
 
 Note that the SQLite library used in `cldfbench doreco.query` does also support
-[math functions](https://www.sqlite.org/lang_mathfunc.html) as well as `stdev` as aggregate function.
+[math functions](https://www.sqlite.org/lang_mathfunc.html) as well as `stdev` as aggregate function. Thus, the above query can also be
+run by saving the SQL as `query,sql` and running
+```shell
+cldfbench doreco.query q.sql 
+  count(*)
+----------
+   1681433
+```

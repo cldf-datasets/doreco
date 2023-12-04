@@ -1,0 +1,2054 @@
+ID,Gloss,LGR,Meaning,Glottocode
+apah1238_1,1,false,first person,apah1238
+apah1238_2,2,false,second person,apah1238
+apah1238_3,3,false,third person,apah1238
+apah1238_4,POSS,true,possessive,apah1238
+apah1238_5,ADV,true,adverbial,apah1238
+apah1238_6,ANA,false,(unclear),apah1238
+apah1238_7,ATTR,false,stative,apah1238
+apah1238_8,BEN ,true,benefactive,apah1238
+apah1238_9,CAUSE,false,cause,apah1238
+apah1238_10,CLASS,false,(unclear),apah1238
+apah1238_11,COMPL,false,completive,apah1238
+apah1238_12,CONJ,false,conjunction,apah1238
+apah1238_13,DEI,false,(unclear),apah1238
+apah1238_14,DEM,true,demonstrative,apah1238
+apah1238_15,DET,true,determiner,apah1238
+apah1238_16,DIR,false,directional,apah1238
+apah1238_17,DONE,false,(unclear),apah1238
+apah1238_18,DS,false,different subject,apah1238
+apah1238_19,EXCL,true,exclusive,apah1238
+apah1238_20,EXIST,false,existential,apah1238
+apah1238_21,FOC,true,focsu,apah1238
+apah1238_22,FOC,true,focus,apah1238
+apah1238_23,FUT,true,future,apah1238
+apah1238_24,GIV,false,given,apah1238
+apah1238_25,IM.FUT,false,immediate future,apah1238
+apah1238_26,IM.PST,false,immediate past,apah1238
+apah1238_27,INF,true,infinitive,apah1238
+apah1238_28,INS,false,instrument,apah1238
+apah1238_29,INTJ,false,interjection,apah1238
+apah1238_30,IRR,false,irrealis,apah1238
+apah1238_31,LOC,true,locative,apah1238
+apah1238_32,NEG,true,negation,apah1238
+apah1238_33,NR,true,nominalizer,apah1238
+apah1238_34,OBJ,true,object,apah1238
+apah1238_35,p ,true,plural,apah1238
+apah1238_36,PART,false,participle,apah1238
+apah1238_37,PN,false,personal name,apah1238
+apah1238_38,PREP,false,(unclear),apah1238
+apah1238_39,PRIOR,false,prior,apah1238
+apah1238_40,PROG,true,progressive,apah1238
+apah1238_41,PRS,true,present,apah1238
+apah1238_42,PST,true,past,apah1238
+apah1238_43,Q,false,question,apah1238
+apah1238_44,REL,false,(unclear),apah1238
+apah1238_45,REM.PST,false,remote past,apah1238
+apah1238_46,RFL,true,reflexive,apah1238
+apah1238_47,s,true,singular,apah1238
+apah1238_48,SF,false,stem former,apah1238
+apah1238_49,SS,false,same subject,apah1238
+arap1274_50,0,false,"inanimate ""person""",arap1274
+arap1274_51,1,false,first person,arap1274
+arap1274_52,2,false,second person,arap1274
+arap1274_53,3,false,third person,arap1274
+arap1274_54,4,false,fourth person,arap1274
+arap1274_55,12,false,first person inclusive,arap1274
+arap1274_56,ADV,true,adverbial,arap1274
+arap1274_57,ALLAT,true,allative,arap1274
+arap1274_58,CAUS,true,causative,arap1274
+arap1274_59,DEPPART,false,dependent participle,arap1274
+arap1274_60,DETACH,false,detachment marker,arap1274
+arap1274_61,DETACH,false,detachment marker,arap1274
+arap1274_62,DUBIT,false,dubitative,arap1274
+arap1274_63,EMPH,false,emphatic,arap1274
+arap1274_64,EMPH,false,emphatic,arap1274
+arap1274_65,FUT,true,future tense,arap1274
+arap1274_66,HABIT,false,habitual,arap1274
+arap1274_67,IC,false,initial change,arap1274
+arap1274_68,IMPER,true,imperative,arap1274
+arap1274_69,IMPERF,true,imperfective,arap1274
+arap1274_70,INDEF,true,indefinite,arap1274
+arap1274_71,INSTR,true,instrumental,arap1274
+arap1274_72,INTENSE,false,intensifier,arap1274
+arap1274_73,INTERR,false,interrogative,arap1274
+arap1274_74,IRREALIS,true,irrealis,arap1274
+arap1274_75,ITER,false,iterative,arap1274
+arap1274_76,LOC,true,locative,arap1274
+arap1274_77,MIRATIVE,false,mirative,arap1274
+arap1274_78,NA,false,animate noun,arap1274
+arap1274_79,NARRPAST,false,narrative past tense,arap1274
+arap1274_80,NEG,true,negation,arap1274
+arap1274_81,NI,false,inanimate noun,arap1274
+arap1274_82,OBLIG,false,obligatory,arap1274
+arap1274_83,OBV,false,obviative,arap1274
+arap1274_84,PASS,true,passive,arap1274
+arap1274_85,PAST,true,past tense,arap1274
+arap1274_86,PERF,true,perfect,arap1274
+arap1274_87,PL,true,plural,arap1274
+arap1274_88,POTENT,false,potential,arap1274
+arap1274_89,PROHIB,true,prohibitive,arap1274
+arap1274_90,REDUP,false,reduplication,arap1274
+arap1274_91,REFL/RECIP,false,reflexive/reciprocal,arap1274
+arap1274_92,S,true,singular,arap1274
+arap1274_93,SUBJ,true,subjunctive,arap1274
+arap1274_94,SUGG,false,suggestive imperative,arap1274
+arap1274_95,SUPERL,false,superlative,arap1274
+arap1274_96,VENTAT,false,ventative,arap1274
+bain1259_97,1,false,first person,bain1259
+bain1259_98,2,false,second person,bain1259
+bain1259_99,3,false,third person,bain1259
+bain1259_100,Adj,true,adjective,bain1259
+bain1259_101,Agr,false,agreement marker,bain1259
+bain1259_102,Antc,false,anticipatory,bain1259
+bain1259_103,Appl,true,applicative,bain1259
+bain1259_104,AUX,true,auxiliary,bain1259
+bain1259_105,Ben,true,benefactive,bain1259
+bain1259_106,Caus,true,causative,bain1259
+bain1259_107,Cl,false,class marker,bain1259
+bain1259_108,Comp,true,complementizer,bain1259
+bain1259_109,Cond,true,conditional,bain1259
+bain1259_110,Conn,false,connective,bain1259
+bain1259_111,Dem,true,demonstrative,bain1259
+bain1259_112,Der,false,derivational affix,bain1259
+bain1259_113,dist,true,distal demonstrative,bain1259
+bain1259_114,Distr,true,distributive,bain1259
+bain1259_115,Emp,false,(unclear),bain1259
+bain1259_116,EMP,false,(unclear),bain1259
+bain1259_117,Emph,false,emphasis,bain1259
+bain1259_118,excl,false,exclusive,bain1259
+bain1259_119,Foc,true,focus,bain1259
+bain1259_120,Fut,true,future,bain1259
+bain1259_121,Ger,false,gerund,bain1259
+bain1259_122,Hab,false,habital,bain1259
+bain1259_123,Imp,true,imperative,bain1259
+bain1259_124,Inact,false,inactual tense,bain1259
+bain1259_125,incl,true,inclusive,bain1259
+bain1259_126,Int,false,interjection,bain1259
+bain1259_127,Irr,true,irrealis,bain1259
+bain1259_128,itr.,true,intransitive,bain1259
+bain1259_129,Loc,true,locative,bain1259
+bain1259_130,Mod,false,modal particle,bain1259
+bain1259_131,NC,false,noun class,bain1259
+bain1259_132,Neg,true,negation,bain1259
+bain1259_133,Obj,true,object,bain1259
+bain1259_134,Pass,true,passive,bain1259
+bain1259_135,Perf,true,perfective,bain1259
+bain1259_136,Pl,true,plural,bain1259
+bain1259_137,Poss ,true,possessive,bain1259
+bain1259_138,Prep,false,preposition,bain1259
+bain1259_139,Pron,false,pronoun,bain1259
+bain1259_140,Rec,true,reciprocal,bain1259
+bain1259_141,Refl,true,reflexive,bain1259
+bain1259_142,Rel,true,relative pronoun,bain1259
+bain1259_143,Rev,false,reversive,bain1259
+bain1259_144,Sbj,true,subject,bain1259
+bain1259_145,Sg,true,singular,bain1259
+bain1259_146,Sub,false,subordinating morpheme,bain1259
+bain1259_147,Subj,true,subject,bain1259
+bain1259_148,TAM,false,tense aspect mood,bain1259
+bain1259_149,tr.,true,transitive,bain1259
+bain1259_150,Ven,false,venitive,bain1259
+beja1238_151,1,false,first person,beja1238
+beja1238_152,2,false,second person,beja1238
+beja1238_153,3,false,third person,beja1238
+beja1238_154,ABL,true,ablative,beja1238
+beja1238_155,ABST,false,abstract suffix,beja1238
+beja1238_156,ACC,true,accusative,beja1238
+beja1238_157,ACMP,false,(unclear),beja1238
+beja1238_158,ADJ,true,adjective,beja1238
+beja1238_159,ADJVZ,false,adjectivizer,beja1238
+beja1238_160,ADJZ,false,adjectivizer,beja1238
+beja1238_161,ADJZR,false,adjectivizer,beja1238
+beja1238_162,ADRE,false,addressee,beja1238
+beja1238_163,ADRF,false,form of address,beja1238
+beja1238_164,ADVS,false,adversative,beja1238
+beja1238_165,ANT,false,converb,beja1238
+beja1238_166,AOR,false,aorist,beja1238
+beja1238_167,ATTENU,false,(unclear),beja1238
+beja1238_168,AUG,false,augmentative,beja1238
+beja1238_169,CAUS,true,causative,beja1238
+beja1238_170,circ,false,circumfix,beja1238
+beja1238_171,CMPR,false,comparative,beja1238
+beja1238_172,COLL,false,(unclear),beja1238
+beja1238_173,COM,true,comitative,beja1238
+beja1238_174,CONTR,false,contrastive,beja1238
+beja1238_175,COORD,false,coordinative,beja1238
+beja1238_176,COP,true,copula,beja1238
+beja1238_177,CSL,false,casual,beja1238
+beja1238_178,CVB,false,simultaneity,beja1238
+beja1238_179,DAT,true,dative,beja1238
+beja1238_180,DBL,false,double,beja1238
+beja1238_181,DEF,true,definite,beja1238
+beja1238_182,DIM,false,diminuitive,beja1238
+beja1238_183,DIR,false,directional,beja1238
+beja1238_184,DIST,true,distal,beja1238
+beja1238_185,DISTR,true,distributive,beja1238
+beja1238_186,DM,false,(unclear),beja1238
+beja1238_187,EMPH,false,emphatic,beja1238
+beja1238_188,EXCM,false,exclamation,beja1238
+beja1238_189,F,true,female,beja1238
+beja1238_190,FS,false,false start,beja1238
+beja1238_191,FUTL,true,future,beja1238
+beja1238_192,GEN,true,genitive,beja1238
+beja1238_193,GNRL,false,general,beja1238
+beja1238_194,HESIT,false,hesitation,beja1238
+beja1238_195,IMP,true,imperative,beja1238
+beja1238_196,INDF,true,indefinite,beja1238
+beja1238_197,INT ,false,intensive,beja1238
+beja1238_198,INTJ,false,interjection,beja1238
+beja1238_199,IPFV,true,imperfective,beja1238
+beja1238_200,L,false,linker clitic,beja1238
+beja1238_201,LINK,false,(unclear),beja1238
+beja1238_202,LOC,true,locative,beja1238
+beja1238_203,M,true,masculine,beja1238
+beja1238_204,MID,false,(unclear),beja1238
+beja1238_205,MNR,false,manner,beja1238
+beja1238_206,MOY,false,(unclear),beja1238
+beja1238_207,N.AC,false,action noun,beja1238
+beja1238_208,N.AGN,false,agent noun,beja1238
+beja1238_209,NEG,true,negation,beja1238
+beja1238_210,NML,false,(unclear),beja1238
+beja1238_211,NMLZ,true,nominalizer,beja1238
+beja1238_212,NOM,true,nominative,beja1238
+beja1238_213,NREG,false,(unclear),beja1238
+beja1238_214,OBJ,true,object,beja1238
+beja1238_215,OPT,false,optative,beja1238
+beja1238_216,ORD,false,ordinal,beja1238
+beja1238_217,PASS,true,passive,beja1238
+beja1238_218,PFV,true,perfective,beja1238
+beja1238_219,PL,true,plural,beja1238
+beja1238_220,PLAC,false,pluractional,beja1238
+beja1238_221,PLC,false,(unclear),beja1238
+beja1238_222,POSS,true,possessive,beja1238
+beja1238_223,POT,false,potential,beja1238
+beja1238_224,PROH,true,prohibitive,beja1238
+beja1238_225,PROX,true,proximal,beja1238
+beja1238_226,RCPT,false,recipient,beja1238
+beja1238_227,RECP,true,reciprocal,beja1238
+beja1238_228,REFL,true,reflexive,beja1238
+beja1238_229,REL,false,relator,beja1238
+beja1238_230,SEQ,false,sequential,beja1238
+beja1238_231,SG,true,singular,beja1238
+beja1238_232,SIMIL,false,similative,beja1238
+beja1238_233,SING,false,singulative,beja1238
+beja1238_234,SMLT,false,simultaneity,beja1238
+beja1238_235,VBLZ,false,verbalizer,beja1238
+beja1238_236,VN,false,verbonominal,beja1238
+beja1238_237,VOC,true,vocative,beja1238
+bora1263_238,1,false,first person,bora1263
+bora1263_239,2,false,second person,bora1263
+bora1263_240,3,false,third person,bora1263
+bora1263_241,ABL,true,ablative case,bora1263
+bora1263_242,ACC,true,accusative case,bora1263
+bora1263_243,AFIR,false,affirmative,bora1263
+bora1263_244,ALL,true,allative case,bora1263
+bora1263_245,ANIM,false,animate,bora1263
+bora1263_246,AUG,false,augmentative,bora1263
+bora1263_247,BEN,true,benefactive case,bora1263
+bora1263_248,CAUS,true,causative,bora1263
+bora1263_249,CLF,true,classifier,bora1263
+bora1263_250,CMPV,false,comparative,bora1263
+bora1263_251,CON,false,sentence connector,bora1263
+bora1263_252,COND,true,conditional,bora1263
+bora1263_253,COP,true,copula,bora1263
+bora1263_254,DIM,false,diminutitive,bora1263
+bora1263_255,DIR,false,directional,bora1263
+bora1263_256,DU,true,dual,bora1263
+bora1263_257,EXCL,true,exclusive,bora1263
+bora1263_258,F,true,feminine,bora1263
+bora1263_259,FRUS,false,frustrative,bora1263
+bora1263_260,FUT,true,future,bora1263
+bora1263_261,HAB,false,habitual,bora1263
+bora1263_262,IFR,false,inferential evidentiality,bora1263
+bora1263_263,IMP,true,imperative,bora1263
+bora1263_264,INAN,false,inanimate,bora1263
+bora1263_265,INST,true,instrumental,bora1263
+bora1263_266,INTER,false,interrogative,bora1263
+bora1263_267,INTR LOC,false,intransitive locative case,bora1263
+bora1263_268,M,true,masculine,bora1263
+bora1263_269,MULT,false,multiple action,bora1263
+bora1263_270,NEG,true,negation,bora1263
+bora1263_271,NMZ,true,nominalizer,bora1263
+bora1263_272,PERF,true,perfective,bora1263
+bora1263_273,PERT,false,pertaining to,bora1263
+bora1263_274,PL,true,plural,bora1263
+bora1263_275,PN,false,third person pronoun,bora1263
+bora1263_276,POSS,true,possessive,bora1263
+bora1263_277,PRED,false,predicate,bora1263
+bora1263_278,PROB,false,probability,bora1263
+bora1263_279,PROX,true,proximal,bora1263
+bora1263_280,PURP,true,purposive,bora1263
+bora1263_281,Q,false,interrogative particle,bora1263
+bora1263_282,Q!TOT,true,quotative,bora1263
+bora1263_283,REC,false,recent past,bora1263
+bora1263_284,RECP,true,reciprocral,bora1263
+bora1263_285,REFL,true,reflexive,bora1263
+bora1263_286,REM,false,remote past,bora1263
+bora1263_287,REP,false,repetitive,bora1263
+bora1263_288,REST,false,restrictive,bora1263
+bora1263_289,SG,true,singular,bora1263
+bora1263_290,SIM,false,similar to,bora1263
+bora1263_291,SOC,false,sociative case,bora1263
+bora1263_292,STA,false,stative,bora1263
+bora1263_293,TR,true,transitive,bora1263
+bora1263_294,VBZ,false,verbalizer,bora1263
+bora1263_295,VOC,true,vocative,bora1263
+bora1263_296,NC,false,not classified,bora1263
+dolg1241_297,1,false,first person,dolg1241
+dolg1241_298,2,false,second person,dolg1241
+dolg1241_299,3,false,third person,dolg1241
+dolg1241_300,ABL,true,ablative,dolg1241
+dolg1241_301,ACC,true,accusative,dolg1241
+dolg1241_302,ADJZ,false,adjectivizer,dolg1241
+dolg1241_303,ADVZ,false,adverbializer,dolg1241
+dolg1241_304,AFFIRM,false,affirmation,dolg1241
+dolg1241_305,AG,false,agent,dolg1241
+dolg1241_306,ANT,false,anteriority,dolg1241
+dolg1241_307,APRX,false,approximately,dolg1241
+dolg1241_308,CAP,false,(unclear),dolg1241
+dolg1241_309,CAUS,true,causative,dolg1241
+dolg1241_310,COLL,false,collective,dolg1241
+dolg1241_311,COM,true,commitative,dolg1241
+dolg1241_312,COMP,false,comparative,dolg1241
+dolg1241_313,COND ,true,conditional,dolg1241
+dolg1241_314,CVB,true,converb,dolg1241
+dolg1241_315,DAT,true,dative,dolg1241
+dolg1241_316,DIM,false,diminuitive,dolg1241
+dolg1241_317,DISTR,false,distributive,dolg1241
+dolg1241_318,DRV,false,(unclear),dolg1241
+dolg1241_319,DU,true,dual,dolg1241
+dolg1241_320,EMOT,false,(unclear),dolg1241
+dolg1241_321,EMPH,false,emphasis,dolg1241
+dolg1241_322,EP,false,epenthetic,dolg1241
+dolg1241_323,EVID,false,(unclear),dolg1241
+dolg1241_324,EX,true,exclusive,dolg1241
+dolg1241_325,FREQ,false,(unclear),dolg1241
+dolg1241_326,FUT,true,future,dolg1241
+dolg1241_327,GEN,true,genitive,dolg1241
+dolg1241_328,HAB,false,habitual,dolg1241
+dolg1241_329,IMP ,true,imperative,dolg1241
+dolg1241_330,INCH,false,inchoative,dolg1241
+dolg1241_331,INDEF,true,indefinite,dolg1241
+dolg1241_332,INFER,false,inference,dolg1241
+dolg1241_333,INSTR,true,instrumental,dolg1241
+dolg1241_334,INTJ,false,interjection,dolg1241
+dolg1241_335,INTNS,false,intensive particle,dolg1241
+dolg1241_336,ITER,false,iterative,dolg1241
+dolg1241_337,LIM,false,(unclear),dolg1241
+dolg1241_338,LOC,true,locative,dolg1241
+dolg1241_339,MED,false,(unclear),dolg1241
+dolg1241_340,MLTP,false,multiplicative,dolg1241
+dolg1241_341,MOD,false,modal,dolg1241
+dolg1241_342,MULT,false,multiplicative,dolg1241
+dolg1241_343,NEC,false,necessary,dolg1241
+dolg1241_344,NEG,true,negation,dolg1241
+dolg1241_345,NMNZ,true,nominalizer,dolg1241
+dolg1241_346,NOM ,true,nominative,dolg1241
+dolg1241_347,ORD,false,ordinal,dolg1241
+dolg1241_348,PART,false,partitive,dolg1241
+dolg1241_349,PASS ,true,passive,dolg1241
+dolg1241_350,PL,true,plural,dolg1241
+dolg1241_351,POSS,true,possessive,dolg1241
+dolg1241_352,POT,false,(unclear),dolg1241
+dolg1241_353,PROPR,false,proper name,dolg1241
+dolg1241_354,PRS,true,present,dolg1241
+dolg1241_355,PST1,false,past 1,dolg1241
+dolg1241_356,PST2,false,past 2,dolg1241
+dolg1241_357,PTCP,true,participle,dolg1241
+dolg1241_358,PURP,false,purpose,dolg1241
+dolg1241_359,Q,false,question particle,dolg1241
+dolg1241_360,RECP,true,reciprocal,dolg1241
+dolg1241_361,REFL,true,reflexive,dolg1241
+dolg1241_362,SEQ,false,sequential,dolg1241
+dolg1241_363,SG,true,singular,dolg1241
+dolg1241_364,SIM,false,simultaneity,dolg1241
+dolg1241_365,TEMP,false,temporal,dolg1241
+dolg1241_366,VBZ,false,verbializer,dolg1241
+even1259_367,1,false,first person,even1259
+even1259_368,2,false,second person,even1259
+even1259_369,3,false,third person,even1259
+even1259_370,ABL,true,ablative,even1259
+even1259_371,ACC,true,accusative,even1259
+even1259_372,ACCIN,false,accusative indefinite,even1259
+even1259_373,ADAPT,false,adaptive,even1259
+even1259_374,ADJ,true,adjective,even1259
+even1259_375,ADV,true,adverb(ial),even1259
+even1259_376,ADVZ,false,adverbializer,even1259
+even1259_377,ADVZ.QT,false,suffix for the number of times,even1259
+even1259_378,ALL,true,allative,even1259
+even1259_379,ANGI,false,(unclear),even1259
+even1259_380,ATR,false,adjectivizing suffix,even1259
+even1259_381,ATR.PROPR,false,adjectivizing suffix for property,even1259
+even1259_382,ATR.QUAL,false,adjectivizing suffix for quality,even1259
+even1259_383,ATR.STAT,false,adjectivizing suffix for state,even1259
+even1259_384,ATR.TEMP,false,adjectivizing suffix for time,even1259
+even1259_385,ATTEN,false,(unclear),even1259
+even1259_386,CAUS,true,causative,even1259
+even1259_387,CHILD,false,nominal suffix 'children',even1259
+even1259_388,COLL,false,collective,even1259
+even1259_389,COM,true,comitative,even1259
+even1259_390,COMIT,true,comitative,even1259
+even1259_391,COMP,true,complementizer,even1259
+even1259_392,COMPAR,false,comparative,even1259
+even1259_393,CON,false,(unclear),even1259
+even1259_394,COND,true,conditional,even1259
+even1259_395,CV,false,converbal form,even1259
+even1259_396,CVANT,false,converbal anterior tense,even1259
+even1259_397,CVBD,false,(unclear),even1259
+even1259_398,CVNSIM,false,(unclear),even1259
+even1259_399,CVPOST,false,converb posterior tense,even1259
+even1259_400,CVSIM,false,converb simultaneity,even1259
+even1259_401,DATLOC,false,dative-locative case,even1259
+even1259_402,DAY,false,affix for 'day',even1259
+even1259_403,DECAUS,false,decausative,even1259
+even1259_404,DES,false,desiderative,even1259
+even1259_405,DISTR,true,distributive,even1259
+even1259_406,DSPRS,false,dispersive,even1259
+even1259_407,DUAL,true,dual,even1259
+even1259_408,DUR,true,durative,even1259
+even1259_409,ELAT,false,elative case,even1259
+even1259_410,EQT,false,equative form,even1259
+even1259_411,EVERY,false,nominal suffix for 'every',even1259
+even1259_412,EXCL,true,exclusive,even1259
+even1259_413,FAG,false,(unclear),even1259
+even1259_414,FAKE,false,suffix for 'fake',even1259
+even1259_415,FAM,false,familiar,even1259
+even1259_416,FAN,false,(unclear),even1259
+even1259_417,FOC,true,focus,even1259
+even1259_418,FUT,true,future,even1259
+even1259_419,FUTCNT,false,future contact,even1259
+even1259_420,GATHER,false,affix for 'gather',even1259
+even1259_421,HAB,false,habitual aspect,even1259
+even1259_422,HES,false,hesitation,even1259
+even1259_423,HUNT,false,affix for 'hunt',even1259
+even1259_424,IMPER,false,imperative,even1259
+even1259_425,IMPERDIST,false,distal imperative,even1259
+even1259_426,INCEP,false,inceptive ,even1259
+even1259_427,INCH,false,inchoative,even1259
+even1259_428,INCL,true,inclusive,even1259
+even1259_429,INDEF,true,indefinite,even1259
+even1259_430,INDPS,false,(unclear),even1259
+even1259_431,INF,true,infinitive,even1259
+even1259_432,INH,false,(unclear),even1259
+even1259_433,INSTR,true,intrumental case,even1259
+even1259_434,INTENT,false,intentive / intentional,even1259
+even1259_435,INTER,true,interrogative,even1259
+even1259_436,INTJ,false,interjection,even1259
+even1259_437,INTS,false,intensive,even1259
+even1259_438,IPFV,true,imperfective,even1259
+even1259_439,ITER,false,iterative aspect,even1259
+even1259_440,LIM,false,limitative,even1259
+even1259_441,LOCALL,false,locative-allative case,even1259
+even1259_442,LOCDIR,false,locative-directive case,even1259
+even1259_443,NEG,true,negation/negative,even1259
+even1259_444,NEW.FAM,false,(unclear),even1259
+even1259_445,NFUT,false,non-future tense ,even1259
+even1259_446,NMLZ,true,nominalizer/nominalization,even1259
+even1259_447,NMLZ.AG,false,nominalizer for agent,even1259
+even1259_448,NMLZ.QUAL,false,nominalizer for quality,even1259
+even1259_449,NMLZ.RES,false,nominalizer for residue,even1259
+even1259_450,NMLZ.RS,false,nominalizer (unclear for what),even1259
+even1259_451,NMLZ.SET,false,nominalizer for set,even1259
+even1259_452,NMLZ.TEMP,false,nominalizer for time,even1259
+even1259_453,NUM.TEN,false,nominalizer (unclear for what),even1259
+even1259_454,ONOM,false,onomatopoeia,even1259
+even1259_455,ORD,false,ordinal numeral,even1259
+even1259_456,ORDER,false,suffix for 'one after the other',even1259
+even1259_457,PANT,false,anterior participle,even1259
+even1259_458,PASS,true,passive,even1259
+even1259_459,PEJOR,false,pejorative,even1259
+even1259_460,PHAB,false,past habitual,even1259
+even1259_461,PL,true,plural,even1259
+even1259_462,PLAY,false,affix for 'play',even1259
+even1259_463,PLSTEM,false,plural stem,even1259
+even1259_464,PNEG,false,(unclear),even1259
+even1259_465,PPF,false,pluperfect,even1259
+even1259_466,PREDEST,false,(unclear),even1259
+even1259_467,PRGRN,false,departure to perform an action,even1259
+even1259_468,PROB,false,probability,even1259
+even1259_469,PROL,false,prolative case,even1259
+even1259_470,PROPR,false,property,even1259
+even1259_471,PROSP,false,prospective aspect,even1259
+even1259_472,PRS,true,present,even1259
+even1259_473,PSIM,false,simple past,even1259
+even1259_474,PST,true,past,even1259
+even1259_475,PURP,false,purpose,even1259
+even1259_476,QA,false,quick action marker,even1259
+even1259_477,QUEST,false,(unclear),even1259
+even1259_478,RECIP,true,reciprocal,even1259
+even1259_479,REL,false,relative tense,even1259
+even1259_480,RESID,false,resident,even1259
+even1259_481,RFL,true,reflexive,even1259
+even1259_482,SG,true,singular,even1259
+even1259_483,SIM,false,similarity,even1259
+even1259_484,SLIP,false,slip of the tongue,even1259
+even1259_485,STAT,false,stative,even1259
+even1259_486,SUPERL,false,superlative,even1259
+even1259_487,TR,true,transitive,even1259
+even1259_488,VBLZ,false,verbalizer,even1259
+even1259_489,VBLZ.FAG,false,verbalizer (unclear for what),even1259
+even1259_490,VOC,true,vocative,even1259
+goem1240_491,1,false,first person,goem1240
+goem1240_492,2,false,second person,goem1240
+goem1240_493,3,false,third person,goem1240
+goem1240_494,ADVZ,false,adverbializer,goem1240
+goem1240_495,ANT,false,anterior,goem1240
+goem1240_496,ASSOC,false,associative,goem1240
+goem1240_497,BEN,true,benefactive,goem1240
+goem1240_498,COM,true,comitative,goem1240
+goem1240_499,COMIT,true,comitative,goem1240
+goem1240_500,COMP,true,complementizer,goem1240
+goem1240_501,COND,true,conditional,goem1240
+goem1240_502,DEF,true,definite,goem1240
+goem1240_503,DEM,true,demonstrative,goem1240
+goem1240_504,DEM.DIST,false,demonstrative distal,goem1240
+goem1240_505,DIM,false,diminuitive,goem1240
+goem1240_506,DIR,false,direction/vicinity of ,goem1240
+goem1240_507,EMPH,false,emphasis,goem1240
+goem1240_508,FOC,true,focus,goem1240
+goem1240_509,FUT.CL,false,close future,goem1240
+goem1240_510,GEN,true,genitive,goem1240
+goem1240_511,HAB,false,habitual,goem1240
+goem1240_512,HOW/WHERE,false,manner/locative nominalizer,goem1240
+goem1240_513,I,false,independent pronoun,goem1240
+goem1240_514,INTERR,false,interrogative,goem1240
+goem1240_515,IRR,true,irrealis,goem1240
+goem1240_516,LOC,true,locative,goem1240
+goem1240_517,LOC.ANAPH,false,locative anaphor,goem1240
+goem1240_518,LogA,false,logophoric addressee,goem1240
+goem1240_519,LogS,false,logophoric speaker,goem1240
+goem1240_520,M,true,masculine,goem1240
+goem1240_521,NEG,true,negation,goem1240
+goem1240_522,NOMZ,true,nominalizer,goem1240
+goem1240_523,O,false,object pronoun,goem1240
+goem1240_524,OBL,true,oblique,goem1240
+goem1240_525,ORD,false,ordinal number,goem1240
+goem1240_526,PAST.CL,false,close past,goem1240
+goem1240_527,PAST.HEST,false,yesterday past,goem1240
+goem1240_528,PAST.REM,false,remote past,goem1240
+goem1240_529,PERM,false,permissive,goem1240
+goem1240_530,PL,true,plural,goem1240
+goem1240_531,POSS,true,possessive,goem1240
+goem1240_532,PRES,false,presentative,goem1240
+goem1240_533,PROGR,true,progressive,goem1240
+goem1240_534,PROH,true,prohibitive,goem1240
+goem1240_535,PROX,true,proximal,goem1240
+goem1240_536,PUR,false,purpose,goem1240
+goem1240_537,REFL,true,reflexive,goem1240
+goem1240_538,RESULT,true,resultative,goem1240
+goem1240_539,S,false,intransitive subject,goem1240
+goem1240_540,SAY,false,reported speech,goem1240
+goem1240_541,SAY,false,reported speech,goem1240
+goem1240_542,SEQ,false,sequential,goem1240
+goem1240_543,SG,true,singular,goem1240
+goem1240_544,SPEC,false,specific-indefinite article,goem1240
+goem1240_545,SUB,false,subordination,goem1240
+goem1240_546,WHERE,false,manner/locative nominalizer,goem1240
+goro1270_547,1,false,first person,goro1270
+goro1270_548,2,false,second person,goro1270
+goro1270_549,3,false,third person,goro1270
+goro1270_550,A,true,agent-like argument of canonical transitive verb,goro1270
+goro1270_551,ABL,true,ablative,goro1270
+goro1270_552,ABS,true,absolutive,goro1270
+goro1270_553,ACC,true,accusative,goro1270
+goro1270_554,ADJ,true,adjective,goro1270
+goro1270_555,ADV,true,adverb(ial),goro1270
+goro1270_556,AGR,true,agreement,goro1270
+goro1270_557,ALL,true,allative,goro1270
+goro1270_558,ANTIP,true,antipassive,goro1270
+goro1270_559,APPL,true,applicative,goro1270
+goro1270_560,ART,true,article,goro1270
+goro1270_561,AUX,true,auxiliary,goro1270
+goro1270_562,Back,false,background  ‘tense’,goro1270
+goro1270_563,CAUS,true,causative,goro1270
+goro1270_564,CLF,true,classifier,goro1270
+goro1270_565,COM,true,comitative,goro1270
+goro1270_566,COMP,true,complementizer,goro1270
+goro1270_567,COMPL,true,completive,goro1270
+goro1270_568,Concess,false,concessive ,goro1270
+goro1270_569,COND,true,conditional,goro1270
+goro1270_570,Consec,false,consecutive,goro1270
+goro1270_571,COP,true,copula,goro1270
+goro1270_572,CVB,true,converb,goro1270
+goro1270_573,DAT,true,dative,goro1270
+goro1270_574,DECL,true,declarative,goro1270
+goro1270_575,DEF,true,definite,goro1270
+goro1270_576,DEM,true,demonstrative,goro1270
+goro1270_577,Dem1,false,proximate demonstrative,goro1270
+goro1270_578,Dem2,false,present/given demonstrative,goro1270
+goro1270_579,Dem3,false,remote demonstrative,goro1270
+goro1270_580,Dem4,false,demonstrative fourth degree deixis,goro1270
+goro1270_581,Dep,false,(unclear),goro1270
+goro1270_582,DET,true,determiner,goro1270
+goro1270_583,DIST,true,distal,goro1270
+goro1270_584,DISTR,true,distributive,goro1270
+goro1270_585,DU,true,dual,goro1270
+goro1270_586,DUR,true,durative,goro1270
+goro1270_587,Emph,false,emphasis,goro1270
+goro1270_588,ERG,true,ergative,goro1270
+goro1270_589,EXCL,true,exclusive,goro1270
+goro1270_590,Exclam.,false,exclamative,goro1270
+goro1270_591,Expect,false,expectative aspect,goro1270
+goro1270_592,Ext,false,(unclear),goro1270
+goro1270_593,F,true,feminine,goro1270
+goro1270_594,FOC,true,focus,goro1270
+goro1270_595,Fr,false,Fr-type subgender,goro1270
+goro1270_596,FUT,true,future,goro1270
+goro1270_597,GEN,true,genitive,goro1270
+goro1270_598,IMP,true,imperative,goro1270
+goro1270_599,Imper,true,imperative,goro1270
+goro1270_600,Imprf,true,imperfective aspect,goro1270
+goro1270_601,Imprs,false,impersonal,goro1270
+goro1270_602,INCL,true,inclusive,goro1270
+goro1270_603,IND,true,indicative,goro1270
+goro1270_604,Indef,true,indefinite,goro1270
+goro1270_605,INDF,true,indefinite,goro1270
+goro1270_606,INF,true,infinitive,goro1270
+goro1270_607,INS,true,instrumental,goro1270
+goro1270_608,Instr,true,instrumental,goro1270
+goro1270_609,INTR,true,intransitive,goro1270
+goro1270_610,intrans.,true,intransitive,goro1270
+goro1270_611,IPFV,true,imperfective,goro1270
+goro1270_612,IRR,true,irrealis,goro1270
+goro1270_613,L,false,linker,goro1270
+goro1270_614,Lat,false,lative,goro1270
+goro1270_615,LF,false,(unclear),goro1270
+goro1270_616,LOC,true,locative,goro1270
+goro1270_617,M,true,masculine,goro1270
+goro1270_618,Mk,false,Mk-type subgender        ,goro1270
+goro1270_619,Mo,false,Mo-type subgender,goro1270
+goro1270_620,MP,false,mediopassive voice,goro1270
+goro1270_621,N,true,neuter,goro1270
+goro1270_622,N-,true,non- (e.g. NSG nonsingular/NPST nonpast),goro1270
+goro1270_623,N0,false,neuter 0-type subgender,goro1270
+goro1270_624,NEG,true,negation/negative,goro1270
+goro1270_625,NMLZ,true,nominalizer/nominalization,goro1270
+goro1270_626,NOM,true,nominative,goro1270
+goro1270_627,Ob,true,object,goro1270
+goro1270_628,OBJ,true,object,goro1270
+goro1270_629,OBL,true,oblique,goro1270
+goro1270_630,P,true,patient-like argument of canonical transitive verb,goro1270
+goro1270_631,PASS,true,passive,goro1270
+goro1270_632,past,true,past tense,goro1270
+goro1270_633,Pers,false,personal,goro1270
+goro1270_634,PFV,true,perfective,goro1270
+goro1270_635,PL,true,plural,goro1270
+goro1270_636,POSS,true,possessive,goro1270
+goro1270_637,PRED,true,predicative,goro1270
+goro1270_638,Prep,false,preposition,goro1270
+goro1270_639,Pres,true,present tense,goro1270
+goro1270_640,PRF,true,perfect,goro1270
+goro1270_641,Pro,false,pronoun,goro1270
+goro1270_642,PROG,true,progressive,goro1270
+goro1270_643,PROH,true,prohibitive,goro1270
+goro1270_644,Prohib,false,prohibative mood,goro1270
+goro1270_645,PROX,true,proximal/proximate,goro1270
+goro1270_646,PRS,true,present,goro1270
+goro1270_647,PST,true,past,goro1270
+goro1270_648,PTCP,true,participle,goro1270
+goro1270_649,PURP,true,purposive,goro1270
+goro1270_650,Q,true,question particle/marker,goro1270
+goro1270_651,QUOT,true,quotative,goro1270
+goro1270_652,Rec,true,reciprocal,goro1270
+goro1270_653,Recip,true,reciprocal,goro1270
+goro1270_654,RECP,true,reciprocal,goro1270
+goro1270_655,REFL,true,reflexive,goro1270
+goro1270_656,REL,true,relative,goro1270
+goro1270_657,RES,true,resultative,goro1270
+goro1270_658,S,true,single argument of canonical intransitive verb,goro1270
+goro1270_659,SBJ,true,subject,goro1270
+goro1270_660,SBJV,true,subjunctive,goro1270
+goro1270_661,SG,true,singular,goro1270
+goro1270_662,Subj,true,single argument of canonical intransitive verb,goro1270
+goro1270_663,TOP,true,topic,goro1270
+goro1270_664,TR,true,transitive,goro1270
+goro1270_665,trans.,true,transitive,goro1270
+goro1270_666,Vent,false,ventive,goro1270
+goro1270_667,VOC,true,vocative,goro1270
+jeha1242_668,1,false,first person,jeha1242
+jeha1242_669,2,false,second person,jeha1242
+jeha1242_670,3,false,third person,jeha1242
+jeha1242_671,ADV,true,adverbial,jeha1242
+jeha1242_672,AFF,false,(unclear),jeha1242
+jeha1242_673,CAUS,true,causative,jeha1242
+jeha1242_674,CLF,true,classifier,jeha1242
+jeha1242_675,COLL,false,collective,jeha1242
+jeha1242_676,CONT,false,continuative,jeha1242
+jeha1242_677,CONTR,false,contrastive,jeha1242
+jeha1242_678,D,true,dual,jeha1242
+jeha1242_679,DEM,true,demonstrative,jeha1242
+jeha1242_680,DIS,false,(unclear),jeha1242
+jeha1242_681,DIST,true,distal,jeha1242
+jeha1242_682,DISTR,true,distributive,jeha1242
+jeha1242_683,EMP,false,(unclear),jeha1242
+jeha1242_684,EQU,false,equative,jeha1242
+jeha1242_685,EXCL,true,excusive,jeha1242
+jeha1242_686,EXP,false,(unclear),jeha1242
+jeha1242_687,FAM,false,familiar,jeha1242
+jeha1242_688,GOAL,false,goal,jeha1242
+jeha1242_689,HORT,false,hortative,jeha1242
+jeha1242_690,ID,false,identification,jeha1242
+jeha1242_691,IMM.FUT,false,immediate future,jeha1242
+jeha1242_692,IMPF,true,imperfective,jeha1242
+jeha1242_693,INCL,true,inclusive,jeha1242
+jeha1242_694,INSTR,true,instrumental,jeha1242
+jeha1242_695,IRR,true,irrealis,jeha1242
+jeha1242_696,ITER,false,iterative,jeha1242
+jeha1242_697,LOC,true,locative,jeha1242
+jeha1242_698,NEG,true,negative,jeha1242
+jeha1242_699,NOM,true,nominative,jeha1242
+jeha1242_700,P,true,plural,jeha1242
+jeha1242_701,PAST,true,past,jeha1242
+jeha1242_702,PERF,true,perfective,jeha1242
+jeha1242_703,PROG,true,progressive,jeha1242
+jeha1242_704,PROH,true,prohibitive,jeha1242
+jeha1242_705,PROP,false,property,jeha1242
+jeha1242_706,Q,true,question marker,jeha1242
+jeha1242_707,REDR,false,(unclear),jeha1242
+jeha1242_708,REL,true,relative,jeha1242
+jeha1242_709,RP,false,root possibility,jeha1242
+jeha1242_710,RT,false,reality tense,jeha1242
+jeha1242_711,S,true,singular,jeha1242
+jeha1242_712,SOURCE,false,source,jeha1242
+jeha1242_713,SUBJ,true,subject,jeha1242
+jeha1242_714,UNIT,false,unitisier,jeha1242
+jeju1234_715,1,false,first person,jeju1234
+jeju1234_716,2,false,second person,jeju1234
+jeju1234_717,ABIL,false,ability,jeju1234
+jeju1234_718,ACC,true,accusative,jeju1234
+jeju1234_719,ADD,false,additive,jeju1234
+jeju1234_720,ADN,false,adnominal,jeju1234
+jeju1234_721,ADVL,false,adverbializer,jeju1234
+jeju1234_722,ASSOC,false,associative,jeju1234
+jeju1234_723,AUX,true,auxiliary,jeju1234
+jeju1234_724,CAUS,true,causative,jeju1234
+jeju1234_725,CG,false,common ground suffix,jeju1234
+jeju1234_726,CHNG,false,change,jeju1234
+jeju1234_727,CLF,true,classifier,jeju1234
+jeju1234_728,CND,true,conditional,jeju1234
+jeju1234_729,CNT,false,content,jeju1234
+jeju1234_730,CNT,false,content,jeju1234
+jeju1234_731,COM,true,comitative,jeju1234
+jeju1234_732,COM,true,comitative,jeju1234
+jeju1234_733,COMP,true,complementizer,jeju1234
+jeju1234_734,COP,true,copula,jeju1234
+jeju1234_735,CVB,true,converb,jeju1234
+jeju1234_736,DAT,true,dative,jeju1234
+jeju1234_737,DECL,true,declarative,jeju1234
+jeju1234_738,DELIM,false,delimiting,jeju1234
+jeju1234_739,DEM,true,demonstrative,jeju1234
+jeju1234_740,DIR,false,directional,jeju1234
+jeju1234_741,DIST,true,distal,jeju1234
+jeju1234_742,EACH,false,each' particle,jeju1234
+jeju1234_743,EGO,false,egophoric,jeju1234
+jeju1234_744,EMPH,false,emphasis,jeju1234
+jeju1234_745,EP,false,epenthetic,jeju1234
+jeju1234_746,EPN,false,epenthetic,jeju1234
+jeju1234_747,EV,false,evidential,jeju1234
+jeju1234_748,EXIST,false,existential copula,jeju1234
+jeju1234_749,FOC,true,focus,jeju1234
+jeju1234_750,GEN,true,genitive,jeju1234
+jeju1234_751,HON,false,honorific,jeju1234
+jeju1234_752,HORT,false,hortative,jeju1234
+jeju1234_753,ILLOC,false,illocutinary force,jeju1234
+jeju1234_754,IMP,true,imperative,jeju1234
+jeju1234_755,IMP,true,imperative,jeju1234
+jeju1234_756,IND,true,indicative,jeju1234
+jeju1234_757,INSTR,true,instrumental,jeju1234
+jeju1234_758,INTENT,false,intentional,jeju1234
+jeju1234_759,INTF,false,interfix,jeju1234
+jeju1234_760,IPF,true,imperfective,jeju1234
+jeju1234_761,IRR,true,irrealis,jeju1234
+jeju1234_762,LOC,true,locative,jeju1234
+jeju1234_763,MED,false,medial,jeju1234
+jeju1234_764,MIR,false,mirative,jeju1234
+jeju1234_765,MOD,false,modal,jeju1234
+jeju1234_766,NEG,true,negation,jeju1234
+jeju1234_767,NMLZ,true,nominalizer,jeju1234
+jeju1234_768,NOM,true,nominative,jeju1234
+jeju1234_769,NPST,false,nonpast,jeju1234
+jeju1234_770,ORD,false,ordinal,jeju1234
+jeju1234_771,PASS,true,passive,jeju1234
+jeju1234_772,PERF,true,perfective,jeju1234
+jeju1234_773,PF,true,perfective,jeju1234
+jeju1234_774,PL,true,plural,jeju1234
+jeju1234_775,PLR,false,polar,jeju1234
+jeju1234_776,POL,false,politeness marker,jeju1234
+jeju1234_777,POT,false,potential,jeju1234
+jeju1234_778,PROG,true,progressive,jeju1234
+jeju1234_779,PROX,true,proximal,jeju1234
+jeju1234_780,PRS,true,present,jeju1234
+jeju1234_781,PST,true,past,jeju1234
+jeju1234_782,PURP,true,purposive,jeju1234
+jeju1234_783,Q,false,question,jeju1234
+jeju1234_784,QUOT,true,quotative,jeju1234
+jeju1234_785,REAL,false,realis,jeju1234
+jeju1234_786,REDUP,false,reduplication,jeju1234
+jeju1234_787,REP,false,repetition,jeju1234
+jeju1234_788,RS,false,reason,jeju1234
+jeju1234_789,SEQ,false,sequential,jeju1234
+jeju1234_790,SG,true,singular,jeju1234
+jeju1234_791,SIM,false,simultaneous,jeju1234
+jeju1234_792,SRC,false,source,jeju1234
+jeju1234_793,STN,false,stance,jeju1234
+jeju1234_794,TOP,true,topic,jeju1234
+jeju1234_795,TRSP,false,(unclear),jeju1234
+jeju1234_796,VOC,true,vocative,jeju1234
+jeju1234_797,VOL,false,volitional,jeju1234
+kaka1265_798,1,false,first person,kaka1265
+kaka1265_799,2,false,second person,kaka1265
+kaka1265_800,3,false,third person,kaka1265
+kaka1265_801,ABST,false,abstract,kaka1265
+kaka1265_802,ACT,false,(unclear),kaka1265
+kaka1265_803,ADDR,false,addressee,kaka1265
+kaka1265_804,ADJ,true,adjective,kaka1265
+kaka1265_805,AG,false,agent nominalizer,kaka1265
+kaka1265_806,ART,true,article,kaka1265
+kaka1265_807,BNF,true,benefactive,kaka1265
+kaka1265_808,CAUS,true,causative,kaka1265
+kaka1265_809,COND,true,conditional,kaka1265
+kaka1265_810,COP,true,copula,kaka1265
+kaka1265_811,DIM,false,diminuitive,kaka1265
+kaka1265_812,DISC,false,discourse particle,kaka1265
+kaka1265_813,EMPH,false,emphatic,kaka1265
+kaka1265_814,ETRG.AR,false,arabic borrowing,kaka1265
+kaka1265_815,ETRG.FR,false,French borrowing,kaka1265
+kaka1265_816,ETRG.MNK,false,Maninka borrowing,kaka1265
+kaka1265_817,ETRG.PUL,false,Pular borrowing,kaka1265
+kaka1265_818,EXC,false,exclamation,kaka1265
+kaka1265_819,EXCL,true,exclusive,kaka1265
+kaka1265_820,EXCLM,false,exclamation,kaka1265
+kaka1265_821,F,false,female (name),kaka1265
+kaka1265_822,FOC,true,focus,kaka1265
+kaka1265_823,GER,false,gerund,kaka1265
+kaka1265_824,HESIT,false,hesitation,kaka1265
+kaka1265_825,IDENT,false,identification copula,kaka1265
+kaka1265_826,IMP,true,imperative,kaka1265
+kaka1265_827,INCL,true,inclusive,kaka1265
+kaka1265_828,INDEF,true,indefinite,kaka1265
+kaka1265_829,INF,true,infinitive,kaka1265
+kaka1265_830,INTERR,false,interrogative,kaka1265
+kaka1265_831,INTERR,false,interrogative,kaka1265
+kaka1265_832,INTERR.INDER,false,(unclear),kaka1265
+kaka1265_833,INTR,true,intransitive,kaka1265
+kaka1265_834,LOC,true,locative,kaka1265
+kaka1265_835,M,false,male (name),kaka1265
+kaka1265_836,NEG,true,negative,kaka1265
+kaka1265_837,NMLZ,true,nominalizer,kaka1265
+kaka1265_838,NOM,false,name,kaka1265
+kaka1265_839,NOM,false,proper name,kaka1265
+kaka1265_840,OPT,false,optative,kaka1265
+kaka1265_841,ORDINAL,false,ordinal,kaka1265
+kaka1265_842,PC,false,personal communication,kaka1265
+kaka1265_843,PC.RES,false,(unclear),kaka1265
+kaka1265_844,PL,true,plural,kaka1265
+kaka1265_845,POSS,true,possessive,kaka1265
+kaka1265_846,POT,false,potential,kaka1265
+kaka1265_847,PRF,false,perfect,kaka1265
+kaka1265_848,PRS.N,false,(unclear),kaka1265
+kaka1265_849,PST,true,past,kaka1265
+kaka1265_850,REFL,true,reflexive,kaka1265
+kaka1265_851,REL,false,relator,kaka1265
+kaka1265_852,REP,false,(unclear),kaka1265
+kaka1265_853,RETR,false,(unclear),kaka1265
+kaka1265_854,SEQ,false,sequential,kaka1265
+kaka1265_855,SG,true,singular,kaka1265
+kaka1265_856,STAT,false,stative,kaka1265
+kaka1265_857,SUPIN,false,(unclear),kaka1265
+kaka1265_858,TOPON,false,(unclear),kaka1265
+kaka1265_859,TR,true,transitive,kaka1265
+kaka1265_860,TRUH.FOC,false,assertion focus marker,kaka1265
+kaka1265_861,TRUTH.FOC,false,truth focus marker,kaka1265
+kaka1265_862,UNIV,false,universal quantifier,kaka1265
+kaka1265_863,VERB.PL,false,verbal plurality,kaka1265
+kama1351_864,1,false,first person,kama1351
+kama1351_865,2,false,second person,kama1351
+kama1351_866,3,false,third person,kama1351
+kama1351_867,A,true,agent-like argument of canonical transitive verb,kama1351
+kama1351_868,ABL,true,ablative,kama1351
+kama1351_869,ABS,true,absolutive,kama1351
+kama1351_870,ADJ,true,adjective,kama1351
+kama1351_871,ADV,true,adverb(ial),kama1351
+kama1351_872,AGR,true,agreement,kama1351
+kama1351_873,ALL,true,allative,kama1351
+kama1351_874,ANTIP,true,antipassive,kama1351
+kama1351_875,APPL,true,applicative,kama1351
+kama1351_876,ART,true,article,kama1351
+kama1351_877,AUX,true,auxiliary,kama1351
+kama1351_878,BEN,true,benefactive,kama1351
+kama1351_879,CAP,false,captative verb,kama1351
+kama1351_880,CAUS,true,causative,kama1351
+kama1351_881,CLF,true,classifier,kama1351
+kama1351_882,CNG,false,connegative,kama1351
+kama1351_883,COLL,false,collective,kama1351
+kama1351_884,COM,true,comitative,kama1351
+kama1351_885,COMP,true,complementizer,kama1351
+kama1351_886,COMPL,true,completive,kama1351
+kama1351_887,COND,true,conditional,kama1351
+kama1351_888,CONNREC,false,(unclear),kama1351
+kama1351_889,COP,true,copula,kama1351
+kama1351_890,CVB,true,converb,kama1351
+kama1351_891,DAT,true,dative,kama1351
+kama1351_892,DECL,true,declarative,kama1351
+kama1351_893,DEF,true,definite,kama1351
+kama1351_894,DEM,true,demonstrative,kama1351
+kama1351_895,DES,false,desiderative,kama1351
+kama1351_896,DET,true,determiner,kama1351
+kama1351_897,DETR,false,detransitivizer/detransitive verb,kama1351
+kama1351_898,DIST,true,distal,kama1351
+kama1351_899,DISTR,true,distributive,kama1351
+kama1351_900,DRV,false,(unclear),kama1351
+kama1351_901,DU,true,dual,kama1351
+kama1351_902,DUR,true,durative,kama1351
+kama1351_903,EP,false,epenthetic morpheme,kama1351
+kama1351_904,ERG,true,ergative,kama1351
+kama1351_905,EXCL,true,exclusive,kama1351
+kama1351_906,F,true,feminine,kama1351
+kama1351_907,FACT,false,factitive verb,kama1351
+kama1351_908,FOC,true,focus,kama1351
+kama1351_909,FRQ,false,frequentative verb,kama1351
+kama1351_910,FUT,true,future,kama1351
+kama1351_911,GEN,true,genitive,kama1351
+kama1351_912,IMP,true,imperative,kama1351
+kama1351_913,INCL,true,inclusive,kama1351
+kama1351_914,IND,true,indicative,kama1351
+kama1351_915,INDEF,true,indefinite,kama1351
+kama1351_916,INDF,true,indefinite,kama1351
+kama1351_917,INF,true,infinitive,kama1351
+kama1351_918,INS,true,instrumental,kama1351
+kama1351_919,INTR,true,intransitive,kama1351
+kama1351_920,IPFV,true,imperfective,kama1351
+kama1351_921,IPFVZ,false,imperfective verb marker,kama1351
+kama1351_922,IRR,true,irrealis,kama1351
+kama1351_923,IRREAL,true,irrealis,kama1351
+kama1351_924,LAT,false,lative,kama1351
+kama1351_925,LOC,true,locative,kama1351
+kama1351_926,LOCADV,false,locative adverb,kama1351
+kama1351_927,M,true,masculine,kama1351
+kama1351_928,MOM,false,momentaneous,kama1351
+kama1351_929,MULT,false,multiplicative,kama1351
+kama1351_930,N,true,neuter,kama1351
+kama1351_931,N-,true,non- (e.g. NSG nonsingular/NPST nonpast),kama1351
+kama1351_932,NEG,true,negation/negative,kama1351
+kama1351_933,NEG.EX,false,existential negation,kama1351
+kama1351_934,NMLZ,true,nominalizer/nominalization,kama1351
+kama1351_935,NOM,true,nominative,kama1351
+kama1351_936,O (as in 3SG.O),false,Objective,kama1351
+kama1351_937,OBJ,true,object,kama1351
+kama1351_938,OBL,true,oblique,kama1351
+kama1351_939,OPT,false,optative,kama1351
+kama1351_940,P,true,patient-like argument of canonical transitive verb,kama1351
+kama1351_941,PASS,true,passive,kama1351
+kama1351_942,PFV,true,perfective,kama1351
+kama1351_943,PL,true,plural,kama1351
+kama1351_944,POSS,true,possessive,kama1351
+kama1351_945,PRED,true,predicative,kama1351
+kama1351_946,PRF,true,perfect,kama1351
+kama1351_947,PROG,true,progressive,kama1351
+kama1351_948,PROH,true,prohibitive,kama1351
+kama1351_949,PROX,true,proximal/proximate,kama1351
+kama1351_950,PRS,true,present,kama1351
+kama1351_951,PST,true,past,kama1351
+kama1351_952,PTCL,false,particle,kama1351
+kama1351_953,PTCP,true,participle,kama1351
+kama1351_954,PURP,true,purposive,kama1351
+kama1351_955,Q,true,question particle/marker,kama1351
+kama1351_956,QUOT,true,quotative,kama1351
+kama1351_957,RECP,true,reciprocal,kama1351
+kama1351_958,REFL,true,reflexive,kama1351
+kama1351_959,REL,true,relative,kama1351
+kama1351_960,RES,true,resultative,kama1351
+kama1351_961,S,true,single argument of canonical intransitive verb,kama1351
+kama1351_962,SBJ,true,subject,kama1351
+kama1351_963,SBJV,true,subjunctive,kama1351
+kama1351_964,SEM,false,(unclear),kama1351
+kama1351_965,SG,true,singular,kama1351
+kama1351_966,TOP,true,topic,kama1351
+kama1351_967,TR,true,transitive,kama1351
+kama1351_968,VBLZ,false,verbalizer,kama1351
+kama1351_969,VOC,true,vocative,kama1351
+komn1238_970,1,false,first person,komn1238
+komn1238_971,2,false,second person,komn1238
+komn1238_972,3,false,third person,komn1238
+komn1238_973,2|3,false,second or third person (syncretism),komn1238
+komn1238_974,ABL,true,ablative,komn1238
+komn1238_975,ABS,true,absolutive,komn1238
+komn1238_976,ADLZR,false,adjectivalizer,komn1238
+komn1238_977,ALL,true,allative,komn1238
+komn1238_978,ALR,false,iamative 'already',komn1238
+komn1238_979,AND,false,andative,komn1238
+komn1238_980,ANIM,false,animate,komn1238
+komn1238_981,APPR,false,apprehensive,komn1238
+komn1238_982,ASSOC,false,associative,komn1238
+komn1238_983,CHAR,false,characteristic case,komn1238
+komn1238_984,DAT,true,dative,komn1238
+komn1238_985,DEM,true,demonstrative,komn1238
+komn1238_986,DIM,false,diminuitive,komn1238
+komn1238_987,DIST,true,distal,komn1238
+komn1238_988,DISTR,true,distributive,komn1238
+komn1238_989,DU,true,dual,komn1238
+komn1238_990,DUR,true,durative,komn1238
+komn1238_991,EMPH,false,emphatic,komn1238
+komn1238_992,ERG,true,ergative,komn1238
+komn1238_993,ETC,false,et cetera 'and all',komn1238
+komn1238_994,FEM,false,feminine,komn1238
+komn1238_995,FUT,true,future,komn1238
+komn1238_996,FUTIMP,false,future imperative,komn1238
+komn1238_997,HAB,false,habitual,komn1238
+komn1238_998,IMM,false,immediate,komn1238
+komn1238_999,IMN,false,imminent,komn1238
+komn1238_1000,IMP,true,imperative,komn1238
+komn1238_1001,INDF,true,indefinite,komn1238
+komn1238_1002,INS,true,instrumental,komn1238
+komn1238_1003,IO,false,indirect object,komn1238
+komn1238_1004,IPFV,true,imperfective,komn1238
+komn1238_1005,IPST,false,immediate past,komn1238
+komn1238_1006,IRR,true,irrealis,komn1238
+komn1238_1007,ITER,false,iterative,komn1238
+komn1238_1008,LOC,true,locative,komn1238
+komn1238_1009,MASC,true,masculine,komn1238
+komn1238_1010,MED,false,medial demonstrative,komn1238
+komn1238_1011,NEG,true,negation,komn1238
+komn1238_1012,NMLZ,true,nominalizer,komn1238
+komn1238_1013,NPST,false,nonpast,komn1238
+komn1238_1014,NSG,false,non-singular,komn1238
+komn1238_1015,ONLY,false,exclusive marker 'only' 'just',komn1238
+komn1238_1016,PFV,true,perfective,komn1238
+komn1238_1017,PL,true,plural,komn1238
+komn1238_1018,POSS,true,possessive,komn1238
+komn1238_1019,POT,false,potential,komn1238
+komn1238_1020,PRIV,false,privative case,komn1238
+komn1238_1021,PROP,false,proprietive case,komn1238
+komn1238_1022,PROX,true,proximal,komn1238
+komn1238_1023,PST,true,past,komn1238
+komn1238_1024,PST:PST/hit,true,object,komn1238
+komn1238_1025,PURP,true,purposive,komn1238
+komn1238_1026,RECOG,false,recognitional pronoun,komn1238
+komn1238_1027,REDUP,false,reduplication,komn1238
+komn1238_1028,RPST,false,recept past,komn1238
+komn1238_1029,SBJ,true,subject,komn1238
+komn1238_1030,SG,true,singular,komn1238
+komn1238_1031,SIMIL,false,similative,komn1238
+komn1238_1032,STAT,false,stative,komn1238
+komn1238_1033,TEMP,false,temporal case,komn1238
+komn1238_1034,VENT,false,venitive,komn1238
+movi1243_1035,1,false,first person,movi1243
+movi1243_1036,2,false,second person,movi1243
+movi1243_1037,3,false,third person,movi1243
+movi1243_1038,a,false,absential,movi1243
+movi1243_1039,AB ,false,absential,movi1243
+movi1243_1040,ABS,false,absolute state,movi1243
+movi1243_1041,ABSN,false,absent referent,movi1243
+movi1243_1042,ABSTR,false,abstract,movi1243
+movi1243_1043,AGT,false,agentive,movi1243
+movi1243_1044,ANT,false,anterior,movi1243
+movi1243_1045,APPL,true,applicative,movi1243
+movi1243_1046,APPR ,false,approaching,movi1243
+movi1243_1047,BDP,false,bodily process,movi1243
+movi1243_1048,BE,false,bound element,movi1243
+movi1243_1049,BEN,true,benefactive,movi1243
+movi1243_1050,BR,false,bound root,movi1243
+movi1243_1051,CAUS,true,causative,movi1243
+movi1243_1052,CL,false,(unclear),movi1243
+movi1243_1053,CLF,false,classifier,movi1243
+movi1243_1054,CO,false,co participant,movi1243
+movi1243_1055,CONJ,false,conjunction,movi1243
+movi1243_1056,CSL,false,causal,movi1243
+movi1243_1057,d,true,distal,movi1243
+movi1243_1058,D,false,dummy element,movi1243
+movi1243_1059,DEF,false,definite,movi1243
+movi1243_1060,DEM,true,demonstrative,movi1243
+movi1243_1061,DET,true,determiner,movi1243
+movi1243_1062,DETR,false,detransitivization,movi1243
+movi1243_1063,DIR,false,directional,movi1243
+movi1243_1064,DR,false,bivalent direct,movi1243
+movi1243_1065,DR2,false,secondary direct marker,movi1243
+movi1243_1066,DSC,false,discontinutative,movi1243
+movi1243_1067,DUB,false,dubitative,movi1243
+movi1243_1068,DUR,true,durative,movi1243
+movi1243_1069,DYN,false,dynamic,movi1243
+movi1243_1070,el,false,elevated,movi1243
+movi1243_1071,EMPH,false,emphatic,movi1243
+movi1243_1072,EV,false,evidential,movi1243
+movi1243_1073,EVD,false,evidential,movi1243
+movi1243_1074,EXCL,true,exclusive,movi1243
+movi1243_1075,f,true,feminine,movi1243
+movi1243_1076,FRUST,false,frustrative,movi1243
+movi1243_1077,FUT,true,future,movi1243
+movi1243_1078,HESIT,false,hesitation,movi1243
+movi1243_1079,HORT,false,hortative,movi1243
+movi1243_1080,HYP,false,hypothetical,movi1243
+movi1243_1081,IJ,false,interjection,movi1243
+movi1243_1082,IM,false,immediately/impossibly,movi1243
+movi1243_1083,IMP,true,imperative,movi1243
+movi1243_1084,INAL,false,inalianable possession,movi1243
+movi1243_1085,INC,true,inclusive,movi1243
+movi1243_1086,INSTR,false,instrumental nominalization,movi1243
+movi1243_1087,INT,false,intensifier,movi1243
+movi1243_1088,INTJ,false,interjection,movi1243
+movi1243_1089,INTR,true,intransitive,movi1243
+movi1243_1090,intr,true,intransitive,movi1243
+movi1243_1091,INV,false,bivalent inverse,movi1243
+movi1243_1092,IRR,true,irrealis,movi1243
+movi1243_1093,ITN,false,intentional,movi1243
+movi1243_1094,LINK,false,linking nasal,movi1243
+movi1243_1095,LN,false,linking nasal,movi1243
+movi1243_1096,LOC,false,location,movi1243
+movi1243_1097,LV,false,linking vowel,movi1243
+movi1243_1098,m ,true,masculine,movi1243
+movi1243_1099,MD ,false,middle voice,movi1243
+movi1243_1100,MLT,false,multiple event,movi1243
+movi1243_1101,MOD,false,modal,movi1243
+movi1243_1102,n,true,neuter,movi1243
+movi1243_1103,N,false,noun,movi1243
+movi1243_1104,NEG,true,negation,movi1243
+movi1243_1105,NMLZ,true,nominalizer,movi1243
+movi1243_1106,NMLZ.AGT,false,agent nominalizer,movi1243
+movi1243_1107,NMZ,false,action/state nominalization,movi1243
+movi1243_1108,nst,false,non-standing,movi1243
+movi1243_1109,ntr,false,neutral,movi1243
+movi1243_1110,NTR,false,neutral,movi1243
+movi1243_1111,OBL,true,oblique,movi1243
+movi1243_1112,OBV,false,obviative,movi1243
+movi1243_1113,p,true,past,movi1243
+movi1243_1114,PH,false,phasal aspect,movi1243
+movi1243_1115,pl,true,plural,movi1243
+movi1243_1116,PRC,false,process nominalization/verbalization,movi1243
+movi1243_1117,PRO,false,free pronoun,movi1243
+movi1243_1118,PROH,true,prohibitive,movi1243
+movi1243_1119,PSEUDO,false,pseudo,movi1243
+movi1243_1120,PST,true,past,movi1243
+movi1243_1121,R,true,reflexive,movi1243
+movi1243_1122,R ,true,reciprocal,movi1243
+movi1243_1123,REAS,false,reason,movi1243
+movi1243_1124,RED,false,reduplication,movi1243
+movi1243_1125,REL,false,relativizer,movi1243
+movi1243_1126,RES,false,resultative,movi1243
+movi1243_1127,rtr,false,retreating,movi1243
+movi1243_1128,SNS,false,sensation,movi1243
+movi1243_1129,SPK,false,proximate to speaker,movi1243
+movi1243_1130,std,false,standing,movi1243
+movi1243_1131,TRC,false,truncated element,movi1243
+movi1243_1132,VBLZ,false,verbalization,movi1243
+movi1243_1133,VBZ,false,action verbialization,movi1243
+ngal1292_1134,1,false,first person,ngal1292
+ngal1292_1135,2,false,second person,ngal1292
+ngal1292_1136,3,false,third person,ngal1292
+ngal1292_1137,ABL,true,ablative,ngal1292
+ngal1292_1138,APPR,false,apprehensive mood,ngal1292
+ngal1292_1139,BEN,true,benefactive,ngal1292
+ngal1292_1140,CAUS,true,causative,ngal1292
+ngal1292_1141,COM,true,comitative,ngal1292
+ngal1292_1142,CONJ,false,conjunction,ngal1292
+ngal1292_1143,CSTVZR,false,causativizer,ngal1292
+ngal1292_1144,D.here,true,demostrative prox,ngal1292
+ngal1292_1145,D.UNF,true,(unclear),ngal1292
+ngal1292_1146,D.ID,true,(unclear),ngal1292
+ngal1292_1147,D.there,true,demonstrative dist,ngal1292
+ngal1292_1148,DEM,true,demonstrative,ngal1292
+ngal1292_1149,DIM,false,diminutive,ngal1292
+ngal1292_1150,du,true,dual,ngal1292
+ngal1292_1151,DYAD,false,dyadic suffix,ngal1292
+ngal1292_1152,EMPH,false,emphasizer,ngal1292
+ngal1292_1153,ERG,true,ergative,ngal1292
+ngal1292_1154,excl,true,exclusive,ngal1292
+ngal1292_1155,FEM,true,femenine,ngal1292
+ngal1292_1156,FILL,false,morphological filler,ngal1292
+ngal1292_1157,FILLER,false,morphological filler,ngal1292
+ngal1292_1158,FOC,true,focus prefix,ngal1292
+ngal1292_1159,FUT,true,future,ngal1292
+ngal1292_1160,GEN,true,genitive,ngal1292
+ngal1292_1161,h,false,high(er) on scale of animacy,ngal1292
+ngal1292_1162,HORT,false,hortative,ngal1292
+ngal1292_1163,INCH,false,inchoative marker,ngal1292
+ngal1292_1164,incl,true,inclusive,ngal1292
+ngal1292_1165,INTERJ,false,interjection,ngal1292
+ngal1292_1166,INTERR,false,interrogative,ngal1292
+ngal1292_1167,INTJ,false,interjection,ngal1292
+ngal1292_1168,IRR,true,irrealis mood,ngal1292
+ngal1292_1169,LOC,true,locative,ngal1292
+ngal1292_1170,NEG,true,negation,ngal1292
+ngal1292_1171,PCUST,false,customary past,ngal1292
+ngal1292_1172,PI,false,past imperfective,ngal1292
+ngal1292_1173,POSS,true,possesive,ngal1292
+ngal1292_1174,PP,false,past perfective,ngal1292
+ngal1292_1175,PR,true,present,ngal1292
+ngal1292_1176,PRIV,false,privative suffix,ngal1292
+ngal1292_1177,R,false,realis mood,ngal1292
+ngal1292_1178,RESULT,false,(unclear),ngal1292
+ngal1292_1179,RR,false,reflexive/reciprocal,ngal1292
+ngal1292_1180,SEQ,false,sequential,ngal1292
+ngal1292_1181,sg,true,singular,ngal1292
+ngal1292_1182,SUB,false,subordinate marker,ngal1292
+ngal1292_1183,TIME,false,temporal case marker,ngal1292
+ngal1292_1184,VBLZR,false,verbalizer,ngal1292
+nngg1234_1185,1,false,first person,nngg1234
+nngg1234_1186,2,false,second person,nngg1234
+nngg1234_1187,3,false,third person,nngg1234
+nngg1234_1188,ASP,false,aspect,nngg1234
+nngg1234_1189,BEN,true,benefactive,nngg1234
+nngg1234_1190,CAUS,false,causative,nngg1234
+nngg1234_1191,CL,false,(unclear),nngg1234
+nngg1234_1192,COM,true,comitative,nngg1234
+nngg1234_1193,COMP,false,(unclear),nngg1234
+nngg1234_1194,CONN,false,connector particle,nngg1234
+nngg1234_1195,COP,true,copula,nngg1234
+nngg1234_1196,DAT,true,dative,nngg1234
+nngg1234_1197,DECL,true,declarative,nngg1234
+nngg1234_1198,DEF,true,definite,nngg1234
+nngg1234_1199,DEM,true,demonstrative,nngg1234
+nngg1234_1200,DIM,false,diminutive,nngg1234
+nngg1234_1201,DIST,true,distal,nngg1234
+nngg1234_1202,FUT,true,future,nngg1234
+nngg1234_1203,GEN,true,genitive,nngg1234
+nngg1234_1204,GN,false,geographical name,nngg1234
+nngg1234_1205,H,false,human,nngg1234
+nngg1234_1206,HESIT,false,hesitation,nngg1234
+nngg1234_1207,ID,false,(unclear),nngg1234
+nngg1234_1208,IMP,true,imperative,nngg1234
+nngg1234_1209,INAL,false,inalienable,nngg1234
+nngg1234_1210,INT,false,(unclear),nngg1234
+nngg1234_1211,INTERJ,false,interjection,nngg1234
+nngg1234_1212,IP,false,impersonal,nngg1234
+nngg1234_1213,IRR,true,irrealis,nngg1234
+nngg1234_1214,LOAN,false,loan word,nngg1234
+nngg1234_1215,NEG,true,negation,nngg1234
+nngg1234_1216,NH,false,non-human,nngg1234
+nngg1234_1217,NMLZ,true,nominalizer,nngg1234
+nngg1234_1218,NOM,true,nominative,nngg1234
+nngg1234_1219,OBL,true,multi-purpose oblique,nngg1234
+nngg1234_1220,OBLIG,false,obligative,nngg1234
+nngg1234_1221,PL,true,plural,nngg1234
+nngg1234_1222,E,true,exclusive,nngg1234
+nngg1234_1223,I,true,inclusive,nngg1234
+nngg1234_1224,PN,false,personal name,nngg1234
+nngg1234_1225,PROH,true,prohibitive,nngg1234
+nngg1234_1226,PROX,true,proximate,nngg1234
+nngg1234_1227,PST,true,past,nngg1234
+nngg1234_1228,PTCP,true,participle,nngg1234
+nngg1234_1229,PURP,true,purposive,nngg1234
+nngg1234_1230,Q,true,question marker,nngg1234
+nngg1234_1231,QUOT,true,quotative,nngg1234
+nngg1234_1232,REF,true,reflexive,nngg1234
+nngg1234_1233,REL,true,relative,nngg1234
+nngg1234_1234,SBJ,true,subject,nngg1234
+nngg1234_1235,SG,true,singular,nngg1234
+nngg1234_1236,SGLT,false,singulative,nngg1234
+nngg1234_1237,STR,false,(unclear),nngg1234
+nngg1234_1238,TF,false,term focus,nngg1234
+nngg1234_1239,TQ,false,(unclear),nngg1234
+nngg1234_1240,UP,false,(unclear),nngg1234
+nngg1234_1241,VOC,true,vocative,nngg1234
+nort2641_1242,1,false,first person,nort2641
+nort2641_1243,2,false,second person,nort2641
+nort2641_1244,3,false,third person,nort2641
+nort2641_1245,ADD,false,additive,nort2641
+nort2641_1246,ADP,false,adposition,nort2641
+nort2641_1247,COMPL,true,complementizer,nort2641
+nort2641_1248,COP,true,copula,nort2641
+nort2641_1249,DEM,true,demonstrative,nort2641
+nort2641_1250,DRCT,false,directional,nort2641
+nort2641_1251,EMPH,false,emphatic,nort2641
+nort2641_1252,EXCL,false,exclamative,nort2641
+nort2641_1253,EZ,false,ezafe,nort2641
+nort2641_1254,F,true,feminine,nort2641
+nort2641_1255,FUT,true,future,nort2641
+nort2641_1256,IMP,true,imperative,nort2641
+nort2641_1257,IMPER,true,imperative,nort2641
+nort2641_1258,IND,true,indicative,nort2641
+nort2641_1259,INDEF,true,indefinite,nort2641
+nort2641_1260,INDF,true,indefinite,nort2641
+nort2641_1261,INF,true,infinitive,nort2641
+nort2641_1262,M,true,masculine,nort2641
+nort2641_1263,MOD,false,modality,nort2641
+nort2641_1264,NC,false,not considered,nort2641
+nort2641_1265,nc,false,not considered,nort2641
+nort2641_1266,NEG,true,negation,nort2641
+nort2641_1267,OBL,true,oblique,nort2641
+nort2641_1268,PL,true,plural,nort2641
+nort2641_1269,POP,false,postposition,nort2641
+nort2641_1270,POSS,true,possessive,nort2641
+nort2641_1271,PPRF,false,pluperfect,nort2641
+nort2641_1272,PRF,true,perfect,nort2641
+nort2641_1273,PRO,false,pronoun,nort2641
+nort2641_1274,PROG,true,progressive,nort2641
+nort2641_1275,PROGR,true,progressive,nort2641
+nort2641_1276,PRS,true,present,nort2641
+nort2641_1277,PRT,false,particle,nort2641
+nort2641_1278,PST,true,past ,nort2641
+nort2641_1279,PTCP,true,participle,nort2641
+nort2641_1280,RECIP,false,reciprocal,nort2641
+nort2641_1281,RED,false,reduplication,nort2641
+nort2641_1282,REDUPL,false,reduplication,nort2641
+nort2641_1283,REFL,true,reflexive,nort2641
+nort2641_1284,SBJ,true,subjunctive,nort2641
+nort2641_1285,SG,false,singular,nort2641
+nort2641_1286,SJB,true,subjunctive,nort2641
+nort2641_1287,SUBJ,true,subjunctive,nort2641
+nort2641_1288,VOC,true,vocative,nort2641
+orko1234_1289,1,false,first person,orko1234
+orko1234_1290,2,false,second person,orko1234
+orko1234_1291,3,false,third person,orko1234
+orko1234_1292,ABS,true,absolutive case,orko1234
+orko1234_1293,ANA,false,anaphor,orko1234
+orko1234_1294,ASPECT,false,aspect,orko1234
+orko1234_1295,ASS,false,(unclear),orko1234
+orko1234_1296,AVE,false,(unclear),orko1234
+orko1234_1297,CAU,false,causative case,orko1234
+orko1234_1298,CL1,false,classifier/possesive class,orko1234
+orko1234_1299,CL2,false,classifier/possesive class,orko1234
+orko1234_1300,CL3,false,classifier/possesive class,orko1234
+orko1234_1301,CONJ,false,conjunction,orko1234
+orko1234_1302,CONT,false,(unclear),orko1234
+orko1234_1303,COP,true,copula,orko1234
+orko1234_1304,CST,false,(unclear),orko1234
+orko1234_1305,CV,false,(unclear),orko1234
+orko1234_1306,CWA,false,(unclear),orko1234
+orko1234_1307,CWA2,false,(unclear),orko1234
+orko1234_1308,DEM,true,demonstrative,orko1234
+orko1234_1309,DIST,true,distal,orko1234
+orko1234_1310,DL,false,(unclear),orko1234
+orko1234_1311,EX,false,exclusive,orko1234
+orko1234_1312,FDIST,true,far distal,orko1234
+orko1234_1313,FOC,true,focus,orko1234
+orko1234_1314,FUT,true,future,orko1234
+orko1234_1315,GEN,true,genitive case,orko1234
+orko1234_1316,IN,false,inclusive,orko1234
+orko1234_1317,INCEPT,false,(unclear),orko1234
+orko1234_1318,IND,true,indicative,orko1234
+orko1234_1319,INTJ,false,interjection,orko1234
+orko1234_1320,IRR,true,irrealis,orko1234
+orko1234_1321,LOC,true,locative case,orko1234
+orko1234_1322,LPROX,true,less proximity,orko1234
+orko1234_1323,MED,false,medial,orko1234
+orko1234_1324,NEG,true,negation,orko1234
+orko1234_1325,NEG1,true,negation,orko1234
+orko1234_1326,NEG2,true,negation,orko1234
+orko1234_1327,NMLZ,true,nominalizer,orko1234
+orko1234_1328,NREC,false,(unclear),orko1234
+orko1234_1329,PART,false,partitive,orko1234
+orko1234_1330,PC,false,paucal,orko1234
+orko1234_1331,PERF,true,perfect,orko1234
+orko1234_1332,pi,false,plural inclusive,orko1234
+orko1234_1333,PL,true,plural,orko1234
+orko1234_1334,POSS,true,possesive,orko1234
+orko1234_1335,POT,false,potentive,orko1234
+orko1234_1336,PROX,true,proximate,orko1234
+orko1234_1337,PST,true,past,orko1234
+orko1234_1338,REC,false,(unclear),orko1234
+orko1234_1339,REL,true,relative,orko1234
+orko1234_1340,RPD,false,reduplication,orko1234
+orko1234_1341,SG,true,singular,orko1234
+orko1234_1342,SPEC,false,specificity marker,orko1234
+orko1234_1343,SUB,false,subordinate marker,orko1234
+orko1234_1344,TOP,true,topic,orko1234
+orko1234_1345,TR,true,transitive,orko1234
+pnar1238_1346,1,false,first person,pnar1238
+pnar1238_1347,2,false,second person,pnar1238
+pnar1238_1348,3,false,third person,pnar1238
+pnar1238_1349,ABL,true,ablative,pnar1238
+pnar1238_1350,acc,true,accusative,pnar1238
+pnar1238_1351,ACT,false,action nominalizer,pnar1238
+pnar1238_1352,ADH,false,adhortative,pnar1238
+pnar1238_1353,ag,false,agentive,pnar1238
+pnar1238_1354,ALL,true,allative,pnar1238
+pnar1238_1355,BEN,true,benefactive,pnar1238
+pnar1238_1356,CAUS,true,causative,pnar1238
+pnar1238_1357,CL,true,classifier,pnar1238
+pnar1238_1358,COMT,true,comitative,pnar1238
+pnar1238_1359,CONT,false,continuous,pnar1238
+pnar1238_1360,CPLV,false,(unclear),pnar1238
+pnar1238_1361,CTAG,false,confirmation tag,pnar1238
+pnar1238_1362,DISJ,false,(unclear),pnar1238
+pnar1238_1363,DTAG,false,disjunction tag,pnar1238
+pnar1238_1364,DUR,false,durative,pnar1238
+pnar1238_1365,EMPH,false,emphatic,pnar1238
+pnar1238_1366,F,true,feminine,pnar1238
+pnar1238_1367,GEN,true,genitive,pnar1238
+pnar1238_1368,GMC,false,(unclear),pnar1238
+pnar1238_1369,HAB,false,habitual,pnar1238
+pnar1238_1370,hon,false,honorific,pnar1238
+pnar1238_1371,ICCS,false,(unclear),pnar1238
+pnar1238_1372,IMM1,false,immediacy level 1,pnar1238
+pnar1238_1373,IMM2,false,immediacy level 2,pnar1238
+pnar1238_1374,IMM3,false,immediacy level 3,pnar1238
+pnar1238_1375,IMMD,false,immediacy marker,pnar1238
+pnar1238_1376,INST,true,instrumental,pnar1238
+pnar1238_1377,ints ,false,intensifier,pnar1238
+pnar1238_1378,INTS1,false,intensity level one,pnar1238
+pnar1238_1379,INTS2,false,intensity level 2,pnar1238
+pnar1238_1380,INTS3,false,intensity level 3,pnar1238
+pnar1238_1381,INTSF,false,intensifier,pnar1238
+pnar1238_1382,IRR,true,irrealis,pnar1238
+pnar1238_1383,LOC,true,locative,pnar1238
+pnar1238_1384,M,true,masculine,pnar1238
+pnar1238_1385,medl,false,medial,pnar1238
+pnar1238_1386,N,true,neuter,pnar1238
+pnar1238_1387,NEG,true,negation,pnar1238
+pnar1238_1388,NF,false,non-finite,pnar1238
+pnar1238_1389,NMZ,true,nominalizer,pnar1238
+pnar1238_1390,nom,true,nominative,pnar1238
+pnar1238_1391,Non-purp,false,non purposive,pnar1238
+pnar1238_1392,nvis,false,non visible,pnar1238
+pnar1238_1393,OBLIG,false,obligatory,pnar1238
+pnar1238_1394,PASS,true,passive,pnar1238
+pnar1238_1395,PL,true,plural,pnar1238
+pnar1238_1396,PROH,true,prohibitive,pnar1238
+pnar1238_1397,prox,true,proximal,pnar1238
+pnar1238_1398,PTNL,false,(unclear),pnar1238
+pnar1238_1399,QTAG,false,question tag,pnar1238
+pnar1238_1400,REAL,false,realis,pnar1238
+pnar1238_1401,REF,false,referential,pnar1238
+pnar1238_1402,RES,true,resultative,pnar1238
+pnar1238_1403,sg,true,singular,pnar1238
+pnar1238_1404,top,true,topic,pnar1238
+port1286_1405,1,false,first person,port1286
+port1286_1406,2,false,second person,port1286
+port1286_1407,3,false,third person,port1286
+port1286_1408,comp,true,complementizer,port1286
+port1286_1409,cop,true,copula,port1286
+port1286_1410,cp.nre,true,nonrealis complementizer,port1286
+port1286_1411,cp.re,false,realis complementizer,port1286
+port1286_1412,d,true,dual,port1286
+port1286_1413,dem,true,demonstrative,port1286
+port1286_1414,detr,true,determiner,port1286
+port1286_1415,dist,true,distal,port1286
+port1286_1416,dst,false,(unclear,port1286
+port1286_1417,emph,false,emphasizer,port1286
+port1286_1418,ex,true,exclusive,port1286
+port1286_1419,foc,true,focus,port1286
+port1286_1420,fut,true,future,port1286
+port1286_1421,in,true,inclusive,port1286
+port1286_1422,ind,true,indicative,port1286
+port1286_1423,indef,true,indefinite,port1286
+port1286_1424,ir,false,unclear,port1286
+port1286_1425,irr,true,irrealis,port1286
+port1286_1426,lc,false,locative,port1286
+port1286_1427,loc,true,locative,port1286
+port1286_1428,neg,true,negation,port1286
+port1286_1429,nhum,false,non-human,port1286
+port1286_1430,nom,true,nominative,port1286
+port1286_1431,p,true,plural,port1286
+port1286_1432,pl,true,plural,port1286
+port1286_1433,poss,true,possesive,port1286
+port1286_1434,prep,false,preposition,port1286
+port1286_1435,prog,true,progressive,port1286
+port1286_1436,pron,false,pronoun,port1286
+port1286_1437,prox,true,proximate,port1286
+port1286_1438,prx,true,proximate,port1286
+port1286_1439,rel,true,relative,port1286
+port1286_1440,s,true,singular,port1286
+port1286_1441,sg,true,singular,port1286
+port1286_1442,sp,false,(unclear),port1286
+port1286_1443,t,false,(unclear),port1286
+port1286_1444,tr,true,transitive,port1286
+port1286_1445,trans,true,transitive,port1286
+ruul1235_1446,1,false,class 1,ruul1235
+ruul1235_1447,1,false,first person,ruul1235
+ruul1235_1448,2,false,class 2,ruul1235
+ruul1235_1449,2,false,second person,ruul1235
+ruul1235_1450,3,false,class 3,ruul1235
+ruul1235_1451,4,false,class 4,ruul1235
+ruul1235_1452,5,false,class 5,ruul1235
+ruul1235_1453,5,false,class 5,ruul1235
+ruul1235_1454,6,false,class 6,ruul1235
+ruul1235_1455,7,false,class 7,ruul1235
+ruul1235_1456,8,false,class 8,ruul1235
+ruul1235_1457,9,false,class 9,ruul1235
+ruul1235_1458,10,false,class 10,ruul1235
+ruul1235_1459,11,false,class 11,ruul1235
+ruul1235_1460,12,false,class 12,ruul1235
+ruul1235_1461,13,false,class 13,ruul1235
+ruul1235_1462,14,false,class 14,ruul1235
+ruul1235_1463,15,false,class 15,ruul1235
+ruul1235_1464,16,false,class 16,ruul1235
+ruul1235_1465,17,false,class 17,ruul1235
+ruul1235_1466,18,false,class 18,ruul1235
+ruul1235_1467,18,false,class 18,ruul1235
+ruul1235_1468,22,false,class 22,ruul1235
+ruul1235_1469,23,false,class 23,ruul1235
+ruul1235_1470,ADD,false,additive,ruul1235
+ruul1235_1471,APPL,false,applicative,ruul1235
+ruul1235_1472,AUG,false,augment,ruul1235
+ruul1235_1473,AUX,true,auxiliary,ruul1235
+ruul1235_1474,CAUS,true,causative,ruul1235
+ruul1235_1475,CNTRFACT,false,(unclear),ruul1235
+ruul1235_1476,COM,true,comitative,ruul1235
+ruul1235_1477,COMPL,true,complementizer,ruul1235
+ruul1235_1478,CONJ,false,conjunction,ruul1235
+ruul1235_1479,COP,true,copula,ruul1235
+ruul1235_1480,DEM,true,demonstrative,ruul1235
+ruul1235_1481,DIST ,true,distal,ruul1235
+ruul1235_1482,eMPH,false,emphatic,ruul1235
+ruul1235_1483,FOC,true,focus,ruul1235
+ruul1235_1484,FUT,true,future,ruul1235
+ruul1235_1485,FV,false,final vowel,ruul1235
+ruul1235_1486,GEN,true,genitive,ruul1235
+ruul1235_1487,HAB,false,habitual,ruul1235
+ruul1235_1488,HORT,false,hortative,ruul1235
+ruul1235_1489,IMP ,true,imperative,ruul1235
+ruul1235_1490,INF,true,infinitive,ruul1235
+ruul1235_1491,INTERJ,false,interjection,ruul1235
+ruul1235_1492,LOC,true,locative,ruul1235
+ruul1235_1493,MED,false,medial,ruul1235
+ruul1235_1494,NAR,false,narrative,ruul1235
+ruul1235_1495,NEG,true,negation,ruul1235
+ruul1235_1496,O,true,object,ruul1235
+ruul1235_1497,P,true,patient like argument of canonical transitive verb,ruul1235
+ruul1235_1498,PASS,true,passive,ruul1235
+ruul1235_1499,PERS,false,persistive,ruul1235
+ruul1235_1500,PFV,true,perfective,ruul1235
+ruul1235_1501,pl,true,plural,ruul1235
+ruul1235_1502,POSS,true,possessive,ruul1235
+ruul1235_1503,POT,false,(unclear),ruul1235
+ruul1235_1504,PROG,true,progressive,ruul1235
+ruul1235_1505,PROX,true,proximal,ruul1235
+ruul1235_1506,PST,true,past,ruul1235
+ruul1235_1507,QUOT,true,quotative,ruul1235
+ruul1235_1508,REFL,false,reflexive,ruul1235
+ruul1235_1509,REL,false,relativizer,ruul1235
+ruul1235_1510,RPOG,true,progressive,ruul1235
+ruul1235_1511,S,false,subject agreement prefix,ruul1235
+ruul1235_1512,SBJ,true,subject,ruul1235
+ruul1235_1513,SBJV,true,subjunctive,ruul1235
+ruul1235_1514,sg,true,singular,ruul1235
+sanz1248_1515,1,false,first person,sanz1248
+sanz1248_1516,2,false,second person,sanz1248
+sanz1248_1517,3,false,third person,sanz1248
+sanz1248_1518,1/2,false,first/second person,sanz1248
+sanz1248_1519,[I],false,code switch to Icari Dargwa,sanz1248
+sanz1248_1520,[R],false,code swtich Russian,sanz1248
+sanz1248_1521,MODAL,false,modal,sanz1248
+sanz1248_1522,ABL,true,ablative,sanz1248
+sanz1248_1523,ADJVZ,false,adjectivizer,sanz1248
+sanz1248_1524,ADVZ,false,adverbializer,sanz1248
+sanz1248_1525,ALLAT,true,allative,sanz1248
+sanz1248_1526,ANTE,false,spatial case 'before',sanz1248
+sanz1248_1527,ATTR,false,attributive,sanz1248
+sanz1248_1528,CAUS,true,causative,sanz1248
+sanz1248_1529,COMIT,true,comitative,sanz1248
+sanz1248_1530,COMP,false,comparative,sanz1248
+sanz1248_1531,COND,true,conditional,sanz1248
+sanz1248_1532,CVB,false,converb,sanz1248
+sanz1248_1533,DAT,true,dative,sanz1248
+sanz1248_1534,DEM,true,demonstrative,sanz1248
+sanz1248_1535,EMPH,false,emphatic particle,sanz1248
+sanz1248_1536,ERG,true,ergative,sanz1248
+sanz1248_1537,F,true,feminine,sanz1248
+sanz1248_1538,GEN,true,genitive,sanz1248
+sanz1248_1539,GL_FILLER,false,pause filler,sanz1248
+sanz1248_1540,HAB,false,habitual,sanz1248
+sanz1248_1541,HPL,false,human plural ,sanz1248
+sanz1248_1542,ICVB,false,imperfective converb,sanz1248
+sanz1248_1543,IMP,true,imperative,sanz1248
+sanz1248_1544,IN,false,spatial case 'in',sanz1248
+sanz1248_1545,INDEF,true,indefinite,sanz1248
+sanz1248_1546,INF1,false,non-inflecting infinitive,sanz1248
+sanz1248_1547,INF2,false,inflecting infinitive,sanz1248
+sanz1248_1548,IPFV,true,imperfective,sanz1248
+sanz1248_1549,LAT,false,lative,sanz1248
+sanz1248_1550,LOC,true,locative,sanz1248
+sanz1248_1551,M,true,masculine,sanz1248
+sanz1248_1552,MODQ,false,modal interrogative,sanz1248
+sanz1248_1553,MSD,false,masdar,sanz1248
+sanz1248_1554,N,false,neuter,sanz1248
+sanz1248_1555,NC,false,not considered,sanz1248
+sanz1248_1556,NEG,true,negation,sanz1248
+sanz1248_1557,NMLZ,true,nominalizer,sanz1248
+sanz1248_1558,NPL,false,neuter plural,sanz1248
+sanz1248_1559,NUM,false,numeral,sanz1248
+sanz1248_1560,OBL,true,oblique,sanz1248
+sanz1248_1561,ORD,false,ordinal,sanz1248
+sanz1248_1562,PFV,true,perfective,sanz1248
+sanz1248_1563,PL,true,plural,sanz1248
+sanz1248_1564,POST,false,spatial case 'behind',sanz1248
+sanz1248_1565,PRET,false,preterite,sanz1248
+sanz1248_1566,PROH,false,prohibitive,sanz1248
+sanz1248_1567,PRS,true,present,sanz1248
+sanz1248_1568,PRT,false,particle,sanz1248
+sanz1248_1569,PST,true,past,sanz1248
+sanz1248_1570,PTCP,true,participle,sanz1248
+sanz1248_1571,REFL,true,reflexive,sanz1248
+sanz1248_1572,SG,true,singular,sanz1248
+sanz1248_1573,SPR,false,spatial case 'on',sanz1248
+sanz1248_1574,SUB,false,spatial case 'under',sanz1248
+savo1255_1575,1,false,first person,savo1255
+savo1255_1576,2,false,second person,savo1255
+savo1255_1577,3,false,third person,savo1255
+savo1255_1578,ABL,true,ablative,savo1255
+savo1255_1579,AFF,false,affirmative,savo1255
+savo1255_1580,ANT,false,anticipatory,savo1255
+savo1255_1581,APPR,false,apprehensive,savo1255
+savo1255_1582,ATT,false,attributive marker,savo1255
+savo1255_1583,BG,false,background,savo1255
+savo1255_1584,CERT,false,certainty marker,savo1255
+savo1255_1585,CONJ,false,conjunction,savo1255
+savo1255_1586,CONSEC,false,consecutively,savo1255
+savo1255_1587,DET,true,determiner,savo1255
+savo1255_1588,DETR,false,detransitivizing suffix,savo1255
+savo1255_1589,DISTR,false,distributive,savo1255
+savo1255_1590,DU ,true,dual,savo1255
+savo1255_1591,DUR,true,durative,savo1255
+savo1255_1592,EMPH,false,emphasis,savo1255
+savo1255_1593,EP,false,epenthetic vowel,savo1255
+savo1255_1594,EX ,true,exclusive,savo1255
+savo1255_1595,EXCL,true,exclusive,savo1255
+savo1255_1596,FIN,false,finiteness marker,savo1255
+savo1255_1597,FUT,true,future,savo1255
+savo1255_1598,GEN ,true,genitive,savo1255
+savo1255_1599,IMP,true,imperative,savo1255
+savo1255_1600,IN,true,inclusive,savo1255
+savo1255_1601,INGR,false,ingressive,savo1255
+savo1255_1602,IPFV,true,imperfective,savo1255
+savo1255_1603,IRR,true,irrealis,savo1255
+savo1255_1604,ITER,false,iterative,savo1255
+savo1255_1605,LOC,false,locational,savo1255
+savo1255_1606,M,true,masculine,savo1255
+savo1255_1607,NMLZ,true,nominalizer,savo1255
+savo1255_1608,NOM,true,nominative,savo1255
+savo1255_1609,NSG,false,non-singular,savo1255
+savo1255_1610,O,true,object,savo1255
+savo1255_1611,PL,true,plural,savo1255
+savo1255_1612,PRIV,false,privative,savo1255
+savo1255_1613,PROPR,false,proprietive,savo1255
+savo1255_1614,PROX,true,proximal,savo1255
+savo1255_1615,PROX,true,PROXIMAL,savo1255
+savo1255_1616,PRS,true,present,savo1255
+savo1255_1617,PST ,true,past,savo1255
+savo1255_1618,RECIP,true,reciprocal,savo1255
+savo1255_1619,REL,false,relativizer,savo1255
+savo1255_1620,SG,true,singular,savo1255
+savo1255_1621,SIM,false,simultaneous,savo1255
+savo1255_1622,SS,false,same subject,savo1255
+savo1255_1623,TE,false,(unclear),savo1255
+savo1255_1624,TR,false,transitivizing suffix,savo1255
+savo1255_1625,VERB,false,verbializer,savo1255
+savo1255_1626,VR,false,(unclear),savo1255
+savo1255_1627,ZE,false,(unclear),savo1255
+sout2856_1628,1,false,first person,sout2856
+sout2856_1629,2,false,second person,sout2856
+sout2856_1630,3,false,third person,sout2856
+sout2856_1631,DST,false,distant particle,sout2856
+sout2856_1632,TS,false,transitive suffix,sout2856
+sout2856_1633,AD,false,addressee deictic,sout2856
+sout2856_1634,BEN,true,benefactive,sout2856
+sout2856_1635,CND,true,conditional,sout2856
+sout2856_1636,COMP,true,complementizer,sout2856
+sout2856_1637,COND,true,conditional,sout2856
+sout2856_1638,D,true,dual,sout2856
+sout2856_1639,DEM,true,demonstrative,sout2856
+sout2856_1640,DET,true,determiner,sout2856
+sout2856_1641,DP,false,direct possession,sout2856
+sout2856_1642,DP,false,direct possession,sout2856
+sout2856_1643,EMPH,false,EMPH,sout2856
+sout2856_1644,ES,false,echo-subject,sout2856
+sout2856_1645,EXCL,true,exclusive,sout2856
+sout2856_1646,HAB,false,habitual,sout2856
+sout2856_1647,HABIT,false,habitual,sout2856
+sout2856_1648,HES,false,hesitation,sout2856
+sout2856_1649,HESIT,false,hesitation marker,sout2856
+sout2856_1650,INCH,false,inchoative,sout2856
+sout2856_1651,incl,true,inclusive,sout2856
+sout2856_1652,INT,false,intensifier,sout2856
+sout2856_1653,IR,true,irrealis,sout2856
+sout2856_1654,IRS,false,irrealis subject,sout2856
+sout2856_1655,LOC,true,locative,sout2856
+sout2856_1656,NC,false,not considered,sout2856
+sout2856_1657,NEG,true,negation,sout2856
+sout2856_1658,NEG2,false,second negation particle,sout2856
+sout2856_1659,NMLS,false,nominalizer,sout2856
+sout2856_1660,NR,false,NC typo,sout2856
+sout2856_1661,O,true,object,sout2856
+sout2856_1662,OBL,true,oblique,sout2856
+sout2856_1663,P,true,plural,sout2856
+sout2856_1664,PERF,true,perfect,sout2856
+sout2856_1665,PF,true,perfect,sout2856
+sout2856_1666,PN,false,proper name,sout2856
+sout2856_1667,POS,false,possessive,sout2856
+sout2856_1668,PREP,false,preposition,sout2856
+sout2856_1669,PROG,true,progressive,sout2856
+sout2856_1670,PS,false,perfect subject,sout2856
+sout2856_1671,PSP,false,prospective,sout2856
+sout2856_1672,PURP,false,purpose 'in order to',sout2856
+sout2856_1673,RECP,true,reciprocal,sout2856
+sout2856_1674,REFL,true,reflexive,sout2856
+sout2856_1675,REL,false,relativizer,sout2856
+sout2856_1676,RS,false,realis subject,sout2856
+sout2856_1677,S,true,singular,sout2856
+sout2856_1678,SUB,false,subordinator,sout2856
+sout2856_1679,TOP,true,topic,sout2856
+sout2856_1680,TR,false,transitivizer,sout2856
+sout2856_1681,TS,false,transitive suffix,sout2856
+sout2856_1682,V,false,epenthetic vowel preceding DP suffix,sout2856
+sout3282_1683,1,false,first person,sout3282
+sout3282_1684,2,false,second person,sout3282
+sout3282_1685,3,false,third person,sout3282
+sout3282_1686,DIST,true,distal,sout3282
+sout3282_1687,F,true,feminine,sout3282
+sout3282_1688,IMP,true,imperative,sout3282
+sout3282_1689,INF,true,infinitive,sout3282
+sout3282_1690,M,true,masculine,sout3282
+sout3282_1691,N,true,neuter,sout3282
+sout3282_1692,NEG,true,negation,sout3282
+sout3282_1693,[INT],false,interviewer,sout3282
+sout3282_1694,HORT,false,hortative,sout3282
+sout3282_1695,NC,false,not considered,sout3282
+sout3282_1696,TAG,false,tag question,sout3282
+sout3282_1697,CMPR,false,comparative,sout3282
+sout3282_1698,NC3PL,false,not considered,sout3282
+sout3282_1699,SUPR,false,superlative,sout3282
+sout3282_1700,OBL,true,oblique,sout3282
+sout3282_1701,PL,true,plural,sout3282
+sout3282_1702,POSS,true,possessive,sout3282
+sout3282_1703,PROX,true,proximal/proximate,sout3282
+sout3282_1704,PRS,true,present,sout3282
+sout3282_1705,PST,true,past,sout3282
+sout3282_1706,PTCP,true,participle,sout3282
+sout3282_1707,REFL,true,reflexive,sout3282
+sout3282_1708,SG,true,singular,sout3282
+sout3282_1709,SUBJ,true,subjunctive,sout3282
+sumi1235_1710,1,false,first person ,sumi1235
+sumi1235_1711,2,false,second person,sumi1235
+sumi1235_1712,3,false,third person,sumi1235
+sumi1235_1713,ABIL,false,ability,sumi1235
+sumi1235_1714,ABL,true,ablative,sumi1235
+sumi1235_1715,ADJ,true,adjective,sumi1235
+sumi1235_1716,ADV,true,adverb,sumi1235
+sumi1235_1717,AGT,false,(unclear),sumi1235
+sumi1235_1718,ALL,true,allative,sumi1235
+sumi1235_1719,AM,false,(unclear),sumi1235
+sumi1235_1720,ASSOC,false,associative,sumi1235
+sumi1235_1721,AUX,true,auxiliary,sumi1235
+sumi1235_1722,BEN,true,benefactive,sumi1235
+sumi1235_1723,CAUS,true,causative,sumi1235
+sumi1235_1724,COM,true,comitative,sumi1235
+sumi1235_1725,COMP,true,complementizer,sumi1235
+sumi1235_1726,CONN,false,connective,sumi1235
+sumi1235_1727,CONT,false,continuative,sumi1235
+sumi1235_1728,COP,true,copula,sumi1235
+sumi1235_1729,CPL,false,(unclear),sumi1235
+sumi1235_1730,DEF,true,definite,sumi1235
+sumi1235_1731,DES,false,(unclear),sumi1235
+sumi1235_1732,DIST,true,distal,sumi1235
+sumi1235_1733,DISTR,true,distributive,sumi1235
+sumi1235_1734,DP,false,(unclear),sumi1235
+sumi1235_1735,DU,true,dual,sumi1235
+sumi1235_1736,EMPH,false,emphasizer,sumi1235
+sumi1235_1737,EXCL,true,exclusive,sumi1235
+sumi1235_1738,EXIST,false,existential,sumi1235
+sumi1235_1739,FOC,true,focus,sumi1235
+sumi1235_1740,FUT,true,future,sumi1235
+sumi1235_1741,HAB,false,habitual,sumi1235
+sumi1235_1742,HORT,false,hortative,sumi1235
+sumi1235_1743,IMP,true,imperative,sumi1235
+sumi1235_1744,IMPRF,true,imperfective,sumi1235
+sumi1235_1745,INCEP,false,inceptive,sumi1235
+sumi1235_1746,INST,true,instrumental,sumi1235
+sumi1235_1747,LOC,true,locative,sumi1235
+sumi1235_1748,MED,false,medial,sumi1235
+sumi1235_1749,NEG,true,negative,sumi1235
+sumi1235_1750,NRL,true,nominalizer,sumi1235
+sumi1235_1751,NZP,false,(unclear),sumi1235
+sumi1235_1752,NZR,true,nominalizer,sumi1235
+sumi1235_1753,PART,false,(unclear),sumi1235
+sumi1235_1754,PL,true,plural,sumi1235
+sumi1235_1755,POS,true,possesive,sumi1235
+sumi1235_1756,PRES,true,present,sumi1235
+sumi1235_1757,PRF,true,perfect,sumi1235
+sumi1235_1758,PROG,true,progressive,sumi1235
+sumi1235_1759,PROS,false,(unclear),sumi1235
+sumi1235_1760,PRT,false,(unclear),sumi1235
+sumi1235_1761,PRX,true,proximal,sumi1235
+sumi1235_1762,Q,true,question marker,sumi1235
+sumi1235_1763,QUOT,true,quotative,sumi1235
+sumi1235_1764,RECP,true,reciprocal,sumi1235
+sumi1235_1765,SG,true,singular,sumi1235
+sumi1235_1766,SUPR,false,superlative,sumi1235
+sumi1235_1767,TOP,true,topic,sumi1235
+sumi1235_1768,VM,false,(unclear),sumi1235
+taba1259_1769,1,false,first person,taba1259
+taba1259_1770,2,false,second person,taba1259
+taba1259_1771,3,false,third person,taba1259
+taba1259_1772,ABS,true,absolutive,taba1259
+taba1259_1773,ABSTR,false,abstract,taba1259
+taba1259_1774,ADD,false,additive,taba1259
+taba1259_1775,ADV,true,adverbial,taba1259
+taba1259_1776,AG,false,agent,taba1259
+taba1259_1777,AOR,false,aorist,taba1259
+taba1259_1778,APUD,false,"spatial case ‘by, near’",taba1259
+taba1259_1779,ATTR,false,attributive,taba1259
+taba1259_1780,CIT,false,verb k’ur ‘say.FUT’ used as a quotative,taba1259
+taba1259_1781,COM,true,comitative,taba1259
+taba1259_1782,COMP,false,comparative particle,taba1259
+taba1259_1783,COND,true,conditional,taba1259
+taba1259_1784,CONT,false,continuative,taba1259
+taba1259_1785,CONTR,false,contrastive,taba1259
+taba1259_1786,COP,true,copula,taba1259
+taba1259_1787,DAT,true,dative,taba1259
+taba1259_1788,DEF,true,definite,taba1259
+taba1259_1789,DIR,false,spatial case ‘to’,taba1259
+taba1259_1790,DIST,true,distal,taba1259
+taba1259_1791,DOWN,false,prefixal marker in demonstrative pronoun ‘downwards’,taba1259
+taba1259_1792,ELAT,false,elative,taba1259
+taba1259_1793,EMPH,false,emphasis,taba1259
+taba1259_1794,ERG,true,ergative,taba1259
+taba1259_1795,EXCL,true,exclusive,taba1259
+taba1259_1796,FOC,true,focal particle,taba1259
+taba1259_1797,FUT,true,future,taba1259
+taba1259_1798,GEN,true,genitive,taba1259
+taba1259_1799,HSG,false,human singular,taba1259
+taba1259_1800,ICVB,false,imperfective converb,taba1259
+taba1259_1801,IMP,true,imperative,taba1259
+taba1259_1802,IN,false,spatial case ‘in’,taba1259
+taba1259_1803,INCL,true,inclusive,taba1259
+taba1259_1804,INDEF,true,indefinite,taba1259
+taba1259_1805,INF,true,infinitive,taba1259
+taba1259_1806,INTER,false,spatial case ‘between’,taba1259
+taba1259_1807,INTERJ,false,interjection,taba1259
+taba1259_1808,IPFV,true,imperfective,taba1259
+taba1259_1809,JUSS,false,jussive,taba1259
+taba1259_1810,LAT,false,lative,taba1259
+taba1259_1811,LOC,true,locative,taba1259
+taba1259_1812,MSD,false,masdar,taba1259
+taba1259_1813,NEG,true,negative,taba1259
+taba1259_1814,NMLZ,true,nominalization,taba1259
+taba1259_1815,NSG,false,neuter singular,taba1259
+taba1259_1816,ORD,false,ordinal number,taba1259
+taba1259_1817,PAT,false,patient,taba1259
+taba1259_1818,PCVB,false,perfective converb,taba1259
+taba1259_1819,PFV,true,perfective,taba1259
+taba1259_1820,PL,true,plural,taba1259
+taba1259_1821,POSS,true,possessive,taba1259
+taba1259_1822,POST,false,"spatial case ‘behind, after’",taba1259
+taba1259_1823,PROH,true,prohibitive,taba1259
+taba1259_1824,PROX,true,proximal,taba1259
+taba1259_1825,PRS,true,present,taba1259
+taba1259_1826,PRT,false,particle,taba1259
+taba1259_1827,PST,true,past,taba1259
+taba1259_1828,PTCP,true,participle,taba1259
+taba1259_1829,Q,true,question particle,taba1259
+taba1259_1830,REFL,true,reflexive,taba1259
+taba1259_1831,RES,true,resultative,taba1259
+taba1259_1832,SG,true,singular,taba1259
+taba1259_1833,SUB,false,spatial case ‘under’,taba1259
+taba1259_1834,SUPER,false,spatial case ‘on’,taba1259
+taba1259_1835,TEMP,false,temporal marker ‘when’,taba1259
+taba1259_1836,VOC,true,vocative,taba1259
+teop1238_1837,1,false,first person,teop1238
+teop1238_1838,2,false,second person,teop1238
+teop1238_1839,3,false,third person,teop1238
+teop1238_1840,4,false,4th person,teop1238
+teop1238_1841,ACAUS,false,anticausative,teop1238
+teop1238_1842,ADJR,false,adjectivalizer,teop1238
+teop1238_1843,ADV,false,adverbalizer,teop1238
+teop1238_1844,ADVR,false,adverbalizer,teop1238
+teop1238_1845,ANA,false,anaphoric adnominal demonstrative,teop1238
+teop1238_1846,and3,false,conjunction type 3,teop1238
+teop1238_1847,and4,false,conjunction type 4,teop1238
+teop1238_1848,APPL,true,applicative,teop1238
+teop1238_1849,ART2,true,basic specific article for second class nouns,teop1238
+teop1238_1850,ART2,true,basic specific article for nouns of class 2,teop1238
+teop1238_1851,ART3,true,basic specific article for class 3 nouns,teop1238
+teop1238_1852,CAUS,true,causative,teop1238
+teop1238_1853,COMP1,true,complementizer,teop1238
+teop1238_1854,COMPL1,true,complementizer type 1,teop1238
+teop1238_1855,COMPL2,true,complementizer type 2,teop1238
+teop1238_1856,CONSEC,false,consecutive marker,teop1238
+teop1238_1857,CONT,false,adverb indicating event lasts for a while,teop1238
+teop1238_1858,DAT,true,dative ,teop1238
+teop1238_1859,DEM1,true,demonstrative type 1,teop1238
+teop1238_1860,DEM2,true,demonstrative type 2,teop1238
+teop1238_1861,DEM2,true,demonstrative type 2,teop1238
+teop1238_1862,DEM3,true,demonstrative type 3,teop1238
+teop1238_1863,DEM4,false,demonstrative type 4,teop1238
+teop1238_1864,DEM5,true,demonstrative type 5,teop1238
+teop1238_1865,DEM6,true,demonstrative type 6,teop1238
+teop1238_1866,DEREL,false,derelational suffix,teop1238
+teop1238_1867,DIM,false,diminuitive,teop1238
+teop1238_1868,DYAD,false,2nd class noun referring to 2+ people in reciprocal kin relationship,teop1238
+teop1238_1869,EMPH2,false,emphatic particle,teop1238
+teop1238_1870,EX,true,exclusive,teop1238
+teop1238_1871,EXC,true,exclusive,teop1238
+teop1238_1872,GOAL,false,movement goal,teop1238
+teop1238_1873,H,false,(unclear),teop1238
+teop1238_1874,IMM,false,immediatness marker,teop1238
+teop1238_1875,IN,true,inclsuive,teop1238
+teop1238_1876,INDEF2,true,indefinite for 2nd class nouns,teop1238
+teop1238_1877,INDEF3,true,indefinite for 3rd class nouns,teop1238
+teop1238_1878,INTERJ,false,interjection,teop1238
+teop1238_1879,IPFV,true,imperfective,teop1238
+teop1238_1880,LNK,false,linker,teop1238
+teop1238_1881,MULT,false,verb prefix indicating repetition and 2+ participants,teop1238
+teop1238_1882,NC,false,not considered,teop1238
+teop1238_1883,NEG,true,negation,teop1238
+teop1238_1884,NSPEC2,false,non-specific article for 2nd class nouns,teop1238
+teop1238_1885,NSPEC3,false,non-specific article for third class nouns,teop1238
+teop1238_1886,OBJ,false,object marker,teop1238
+teop1238_1887,OBJM,false,object marker,teop1238
+teop1238_1888,one2,false,one' for class 2 nouns,teop1238
+teop1238_1889,one3,false,one' for class 3 nouns,teop1238
+teop1238_1890,ORD,false,ordinal numbers prefix,teop1238
+teop1238_1891,other2,false,other' for class 2 nouns,teop1238
+teop1238_1892,other3,false,other' for class 3 nouns,teop1238
+teop1238_1893,PART,false,partitive,teop1238
+teop1238_1894,PL,true,plural,teop1238
+teop1238_1895,PLM,false,plural marker,teop1238
+teop1238_1896,PN,false,personal name,teop1238
+teop1238_1897,POSS,true,possessive,teop1238
+teop1238_1898,PREP,false,preposition,teop1238
+teop1238_1899,PRON,false,personal pronoun,teop1238
+teop1238_1900,PTCL2,false,particle,teop1238
+teop1238_1901,RED,false,reduplication,teop1238
+teop1238_1902,REL,false,particle introducing relative clauses,teop1238
+teop1238_1903,SG,true,singular,teop1238
+teop1238_1904,TAM1,false,tense/aspect/mood marker 1,teop1238
+teop1238_1905,TAM2,false,tense/aspect/mood marker 2,teop1238
+teop1238_1906,TAM3,false,tense/aspect/mood marker 3,teop1238
+teop1238_1907,TAM4,false,tense/aspect/mood marker 4,teop1238
+teop1238_1908,two2,false,two' for second class nouns,teop1238
+teop1238_1909,ZERO,false,empty argument position that refers to unambiguously retrievable argument,teop1238
+texi1237_1910,1,false,first person,texi1237
+texi1237_1911,1/2,false,,texi1237
+texi1237_1912,1/3,false,,texi1237
+texi1237_1913,2,false,second person,texi1237
+texi1237_1914,2/1,false,second person agent acting on first person patient,texi1237
+texi1237_1915,2/3,false,second person agent acting on third person patient,texi1237
+texi1237_1916,3,false,third person,texi1237
+texi1237_1917,3/1,false,third person agent acting on first person patient,texi1237
+texi1237_1918,3/2,false,third person agent acting on second person patient,texi1237
+texi1237_1919,3/3,false,third person agent acting on third person patient,texi1237
+texi1237_1920,A,true,ergative/ possessive,texi1237
+texi1237_1921,ADJ,true,adjective,texi1237
+texi1237_1922,AP,false,(unclear),texi1237
+texi1237_1923,APL,false,aplicative,texi1237
+texi1237_1924,AUM,false,augmentative,texi1237
+texi1237_1925,AUX,true,auxiliary,texi1237
+texi1237_1926,B,true,absolutive,texi1237
+texi1237_1927,CAUS,true,causative,texi1237
+texi1237_1928,CN,true,numeral classifier,texi1237
+texi1237_1929,CONFAC,false,(unclear),texi1237
+texi1237_1930,CUOT,true,quotative,texi1237
+texi1237_1931,DEF,true,defnite,texi1237
+texi1237_1932,DEP,false,dependent,texi1237
+texi1237_1933,DES,false,desiderative,texi1237
+texi1237_1934,DF,false,diffuse action,texi1237
+texi1237_1935,DIM,false,diminutive,texi1237
+texi1237_1936,DISTR,true,distributive,texi1237
+texi1237_1937,EST.POS,false,stative positional verb,texi1237
+texi1237_1938,EXCL,true,exclusive,texi1237
+texi1237_1939,FI,false,(unclear),texi1237
+texi1237_1940,FUT,true,future,texi1237
+texi1237_1941,IMP,true,imperative,texi1237
+texi1237_1942,IN,false,(unclear),texi1237
+texi1237_1943,INC,false,incoative,texi1237
+texi1237_1944,INSTR,true,instrumental,texi1237
+texi1237_1945,INT,false,intensive,texi1237
+texi1237_1946,IPFV,true,imperfective,texi1237
+texi1237_1947,IT,false,intensive translative,texi1237
+texi1237_1948,ITER,false,iterative,texi1237
+texi1237_1949,LIM,false,(unclear),texi1237
+texi1237_1950,LOC,true,locative,texi1237
+texi1237_1951,NEG,true,negative,texi1237
+texi1237_1952,NOM,true,nominative,texi1237
+texi1237_1953,ONOM,false,onomatopeia,texi1237
+texi1237_1954,PART,false,(unclear),texi1237
+texi1237_1955,PE,false,(unclear),texi1237
+texi1237_1956,PERM,false,permisive,texi1237
+texi1237_1957,PFV,true,perfective,texi1237
+texi1237_1958,PL,true,plural,texi1237
+texi1237_1959,POS,false,positional,texi1237
+texi1237_1960,PP,false,(unclear),texi1237
+texi1237_1961,PRON,false,pronoun,texi1237
+texi1237_1962,PSD,false,conditional past ,texi1237
+texi1237_1963,PSV,true,passive,texi1237
+texi1237_1964,REC,true,reciprocal,texi1237
+texi1237_1965,REFL,true,reflexive,texi1237
+texi1237_1966,REL,true,relativizer,texi1237
+texi1237_1967,RPD,false,(unclear),texi1237
+texi1237_1968,TRAS,false,translative,texi1237
+texi1237_1969,VRB,false,verbalizer,texi1237
+vera1241_1970,1,false,first person,vera1241
+vera1241_1971,2,false,second person,vera1241
+vera1241_1972,3,false,third person,vera1241
+vera1241_1973,TL,false,trial,vera1241
+vera1241_1974,A,false,transitive subject,vera1241
+vera1241_1975,ABIL,false,ability,vera1241
+vera1241_1976,ABL,true,ablative,vera1241
+vera1241_1977,ADN,false,adnominal,vera1241
+vera1241_1978,ART,true,article,vera1241
+vera1241_1979,ASS,false,associative,vera1241
+vera1241_1980,BED,false,possessive classifier for bed possession,vera1241
+vera1241_1981,CARD,false,cardinal numeral,vera1241
+vera1241_1982,CAT,false,cataphoric,vera1241
+vera1241_1983,CC,false,clause combining particle,vera1241
+vera1241_1984,CL,true,classifier,vera1241
+vera1241_1985,COM,true,comitative,vera1241
+vera1241_1986,CPL,true,complementizer,vera1241
+vera1241_1987,CPL,false,complementizer,vera1241
+vera1241_1988,CS,false,construct suffix,vera1241
+vera1241_1989,DAT,true,dative,vera1241
+vera1241_1990,DEICT,false,deictic,vera1241
+vera1241_1991,DEL,false,delimitative,vera1241
+vera1241_1992,DEM,true,demonstrative,vera1241
+vera1241_1993,DIR,false,directional,vera1241
+vera1241_1994,DIS,false,dissociative possessive suffix,vera1241
+vera1241_1995,DISC,false,discourse particle,vera1241
+vera1241_1996,DL,true,dual,vera1241
+vera1241_1997,DOM,false,possessive classifier for domestic possession,vera1241
+vera1241_1998,DRINK,false,possessive classifier for drink possession,vera1241
+vera1241_1999,EAT,false,possessive classifier for eating possession,vera1241
+vera1241_2000,EMPH,false,emphatic,vera1241
+vera1241_2001,EMPH,false,emphatic particle,vera1241
+vera1241_2002,EV,false,epenthetic vowel,vera1241
+vera1241_2003,EX,true,exclusive,vera1241
+vera1241_2004,FUT,true,future,vera1241
+vera1241_2005,GEN,true,genitive,vera1241
+vera1241_2006,HES,false,hesitation,vera1241
+vera1241_2007,HOUSE,false,possessive classifier for house possession,vera1241
+vera1241_2008,IMM,false,immediacy,vera1241
+vera1241_2009,IN,true,inclusive,vera1241
+vera1241_2010,INABIL1,false,inability,vera1241
+vera1241_2011,INTENS,false,intensifier,vera1241
+vera1241_2012,INTERJ,false,interjection,vera1241
+vera1241_2013,INTERJ,false,interjection,vera1241
+vera1241_2014,LOC,true,locative,vera1241
+vera1241_2015,MAN,false,manner adverb,vera1241
+vera1241_2016,MULT,false,multipicative,vera1241
+vera1241_2017,NC,false,not considered,vera1241
+vera1241_2018,NEG,true,negation,vera1241
+vera1241_2019,NMLZ,true,nominalization,vera1241
+vera1241_2020,NSG,false,nonsingular,vera1241
+vera1241_2021,NUM,false,numeral prefix,vera1241
+vera1241_2022,NY,false,not yet' negation,vera1241
+vera1241_2023,OBL,true,oblique,vera1241
+vera1241_2024,ORD,false,ordinal quantifier,vera1241
+vera1241_2025,PART,false,partitive article,vera1241
+vera1241_2026,PERS,false,personal,vera1241
+vera1241_2027,PFV,true,perfective,vera1241
+vera1241_2028,PL,true,plural,vera1241
+vera1241_2029,POSS,true,possessive,vera1241
+vera1241_2030,PRO,false,pronoun,vera1241
+vera1241_2031,PROH,false,prohibitive,vera1241
+vera1241_2032,PROH,false,prohibitive ,vera1241
+vera1241_2033,PROSP,false,prospective marker,vera1241
+vera1241_2034,PROX,true,proximal,vera1241
+vera1241_2035,PURP,false,purpose,vera1241
+vera1241_2036,QUOT,true,quotative,vera1241
+vera1241_2037,RCP,true,reciprocal,vera1241
+vera1241_2038,REC,false,reciprocal prefix,vera1241
+vera1241_2039,RED,false,reduplication,vera1241
+vera1241_2040,REL,false,relativizer,vera1241
+vera1241_2041,REL,false,relativizer,vera1241
+vera1241_2042,REM,false,remote past,vera1241
+vera1241_2043,SG,true,singular,vera1241
+vera1241_2044,SIM,false,simultaneity,vera1241
+vera1241_2045,SP,false,specific,vera1241
+vera1241_2046,STAT,false,stative,vera1241
+vera1241_2047,TAM,false,tense aspect mood ,vera1241
+vera1241_2048,TAM1,false,tense aspect mood 1 ,vera1241
+vera1241_2049,TEMP,false,temporial adverb,vera1241
+vera1241_2050,THING,false,placeholder word,vera1241
+vera1241_2051,VES,false,possessive classifier for vessel possession,vera1241
+vera1241_2052,VOC,true,vocative,vera1241
+vera1241_2053,ZERO,false,zero ,vera1241
