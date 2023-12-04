@@ -11,7 +11,7 @@
   agreeing to the defaults whenever prompted.  
 - Re-create the CLDF dataset running
   ```shell
-  cldfbench makecldf cldfbench_doreco.py --glottolog-version v4.7 --with-cldfreadme --with-zenodo
+  cldfbench makecldf cldfbench_doreco.py --glottolog-version v4.8 --with-cldfreadme --with-zenodo
   cldfbench readme cldfbench_doreco.py
   ```
 - Make sure the data is valid running

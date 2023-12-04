@@ -12,8 +12,8 @@ property | value
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF Generic](http://cldf.clld.org/v1.0/terms.rdf#Generic)
 [dc:license](http://purl.org/dc/terms/license) | CC-BY
 [dcat:accessURL](http://www.w3.org/ns/dcat#accessURL) | https://github.com/cldf-datasets/doreco/
-[prov:wasDerivedFrom](http://www.w3.org/ns/prov#wasDerivedFrom) | <ol><li><a href="https://github.com/cldf-datasets/doreco//tree/ab2a7f9">cldf-datasets/doreco/ ab2a7f9</a></li><li><a href="https://github.com/glottolog/glottolog/tree/v4.7">Glottolog v4.7</a></li></ol>
-[prov:wasGeneratedBy](http://www.w3.org/ns/prov#wasGeneratedBy) | <ol><li><strong>python</strong>: 3.10.6</li><li><strong>python-packages</strong>: <a href="./requirements.txt">requirements.txt</a></li></ol>
+[prov:wasDerivedFrom](http://www.w3.org/ns/prov#wasDerivedFrom) | <ol><li><a href="https://github.com/cldf-datasets/doreco/">Anal DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yali (Apahapsili) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Arapaho DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Baïnounk Gubëeher DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Beja DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Bora DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Cashinahua DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Dolgan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Evenki DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Goemai DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Gorwaa DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Jahai DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Jejuan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Kakabe DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Kamas DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Tabaq (Karko) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Komnzo DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Lower Sorbian DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Movima DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Dalabon DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Nǁng DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Northern Kurdish (Kurmanji) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Fanbyak DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Pnar DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Daakie DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Resígaro DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Ruuli DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sadu DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sanzhi Dargwa DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Savosavo DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Nafsan (South Efate) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">English (Southern England) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">French (Swiss) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sümi DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Svan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Tabasaran DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Teop DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Texistepec Popoluca DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Mojeño Trinitario DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Asimjeeg Datooga DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Vera'a DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yongning Na DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco//tree/39342aa">cldf-datasets/doreco/ 39342aa</a></li><li><a href="https://github.com/glottolog/glottolog/tree/v4.8">Glottolog v4.8</a></li></ol>
+[prov:wasGeneratedBy](http://www.w3.org/ns/prov#wasGeneratedBy) | <ol><li><strong>python</strong>: 3.10.12</li><li><strong>python-packages</strong>: <a href="./requirements.txt">requirements.txt</a></li></ol>
 [rdf:ID](http://www.w3.org/1999/02/22-rdf-syntax-ns#ID) | doreco
 [rdf:type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) | http://www.w3.org/ns/dcat#Distribution
 
@@ -32,18 +32,18 @@ property | value
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | Primary key
+[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string`<br>Regex: `[a-zA-Z0-9_\-]+` | Primary key
 [Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | 
-[Media_Type](http://cldf.clld.org/v1.0/terms.rdf#mediaType) | `string` | 
+[Media_Type](http://cldf.clld.org/v1.0/terms.rdf#mediaType) | `string`<br>Regex: `[^/]+/.+` | 
 [Download_URL](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl) | `anyURI` | 
-`rec_date` | `string` | 
-`rec_date_assignment_certain` | `string` | 
-`genre` | `string` | 
+`rec_date` | `string`<br>Regex: `[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?` | 
+`rec_date_assignment_certain` | `string`<br>Valid choices:<br> `certain` `approximate` | 
+`genre` | `string`<br>Regex: `traditional narrative|personal narrative|conversation|stimulus retelling|procedural|procedural/conversation` | 
 `genre_stim` | `string` | 
 `gloss` | `string` | Information on whether/how the audio has been annotated with glosses.
 `transl` | list of `string` (separated by `/`) | Information on meta languages for which the annotations contain translations.
-`sound_quality` | `string` | 
-`background_noise` | `string` | 
+`sound_quality` | `string`<br>Valid choices:<br> `good` `medium` `bad` `middle` | 
+`background_noise` | `string`<br>Valid choices:<br> `punctual` `none` `constant` `medium` | 
 [Corpus_ID](http://cldf.clld.org/v1.0/terms.rdf#contributionReference) | `string` | References [contributions.csv::ID](#table-contributionscsv)
 [Glottocode](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | References [languages.csv::ID](#table-languagescsv)
 
@@ -54,14 +54,14 @@ Some corpora in DoReCo contain data annotated with glosses. Such glossed data is
 property | value
  --- | ---
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF ExampleTable](http://cldf.clld.org/v1.0/terms.rdf#ExampleTable)
-[dc:extent](http://purl.org/dc/terms/extent) | 94671
+[dc:extent](http://purl.org/dc/terms/extent) | 94672
 
 
 ### Columns
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | Primary key
+[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string`<br>Regex: `[a-zA-Z0-9_\-]+` | Primary key
 [Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | References [languages.csv::ID](#table-languagescsv)
 [Primary_Text](http://cldf.clld.org/v1.0/terms.rdf#primaryText) | `string` | The example text in the source language.
 [Analyzed_Word](http://cldf.clld.org/v1.0/terms.rdf#analyzedWord) | list of `string` (separated by `	`) | The sequence of words of the primary text to be aligned with glosses
@@ -86,13 +86,13 @@ property | value
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | Primary key
+[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string`<br>Regex: `[a-zA-Z0-9_\-]+` | Primary key
 [Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | 
 [Macroarea](http://cldf.clld.org/v1.0/terms.rdf#macroarea) | `string` | 
-[Latitude](http://cldf.clld.org/v1.0/terms.rdf#latitude) | `decimal` | 
-[Longitude](http://cldf.clld.org/v1.0/terms.rdf#longitude) | `decimal` | 
-[Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) | `string` | 
-[ISO639P3code](http://cldf.clld.org/v1.0/terms.rdf#iso639P3code) | `string` | 
+[Latitude](http://cldf.clld.org/v1.0/terms.rdf#latitude) | `decimal`<br>&ge; -90<br>&le; 90 | 
+[Longitude](http://cldf.clld.org/v1.0/terms.rdf#longitude) | `decimal`<br>&ge; -180<br>&le; 180 | 
+[Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) | `string`<br>Regex: `[a-z0-9]{4}[1-9][0-9]{3}` | 
+[ISO639P3code](http://cldf.clld.org/v1.0/terms.rdf#iso639P3code) | `string`<br>Regex: `[a-z]{3}` | 
 [Source](http://cldf.clld.org/v1.0/terms.rdf#source) | `string` | References [sources.bib::BibTeX-key](./sources.bib)
 
 ## <a name="table-contributionscsv"></a>Table [contributions.csv](./contributions.csv)
@@ -109,7 +109,7 @@ property | value
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | Primary key<br>References [languages.csv::ID](#table-languagescsv)
+[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string`<br>Regex: `[a-zA-Z0-9_\-]+` | Primary key<br>References [languages.csv::ID](#table-languagescsv)
 [Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | 
 [Description](http://cldf.clld.org/v1.0/terms.rdf#description) | `string` | 
 [Contributor](http://cldf.clld.org/v1.0/terms.rdf#contributor) | `string` | 
@@ -127,14 +127,14 @@ The ParameterTable lists IPA phones which appear in the DoReCo corpus (if a corr
 property | value
  --- | ---
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF ParameterTable](http://cldf.clld.org/v1.0/terms.rdf#ParameterTable)
-[dc:extent](http://purl.org/dc/terms/extent) | 316
+[dc:extent](http://purl.org/dc/terms/extent) | 339
 
 
 ### Columns
 
 Name/Property | Datatype | Description
  --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | Primary key
+[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string`<br>Regex: `[a-zA-Z0-9_\-]+` | Primary key
 [Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | The IPA representation of the sound.
 [Description](http://cldf.clld.org/v1.0/terms.rdf#description) | `string` | 
 [ColumnSpec](http://cldf.clld.org/v1.0/terms.rdf#columnSpec) | `json` | 
@@ -154,16 +154,16 @@ Name/Property | Datatype | Description
 [ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | Primary key
 [Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | References [languages.csv::ID](#table-languagescsv)
 `age` | `integer` | 
-`age_assignment_certain` | `string` | 
-`sex` | `string` | 
+`age_assignment_certain` | `string`<br>Valid choices:<br> `certain` `approximate` | 
+`sex` | `string`<br>Valid choices:<br> `m` `f` | 
 
-## <a name="table-phonescsv"></a>Table [phones.csv](./phones.csv)
+## <a name="table-phonescsv"></a>Table [phones.csv](./phones.csv.zip)
 
 This table lists individual, time-aligned phones.
 
 property | value
  --- | ---
-[dc:extent](http://purl.org/dc/terms/extent) | 1863834
+[dc:extent](http://purl.org/dc/terms/extent) | 1863702
 
 
 ### Columns
@@ -174,17 +174,17 @@ Name/Property | Datatype | Description
 [ph](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | See the description of the Token_Type column.
 [IPA](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | Link to corresponding IPA phoneme, with details given in ParameterTable<br>References [parameters.csv::ID](#table-parameterscsv)
 `u_ID` | `string` | Utterance ID. Utterances are words/phones delimited by silent pauses.
-`Token_Type` | `string` | Not all rows in this table correspond to actual phones. If a row does the Token_Type is 'xsampa' and the `ph` column holds the X-SAMPA representation of the phone, otherwise it is a 'pause' or a 'label'.  Labels consist of two opening brackets, the label proper, a closing bracket, the content (optional), and another closing bracket, e.g. `<<ui>word>`. Labels may also appear on their own if the content is not known, e.g. `<<ui>>`. Valid proper labels are  - fp: Filled pause - fs: False start - pr: Prolongation - fm: Foreign material - sg: Singing - bc: Backchannel - id: Ideophone - on: Onomatopoeic - wip: Word-internal pause - ui: Unidentifiable  Silent pauses are marked by a special symbol, `<p:>`. The location of silent pauses is manually checked by the DoReCo team, while the symbol itself is inserted by the WebMAUS service. Unlike labels, the <p:> symbol has only one of each bracket, and no other content may be included in it.
+`Token_Type` | `string`<br>Valid choices:<br> `label` `pause` `xsampa` | Not all rows in this table correspond to actual phones. If a row does the Token_Type is 'xsampa' and the `ph` column holds the X-SAMPA representation of the phone, otherwise it is a 'pause' or a 'label'.  Labels consist of two opening brackets, the label proper, a closing bracket, the content (optional), and another closing bracket, e.g. `<<ui>word>`. Labels may also appear on their own if the content is not known, e.g. `<<ui>>`. Valid proper labels are  - fp: Filled pause - fs: False start - pr: Prolongation - fm: Foreign material - sg: Singing - bc: Backchannel - id: Ideophone - on: Onomatopoeic - wip: Word-internal pause - ui: Unidentifiable  Silent pauses are marked by a special symbol, `<p:>`. The location of silent pauses is manually checked by the DoReCo team, while the symbol itself is inserted by the WebMAUS service. Unlike labels, the <p:> symbol has only one of each bracket, and no other content may be included in it.
 `start` | `decimal` | Start of the phone in the linked sound file in (floating point) seconds.
 `end` | `decimal` | End of the phone in the linked sound file in (floating point) seconds.
 `duration` | `decimal` | Duration of the phone in the linked sound file in (floating point) seconds.
 `wd_ID` | `string` | Link to corresponding word.<br>References [words.csv::wd_ID](#table-wordscsv)
 
-## <a name="table-wordscsv"></a>Table [words.csv](./words.csv)
+## <a name="table-wordscsv"></a>Table [words.csv](./words.csv.zip)
 
 property | value
  --- | ---
-[dc:extent](http://purl.org/dc/terms/extent) | 896661
+[dc:extent](http://purl.org/dc/terms/extent) | 896664
 
 
 ### Columns
