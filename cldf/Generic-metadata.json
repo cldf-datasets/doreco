@@ -267,7 +267,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
-            "dc:created": "39342aa",
+            "dc:created": "4ab55fb",
             "dc:title": "Repository"
         },
         {
@@ -327,6 +327,7 @@
                         "name": "Download_URL"
                     },
                     {
+                        "dc:description": "Date of recording. See also rec_date_assignment_certain.",
                         "datatype": {
                             "base": "string",
                             "format": "[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?"
@@ -349,6 +350,9 @@
                     },
                     {
                         "datatype": "string",
+                        "null": [
+                            "na"
+                        ],
                         "name": "genre_stim"
                     },
                     {
@@ -689,7 +693,10 @@
                         "name": "Archive_link"
                     },
                     {
-                        "datatype": "string",
+                        "datatype": {
+                            "base": "string",
+                            "format": "CC BY|CC BY-NC-SA|CC BY-NC"
+                        },
                         "name": "AnnotationLicense"
                     },
                     {
@@ -780,6 +787,7 @@
                         "name": "Language_ID"
                     },
                     {
+                        "dc:description": "Speaker age. See also age_assignment_certain.",
                         "datatype": "integer",
                         "name": "age"
                     },
@@ -791,6 +799,7 @@
                         "name": "age_assignment_certain"
                     },
                     {
+                        "dc:description": "Speaker sex.",
                         "datatype": {
                             "base": "string",
                             "format": "m|f"

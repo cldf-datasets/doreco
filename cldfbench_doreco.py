@@ -83,7 +83,6 @@ class Dataset(BaseDataset):
 
         with_nd_data = confirm('Include ND data?', default=False)
         with_audio_data = confirm('Include audio files?', default=False)
-        dl = False
         for row in self.raw_dir.read_csv('languages.csv', dicts=True):
             if with_nd_data or ('ND' not in row['Annotation license']):
                 print(row['Glottocode'], row['DOI'])
@@ -117,11 +116,10 @@ class Dataset(BaseDataset):
         corpus_citations = [
             "Please note that when citing this dataset, it is NOT sufficient to refer to DoReCo as "
             "a whole, but the full citation for each individual corpus must be provided, including "
-            "the name(s) of the creator(s) of each corpus as given below."]
+            "the name(s) of the creator(s) of each corpus."]
         zenodo['description'] += '\n<p>{}</p>\n'.format(corpus_citations[0])
         for src in self.cldf_reader().properties['prov:wasDerivedFrom']:
             if src.get('dc:title', '').endswith('DoReCo dataset'):
-                corpus_citations.append('> {}\n'.format(src['dc:bibliographicCitation']))
                 zenodo['description'] += '\n<blockquote>{}</blockquote>\n'.format(
                     html.escape(src['dc:bibliographicCitation']))
         dump(zenodo, self.dir / '.zenodo.json', indent=4)
@@ -345,7 +343,6 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 })
                 i += 1
 
-        misaligned_start, max_misalignment = [], decimal.Decimal('0')
         eids = collections.defaultdict(int)
         for (f, tx, ft), rows in tqdm(itertools.groupby(self.iter_rows('*_wd.csv'), lambda r: (r['file'], r['tx'], r['ft'])), desc='words'):
             rows = list(rows)
@@ -395,13 +392,14 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 })
         assert not wd_intervals, '{} missing wd_IDs linked from phones!'.format(len(wd_intervals))
 
-
     def create_schema(self, cldf):
         t = cldf.add_component(
             'MediaTable',
             {
                 'name': 'rec_date',
-                'datatype': {'base': 'string', 'format': '[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?'}},
+                'datatype': {'base': 'string', 'format': '[0-9]{4}(-[0-9]{2})?(-[0-9]{2})?'},
+                'dc:description': 'Date of recording. See also rec_date_assignment_certain.',
+            },
             {
                 'name': 'rec_date_assignment_certain',
                 'datatype': {'base': 'str', 'format': 'certain|approximate'}},
@@ -409,7 +407,9 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 'name': 'genre',
                 'datatype': {'base': 'str', 'format': 'traditional narrative|personal narrative|conversation|stimulus retelling|procedural|procedural/conversation'}},
             {
-                'name': 'genre_stim', 'datatype': 'string'},
+                'name': 'genre_stim',
+                'null': ['na'],
+                'datatype': 'string'},
             {
                 'name': 'gloss',
                 'dc:description': 'Information on whether/how the audio has been annotated with glosses.',
@@ -486,7 +486,7 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
             'ContributionTable',
             {'name': 'Archive', 'datatype': 'string', 'null': ['na']},
             {'name': 'Archive_link', 'datatype': 'string', 'null': ['na']},
-            {'name': 'AnnotationLicense', 'datatype': 'string'},
+            {'name': 'AnnotationLicense', 'datatype': {'base': 'string', 'format': 'CC BY|CC BY-NC-SA|CC BY-NC'}},
             {'name': 'AudioLicense', 'datatype': 'string'},
             {'name': 'DOI', 'datatype': 'string'},
         )
@@ -512,11 +512,17 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 'name': 'Language_ID',
                 'datatype': 'string',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#languageReference'},
-            {'name': 'age', 'datatype': 'integer'},
+            {
+                'name': 'age',
+                'dc:description': 'Speaker age. See also age_assignment_certain.',
+                'datatype': 'integer'},
             {'name': 'age_assignment_certain',
              'datatype': {'base': 'str', 'format': 'certain|approximate'},
              },
-            {'name': 'sex', 'datatype': {'base': 'str', 'format': 'm|f'}},
+            {
+                'name': 'sex',
+                'dc:description': 'Speaker sex.',
+                'datatype': {'base': 'str', 'format': 'm|f'}},
         )
         t = cldf.add_table(
             'phones.csv',

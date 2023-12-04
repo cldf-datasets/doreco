@@ -1,5 +1,10 @@
 """
 Query the DoReCo SQLite database.
+
+Running queries via this `cldfbench` subcommand makes sure
+- SQLite's built-in math functions are available (because Python's sqlite3 module is used to
+  interface with the database) and
+- a `stdev` function is available.
 """
 import math
 import typing

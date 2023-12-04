@@ -4,8 +4,8 @@ Babel==2.11.0
 bs4==0.0.1
 Cartopy==0.21.1
 certifi==2022.12.7
--e git+https://github.com/cldf/cldfbench@faf74f8780e9e675be58671847cee871985e9292#egg=cldfbench
--e git+https://github.com/cldf-datasets/doreco/@39342aa54c40b5715940dcff2752871eb7a204d6#egg=cldfbench_doreco
+cldfbench==1.14.0
+-e git+https://github.com/cldf-datasets/doreco/@4ab55fb44eebf5674b50280103a97f53154d81d9#egg=cldfbench_doreco
 -e git+https://github.com/cldf-datasets/imtvault@1087aa3d1dc1d846bf2fdc986290d7950025c03b#egg=cldfbench_imtvault
 -e git+https://github.com/cldf-datasets/rangelovvanuatu@f96ca8f58792d9bbd2dc7d80a62540e79639d6e1#egg=cldfbench_rangelovvanuatu
 cldfcatalog==1.5.1

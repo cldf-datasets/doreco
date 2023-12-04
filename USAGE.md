@@ -7,11 +7,10 @@ Before you use the DoReCo CLDF data you should read through the data model descr
 
 This dataset is derived from the DoReCo data as follows:
 
-- DoReCo data is **limited to the core data with annotations released under a license without ND (no derivatives) clause**
-  (because we add annotations which goes against this clause).
+- DoReCo data is 
+  **limited to the core data with annotations released under a license without [ND (no derivatives) clause](https://pitt.libguides.com/openlicensing/cc-noderivatives)**
+  (because we add annotations which would violate this license).
 - Morpheme-aligned data is converted into IGT instances in an ExampleTable.
-- The Beja annotation files are taken from DOI 10.34847/nkl.edd011t1 v6, not the latest, but
-  incorrect v7.
 - Two minor issues with the DoReCo data are fixed, namely a handful of phones in the Evenki corpus
   being linked to two words, and phones/words in the Yucatec corpus having a typo in the speaker
   reference.

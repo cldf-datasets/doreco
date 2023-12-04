@@ -46,7 +46,7 @@ def fix_text(s, type_, gc):
 def harmonize_separators(morphemes, glosses):
     #
     # Combine morphemes and morpheme glosses at the same time, giving explicit morpheme
-    # saparators precedence. E.g.
+    # separators precedence. E.g.
 
     # anē=n
     # DEM1.A-ART
@@ -75,8 +75,8 @@ def combine_morphemes(morphemes, type_):
     """
     FIXME:
     goro1270
-tsoobu>-kwí>----dir=í
-liquid.honey>---DemM>---place\LF
+    tsoobu>-kwí>----dir=í
+    liquid.honey>---DemM>---place\LF
 
     \LF or \F to =LF, =F? or just remove the "="?
     What to do with
