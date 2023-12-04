@@ -1,7 +1,7 @@
 SELECT
     phone.cldf_id AS ID,
 	phone.cldf_name AS Value,
-	phone.duration AS Duration,
+	1000*phone.duration AS Duration,
     word.cldf_languageReference AS Language,
     word.speaker_id AS Speaker,
     CASE
@@ -18,11 +18,11 @@ SELECT
 		WHEN sound.cldf_cltsReference LIKE '%fricative%' THEN 'fricative' ELSE 'sonorant'
         END sound_class,
     -- normalized word length:
-	(phones_per_word.num_phones - sd_num_phones.avg_num_phones) / sd_num_phones.num_phones AS z_num_phones,
+	ROUND(((phones_per_word.num_phones - sd_num_phones.avg_num_phones) / sd_num_phones.num_phones), 3) AS z_num_phones,
 	-- normalized speech rate of the utterance:
-	(utt.log_speech_rate - sd_speech_rate.avg_speech_rate) / sd_speech_rate.speech_rate AS z_speech_rate,
+	ROUND(((utt.log_speech_rate - sd_speech_rate.avg_speech_rate) / sd_speech_rate.speech_rate), 3) AS z_speech_rate,
 	-- normalized frequency of the word form:
-	(forms.freq - sd_word_freq.avg_word_freq) / sd_word_freq.word_freq AS z_word_freq
+	ROUND(((forms.freq - sd_word_freq.avg_word_freq) / sd_word_freq.word_freq), 3) AS z_word_freq
 FROM
     "phones.csv" AS phone,
     "words.csv" AS word, -- word-level metadata joined ON phone.wd_id = word.cldf_id
