@@ -267,7 +267,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
-            "dc:created": "4ab55fb",
+            "dc:created": "fb1a513",
             "dc:title": "Repository"
         },
         {
@@ -695,7 +695,7 @@
                     {
                         "datatype": {
                             "base": "string",
-                            "format": "CC BY|CC BY-NC-SA|CC BY-NC"
+                            "format": "CC BY|CC BY-NC-SA|CC BY-NC|CC BY-NC-ND"
                         },
                         "name": "AnnotationLicense"
                     },
