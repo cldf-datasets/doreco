@@ -486,7 +486,7 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
             'ContributionTable',
             {'name': 'Archive', 'datatype': 'string', 'null': ['na']},
             {'name': 'Archive_link', 'datatype': 'string', 'null': ['na']},
-            {'name': 'AnnotationLicense', 'datatype': {'base': 'string', 'format': 'CC BY|CC BY-NC-SA|CC BY-NC'}},
+            {'name': 'AnnotationLicense', 'datatype': {'base': 'string', 'format': 'CC BY|CC BY-NC-SA|CC BY-NC|CC BY-NC-ND'}},
             {'name': 'AudioLicense', 'datatype': 'string'},
             {'name': 'DOI', 'datatype': 'string'},
         )
