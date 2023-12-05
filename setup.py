@@ -20,6 +20,8 @@ setup(
         'pybtex',
         'tqdm',
         'cldfbench',
+        'pydub',
+        'pyigt'
     ],
     extras_require={
         'test': [
