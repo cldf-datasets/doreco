@@ -18,6 +18,7 @@ setup(
     install_requires=[
         'clldutils>=3.20',
         'pyclts',
+        'pyglottolog',
         'pybtex',
         'tqdm',
         'cldfbench',
