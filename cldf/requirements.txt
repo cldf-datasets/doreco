@@ -1,17 +1,16 @@
 appdirs==1.4.4
 arrow==1.2.3
 Babel==2.11.0
+bibtexparser==2.0.0b4
 bs4==0.0.1
 Cartopy==0.21.1
 certifi==2022.12.7
 cldfbench==1.14.0
--e git+https://github.com/cldf-datasets/doreco/@fb1a5134fb65f845a00d029a257c21463fda7f97#egg=cldfbench_doreco
--e git+https://github.com/cldf-datasets/imtvault@1087aa3d1dc1d846bf2fdc986290d7950025c03b#egg=cldfbench_imtvault
--e git+https://github.com/cldf-datasets/rangelovvanuatu@f96ca8f58792d9bbd2dc7d80a62540e79639d6e1#egg=cldfbench_rangelovvanuatu
+-e git+https://github.com/cldf-datasets/doreco/@83130c3f59da5c741dc19feb307be0e84c93c8fa#egg=cldfbench_doreco
 cldfcatalog==1.5.1
 cldfviz==1.0.1
 cldfzenodo==1.1.0
-clldutils==3.20.0
+clldutils==3.22.1
 colorama==0.4.6
 colorlog==6.7.0
 commonnexus==1.2.0
@@ -29,7 +28,6 @@ jmespath==1.0.1
 jsonschema==4.17.3
 kiwisolver==1.4.4
 Levenshtein==0.20.9
--e git+https://github.com/cldf/linglit@ccdc08844cc8736beca42d29c5cc1a65c303819f#egg=linglit
 lxml==4.9.2
 Markdown==3.4.1
 MarkupSafe==2.1.1

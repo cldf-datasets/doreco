@@ -14,6 +14,8 @@ Please note that when citing this dataset, it is NOT sufficient to refer to DoRe
 
 This dataset is licensed under a CC-BY license
 
+Available online at https://doreco.huma-num.fr/
+
 
 
 ![](map.png)

@@ -503,7 +503,7 @@ in a file called `phones_by_duration.sql` you can run the parametrized query fro
 $ cldfbench doreco.query phones_by_duration.sql 0.7
   count(*)
 ----------
-     79281
+     60218
 ```
 
 ### Filtering phones based on features
@@ -579,7 +579,7 @@ count(*)
 
 Note that the SQLite library used in `cldfbench doreco.query` does also support
 [math functions](https://www.sqlite.org/lang_mathfunc.html) as well as `stdev` as aggregate function. Thus, the above query can also be
-run by saving the SQL as `query,sql` and running
+run by saving the SQL as `query.sql` and running
 ```shell
 cldfbench doreco.query q.sql 
   count(*)

@@ -1,5 +1,10 @@
 # Releasing the DoReCo CLDF dataset
 
+- Install requirements:
+  ```shell
+  pip install cldfviz[cartopy]
+  ```
+
 - Adapt the URLs for languages metadata and citations in `cmd_download` to the ones linked from 
   https://doreco.huma-num.fr/languages
 - Adapt/remove the fixes in `cldfbench_doreco.py` if the corresponding issues in the "raw" data

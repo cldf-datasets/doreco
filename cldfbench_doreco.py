@@ -229,7 +229,7 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
             args.writer.objects["ContributionTable"].append({
                 "ID": row["Glottocode"],
                 "Name": "{}  DoReCo dataset".format(row["Language"]),
-                "Citation": str(args.writer.cldf.sources["doreco-" + row["Glottocode"]]),
+                "Citation": CORPUS_CITATION_FMT.format(**row),
                 "Contributor": row["Creator"],
                 "Archive": row["Archive"],
                 "Archive_link": row["Archive_link"],
@@ -402,10 +402,10 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
             },
             {
                 'name': 'rec_date_assignment_certain',
-                'datatype': {'base': 'str', 'format': 'certain|approximate'}},
+                'datatype': {'base': 'string', 'format': 'certain|approximate'}},
             {
                 'name': 'genre',
-                'datatype': {'base': 'str', 'format': 'traditional narrative|personal narrative|conversation|stimulus retelling|procedural|procedural/conversation'}},
+                'datatype': {'base': 'string', 'format': 'traditional narrative|personal narrative|conversation|stimulus retelling|procedural|procedural/conversation'}},
             {
                 'name': 'genre_stim',
                 'null': ['na'],
@@ -424,11 +424,11 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
             },
             {
                 'name': 'sound_quality',
-                'datatype': {'base': 'str', 'format': 'good|medium|bad|middle'}},
+                'datatype': {'base': 'string', 'format': 'good|medium|bad|middle'}},
             {
                 'name': 'background_noise',
                 'null': ['na'],
-                'datatype': {'base': 'str', 'format': 'punctual|none|constant|medium'}},
+                'datatype': {'base': 'string', 'format': 'punctual|none|constant|medium'}},
             {
                 'name': 'Corpus_ID',
                 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#contributionReference',
@@ -517,12 +517,12 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 'dc:description': 'Speaker age. See also age_assignment_certain.',
                 'datatype': 'integer'},
             {'name': 'age_assignment_certain',
-             'datatype': {'base': 'str', 'format': 'certain|approximate'},
+             'datatype': {'base': 'string', 'format': 'certain|approximate'},
              },
             {
                 'name': 'sex',
                 'dc:description': 'Speaker sex.',
-                'datatype': {'base': 'str', 'format': 'm|f'}},
+                'datatype': {'base': 'string', 'format': 'm|f'}},
         )
         t = cldf.add_table(
             'phones.csv',
