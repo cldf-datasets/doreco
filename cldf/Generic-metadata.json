@@ -268,7 +268,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
-            "dc:created": "83130c3",
+            "dc:created": "2064e0f",
             "dc:title": "Repository"
         },
         {
@@ -731,7 +731,7 @@
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
             "dc:description": "The ParameterTable lists IPA phones which appear in the DoReCo corpus (if a correspondence to the X-Sampa representation could be determined). If possible, IPA phones are linked to CLTS' BIPA representation, giving access to the CLTS feature system.",
-            "dc:extent": 339,
+            "dc:extent": 335,
             "tableSchema": {
                 "columns": [
                     {

@@ -195,13 +195,17 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
             bib_format='bibtex',
         ))
 
-        for i, (xsampa, bipa) in enumerate(list(xsampa_to_bipa.items()), start=1):
-            args.writer.objects['ParameterTable'].append(dict(
-                ID=str(i),
-                Name=bipa.s,
-                CLTS_ID=bipa.name.replace(' ', '_'),
-            ))
-            xsampa_to_bipa[xsampa] = str(i)
+        known, i = {}, 0
+        for xsampa, bipa in xsampa_to_bipa.items():
+            if bipa.s not in known:
+                i += 1
+                args.writer.objects['ParameterTable'].append(dict(
+                    ID=str(i),
+                    Name=bipa.s,
+                    CLTS_ID=bipa.name.replace(' ', '_'),
+                ))
+                known[bipa.s] = str(i)
+            xsampa_to_bipa[xsampa] = known[bipa.s]
 
         args.log.info("added sources")
 
