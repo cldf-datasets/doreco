@@ -6,7 +6,7 @@ bs4==0.0.1
 Cartopy==0.21.1
 certifi==2022.12.7
 cldfbench==1.14.0
--e git+https://github.com/cldf-datasets/doreco/@2064e0fa20a4db607fb83a3ad8219e887fcfcf85#egg=cldfbench_doreco
+-e git+https://github.com/cldf-datasets/doreco/@25772a7e69f8430f11580737e5e5e33732d34c18#egg=cldfbench_doreco
 -e git+https://github.com/cldf-datasets/imtvault@1087aa3d1dc1d846bf2fdc986290d7950025c03b#egg=cldfbench_imtvault
 -e git+https://github.com/cldf-datasets/rangelovvanuatu@f96ca8f58792d9bbd2dc7d80a62540e79639d6e1#egg=cldfbench_rangelovvanuatu
 cldfcatalog==1.5.1
