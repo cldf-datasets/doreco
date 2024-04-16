@@ -11,7 +11,7 @@
     "dc:license": "CC-BY",
     "dc:source": "sources.bib",
     "dc:title": "CLDF dataset derived from the DoReCo core corpus",
-    "dcat:accessURL": "https://github.com/cldf-datasets/doreco/",
+    "dcat:accessURL": "https://github.com/cldf-datasets/doreco",
     "prov:wasDerivedFrom": [
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
@@ -52,6 +52,12 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
+            "dc:title": "Cab\u00e9car DoReCo dataset",
+            "dc:bibliographicCitation": "Quesada, Juan Diego and Skopeteas, Stavros and Pasamonik, Carolina and Brokmann, Carolin and Fischer, Florian. 2022. Cab\u00e9car DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/cabe1245. DOI:10.34847/nkl.ebc4ra22"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
             "dc:title": "Cashinahua DoReCo dataset",
             "dc:bibliographicCitation": "Reiter, Sabine. 2022. Cashinahua DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/cash1254. DOI:10.34847/nkl.a8f9q2f1"
         },
@@ -78,6 +84,12 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Gorwaa DoReCo dataset",
             "dc:bibliographicCitation": "Harvey, Andrew. 2022. Gorwaa DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/goro1270. DOI:10.34847/nkl.a4b4ijj2"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Hooc\u0105k DoReCo dataset",
+            "dc:bibliographicCitation": "Hartmann, Iren. 2022. Hooc\u0105k DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/hoch1243. DOI:10.34847/nkl.b57f5065"
         },
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
@@ -118,6 +130,12 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
+            "dc:title": "Light Warlpiri DoReCo dataset",
+            "dc:bibliographicCitation": "O'Shannessy, Carmel. 2022. Light Warlpiri DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/ligh1234. DOI:10.34847/nkl.7452803q"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
             "dc:title": "Lower Sorbian DoReCo dataset",
             "dc:bibliographicCitation": "Bartels, Hauke and Szczepa\u0144ski, Marcin. 2022. Lower Sorbian DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/lowe1385. DOI:10.34847/nkl.6c6e4e9k"
         },
@@ -136,6 +154,12 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
+            "dc:title": "Nisvai DoReCo dataset",
+            "dc:bibliographicCitation": "Aznar, Jocelyn. 2022. Nisvai DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/nisv1234. DOI:10.34847/nkl.2801565f"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
             "dc:title": "N\u01c1ng DoReCo dataset",
             "dc:bibliographicCitation": "G\u00fcldemann, Tom and Ernszt, Martina and Siegmund, Sven and Witzlack-Makarevich, Alena. 2022. N\u01c1ng DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/nngg1234. DOI:10.34847/nkl.f6c37fi0"
         },
@@ -144,6 +168,12 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Northern Kurdish (Kurmanji) DoReCo dataset",
             "dc:bibliographicCitation": "Haig, Geoff and Vollmer, Maria and Thiele, Hanna. 2022. Northern Kurdish (Kurmanji) DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/nort2641. DOI:10.34847/nkl.ca10ez5t"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Northern Alta DoReCo dataset",
+            "dc:bibliographicCitation": "Garcia-Laguia, Alexandro. 2022. Northern Alta DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/nort2875. DOI:10.34847/nkl.efea0b36"
         },
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
@@ -256,8 +286,20 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
+            "dc:title": "Urum DoReCo dataset",
+            "dc:bibliographicCitation": "Skopeteas, Stavros and Moisidi, Violeta and Tsetereli, Nutsa and Lorenz, Johanna and Schr\u00f6ter, Stefanie. 2022. Urum DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/urum1249. DOI:10.34847/nkl.ac166n10"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
             "dc:title": "Vera'a DoReCo dataset",
             "dc:bibliographicCitation": "Schnell, Stefan. 2022. Vera'a DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/vera1241. DOI:10.34847/nkl.3e2cu8c4"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Warlpiri DoReCo dataset",
+            "dc:bibliographicCitation": "O'Shannessy, Carmel. 2022. Warlpiri DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/warl1254. DOI:10.34847/nkl.042dv614"
         },
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
@@ -268,20 +310,32 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
-            "dc:created": "25772a7",
+            "dc:title": "Yucatec Maya DoReCo dataset",
+            "dc:bibliographicCitation": "Skopeteas, Stavros. 2022. Yucatec Maya DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/yuca1254. DOI:10.34847/nkl.9cbb3619"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco/",
+            "rdf:type": "prov:Entity",
+            "dc:title": "Yurakar\u00e9 DoReCo dataset",
+            "dc:bibliographicCitation": "Gipper, Sonja and Ballivi\u00e1n Torrico, Jerem\u00edas. 2022. Yurakar\u00e9 DoReCo dataset. In Seifart, Frank, Ludger Paschen and Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Universit\u00e9 Lyon 2). https://doreco.huma-num.fr/languages/yura1255. DOI:10.34847/nkl.7ca412wg"
+        },
+        {
+            "rdf:about": "https://github.com/cldf-datasets/doreco",
+            "rdf:type": "prov:Entity",
+            "dc:created": "v1.2",
             "dc:title": "Repository"
         },
         {
             "rdf:about": "https://github.com/glottolog/glottolog",
             "rdf:type": "prov:Entity",
-            "dc:created": "v4.8",
+            "dc:created": "v5.0",
             "dc:title": "Glottolog"
         }
     ],
     "prov:wasGeneratedBy": [
         {
             "dc:title": "python",
-            "dc:description": "3.10.12"
+            "dc:description": "3.12.2"
         },
         {
             "dc:title": "python-packages",
@@ -294,7 +348,7 @@
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#MediaTable",
             "dc:description": "This table lists audio files which have been transcribed/annotated for DoReCo corpora. Note that only downloadable files are listed.",
-            "dc:extent": 583,
+            "dc:extent": 830,
             "tableSchema": {
                 "columns": [
                     {
@@ -431,7 +485,7 @@
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
             "dc:description": "Some corpora in DoReCo contain data annotated with glosses. Such glossed data is extracted into a CLDF ExampleTable.",
-            "dc:extent": 94672,
+            "dc:extent": 104388,
             "tableSchema": {
                 "columns": [
                     {
@@ -493,6 +547,17 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference",
                         "required": false,
                         "name": "Meta_Language_ID"
+                    },
+                    {
+                        "dc:description": "The level of conformance of the example with the Leipzig Glossing Rules",
+                        "dc:extent": "singlevalued",
+                        "datatype": {
+                            "base": "string",
+                            "format": "WORD_ALIGNED|MORPHEME_ALIGNED"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lgrConformance",
+                        "required": false,
+                        "name": "LGR_Conformance"
                     },
                     {
                         "datatype": "string",
@@ -565,7 +630,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 42,
+            "dc:extent": 51,
             "tableSchema": {
                 "columns": [
                     {
@@ -643,7 +708,7 @@
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
             "dc:description": "Each DoReCo language corpus is listed as separate contribution in this table.",
-            "dc:extent": 42,
+            "dc:extent": 51,
             "tableSchema": {
                 "columns": [
                     {
@@ -775,7 +840,7 @@
             "url": "parameters.csv"
         },
         {
-            "dc:extent": 289,
+            "dc:extent": 396,
             "tableSchema": {
                 "columns": [
                     {
@@ -829,7 +894,7 @@
         },
         {
             "dc:description": "This table lists individual, time-aligned phones.",
-            "dc:extent": 1863702,
+            "dc:extent": 2389658,
             "tableSchema": {
                 "columns": [
                     {
@@ -912,7 +977,7 @@
             "url": "phones.csv"
         },
         {
-            "dc:extent": 896664,
+            "dc:extent": 1073744,
             "tableSchema": {
                 "columns": [
                     {
@@ -1034,7 +1099,7 @@
         },
         {
             "dc:description": "Gloss abbreviations used for glosses in a corpus.",
-            "dc:extent": 2053,
+            "dc:extent": 2434,
             "tableSchema": {
                 "columns": [
                     {
