@@ -5,10 +5,15 @@ bibtexparser==2.0.0b4
 bs4==0.0.1
 Cartopy==0.21.1
 certifi==2022.12.7
+cffi==1.16.0
+chardet==5.2.0
 cldfbench==1.14.0
--e git+https://github.com/cldf-datasets/doreco/@25772a7e69f8430f11580737e5e5e33732d34c18#egg=cldfbench_doreco
+-e git+https://github.com/cldf-datasets/doreco/@42f6dc36389d9585e2904983c33caf6ff57b85fc#egg=cldfbench_doreco
+-e git+https://github.com/cldf-datasets/haigandschnellmulticast.git@a03269497020aeab5c862a0e8d294786d567c241#egg=cldfbench_haigandschnellmulticast
 -e git+https://github.com/cldf-datasets/imtvault@1087aa3d1dc1d846bf2fdc986290d7950025c03b#egg=cldfbench_imtvault
+-e git+https://github.com/cldf-datasets/languageatlasofthepacificarea@ac194750228b5e782cab2cc6710a5c355602edaa#egg=cldfbench_languageatlasofthepacificarea
 -e git+https://github.com/cldf-datasets/rangelovvanuatu@f96ca8f58792d9bbd2dc7d80a62540e79639d6e1#egg=cldfbench_rangelovvanuatu
+-e git+https://github.com/cldf-datasets/uclaphoneticslabarchive@9cd6643548cf54d02287011eee266f5b5db861d4#egg=cldfbench_uclaphoneticslabarchive
 cldfcatalog==1.5.1
 cldfviz==1.0.1
 cldfzenodo==1.1.0
@@ -19,6 +24,8 @@ commonnexus==1.2.0
 csvw==3.2.0
 cycler==0.11.0
 exceptiongroup==1.1.0
+fiona==1.9.5
+geopandas==0.14.2
 gitdb==4.0.10
 greenlet==2.0.1
 html5lib==1.1
@@ -30,7 +37,7 @@ jmespath==1.0.1
 jsonschema==4.17.3
 kiwisolver==1.4.4
 Levenshtein==0.20.9
--e git+https://github.com/cldf/linglit@ccdc08844cc8736beca42d29c5cc1a65c303819f#egg=linglit
+-e git+https://github.com/cldf/linglit@467252bced874e4921ea37e3b445080839f8075c#egg=linglit
 lxml==4.9.2
 Markdown==3.4.1
 MarkupSafe==2.1.1
@@ -40,16 +47,17 @@ nameparser==1.1.2
 newick==1.9.0
 numpy==1.24.1
 openpyxl==3.1.2
-packaging==23.0
-pluggy==1.0.0
+packaging==23.2
+pandas==2.2.0
+pluggy==1.4.0
 purl==1.6
 pybtex==0.24.0
-pycldf==1.36.0
+-e git+https://github.com/cldf/pycldf@2ea08a74d6de7c905871da62a1427299bd4b8d0f#egg=pycldf
 pyclts==3.1.1
 pycountry==22.3.5
 pydub==0.25.1
 pyglottolog==3.11.0
-pyigt==2.0.0
+pyigt==2.1.0
 pylatexenc==2.10
 pyparsing==3.0.9
 pyproj==3.4.1
@@ -69,6 +77,7 @@ segments==2.2.1
 shapely==2.0.0
 six==1.16.0
 smmap==5.0.0
+soundfile==0.12.1
 soupsieve==2.3.2.post1
 SQLAlchemy==1.4.46
 tabulate==0.9.0

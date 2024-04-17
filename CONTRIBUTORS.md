@@ -6,4 +6,4 @@ Frank Seifart | | author
 Ludger Paschen | @LuPaschen | author
 Matthew Stave | @matt-stave | author
 Robert Forkel | @xrotwang | author
-
+Frederic Blum | @FredericBlum | author

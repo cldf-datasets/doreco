@@ -11,6 +11,9 @@
         },
         {
             "name": "Robert Forkel"
+        },
+        {
+            "name": "Frederic Blum"
         }
     ],
     "title": "CLDF dataset derived from the DoReCo core corpus",
