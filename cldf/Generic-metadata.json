@@ -322,7 +322,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco",
             "rdf:type": "prov:Entity",
-            "dc:created": "v1.2",
+            "dc:created": "v1.2-1-g8a9e4b6",
             "dc:title": "Repository"
         },
         {
@@ -697,6 +697,10 @@
                         "datatype": "string",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
                         "name": "Source"
+                    },
+                    {
+                        "datatype": "string",
+                        "name": "Family"
                     }
                 ],
                 "primaryKey": [

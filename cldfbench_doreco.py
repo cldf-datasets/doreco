@@ -220,12 +220,10 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 "dc:bibliographicCitation": CORPUS_CITATION_FMT.format(**row)
             })
 
-            print(row["Language"], row["Family"])
             args.writer.objects["LanguageTable"].append({
                 "ID": row["Glottocode"],
                 "Name": row["Language"],
                 "Glottocode": row["Glottocode"],
-                "Family": row["Family"],
                 "Latitude": row["Latitude"],
                 "Longitude": row["Longitude"],
                 "Macroarea": row["Area"],
@@ -483,10 +481,9 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
         cldf['ExampleTable', 'Gloss'].separator = '\t'
         cldf.add_component(
             'LanguageTable',
-            {
-                'name': 'Source',
-                'datatype': 'string',
-                'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#source'})
+            {'name': 'Source', 'datatype': 'string', 'propertyUrl': 'http://cldf.clld.org/v1.0/terms.rdf#source'},
+            {'name': 'Family', 'datatype': 'string'}
+            )
 
         t = cldf.add_component(
             'ContributionTable',
