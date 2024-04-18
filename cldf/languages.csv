@@ -1,43 +1,43 @@
 ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code,Source,Family
-anal1239,Anal,Eurasia,24.05,94.28,anal1239,,doreco-anal1239,
-apah1238,Yali (Apahapsili),Papunesia,-4.08,139.46,apah1238,,doreco-apah1238,
-arap1274,Arapaho,North America,43.39,-108.81,arap1274,,doreco-arap1274,
-bain1259,Baïnounk Gubëeher,Africa,12.31,-16.06,bain1259,,doreco-bain1259,
-beja1238,Beja,Africa,17.24,36.67,beja1238,,doreco-beja1238,
-bora1263,Bora,South America,-2,-72.26,bora1263,,doreco-bora1263,
-cash1254,Cashinahua,South America,-9.72,-71.17,cash1254,,doreco-cash1254,
-dolg1241,Dolgan,Eurasia,71.11,94.29,dolg1241,,doreco-dolg1241,
-even1259,Evenki,Eurasia,61.97,94.69,even1259,,doreco-even1259,
-goem1240,Goemai,Africa,8.74,9.72,goem1240,,doreco-goem1240,
-goro1270,Gorwaa,Africa,-4.24,35.8,goro1270,,doreco-goro1270,
-jeha1242,Jahai,Eurasia,5.64,101.54,jeha1242,,doreco-jeha1242,
-jeju1234,Jejuan,Eurasia,33.38,126.56,jeju1234,,doreco-jeju1234,
-kaka1265,Kakabe,Africa,10.6,-11.44,kaka1265,,doreco-kaka1265,
-kama1351,Kamas,Eurasia,55.07,94.83,kama1351,,doreco-kama1351,
-kark1256,Tabaq (Karko),Africa,12.05,29.21,kark1256,,doreco-kark1256,
-komn1238,Komnzo,Papunesia,-8.65,141.52,komn1238,,doreco-komn1238,
-lowe1385,Lower Sorbian,Eurasia,51.66,13.94,lowe1385,,doreco-lowe1385,
-movi1243,Movima,South America,-13.81,-65.63,movi1243,,doreco-movi1243,
-ngal1292,Dalabon,Australia,-13.98,133.94,ngal1292,,doreco-ngal1292,
-nngg1234,Nǁng,Africa,-29.71,19.08,nngg1234,,doreco-nngg1234,
-nort2641,Northern Kurdish (Kurmanji),Eurasia,37,43,nort2641,,doreco-nort2641,
-orko1234,Fanbyak,Papunesia,-16.21,168.21,orko1234,,doreco-orko1234,
-pnar1238,Pnar,Eurasia,24.82,92.26,pnar1238,,doreco-pnar1238,
-port1286,Daakie,Papunesia,-16.31,168.05,port1286,,doreco-port1286,
-resi1247,Resígaro,South America,-2.48,-71.36,resi1247,,doreco-resi1247,
-ruul1235,Ruuli,Africa,1.42,32.42,ruul1235,,doreco-ruul1235,
-sadu1234,Sadu,Eurasia,24.3,102,sadu1234,,doreco-sadu1234,
-sanz1248,Sanzhi Dargwa,Eurasia,41.98,47.57,sanz1248,,doreco-sanz1248,
-savo1255,Savosavo,Papunesia,-9.13,159.81,savo1255,,doreco-savo1255,
-sout2856,Nafsan (South Efate),Papunesia,-17.7,168.38,sout2856,,doreco-sout2856,
-sout3282,English (Southern England),Eurasia,53,-1,sout3282,,doreco-sout3282,
-stan1290,French (Swiss),Eurasia,48,2,stan1290,,doreco-stan1290,
-sumi1235,Sümi,Eurasia,26,94.42,sumi1235,,doreco-sumi1235,
-svan1243,Svan,Eurasia,42.91,42.59,svan1243,,doreco-svan1243,
-taba1259,Tabasaran,Eurasia,42.02,47.84,taba1259,,doreco-taba1259,
-teop1238,Teop,Papunesia,-5.67,154.97,teop1238,,doreco-teop1238,
-texi1237,Texistepec Popoluca,North America,17.89,-94.81,texi1237,,doreco-texi1237,
-trin1278,Mojeño Trinitario,South America,-15.33,-65.41,trin1278,,doreco-trin1278,
-tsim1256,Asimjeeg Datooga,Africa,-3.42,35.43,tsim1256,,doreco-tsim1256,
-vera1241,Vera'a,Papunesia,-13.89,167.43,vera1241,,doreco-vera1241,
-yong1270,Yongning Na,Eurasia,27.8,100.9,yong1270,,doreco-yong1270,
+anal1239,Anal,Eurasia,24.05,94.28,anal1239,,doreco-anal1239,Sino-Tibetan
+apah1238,Yali (Apahapsili),Papunesia,-4.08,139.46,apah1238,,doreco-apah1238,Nuclear Trans New Guinea
+arap1274,Arapaho,North America,43.39,-108.81,arap1274,,doreco-arap1274,Algic
+bain1259,Baïnounk Gubëeher,Africa,12.31,-16.06,bain1259,,doreco-bain1259,Atlantic-Congo
+beja1238,Beja,Africa,17.24,36.67,beja1238,,doreco-beja1238,Afro-Asiatic
+bora1263,Bora,South America,-2,-72.26,bora1263,,doreco-bora1263,Boran
+cash1254,Cashinahua,South America,-9.72,-71.17,cash1254,,doreco-cash1254,Pano-Tacanan
+dolg1241,Dolgan,Eurasia,71.11,94.29,dolg1241,,doreco-dolg1241,Turkic
+even1259,Evenki,Eurasia,61.97,94.69,even1259,,doreco-even1259,Tungusic
+goem1240,Goemai,Africa,8.74,9.72,goem1240,,doreco-goem1240,Afro-Asiatic
+goro1270,Gorwaa,Africa,-4.24,35.8,goro1270,,doreco-goro1270,Afro-Asiatic
+jeha1242,Jahai,Eurasia,5.64,101.54,jeha1242,,doreco-jeha1242,Austroasiatic
+jeju1234,Jejuan,Eurasia,33.38,126.56,jeju1234,,doreco-jeju1234,Koreanic
+kaka1265,Kakabe,Africa,10.6,-11.44,kaka1265,,doreco-kaka1265,Mande
+kama1351,Kamas,Eurasia,55.07,94.83,kama1351,,doreco-kama1351,Uralic
+kark1256,Tabaq (Karko),Africa,12.05,29.21,kark1256,,doreco-kark1256,Nubian
+komn1238,Komnzo,Papunesia,-8.65,141.52,komn1238,,doreco-komn1238,Yam
+lowe1385,Lower Sorbian,Eurasia,51.66,13.94,lowe1385,,doreco-lowe1385,Indo-European
+movi1243,Movima,South America,-13.81,-65.63,movi1243,,doreco-movi1243,Isolate
+ngal1292,Dalabon,Australia,-13.98,133.94,ngal1292,,doreco-ngal1292,Gunwinyguan
+nngg1234,Nǁng,Africa,-29.71,19.08,nngg1234,,doreco-nngg1234,Tuu
+nort2641,Northern Kurdish (Kurmanji),Eurasia,37,43,nort2641,,doreco-nort2641,Indo-European
+orko1234,Fanbyak,Papunesia,-16.21,168.21,orko1234,,doreco-orko1234,Austronesian
+pnar1238,Pnar,Eurasia,24.82,92.26,pnar1238,,doreco-pnar1238,Austroasiatic
+port1286,Daakie,Papunesia,-16.31,168.05,port1286,,doreco-port1286,Austronesian
+resi1247,Resígaro,South America,-2.48,-71.36,resi1247,,doreco-resi1247,Arawakan
+ruul1235,Ruuli,Africa,1.42,32.42,ruul1235,,doreco-ruul1235,Atlantic-Congo
+sadu1234,Sadu,Eurasia,24.3,102,sadu1234,,doreco-sadu1234,Sino-Tibetan
+sanz1248,Sanzhi Dargwa,Eurasia,41.98,47.57,sanz1248,,doreco-sanz1248,Nakh-Daghestanian
+savo1255,Savosavo,Papunesia,-9.13,159.81,savo1255,,doreco-savo1255,Isolate
+sout2856,Nafsan (South Efate),Papunesia,-17.7,168.38,sout2856,,doreco-sout2856,Austronesian
+sout3282,English (Southern England),Eurasia,53,-1,sout3282,,doreco-sout3282,Indo-European
+stan1290,French (Swiss),Eurasia,48,2,stan1290,,doreco-stan1290,Indo-European
+sumi1235,Sümi,Eurasia,26,94.42,sumi1235,,doreco-sumi1235,Sino-Tibetan
+svan1243,Svan,Eurasia,42.91,42.59,svan1243,,doreco-svan1243,Kartvelian
+taba1259,Tabasaran,Eurasia,42.02,47.84,taba1259,,doreco-taba1259,Nakh-Daghestanian
+teop1238,Teop,Papunesia,-5.67,154.97,teop1238,,doreco-teop1238,Austronesian
+texi1237,Texistepec Popoluca,North America,17.89,-94.81,texi1237,,doreco-texi1237,Mixe-Zoque
+trin1278,Mojeño Trinitario,South America,-15.33,-65.41,trin1278,,doreco-trin1278,Arawakan
+tsim1256,Asimjeeg Datooga,Africa,-3.42,35.43,tsim1256,,doreco-tsim1256,Nilotic
+vera1241,Vera'a,Papunesia,-13.89,167.43,vera1241,,doreco-vera1241,Austronesian
+yong1270,Yongning Na,Eurasia,27.8,100.9,yong1270,,doreco-yong1270,Sino-Tibetan

@@ -8,7 +8,7 @@ certifi==2022.12.7
 cffi==1.16.0
 chardet==5.2.0
 cldfbench==1.14.0
--e git+https://github.com/cldf-datasets/doreco/@42f6dc36389d9585e2904983c33caf6ff57b85fc#egg=cldfbench_doreco
+-e git+https://github.com/cldf-datasets/doreco/@270e584f272ec6f350933a3ea8e4cec6b5b68db0#egg=cldfbench_doreco
 -e git+https://github.com/cldf-datasets/haigandschnellmulticast.git@a03269497020aeab5c862a0e8d294786d567c241#egg=cldfbench_haigandschnellmulticast
 -e git+https://github.com/cldf-datasets/imtvault@1087aa3d1dc1d846bf2fdc986290d7950025c03b#egg=cldfbench_imtvault
 -e git+https://github.com/cldf-datasets/languageatlasofthepacificarea@ac194750228b5e782cab2cc6710a5c355602edaa#egg=cldfbench_languageatlasofthepacificarea

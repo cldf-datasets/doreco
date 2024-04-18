@@ -224,6 +224,7 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 "ID": row["Glottocode"],
                 "Name": row["Language"],
                 "Glottocode": row["Glottocode"],
+                "Family": row["Family"],
                 "Latitude": row["Latitude"],
                 "Longitude": row["Longitude"],
                 "Macroarea": row["Area"],

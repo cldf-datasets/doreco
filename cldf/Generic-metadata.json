@@ -268,7 +268,7 @@
         {
             "rdf:about": "https://github.com/cldf-datasets/doreco/",
             "rdf:type": "prov:Entity",
-            "dc:created": "v1.2-2-g42f6dc3",
+            "dc:created": "v1.2-4-g270e584",
             "dc:title": "Repository"
         },
         {

@@ -148,6 +148,7 @@ def igt(rows, tx, ft, eids, fid):
             Primary_Text=tx,
             Analyzed_Word=[k if k else NON_OVERT_ELEMENT for k in mbs],
             Gloss=[k if k else NON_OVERT_ELEMENT for k in gls],
+            LGR_Conformance=igt.conformance.name,
             Translated_Text=ft,
             start=decimal.Decimal(rows[0]["start"]),
             end=decimal.Decimal(rows[-1]["end"]),
