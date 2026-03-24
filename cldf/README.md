@@ -8,13 +8,13 @@
 
 property | value
  --- | ---
-[dc:bibliographicCitation](http://purl.org/dc/terms/bibliographicCitation) | Seifart, Frank, Ludger Paschen & Matthew Stave (eds.). 2022. Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Université Lyon 2). DOI:10.34847/nkl.7cbfq779
+[dc:bibliographicCitation](http://purl.org/dc/terms/bibliographicCitation) | Seifart, Frank, Ludger Paschen & Matthew Stave (eds.). 2022. Language Documentation Reference Corpus (DoReCo) 2.0. Berlin & Lyon: Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage (UMR5596, CNRS & Université Lyon 2). DOI:10.34847/nkl.7cbfq779
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF Generic](http://cldf.clld.org/v1.0/terms.rdf#Generic)
 [dc:identifier](http://purl.org/dc/terms/identifier) | https://doreco.huma-num.fr/
 [dc:license](http://purl.org/dc/terms/license) | CC-BY
-[dcat:accessURL](http://www.w3.org/ns/dcat#accessURL) | https://github.com/cldf-datasets/doreco/
-[prov:wasDerivedFrom](http://www.w3.org/ns/prov#wasDerivedFrom) | <ol><li><a href="https://github.com/cldf-datasets/doreco/">Anal DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yali (Apahapsili) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Arapaho DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Baïnounk Gubëeher DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Beja DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Bora DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Cashinahua DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Dolgan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Evenki DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Goemai DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Gorwaa DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Jahai DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Jejuan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Kakabe DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Kamas DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Tabaq (Karko) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Komnzo DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Lower Sorbian DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Movima DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Dalabon DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Nǁng DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Northern Kurdish (Kurmanji) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Fanbyak DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Pnar DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Daakie DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Resígaro DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Ruuli DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sadu DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sanzhi Dargwa DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Savosavo DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Nafsan (South Efate) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">English (Southern England) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">French (Swiss) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sümi DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Svan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Tabasaran DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Teop DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Texistepec Popoluca DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Mojeño Trinitario DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Asimjeeg Datooga DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Vera'a DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yongning Na DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco//tree/270e584">cldf-datasets/doreco/ v1.2-4-g270e584</a></li><li><a href="https://github.com/glottolog/glottolog/tree/v4.8">Glottolog v4.8</a></li></ol>
-[prov:wasGeneratedBy](http://www.w3.org/ns/prov#wasGeneratedBy) | <ol><li><strong>python</strong>: 3.10.12</li><li><strong>python-packages</strong>: <a href="./requirements.txt">requirements.txt</a></li></ol>
+[dcat:accessURL](http://www.w3.org/ns/dcat#accessURL) | https://github.com/cldf-datasets/doreco
+[prov:wasDerivedFrom](http://www.w3.org/ns/prov#wasDerivedFrom) | <ol><li><a href="https://github.com/cldf-datasets/doreco/">Anal DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yali (Apahapsili) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Arapaho DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Baïnounk Gubëeher DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Beja DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Bora DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Cabécar DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Cashinahua DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Dolgan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Evenki DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Goemai DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Gorwaa DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Jahai DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Jejuan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Kakabe DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Kamas DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Tabaq (Karko) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Komnzo DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Lower Sorbian DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Movima DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Dalabon DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Nǁng DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Northern Kurdish (Kurmanji) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Northern Alta DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Fanbyak DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Pnar DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Daakie DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Resígaro DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Ruuli DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sadu DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sanzhi Dargwa DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Savosavo DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Nafsan (South Efate) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">English (Southern England) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">French (Swiss) DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Sümi DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Svan DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Tabasaran DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Teop DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Texistepec Popoluca DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Totoli DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Mojeño Trinitario DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Asimjeeg Datooga DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Urum DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Vera'a DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yongning Na DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/">Yucatec Maya DoReCo dataset </a></li><li><a href="https://github.com/cldf-datasets/doreco/tree/v1.2.1">cldf-datasets/doreco v1.2.1</a></li><li><a href="https://github.com/glottolog/glottolog/tree/v5.3">Glottolog v5.3</a></li></ol>
+[prov:wasGeneratedBy](http://www.w3.org/ns/prov#wasGeneratedBy) | <ol><li><strong>python</strong>: 3.14.3</li><li><strong>python-packages</strong>: <a href="./requirements.txt">requirements.txt</a></li></ol>
 [rdf:ID](http://www.w3.org/1999/02/22-rdf-syntax-ns#ID) | doreco
 [rdf:type](http://www.w3.org/1999/02/22-rdf-syntax-ns#type) | http://www.w3.org/ns/dcat#Distribution
 
@@ -26,7 +26,7 @@ This table lists audio files which have been transcribed/annotated for DoReCo co
 property | value
  --- | ---
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF MediaTable](http://cldf.clld.org/v1.0/terms.rdf#MediaTable)
-[dc:extent](http://purl.org/dc/terms/extent) | 583
+[dc:extent](http://purl.org/dc/terms/extent) | 780
 
 
 ### Columns
@@ -55,7 +55,7 @@ Some corpora in DoReCo contain data annotated with glosses. Such glossed data is
 property | value
  --- | ---
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF ExampleTable](http://cldf.clld.org/v1.0/terms.rdf#ExampleTable)
-[dc:extent](http://purl.org/dc/terms/extent) | 94672
+[dc:extent](http://purl.org/dc/terms/extent) | 102616
 
 
 ### Columns
@@ -81,7 +81,7 @@ Name/Property | Datatype | Description
 property | value
  --- | ---
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF LanguageTable](http://cldf.clld.org/v1.0/terms.rdf#LanguageTable)
-[dc:extent](http://purl.org/dc/terms/extent) | 42
+[dc:extent](http://purl.org/dc/terms/extent) | 47
 
 
 ### Columns
@@ -105,7 +105,7 @@ Each DoReCo language corpus is listed as separate contribution in this table.
 property | value
  --- | ---
 [dc:conformsTo](http://purl.org/dc/terms/conformsTo) | [CLDF ContributionTable](http://cldf.clld.org/v1.0/terms.rdf#ContributionTable)
-[dc:extent](http://purl.org/dc/terms/extent) | 42
+[dc:extent](http://purl.org/dc/terms/extent) | 47
 
 
 ### Columns
@@ -147,7 +147,7 @@ Name/Property | Datatype | Description
 
 property | value
  --- | ---
-[dc:extent](http://purl.org/dc/terms/extent) | 289
+[dc:extent](http://purl.org/dc/terms/extent) | 349
 
 
 ### Columns
@@ -166,7 +166,7 @@ This table lists individual, time-aligned phones.
 
 property | value
  --- | ---
-[dc:extent](http://purl.org/dc/terms/extent) | 1863702
+[dc:extent](http://purl.org/dc/terms/extent) | 2112583
 
 
 ### Columns
@@ -187,7 +187,7 @@ Name/Property | Datatype | Description
 
 property | value
  --- | ---
-[dc:extent](http://purl.org/dc/terms/extent) | 896664
+[dc:extent](http://purl.org/dc/terms/extent) | 971025
 
 
 ### Columns
@@ -214,7 +214,7 @@ Gloss abbreviations used for glosses in a corpus.
 
 property | value
  --- | ---
-[dc:extent](http://purl.org/dc/terms/extent) | 2053
+[dc:extent](http://purl.org/dc/terms/extent) | 2349
 
 
 ### Columns

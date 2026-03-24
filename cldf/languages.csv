@@ -5,6 +5,7 @@ arap1274,Arapaho,North America,43.39,-108.81,arap1274,,doreco-arap1274,Algic
 bain1259,Baïnounk Gubëeher,Africa,12.31,-16.06,bain1259,,doreco-bain1259,Atlantic-Congo
 beja1238,Beja,Africa,17.24,36.67,beja1238,,doreco-beja1238,Afro-Asiatic
 bora1263,Bora,South America,-2,-72.26,bora1263,,doreco-bora1263,Boran
+cabe1245,Cabécar,North America,9.67,-83.41,cabe1245,,doreco-cabe1245,Chibchan
 cash1254,Cashinahua,South America,-9.72,-71.17,cash1254,,doreco-cash1254,Pano-Tacanan
 dolg1241,Dolgan,Eurasia,71.11,94.29,dolg1241,,doreco-dolg1241,Turkic
 even1259,Evenki,Eurasia,61.97,94.69,even1259,,doreco-even1259,Tungusic
@@ -21,6 +22,7 @@ movi1243,Movima,South America,-13.81,-65.63,movi1243,,doreco-movi1243,Isolate
 ngal1292,Dalabon,Australia,-13.98,133.94,ngal1292,,doreco-ngal1292,Gunwinyguan
 nngg1234,Nǁng,Africa,-29.71,19.08,nngg1234,,doreco-nngg1234,Tuu
 nort2641,Northern Kurdish (Kurmanji),Eurasia,37,43,nort2641,,doreco-nort2641,Indo-European
+nort2875,Northern Alta,Papunesia,15.69,121.45,nort2875,,doreco-nort2875,Austronesian
 orko1234,Fanbyak,Papunesia,-16.21,168.21,orko1234,,doreco-orko1234,Austronesian
 pnar1238,Pnar,Eurasia,24.82,92.26,pnar1238,,doreco-pnar1238,Austroasiatic
 port1286,Daakie,Papunesia,-16.31,168.05,port1286,,doreco-port1286,Austronesian
@@ -37,7 +39,10 @@ svan1243,Svan,Eurasia,42.91,42.59,svan1243,,doreco-svan1243,Kartvelian
 taba1259,Tabasaran,Eurasia,42.02,47.84,taba1259,,doreco-taba1259,Nakh-Daghestanian
 teop1238,Teop,Papunesia,-5.67,154.97,teop1238,,doreco-teop1238,Austronesian
 texi1237,Texistepec Popoluca,North America,17.89,-94.81,texi1237,,doreco-texi1237,Mixe-Zoque
+toto1304,Totoli,Papunesia,1.15,120.88,toto1304,,doreco-toto1304,Austronesian
 trin1278,Mojeño Trinitario,South America,-15.33,-65.41,trin1278,,doreco-trin1278,Arawakan
 tsim1256,Asimjeeg Datooga,Africa,-3.42,35.43,tsim1256,,doreco-tsim1256,Nilotic
+urum1249,Urum,Eurasia,42.04,43.99,urum1249,,doreco-urum1249,Turkic
 vera1241,Vera'a,Papunesia,-13.89,167.43,vera1241,,doreco-vera1241,Austronesian
 yong1270,Yongning Na,Eurasia,27.8,100.9,yong1270,,doreco-yong1270,Sino-Tibetan
+yuca1254,Yucatec Maya,North America,18.78,-88.96,yuca1254,,doreco-yuca1254,Mayan

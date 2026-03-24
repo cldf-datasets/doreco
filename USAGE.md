@@ -31,8 +31,15 @@ To do so,
    pip install -e .
    ```
 
-2. Download (and unpack) the CLTS v2.2.0 data from [DOI: 10.5281/zenodo.5583682](https://doi.org/10.5281/zenodo.5583682).
-3. Download (and unpack) the Glottolog v4.8 data from [DOI: 10.5281/zenodo.7398962](https://doi.org/10.5281/zenodo.8131084).
+2. Download (and unpack) the CLTS v2.3.0 data from [DOI: 10.5281/zenodo.10997741](https://doi.org/10.5281/zenodo.10997741). Alternatively, you can clone it directly from GitHub:
+
+    ```shell
+    git clone https://github.com/cldf-clts/clts --branch v2.3.0
+    ```
+
+3. Download (and unpack) the Glottolog v5.3 data from [DOI: 10.5281/zenodo.18840935](https://doi.org/10.5281/zenodo.18840935).
+
+
 4. Then run
 
    ```shell
@@ -43,14 +50,12 @@ To do so,
 5. The CLDF data can then be created running
 
    ```shell
-   cldfbench makecldf cldfbench_doreco.py --glottolog PATH/TO/glottolog-4.8/
+   cldfbench makecldf cldfbench_doreco.py --glottolog PATH/TO/glottolog-5.3/
    ```
 
 ## Overview
 
-Due to the size of the DoReCo corpus - ~ 2,000,000 annotated phones (if ND-licensed data is incuded) - analysing
-the data is made a lot easier (and quicker) when data is accessed via SQL[^1] from the
-[CLDF SQLite](https://github.com/cldf/cldf/blob/master/extensions/sql.md) database.
+Due to the size of the DoReCo corpus - ~ 2,000,000 annotated phones (if ND-licensed data is incuded) - analysing the data is made a lot easier (and quicker) when data is accessed via SQL[^1] from the [CLDF SQLite](https://github.com/cldf/cldf/blob/master/extensions/sql.md) database.
 
 Create the SQLite database by running
 
@@ -58,8 +63,7 @@ Create the SQLite database by running
 cldf createdb cldf/Generic-metadata.json doreco.sqlite
 ```
 
-An [entity relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model),
-visualizing the schema of the resulting database looks as follows:
+An [entity relationship diagram](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model), visualizing the schema of the resulting database looks as follows:
 
 ![ERD](erd.svg)
 
