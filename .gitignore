@@ -115,3 +115,6 @@ ENV/
 /raw/glosses.csv
 /raw/file_metadata.csv
 .idea/
+
+# CLDF resources
+clts/

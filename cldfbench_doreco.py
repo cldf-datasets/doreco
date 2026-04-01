@@ -47,8 +47,8 @@ FILLER = '****'
 LABEL_PATTERN = re.compile(r'<<(?P<label>fp|fs|pr|fm|sg|bc|id|on|wip|ui)>(?P<content>[^>]+)?>')
 LGR_PERSON_AND_ABBR = {p + a for p, a in itertools.product(PERSONS, ABBRS)}
 CORPUS_CITATION_FMT = \
-    "{Creator}. 2022. {Language} DoReCo dataset. In Seifart, Frank, Ludger Paschen and " \
-    "Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 1.2. Berlin & Lyon: " \
+    "{Creator}. 2024. {Language} DoReCo dataset. In Seifart, Frank, Ludger Paschen and " \
+    "Matthew Stave (eds.). Language Documentation Reference Corpus (DoReCo) 2.0. Berlin & Lyon: " \
     "Leibniz-Zentrum Allgemeine Sprachwissenschaft & laboratoire Dynamique Du Langage " \
     "(UMR5596, CNRS & Université Lyon 2). " \
     "https://doreco.huma-num.fr/languages/{Glottocode}. DOI:{DOI}"
@@ -75,10 +75,10 @@ class Dataset(BaseDataset):
 
     def cmd_download(self, args):
         self.raw_dir.download(
-            "https://sharedocs.huma-num.fr/wl/?id=sbLShl5tHQ7J2INRpMaJcotNYWPQioDV&fmode=download",  # v1.2
+            "https://sharedocs.huma-num.fr/wl/?id=fY3LAiyL0QVFxRSBRHLIUINNT7JUhjzr&fmode=download",  # v2.0
             'languages.csv')
         self.raw_dir.download(
-            "https://sharedocs.huma-num.fr/wl/?id=qGGGvFRnpynYiqw8nVvvOQjkl97qhl49&fmode=download",  # v1.2
+            "https://sharedocs.huma-num.fr/wl/?id=FslYxHe1dZKTlevQuDRBBjfcdg50hT8Q&fmode=download",  # v2.0
             'sources.bib')
 
         with_nd_data = confirm('Include ND data?', default=False)
@@ -178,7 +178,7 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                 yield row
 
     def cmd_makecldf(self, args):
-        clts_data = pathlib.Path('cldf-clts-clts-6dc73af')
+        clts_data = pathlib.Path('clts/')
         if not clts_data.exists():
             clts_data = pathlib.Path(input('Path to clts data: '))
         clts = CLTS(clts_data)
@@ -325,10 +325,7 @@ See [USAGE](USAGE.md) for information how the dataset can be analyszed.
                     global_wid = global_id(gc, wid)
                     wd_intervals[global_wid] = [start, None]
                     speaker = global_id(gc, row['speaker'])
-                    if speaker.startswith('yuca1254_0'):
-                        # Known problem of the Yucatec corpus, see
-                        # https://github.com/DoReCo/doreco/issues/5#issuecomment-1490180631
-                        speaker = speaker.replace('0', '')
+
                     assert speaker in speakers, 'Unknown speaker: {}'.format(speaker)
                 else:
                     assert start >= args.writer.objects["phones.csv"][-1]['end']
